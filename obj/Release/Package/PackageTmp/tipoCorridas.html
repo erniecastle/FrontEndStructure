@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script class="AD" type="text/javascript" src="js/funcionesTipoCorrida.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div class="contain" style="width: 100%;" id="con1">
+            <h1 id="titlecon1" class="titlecontain" cambiaridioma="true">Tipos de Corrida</h1>
+            <div id="row2Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroup1Fcol1Frow2Fcon1" style="max-width: 100px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="TipoCorridaclave" style="width: 100%;" id="lblClave">Clave</label>
+                        <input type="text" class="mainPanelContentComponents" style="width: 100%;" id="txtClave" />
+                    </div>
+                    <div id="DivGroup2Fcol1Frow2Fcon1" style="max-width: 330px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="TipoCorridadescripcion" style="width: 100%;" id="lblDescripcion">Descripción</label>
+                        <input type="text" class="mainPanelContentComponents" style="width: 100%;" id="txtDescripcion" />
+                    </div>
+                    <div id="DivGroup3Fcol1Frow2Fcon1" style="max-width: 270px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="TipoCorridadetalleConceptoRecibo" style="width: 100%;" id="lblDetalleConceptoRecibo">Detalle Concepto Recibo</label>
+                        <input type="text" class="mainPanelContentComponents" style="width: 100%;" id="txtDetalleConceptoRecibo" />
+                    </div>
+                    <div id="DivGroup8Fcol1Frow2Fcon1" style="max-width: 40px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="TipoCorridaOrden" style="width: 100%;" id="lblOrden">Orden</label>
+                        <input type="text" class="mainPanelContentComponents" style="width: 100%;" id="txtOrden" />
+                    </div>
+                    <div id="DivGroupT6Fcol1Frow2Fcon1" style="max-width: 230px;" class="mainPanelDivGroup">
+                        <div id="DivGroup4Fcol1Frow2Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                            <input type="checkbox" class="mainPanelContentComponents" name="one" id="rbMostrarMenu" />
+                            <label class="containerCheck" idetiqueta="TipoCorridamostrarMenuCalc" for="rbMostrarMenu" id="rbMostrarMenu">Mostrar en Menú de Cálculo</label>
+                        </div>
+                    </div>
+                    <div id="DivGroupT7Fcol1Frow2Fcon1" style="max-width: 190px;" class="mainPanelDivGroup">
+                        <div id="DivGroup5Fcol1Frow2Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                            <input type="checkbox" class="mainPanelContentComponents" name="one" id="rbUsaCorridaPer" />
+                            <label class="containerCheck" idetiqueta="TipoCorridausaCorrPeriodica" id="rbUsaCorridaPer" for="rbUsaCorridaPer">Usar Corrida Periódica</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Gruopbotones" class="mainPanelDivGroup" style="width:100%">
+            <button id="btnGuarda" class="mainPanelContentComponents defaultButton" onclick="saveTipoCorrida()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                <span idetiqueta="btnGuardar">Guardar</span>
+            </button>
+            <button id="btnActualizar" class="mainPanelContentComponents defaultButton" onclick="actualizarTipoCorrida()" style="display: none">
+                <img class="imgBoton" src="img/Iconos/editar.png" />
+                <span idetiqueta="btnActualizar">Actualizar</span>
+            </button>
+            <button id="btnEliminar" class="mainPanelContentComponents defaultButton" onclick="eliminarTipoCorrida()" style="display: none">
+                <img class="imgBoton" clase="imgBoton" src="img/Iconos/eliminar.png" />
+                <span idetiqueta="btnEliminar">Eliminar</span>
+            </button>
+            <div id="ContenedoraBuscar" style="display: inline;">
+                <button id="btnBuscarTipoCorr" class="mainPanelContentComponents defaultButton" idetiqueta="btnBuscarTipoCorr" dataEdit="selectorCatalogoTipoCorr" functEdit="selectorTipoCorr" onclick="OpenSelector(this)" style="display: inline;">
+                    <img class="imgBoton" src="img/Iconos/buscar.png" />
+                    <span idetiqueta="btnBuscar">Buscar</span>
+                </button>
+            </div>
+            <button id="btnLimpiar" class="mainPanelContentComponents defaultButton" onclick="limpiar()" style="display: inline-block">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,538 @@
+﻿{
+
+  "TipoNomina": {
+    "nameColsObl": [
+      "Clave",
+      "Descripcion",
+      "Periodicidad"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion", "periodicidad.descripcion" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "descripcion", "periodicidad.descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [ "periodicidad" ],
+    "subEntitiesFull": [],
+    "camposWhere": [],
+
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelTipoNomina",
+    "tamSel": "size-2"
+  },
+
+  "PeriodosNomina": {
+    "nameColsObl": [
+      "No. periodo",
+      "Descripcion",
+      "Año"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion", "año" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "descripcion", "año", "fechaAsistenciInicial", "fechaAsistenciaFinal", "status" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [ "tipoNomina", "tipoCorrida" ],
+    "subEntitiesFull": [],
+    "camposWhere": [
+      {
+        "campo": "tipoNomina.id",
+        "valorCampo": "TipoNomina",
+        "valorDefault": "",
+        "valorVariable": ""
+      },
+      {
+
+        "campo": "año",
+        "valorCampo": "",
+        "valorDefault": "",
+        "valorVariable": "ejercicioActual"
+      },
+      {
+
+        "campo": "tipoCorrida.id",
+        "valorCampo": "TipoCorrida",
+        "valorDefault": "",
+        "valorVariable": ""
+      }
+    ],
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelPeriodoNomina",
+    "tamSel": "size-4"
+
+  },
+  "RegistroPatronal": {
+    "nameColsObl": [
+      "Clave",
+      "Nombre",
+      "Registro patronal",
+      "Razón social"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "nombreregtpatronal", "registroPatronal", "razonesSociales.razonsocial" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "[]delegacion", "[]subdelegacion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [ "razonesSociales" ],
+    "subEntitiesFull": [],
+    "camposWhere": [
+      {
+        "campo": "razonesSociales.id",
+        "valorCampo": "RazonSocial",
+        "valorDefault": "",
+        "valorVariable": ""
+      }
+    ],
+
+    "camposMostrar": [ "clave", "nombreregtpatronal" ],
+
+    "tituloSel": "TituloSelRegistroPatronal",
+    "tamSel": "size-2"
+
+  },
+  "CentroDeCosto": {
+    "nameColsObl": [
+      "Clave",
+      "Descripción",
+      "Nombre abreviado",
+      "Razón social"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion", "descripcionPrevia", "razonesSociales.razonsocial" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "[]descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [ "razonesSociales" ],
+    "subEntitiesFull": [],
+    "camposWhere": [
+      {
+        "campo": "razonesSociales.id",
+        "valorCampo": "RazonSocial",
+        "valorDefault": "",
+        "valorVariable": ""
+      }
+    ],
+
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelCentroDeCosto",
+    "tamSel": "size-4"
+  },
+  "Departamentos": {
+    "nameColsObl": [
+      "Clave",
+      "Nombre",
+      "Sub Cuenta"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion", "subCuenta" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [ "razonesSociales" ],
+    "subEntitiesFull": [],
+    "camposWhere": [
+      {
+        "campo": "razonesSociales.id",
+        "valorCampo": "RazonSocial",
+        "valorDefault": "",
+        "valorVariable": ""
+      }
+    ],
+
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelDepartamentos",
+    "tamSel": "size-2"
+  },
+
+  "Empleados": {
+    "nameColsObl": [
+      "Clave",
+      "Nombre",
+      "Apellido Paterno",
+      "Apellido Materno",
+      "Nombre Abreviado"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "plazasPorEmpleado.empleados.clave", "plazasPorEmpleado.empleados.nombre", "plazasPorEmpleado.empleados.apellidoPaterno", "plazasPorEmpleado.empleados.apellidoMaterno", "plazasPorEmpleado.empleados.nombreAbreviado" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]plazasPorEmpleado.empleados.clave", "plazasPorEmpleado.empleados.apellidoPaterno", "plazasPorEmpleado.empleados.apellidoMaterno", "plazasPorEmpleado.empleados.nombre" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [],
+    "subEntitiesFull": [],
+    "camposWhere": [
+      {
+
+        "campo": "plazasPorEmpleado.razonesSociales.id",
+        "valorCampo": "RazonSocial",
+        "valorDefault": "",
+        "valorVariable": ""
+      },
+      {
+        "campo": "tipoNomina.id",
+        "valorCampo": "TipoNomina",
+        "valorDefault": "",
+        "valorVariable": ""
+
+      }
+    ],
+
+    "camposMostrar": [ "plazasPorEmpleado.empleados.clave", "plazasPorEmpleado.empleados.nombre" ],
+    "queryEspecial": "QueryEmpleadoEspecial",
+
+    "tituloSel": "TituloSelEmpleados",
+    "tamSel": "size-4"
+  },
+  "CategoriasPuestos": {
+    "nameColsObl": [
+      "Clave",
+      "Descripcíon"
+
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [],
+    "subEntitiesFull": [],
+    "camposWhere": [],
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelCategoriaPuestos",
+    "tamSel": "size-2"
+  },
+  "Puestos": {
+    "nameColsObl": [
+      "Clave",
+      "Descripcíon",
+      "Salario"
+
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion", "salarioTabular" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "descripcion", "salarioTabular" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [ "categoriasPuestos" ],
+    "subEntitiesFull": [],
+    "camposWhere": [
+      {
+        "campo": "categoriasPuestos.id",
+        "valorCampo": "CategoriasPuestos",
+        "valorDefault": "",
+        "valorVariable": ""
+
+      }
+    ],
+
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelPuestos",
+    "tamSel": "size-2"
+  },
+  "Turnos": {
+    "nameColsObl": [
+      "Clave",
+      "Descripcíon"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [ "razonesSociales" ],
+    "subEntitiesFull": [],
+    "camposWhere": [
+      {
+        "campo": "razonesSociales.id",
+        "valorCampo": "RazonSocial",
+        "valorDefault": "",
+        "valorVariable": ""
+      }
+    ],
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelTurnos",
+    "tamSel": "size-2"
+  },
+  "FormasDePago": {
+    "nameColsObl": [
+      "Clave",
+      "Descripcíon"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [],
+    "subEntitiesFull": [],
+    "camposWhere": [],
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelFormasDePago",
+    "tamSel": "size-2"
+  },
+  "Paises": {
+    "nameColsObl": [
+      "Clave",
+      "Descripcíon"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [],
+    "subEntitiesFull": [],
+    "camposWhere": [],
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelPaises",
+    "tamSel": "size-2"
+  },
+  "Series": {
+    "nameColsObl": [
+      "Serie",
+      "Descripcíon"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "serie", "descripcion" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]serie", "descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [],
+    "subEntitiesFull": [],
+    "camposWhere": [],
+    "camposMostrar": [ "serie", "descripcion" ],
+
+    "tituloSel": "TituloSelSeries",
+    "tamSel": "size-2"
+  },
+  "Periodicidad": {
+    "nameColsObl": [
+      "Clave",
+      "Descripcíon"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [],
+    "subEntitiesFull": [],
+    "camposWhere": [],
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelPeriodicidad",
+    "tamSel": "size-2"
+  },
+
+
+  "Estados": {
+    "nameColsObl": [
+      "Clave",
+      "Descripcíon"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [ "paises" ],
+    "subEntitiesFull": [],
+    "camposWhere": [
+      {
+        "campo": "paises.id",
+        "valorCampo": "Paises",
+        "valorDefault": "",
+        "valorVariable": ""
+      }
+    ],
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelEstados",
+    "tamSel": "size-2"
+  },
+
+  "Municipios": {
+    "nameColsObl": [
+      "Clave",
+      "Descripcíon"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [ "estados" ],
+    "subEntitiesFull": [],
+    "camposWhere": [
+      {
+        "campo": "estados.id",
+        "valorCampo": "Estados",
+        "valorDefault": "",
+        "valorVariable": ""
+      }
+    ],
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelMunicipios",
+    "tamSel": "size-2"
+  },
+
+  "Ciudades": {
+    "nameColsObl": [
+      "Clave",
+      "Descripcíon"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [ "municipios" ],
+    "subEntitiesFull": [],
+    "camposWhere": [
+      {
+        "campo": "municipios.id",
+        "valorCampo": "Municipios",
+        "valorDefault": "",
+        "valorVariable": ""
+      }
+    ],
+
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelCiudades",
+    "tamSel": "size-2"
+  },
+
+  "Cp": {
+    "nameColsObl": [
+      "Clave",
+      "Descripcíon"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [ "ciudades" ],
+    "subEntitiesFull": [],
+    "camposWhere": [
+      {
+        "campo": "ciudades.id",
+        "valorCampo": "Ciudades",
+        "valorDefault": "",
+        "valorVariable": ""
+      }
+    ],
+
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelCp",
+    "tamSel": "size-2"
+  },
+  "RazonesSociales": {
+    "nameColsObl": [
+      "Clave",
+      "Descripcíon"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "razonsocial" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "razonsocial" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [],
+    "subEntitiesFull": [],
+    "camposWhere": [],
+    "camposValor": [],
+    "camposMostrar": [ "clave", "razonsocial" ],
+
+    "tituloSel": "TituloSelRazonesSociales",
+    "tamSel": "size-2"
+  },
+  "TipoCentroCostos": {
+    "nameColsObl": [
+      "Clave",
+      "Nombre"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "nombre" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "nombre" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [ "razonesSociales" ],
+    "subEntitiesFull": [],
+    "camposWhere": [
+      {
+        "campo": "razonesSociales.id",
+        "valorCampo": "RazonSocial",
+        "valorDefault": "",
+        "valorVariable": ""
+      }
+    ],
+    "camposMostrar": [ "clave", "nombre" ],
+
+    "tituloSel": "TituloSelTipoCentroCostos",
+    "tamSel": "size-2"
+  },
+  "TipoCorrida": {
+    "nameColsObl": [
+      "Clave",
+      "Descripcíon"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [],
+    "subEntitiesFull": [],
+    "camposWhere": [],
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelTipoCorrida",
+    "tamSel": "size-2"
+  },
+  "Bancos": {
+    "nameColsObl": [
+      "Clave",
+      "Descripcíon"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [],
+    "subEntitiesFull": [],
+    "camposWhere": [],
+    "camposMostrar": [ "clave", "descripcion" ],
+
+    "tituloSel": "TituloSelBancos",
+    "tamSel": "size-2"
+  },
+  "Monedas": {
+    "nameColsObl": [
+      "Clave",
+      "Descripción"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "identificador" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "[]clave", "identificador" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [],
+    "subEntitiesFull": [],
+    "camposWhere": [],
+    "camposMostrar": [ "clave", "identificador" ],
+
+    "tituloSel": "TituloSelMonedas",
+    "tamSel": "size-2"
+  }
+}

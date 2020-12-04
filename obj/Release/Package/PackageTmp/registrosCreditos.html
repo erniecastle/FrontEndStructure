@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Registros de Creditos</title>
+	<meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/funcionesRegistrosCreditos.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div class="contain" style="width: 100%;" id="con1">
+            <h1 id="titlecon1" class="titlecontain" cambiaridioma="true">Registro Créditos</h1>
+            <div id="row2Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroup1Fcol1Frow2Fcon1" style="max-width: 300px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="CreditoTipoCredito" style="width: 100%;" id="lblTipoDeCredito">Tipo de créditos</label>
+                        <div class="select-style" style="width: 100%;">
+                            <select class="mainPanelContentComponents" style="width: 100%;" id="selTipoDecredito" onchange="valorSelecionadoTipoCred(this.value)">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="DivGroup2Fcol1Frow2Fcon1" style="max-width: 130px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="RegistroAhorroCredito" style="width: 100%;" id="lblFecha">Fecha</label>
+                        <input type="date" class="mainPanelContentComponents" style="width: 100%;" id="dpFecha" onchange="valorSelecionadoTipoCred(this.value)">
+                    </div>
+                </div>
+            </div>
+            <div id="row3Fcon1" class="mainPanelRow" style="width: 100%;margin-top: 20px;">
+                <div id="col1Frow3Fcon1" class="mainPanelCol borderCol col-12 " style="visibility: visible;">
+                    <div id="contTable" class="divTable" dataTbl="contTable" paginado="true" functEdit="editTableRegCredito" style="width: 100%;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Gruopbotones" class="mainPanelDivGroup" style="width:100%">
+            <button id="btnGuarda" class="mainPanelContentComponents defaultButton" onclick="saveCreditoPorEmpleado()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                <span idetiqueta="btnGuardar">Guardar</span>
+            </button>
+            <div id="ContenedoraBuscar" style="display: inline;">
+                <button id="btnBuscarRegistroCreditos" class="mainPanelContentComponents defaultButton"  dataEdit="selectorCatalogoRegistroCreditos" functEdit="selectorRegistroCreditos" onclick="OpenSelector(this)" style="display: inline;">
+                    <img class="imgBoton" src="img/Iconos/buscar.png" />
+                    <span idetiqueta="btnBuscar">Buscar</span>
+                </button>
+            </div>
+            <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="limpiarAhorro()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsConfig.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))</script>
+
+    <link rel="stylesheet" type="text/css" href="Content/dx.common.css" />
+    <link rel="dx-theme" data-theme="generic.light" href="Content/dx.light.css" />
+    <script src="js/stimulsoft.reports.js" type="text/javascript"></script>
+    <script src="js/stimulsoft.viewer.js" type="text/javascript"></script>
+    <script src="js/stimulsoft.designer.js" type="text/javascript"></script>
+    <script type="text/javascript" src="scripts/dx.all.js"></script>
+    <script type="text/javascript" src="scripts/cldr.js"></script>
+    <script type="text/javascript" src="scripts/cldr/event.js"></script>
+    <script type="text/javascript" src="scripts/cldr/supplemental.js"></script>
+    <script type="text/javascript" src="scripts/cldr/unresolved.js"></script>
+    <script type="text/javascript" src="scripts/globalize.js"></script>
+    <script type="text/javascript" src="scripts/globalize/message.js"></script>
+
+    <!-- <script type="text/javascript" src="scripts/globalize/number.js"></script>-->
+    <!--<script type="text/javascript" src="scripts/globalize/plural.js"></script>-->
+    <!-- <script type="text/javascript" src="scripts/globalize/date.js"></script>
+    <script type="text/javascript" src="scripts/globalize/currency.js"></script>-->
+    <!--<script type="text/javascript" src="scripts/globalize/relative-time.js"></script>
+    <script type="text/javascript" src="scripts/globalize/unit.js"></script>-->
+
+    <script type="text/javascript" src="js/funcionesTraducion.js"></script>
+    <script type="text/javascript" src="js/functionsModules.js"></script>
+    <!--<script type="text/javascript" src="js/dynamicBasic.js"></script>-->
+    <script type="text/javascript" src="js/funcionesGlobales.js"></script>
+    <!-- <script type="text/javascript" src="js/BotonesPruebas.js"></script>-->
+    <script type="text/javascript" src="js/genericfunctions.js"></script>
+    <!-- <script type="text/javascript" src="js/CalculoDeNomina.js"></script>-->
+</head>
+    <body id="principalCont">
+        <div id="comboIdioma">
+            <div class="select-style">
+                <select id="idioma" onchange="cambiarIdioma(this.value);">
+                    <option value="es" idetiqueta="IdiomaEs">Español</option>
+                    <option value="en" idetiqueta="IdiomaEn">Ingles</option>
+                </select>
+            </div>
+        </div>
+        <div id="Cambiatemas">
+            <label style="display:block">Cambiar tema</label>
+            <div class="select-style">
+                
+                <select id="tema" onchange="cambiarTema(this.value);">
+                    <option value="">Default</option>
+                    <option value="exitoTheme" >Exito</option>
+                    <option value="windowsTheme">Windows</option>
+                    <option value="brownTheme">brown</option>
+                    <option value="servo">Servo</option>
+                </select>
+            </div>
+        </div>
+        <div id="Menu" class="contenedor">
+            <p><a href="javascript:imprimirReports()">print</a></p>
+        </div>
+        <div id="container" class="contenedor">    
+        </div>
+    </body>
+</html>
+

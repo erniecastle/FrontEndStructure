@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Fuente de datos</title>
+        <link href="css/stylepreview.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/functionsConfig.js"></script>
+        <script type="text/javascript" src="js/functionsCommon.js"></script>
+        <script type="text/javascript" src="js/functionsFuentes.js"></script>
+    </head>
+    <body>
+        <div class="main">
+            <div id="content" class="contentTitle">
+                <h2 class="subTitle">Fuente de datos</h2>
+            </div>
+            <div id="container">
+                <div id="row1" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1" class="mainPanelCol" style="width: 100%;">
+                        <div id="DivGroup2Fcol1" class="mainPanelDivGroup" style="height: 51px; width: 30%; max-width: 100%;">
+                            <label id="lblOrigenDatosTabla" class="mainPanelContentComponents" style="height: 22px; width: 100%;">Origen de datos</label>
+                            <div class="select-style" style="width: 300px;">
+                                <select id="cbxOrigenDatosTabla" class="mainPanelContentComponents" onchange="setFuentes(this.value)">
+                                    <option value="">Seleccione un origen</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="source" class="left medium">
+                    <ul id="myTree">
+                        <li>
+                            <span class="boxTable check-boxTable">Selecciona una fuente</span>
+                            <ul class="nested active">
+                                <li>
+                                    <img id="indicator" src="img/tick.png" class="indicator">
+                                    <span class="box check-box">....</span>
+                                    <ul class="nested active"></ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="data" class="right large">
+
+                    <!--Here will be the properties-->
+                    <div class="formrow">
+                        <div class="formcol">
+                            <div id="ddd" class="mainPanelCol ">  
+
+                                <div id="DivGroupCampo" class="mainPanelDivGroup ">
+                                    <label>Campo:</label>
+                                    <input id="campo" class="mainPanelContentComponents inpMedium" type="text" name="campo" disabled>
+                                </div>
+                                <div id="DivGroupEstado" class="mainPanelDivGroup ">
+                                    <label  class="mainPanelContentComponents">Estado:</label>
+                                    <div class="select-style" style="width: 150px;">
+                                        <select id="estado" name="estado">
+                                            <option value="null"></option>
+                                            <option value="true">Disponible</option>
+                                            <option value="false">No disponible</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="DivGroupSelectors" class="mainPanelDivGroup ">
+                                    <div id="contLlave" class="mainPanelDivGroup" >
+                                        <input id="llave" name="llave" type="checkbox">
+                                        <label for="llave" class="containerCheck">Llave:</label>
+                                    </div>
+                                    <div id="contRequerido" class="mainPanelDivGroup" >
+                                        <input id="requerido" name="requerido" type="checkbox">
+                                        <label for="requerido" class="containerCheck">Requerido:</label>
+                                    </div>
+                                </div>
+                                <div id="DivGroupEtiqueta" class="mainPanelDivGroup ">
+                                    <label>Nombre etiqueta:</label>
+                                    <input id="idEtiqueta" name="idEtiqueta" class="mainPanelContentComponents inpMedium" type="text" >
+                                </div>
+                                <div id="DivGroupTipoDato" class="mainPanelDivGroup ">
+                                    <label>Tipo de dato:</label>
+                                    <div class="select-style" style="width: 120px;">
+                                        <select id="tipoDeDato" class="inpSmall" name="tipoDeDato" onchange="changeDataType(this.value)">
+                                            <option value=""></option>
+                                            <option value="0">Relacion</option>
+                                            <option value="1">Texto</option>
+                                            <option value="2">Entero</option>
+                                            <option value="3">Double</option>
+                                            <option value="4">Fecha</option>
+                                            <option value="5">Boleano</option>
+                                            <option value="6">Tiempo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="DivGroupAncho" class="mainPanelDivGroup ">
+                                    <label class="">Ancho:</label>
+                                    <input id="compAncho" name="compAncho" class="mainPanelContentComponents inpSmall" type="text" >
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="formcol">
+                            <div id="DivGroupTipoCaptura" class="mainPanelDivGroup ">
+                                <label>Tipo de captura:</label>
+                                <div class="select-style" style="width: 150px;">
+                                    <select id="tipoCaptura" name="tipoCaptura" onchange="createType(this.value)">
+                                        <option value=""></option>
+                                        <option value="1">Libre</option>
+                                        <option value="2">Lista</option>
+                                        <option value="3">Equivalencias</option>
+                                        <option value="4">Origen de datos</option>
+                                    </select>
+                                </div>  
+                            </div>
+                            <div id="DivGroupAdapter" class="mainPanelDivGroup ">
+                                <div id="adapterType">
+                                </div>
+                            </div>
+                            <div id="DivGroupActives" class="mainPanelDivGroup">
+                                <div id="contGlobal" class="mainPanelDivGroup" >
+                                    <input id="chkGlobal" name="chkGlobal" type="checkbox">
+                                    <label for="chkGlobal" class="containerCheck">Activar campo global</label>
+                                </div>
+                                <div id="contCaptura" class="mainPanelDivGroup" >
+                                    <input id="chkCaptura" name="chkCaptura" type="checkbox">
+                                    <label for="chkCaptura" class="containerCheck">Activar captura</label>
+                                </div>
+                                <div id="ispassword" class="mainPanelDivGroup" style="display:none">
+                                    <input id="chkpassword" name="chkpassword" type="checkbox" />
+                                    <label for="chkpassword" class="containerCheck">Activar Contraseña</label>
+                                </div>
+                            </div>
+                            <div id="contEventos" style="display:none; border: medium dotted gray;">
+                                <div>
+                                    <label id="lblEventos">Eventos</label>
+                                    <div class="select-style">
+                                        <select id="selEventos" name="Eventos" onchange="validacionEvento(this.value)">
+                                            <option value=""></option>
+                                            <option value="onblur">Onblur</option>
+                                            <option value="onchange">Onchange</option>
+                                            <option value="oncontextmenu">Oncontextmenu</option>
+                                            <option value="onfocus">Onfocus</option>
+                                            <option value="oninput">Oninput</option>
+                                            <option value="onkeypress">Onkeypress</option>
+                                            <option value="onKeyDown">onKeyDown</option>
+
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="divTeclas" class="mainPanelDivGroup">
+                                    
+                                    <label id="lblTeclas" style="display:block">Teclas a presionar</label>
+                                    
+                                        <div class="select-style" style="float:left;margin-right: 10px;">
+                                            <select id="selTeclas" name="Teclas" disabled>
+                                                <option value=""></option>
+                                                <option value="9">Tab</option>
+                                                <option value="13">Enter</option>
+                                            </select>
+                                        </div>
+
+                                 
+                                    <button id="btnAddTeclas" class="mainPanelContentComponents defaultButton" onclick="addTeclas()" disabled>+</button> 
+
+                                    <div id="contTeclas"></div>
+                                </div>
+                                <div>
+                                    <div class="mainPanelDivGroup">
+                                        <div>
+                                            <label id="lblMetodos" style="display: block;">Metodos</label>
+
+                                            <div class="select-style" style="width: 220px; float: left;">
+                                                <select id="selMetodos" onchange="crearStringMetodo(this.value)">
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                            <!-- <button id="btnAddValuesEvento" class="btnAddValues defaultButton" onclick="myFunction()" style="float: left; padding: 1.5% 2%; margin-left: 0.5%;">?</button>-->
+                                            <div class="popup" style="float: left; padding: 1.5% 2%; margin-left: 0.5%; background-color :#DCDCDC; border-radius:250px;">
+                                                ?
+                                                <span class="popuptext" id="myPopup">No hay descripcion </span>
+                                            </div>
+
+                                        </div>
+                                        <div>
+                                            <input id="txtMetodo" name="txtMetodo" class="inpMedium" type="text" style="margin:5px;margin-left:0px" />
+                                            <button id="btnAddValuesMetodo" class="btnAddValues defaultButton" onclick="addValueMetodos()">+</button>
+                                            <br />
+                                            <!-- <label id="descripcion"></label>-->
+                                        </div>
+                                        <div id="contMetodos"></div>
+                                    </div>
+                                </div>
+                                <button id="btnAddValuesEvento" class="btnAddValues defaultButton" onclick="addValueEvento()">Agregar</button>
+                           <div id="contEventosFull" style="display:none">
+                               <label>Lista de Eventos</label>
+                           </div>
+                             </div>
+                            <!-- <textarea id="tipoCaptura" name="tipoCaptura" rows="6" style="width: 100%"></textarea> -->
+                        </div>
+                        <div class="formcol">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="row1Fcon2FcTab1" class="mainPanelRow" style="width: 100%;">
+
+                </div>
+                <div id="content" class="contentTitle">
+                    <h2 class="subTitle">Detalle de fuente de datos</h2>
+                </div>
+                <div id="row2Fcon1FcTab1s" class="mainPanelRow" style=" width 100%;">
+                    <div id="DivGroup2Fcol1Frow1Fcon1FcTab11" class="mainPanelDivGroup" style="height: 51px; width: 40%; max-width: 100%;">
+                        <label id="lblDetalles" class="mainPanelContentComponents" style="height: 22px; width: 100%;">Detalle de datos</label>
+                        <div id="DivGroupDetalleFuentes" class="mainPanelDivGroup ">
+                            <div class="select-style" style="width: 300px;float: left;">
+                                <select id="cbxOrigenDetallesDatosTabla" class="mainPanelContentComponents">
+                                    <option value="">Seleccione un origen</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button id="addDetailOrigin" class="defaultButton" style="float: left; padding:1.5% 2%;margin-left: 0.5%; " onclick="addDetailTable()">+</button>
+                    </div>
+                </div>
+                <div id="row3Fcon1FcTab1" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow3Fcon1FcTab1" class="mainPanelCol" style="width: 100%;">
+                        <table id="mainTableDetails" style="width: 100%;" border="1">
+                            <thead id="mainBodyTable">
+                                <tr>
+                                    <th>Clave</th>
+                                    <th>Nombre</th>
+                                    <th>Recurso</th>
+                                    <th>Eliminar</th>
+                                </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="row1Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow1Fcon1FcTab1" class="mainPanelCol " style="width: 25%;"></div>
+                    <div id="col2Frow1Fcon3FcTab1" class="mainPanelCol" style="width: 25%;">
+                        <div id="DivGroup2" class="mainPanelDivGroup" style="height: 49px; width: 50%; max-width: 100%;">
+                            <button title="F8" id="btnGuardar" class="mainPanelContentComponents defaultButton" style="height: 40px; width: 100%;" onclick="toSaveFont()">Guardar</button>
+                        </div>
+                    </div>
+                    <div id="col1Frow1Fcon2FcTab1" class="mainPanelCol " style="width: 25%;">
+                        <div id="DivGroup1" class="mainPanelDivGroup" style="height: 49px; width: 50%; max-width: 100%;">
+                            <button id="btnEliminar" class="mainPanelContentComponents defaultButton" style="height: 40px; width: 100%;" onclick="toDeleteFont()">Eliminar</button>
+                        </div>
+                    </div>
+                    <div id="col3Frow1Fcon4FcTab1" class="mainPanelCol" style="width: 25%;">
+                        <div id="DivGroup3" class="mainPanelDivGroup" style="height: 49px; width: 50%; max-width: 100%;">
+                            <button id="btnCancelar" class="mainPanelContentComponents defaultButton" style="height: 40px; width: 100%;" onclick="toCancelFont()">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

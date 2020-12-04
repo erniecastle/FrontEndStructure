@@ -1,0 +1,199 @@
+﻿{
+ "Procesos": [
+    {
+      "Referencia": "1",
+      "NombreClass": "Calculo Nomina",
+      "NombreMetodo": "CalculoNomina",
+      "TotalParametros": "22",
+      "Parametros": [
+        {
+          "ReferenciaParametros": "1",
+          "Nombre": "TipoCorrida",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "2",
+          "Nombre": "TipoNomina",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "3",
+          "Nombre": "PeriodosNomina",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "4",
+          "Nombre": "RegistroPatronal",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "5",
+          "Nombre": "CentroDeCosto",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "6",
+          "Nombre": "Departamentos",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "7",
+          "Nombre": "Empleados",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "8",
+          "Nombre": "CategoriasPuestos",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "9",
+          "Nombre": "Puestos",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "10",
+          "Nombre": "Turnos",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "11",
+          "Nombre": "TipoSalario",
+          "TipoDato": "1"
+        },
+        {
+          "ReferenciaParametros": "12",
+          "Nombre": "FormasDePago",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "13",
+          "Nombre": "TipoContrato",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "14",
+          "Nombre": "Estatus",
+          "TipoDato": "1"
+        }
+      ],
+      "Acciones": [ ]
+    },
+    {
+      "Referencia": "2",
+      "NombreClass": "Calculo Nomina",
+      "NombreMetodo": "calculaSalarioDiarioIntegerado",
+      "TotalParametros": "23",
+      "Parametros": [
+        {
+          "ReferenciaParametros": "1",
+          "Nombre": "FechaCalculo",
+          "TipoDato": "4"
+        },
+        {
+          "ReferenciaParametros": "2",
+          "Nombre": "TipoNomina",
+          "TipoDato": "0"
+        },
+
+        {
+          "ReferenciaParametros": "3",
+          "Nombre": "TipoCorrida",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "4",
+          "Nombre": "RegistroPatronal",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "5",
+          "Nombre": "CentroDeCosto",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "6",
+          "Nombre": "Departamentos",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "7",
+          "Nombre": "Empleados",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "8",
+          "Nombre": "CategoriasPuestos",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "9",
+          "Nombre": "Puestos",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "10",
+          "Nombre": "Turnos",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "11",
+          "Nombre": "TipoSalario",
+          "TipoDato": "1"
+        },
+        {
+          "ReferenciaParametros": "12",
+          "Nombre": "FormasDePago",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "13",
+          "Nombre": "TipoContrato",
+          "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "14",
+          "Nombre": "Estatus",
+          "TipoDato": "1"
+        }
+      ],
+      "Acciones": [ ]
+    },
+    {
+      "Referencia": "3",
+      "NombreClass": "PeriodosNomina",
+      "NombreMetodo": "AbrirCerrarPeriodoNomina",
+      "TotalParametros": "2",
+      "Parametros": [
+        {
+          "ReferenciaParametros": "1",
+          "Nombre": "TipoCorrida",
+           "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "2",
+          "Nombre": "TipoNomina",
+           "TipoDato": "0"
+        },
+        {
+          "ReferenciaParametros": "3",
+          "Nombre": "PeriodosNomina",
+          "TipoDato": "0"
+        
+        }
+      ],
+      "Acciones": [
+        {
+          "ReferenciaAccion": "1",
+          "Nombre": "Abrir Periodo"
+        },
+        {
+          "ReferenciaAccion": "2",
+          "Nombre": "Cerrar Periodo"
+        }
+      ]
+    }
+
+  ]
+}
+

@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script class="AD" type="text/javascript" src="js/funcionesPerNomina.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div class="contain" style="width: 100%;" id="con1">
+            <h1 id="titlecon1" class="titlecontain" cambiaridioma="true">Periodos de Nomina</h1>
+            <div id="row2Fcon1" class="mainPanelRow" style="width: 100%;">
+
+                <div id="col1Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 9.667%;">
+                    <div id="DivGroup1Fcol1Frow2Fcon1" style="max-width: 65px;margin-top" class="mainPanelDivGroup">
+                        <label id="lblEjercicio" class="mainPanelContentComponents" style="width: 100%;">Año</label>
+                        <input id="txtEjercicio" type="text" class="mainPanelContentComponents" style="width: 100%;margin-top:-1px;">
+                    </div>
+                </div>
+
+                <div id="col3Frow2Fcon1" class="mainPanelCol borderCol col-6" style="visibility: visible;width: 35%;margin-left:15px">
+                    <div id="DivGroupT4Fcol3Frow2Fcon1" class="mainPanelDivGroup" style="max-width: 285px;">
+                        <div class="editContainer">
+                            <label id="lblTipoCorrida" class="mainPanelContentComponents">Tipo Corrida</label>
+                            <div id="editTipoCorrida" class="edit" dataedit="EditTipoCorrida" functedit="setEditTipoCorrida">
+                                <input id="search-text-input" class="editKey" type="text" kind="filterKey" placeholder="">
+                                <input id="brief-text-input" class="editBrief" type="text" placeholder="" disabled="">
+                                <button class="editButton" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/colores/puntos.png"  /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="col2Frow2Fcon1" class="mainPanelCol borderCol col-10" style="visibility: visible; width: 35%;margin-left:15px">
+                    <div id="DivGroupT3Fcol2Frow2Fcon1" class="mainPanelDivGroup" style="max-width: 300px;">
+                        <div class="editContainer">
+                            <label id="lblTipoNomina" class="mainPanelContentComponents">Tipo Nomina</label>
+                            <div id="editTipoNomina" class="edit" dataedit="EditTipoNomina" functedit="setEditTipoNomina">
+                                <input id="search-text-input" class="editKey" type="text" kind="filterKey" placeholder="">
+                                <input id="brief-text-input" class="editBrief" type="text" placeholder="" disabled="">
+                                <button class="editButton" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/colores/puntos.png"  /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="row3Fcon1" style="width: 100%;margin-top:15px; " class="mainPanelRow">
+                <div id="col1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+
+
+                    <div class="divTable" style="width: 100%;">
+                        <div class="modalEdit-filters">
+                            <!--  <button id="btnModificarPER" class="mainPanelContentComponents defaultButton right" onclick="ConstruirModificarPer()" style="float: right;margin-top: 20px;">Modificar</button>-->
+                            <button id="btnAgregarPER" class="mainPanelContentComponents defaultButton" onclick="mostrarFormaCaptura(false)">
+                                <img class="imgBoton" src="img/Iconos/nuevo.png">
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                        <div id="PeriodosNomina" class="divTable" dataTbl="PeriodosNomina" paginado="true" functEdit="editTablePeriodosNomina" style="width: 100%;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contain" style="width: 100%; display:none;" id="con2">
+            <h1 id="titlecon2" class="titlecontain" cambiaridioma="true">Periodos Nomina</h1>
+
+            <div id="colDatosP" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                <div id="row2Fcon2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow2Fcon2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 9.667%;">
+                        <div id="DivGroup1Fcol1Frow2Fcon1" style="max-width: 65px;" class="mainPanelDivGroup">
+                            <label id="lblEjercicio1" class="mainPanelContentComponents" style="width: 100%;">Año</label>
+                            <input id="txtEjercicio1" type="text"  disabled=""  class="mainPanelContentComponents" style="width: 100%;margin-top:-1px;">
+                        </div>
+                    </div>
+
+                    <div id="col3Frow2Fcon2" class="mainPanelCol borderCol col-6" style="visibility: visible;width: 35%;margin-left:15px">
+                        <div id="DivGroupT4Fcol3Frow2Fcon2" class="mainPanelDivGroup" style="max-width: 285px;">
+                            <div class="editContainer">
+                                <label id="lblTipoCorrida1" class="mainPanelContentComponents">Tipo Corrida</label>
+                                <div id="editTipoCorrida1" class="edit" dataedit="EditTipoCorrida" functedit="setEditTipoCorrida">
+                                    <input id="search-text-input" disabled="" class="editKey" type="text" kind="filterKey" placeholder="Buscar">
+                                    <input id="brief-text-input" class="editBrief" type="text" placeholder="..." disabled="">
+                                    <button class="editButton" disabled="" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/colores/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="col2Frow2Fcon2" class="mainPanelCol borderCol col-10" style="visibility: visible; width: 35%;margin-left:15px">
+                        <div id="DivGroupT3Fcol2row2Fcon2" class="mainPanelDivGroup" style="max-width: 300px;">
+                            <div class="editContainer">
+                                <label class="mainPanelContentComponents" style="width: 100%;" id="lblTipoNomina">Tipo nomina</label>
+                                <input type="text" class="mainPanelContentComponents" style="width: 100%;margin-top:-1px;" id="txtTipoNomina" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="row31Fcon1" class="mainPanelRow" style="width: 100%;">
+
+                    <div id="col1Frow31Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 12.667%; ">
+                        <div id="DivGroup1Fcol1Frow3Fcon2" style="max-width: 100px;" class="mainPanelDivGroup">
+                            <label class="mainPanelContentComponents" style="width: 100%;" id="lblClave">No. periodo</label>
+                            <input type="text" class="mainPanelContentComponents" style="width: 100%;" id="txtClave" />
+                        </div>
+                    </div>
+                    <div id="col1Frow4Fcon1" class="mainPanelCol borderCol" style="width: 15%;margin-left:15px">
+                        <div id="DivGroup1col2row4Fcon1" style="max-width: 120px;" class="mainPanelDivGroup">
+                            <label id="lblFechaIni" class="mainPanelContentComponents" style="width: 100%;">De la fecha</label>
+                            <input id="txtFechaInicial" type="date" class="mainPanelContentComponents" style="width: 100%;">
+                        </div>
+                    </div>
+                    <div id="col2row4Fcon1" class="mainPanelCol borderCol col-2" style="width: 15%;margin-left:15px">
+                        <div id="DivGroup2col2row4Fcon1" style="max-width: 120px;" class="mainPanelDivGroup">
+                            <label id="lblFechaFin" class="mainPanelContentComponents" style="width: 100%;">A la fecha</label>
+                            <input id="txtFechaFinal" type="date" class="mainPanelContentComponents" style="width: 100%;">
+                        </div>
+                    </div>
+
+                </div>
+                
+               
+            </div>
+
+            <div id="tab2FcTab2" style="width: 100%;margin-top:0.5%;" class="tab">
+                <button id="btnDatosGenerales" class="tablinks Selected" onclick="openTab(event,'con2FcTab2')">Generales</button>
+                <button id="btnOtrosDatos" class="tablinks borderleft" onclick="openTab(event,'con4FcTab2')">Otros datos</button>
+            </div>
+
+            <div id="con2FcTab2" class="contain" style="height: 269px; display: block;">
+                
+                <div id="row1Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+
+                    <div id="col1Frow1con2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; ">
+                        <div id="DivGroup1col1Frow3Fcon1" style="max-width: 300px;" class="mainPanelDivGroup">
+                            <label class="mainPanelContentComponents" style="width: 100%;" id="lblDescripcion">Descripción</label>
+                            <input type="text" class="mainPanelContentComponents" style="width: 100%;" id="txtDescripcion" />
+                        </div>
+                    </div>
+                </div>
+                <div id="row2Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow2con2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; ">
+                        <div id="DivGroup8Fcol1Frow2Fcon1" style="max-width: 300px;" class="mainPanelDivGroup">
+                            <label class="mainPanelContentComponents" style="width: 100%;" id="lblDescripcionb">Descripcion breve</label>
+                            <div id="DivGroup9Fcol1Frow2Fcon1" style="max-width: 300px;" class="mainPanelDivGroup">
+                                <input type="text" class="mainPanelContentComponents" style="width: 50%;" id="txtDescripcionb" />
+                            </div>
+                        </div>
+                       
+
+                    </div>
+                </div>
+
+                <div id="row3Fcon2FcTab2" class="mainPanelRow" style="width: 100%;margin-top: 15px;">
+                    <div id="col1row3Fcon2FcTab2" class="mainPanelCol borderCol" style="width:16%">
+                        <div id="DivGroup1col1row3Fcon2FcTab2" style="max-width: 90px;" class="mainPanelDivGroup">
+                            <label id="lblDiasPago" class="mainPanelContentComponents" style="width: 100%;">Días pago</label>
+                            <input id="txtDiasPago" type="text" class="mainPanelContentComponents" style="width: 100%;"  />
+                        </div>
+                    </div>
+                    <div id="col2row3Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible;">
+                        <div id="DivGroup2col2row3Fcon2FcTab2" style="max-width: 90px;" class="mainPanelDivGroup">
+                            <label id="lblDiasIMSS" class="mainPanelContentComponents" style="width: 100%;">Días IMSS</label>
+                            <input id="txtDiasIMSS" type="text" class="mainPanelContentComponents" style="width: 100%;"  />
+                        </div>
+                    </div>
+                </div>
+
+                <div id="row4Fcon2FcTab2" class="mainPanelRow" style="width: 100%;margin-top: 15px;">
+                    <div id="col1row4Fcon2FcTab2" class="mainPanelCol borderCol" style="width:16%">
+                        <div id="DivGroup1col1row4Fcon2FcTab2" style="max-width: 120px;" class="mainPanelDivGroup">
+                            <label class="mainPanelContentComponents" style="width: 100%;" id="lblFechaCorte">Fecha corte</label>
+                            <input type="date" class="mainPanelContentComponents" style="width: 100%;" id="txtFechaCorte" />
+                        </div>
+                    </div>
+                    <div id="col2row4Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible;">
+                        <div id="DivGroup2col4row3Fcon2FcTab2" style="max-width: 120px;" class="mainPanelDivGroup">
+                            <label class="mainPanelContentComponents" style="width: 100%;" id="lblFechaDePago">Fecha pago</label>
+                            <input type="date" class="mainPanelContentComponents" style="width: 100%;" id="txtFechaPago" />
+                        </div>
+                    </div>
+                </div>
+
+
+                
+            </div>
+            <div id="con4FcTab2" class="contain" style="height: 269px; display: none;">
+
+
+                <div id="row1Fcon4FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow1Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; ">
+                        <div id="DivGroupT19Fcol3Frow2Fcon2" style="max-width: 100px;padding:1px;" class="mainPanelDivGroup">
+                            <label class="mainPanelContentComponents" style="width: 100%;" id="lblOpciones">Opciones</label>
+                        </div>
+                        <div  class="colborder" style="border-style: solid; border-width: 1px; max-width: 200px;">
+                            <div id="DivGroupT21Fcol3Frow2Fcon2" class="mainPanelDivGroup" style="width: 100%; margin-left:5px;">
+                                <div id="DivGroup17Fcol3Frow2Fcon2" class="containerSelectors" style="max-width: 100%; width: 100%;margin-top:11px;">
+                                    <input type="checkbox" class="mainPanelContentComponents" id="chkDescontarAhorros">
+                                    <label class="containerCheck" for="chkDescontarAhorros" id="lblDescontarAhorros">Descontar Ahorros</label>
+                                </div>
+                            </div>
+                            <div id="DivGroupT22Fcol3Frow2Fcon1" class="mainPanelDivGroup" style="width: 100%; margin-left:5px;">
+                                <div id="DivGroup18Fcol3Frow2Fcon2" class="containerSelectors" style="max-width: 100%; width: 100%;margin-top:11px;">
+                                    <input type="checkbox" class="mainPanelContentComponents" id="chkDescontarPrestamos">
+                                    <label class="containerCheck" for="chkDescontarPrestamos" id="lblDescontarPrestamos">Descontar Prestamos</label>
+                                </div>
+                            </div>
+                            <div id="DivGroupT23Fcol3Frow2Fcon1" class="mainPanelDivGroup" style="width: 100%; margin-left:5px;">
+                                <div id="DivGroup19Fcol3Frow2Fcon2" class="containerSelectors" style="width: 100%;margin-top:11px;">
+                                    <input type="checkbox" class="mainPanelContentComponents" id="chkSoloPrestaciones">
+                                    <label class="containerCheck" for="chkSoloPrestaciones" id="SoloPrestaciones">Solo Prestaciones</label>
+                                </div>
+                            </div>
+                            <div id="DivGroupT24Fcol3Frow2Fcon1" class="mainPanelDivGroup" style="width: 100%; margin-left:5px;margin-top:11px; margin-bottom:11px">
+                                <div id="DivGroup20Fcol3Frow2Fcon2" class="containerSelectors" style="max-width: 100%; width: 100%;margin-top:11px;">
+                                    <input type="checkbox" class="mainPanelContentComponents" id="chkIncluirBajas">
+                                    <label class="containerCheck" for="chkIncluirBajas" id="IncluirBajas">Incluir Bajas</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="row2Fcon4FcTab2" class="mainPanelRow" style="width: 100%;">
+
+                    <div id="col2row1Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; ">
+                        <div id="DivGroupT25Fcol3Frow2Fcon1" style="max-width: 100%;margin-top: 15px;" class="mainPanelDivGroup">
+                            <div id="DivGroup21Fcol3Frow2Fcon2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                <input type="checkbox" class="mainPanelContentComponents" id="chkCierreMes" />
+                                <label class="containerCheck" for="chkCierreMes" id="lblCierreMes">Cierre del Mes</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="row3Fcon4FcTab2" class="mainPanelRow" style="width: 100%;">
+
+                    <div id="col3row1Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; ">
+                        <div id="DivGroupT26Fcol3Frow2Fcon1" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <div id="DivGroup22Fcol3Frow2Fcon2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                <input type="checkbox" class="mainPanelContentComponents" id="chkBloquear" />
+                                <label class="containerCheck" for="chkBloquear" id="lblBloquear">Bloquear</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="row4Fcon4FcTab2" class="mainPanelRow" style="width: 100%;">
+
+                    <div id="col4row1Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 20%; ">
+                        <div id="DivGroup23Fcol4Frow2Fcon2" style="max-width: 100px;" class="mainPanelDivGroup">
+                            <label class="mainPanelContentComponents" style="width: 100%;" id="lblStatus">Status</label>
+                            <input type="text" class="mainPanelContentComponents" style="width: 100%;" id="txtStatus" />
+                        </div>
+                        
+                    </div>
+                   
+                    <div id="col2row1Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;width: 30%; ">
+                        <div id="DivGroup24Fcol4Frow2Fcon2" style="max-width: 150px;" class="mainPanelDivGroup">
+                            <label class="mainPanelContentComponents" style="width: 100%;" id="lblFechaModificado">Modificado</label>
+                            <input type="text" class="mainPanelContentComponents" style="width: 100%;" id="txtFechaModificado" />
+                        </div>
+                    </div>
+                    <div id="col3row1Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 50%;">
+                        <div id="DivGroup25Fcol4Frow2Fcon2" style="max-width: 300px;" class="mainPanelDivGroup">
+                            <label class="mainPanelContentComponents" style="width: 100%;" id="lblUsuario">Modifico</label>
+                            <input type="text" class="mainPanelContentComponents" style="width: 100%;" id="txtUsuario" />
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+            
+            <div id="Gruopbotones2" class="mainPanelDivGroup" style="width:100%;margin-top:15px;">
+                <button id="btnGuarda2" class="mainPanelContentComponents defaultButton" onclick="saveOrUpdatePER()" style="display: inline-block;">
+                    <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                    <span>Guardar</span>
+                </button>
+                <button id="btnCancelar2" class="mainPanelContentComponents defaultButton" onclick="mostrarFormaCaptura(true)" style="display: inline-block;">
+                    <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                    <span>Cancelar</span>
+                </button>
+
+
+            </div>
+        </div>
+        <div id="Gruopbotones" class="mainPanelDivGroup" style="width:100%">
+            <button id="btnGuarda" class="mainPanelContentComponents defaultButton" onclick="savePeriodosNomina()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                <span>Guardar</span>
+            </button>
+            <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="limpiar()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span>Cancelar</span>
+            </button>
+
+
+        </div>
+        <div id="myDialogo" class="modal">
+            <div class="modal-content" style="width:25%;">
+                <div class="modal-header">
+                    <!--<span class="close">&times;</span>-->
+                    <h2>Ingrese la Fecha Inicial</h2>
+                </div>
+                <div class="modal-body">
+                    <div id="DivGroupFachaBase" style="max-width: 130px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" style="width: 100%;" id="lblFechaBase">Fecha inicial</label>
+                        <input type="date" class="mainPanelContentComponents" style="width: 100%;" id="txtFechaBase" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="mainPanelContentComponents modal-defaultButton" onclick="setFechaInicial()">
+                        <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                        <span>Aceptar</span>
+                    </button>
+                    <button class="mainPanelContentComponents modal-defaultButton" onclick="">
+                        <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                        <span>Cancelar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

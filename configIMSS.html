@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Configuracion IMSS</title>
+    <meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsConfigIMSS.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div class="cTab" style="width: 100%; height: auto;" id="cTab2">
+            <div class="tab" id="tab2FcTab2"><button id="btnTab1Ftab2FcTab2" class="tablinks" onclick="openTab(event,'con2FcTab2')" idetiqueta="ConfiguracionIMSS">Configuración IMSS</button></div>
+            <div class="contain" style="width: 100%; display: block;" id="con2FcTab2">
+                <div id="row2Frow1Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow2Frow1Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 25%;">
+                        <div id="DivGroup3Fcol1Frow2Frow1Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T4Fcol1Frow2Frow1Fcon2FcTab2" idetiqueta="ConfiguracionIMSSFechaApli" class="mainPanelContentComponents" style="width: 100%;">Fecha aplicación</label>
+                            <input id="txtConfigIMSSFechaAplica" type="date" class="mainPanelContentComponents" style="width: 100%;" onchange="setDateIMSS(event);">
+                        </div>
+                    </div>
+                </div>
+                <div id="row1Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow1Fcon2FcTab2" class="mainPanelCol  col-12 bordersubtitulo" style="visibility: visible;">
+                        <div id="DivGroupT2Fcol1Frow1Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup divgruoptitulo">
+                            <label id="T2Fcol1Frow1Fcon2FcTab2" idetiqueta="ConfiguracionIMSSTasasEmpleado" class="mainPanelContentComponents"> Tasas del empleado</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="row3Fcon2FcTab2" class="mainPanelRow" style="width: 100%; margin-top:15px;">
+                    <div id="col1Frow3Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 16.6667%;">
+                        <div id="DivGroup4Fcol1Frow3Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblPrestamosEspecie" idetiqueta="ConfiguracionIMSSPrestaEspecie" class="mainPanelContentComponents" style="width: 100%;">Prestamos en especie</label>
+                            <input id="txtConfigIMSSPrestamosEspecie" type="text" class="mainPanelContentComponents" style="width: 100%;" onkeypress="return isNumberKey(event,this)">
+                        </div>
+                    </div>
+                    <div id="col2Frow3Fcon2FcTab2" class="mainPanelCol borderCol col-6" style="visibility: visible; width: 8.33333%;"></div>
+                    <div id="col3Frow3Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible;">
+                        <div id="DivGroup5Fcol3Frow3Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblExcPresEspecie" idetiqueta="ConfiguracionIMSSExcPrestEspecie" class="mainPanelContentComponents" style="width: 100%;">Exc. prest. en especie</label>
+                            <input id="txtConfigIMSSExcPresEspecie" type="text" class="mainPanelContentComponents" style="width: 100%;" onkeypress="return isNumberKey(event,this)">
+                        </div>
+                    </div>
+                </div>
+                <div id="row4Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-1" style="visibility: visible; width: 16.6667%;">
+                        <div id="DivGroup6Fcol1Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblInvalidezYVida" idetiqueta="ConfiguracionIMSSInvalidezVida" class="mainPanelContentComponents" style="width: 100%;">Invalidéz y Vida</label>
+                            <input id="txtConfigIMSSInvalidezYVida" type="text" class="mainPanelContentComponents" style="width: 100%;" onkeypress="return isNumberKey(event,this)">
+                        </div>
+                    </div>
+                    <div id="col2Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-1" style="visibility: visible;"></div>
+                    <div id="col3Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible;">
+                        <div id="DivGroup7Fcol3Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblPrestEnDinero" idetiqueta="ConfiguracionIMSSPrestDinero" class="mainPanelContentComponents" style="width: 100%;">Prest. en dinero</label>
+                            <input id="txtConfigIMSSPrestEnDinero" type="text" class="mainPanelContentComponents" style="width: 100%;" onkeypress="return isNumberKey(event,this)">
+                        </div>
+                    </div>
+                </div>
+                <div id="row5Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow5Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible;">
+                        <div id="DivGroup13Fcol1Frow5Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblCensatiaVejez" idetiqueta="ConfiguracionIMSSCensatiaVejez" class="mainPanelContentComponents" style="width: 100%;">Censatía y Vejez</label>
+                            <input id="txtConfigIMSSCensatiaVejez" type="text" class="mainPanelContentComponents" style="width: 100%;" onkeypress="return isNumberKey(event,this)">
+                        </div>
+                    </div>
+                    <div id="col2Frow5Fcon2FcTab2" class="mainPanelCol borderCol col-1" style="visibility: visible;"></div>
+                    <div id="col3Frow5Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible;">
+                        <div id="DivGroup9Fcol3Frow5Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblGastosPensio"  idetiqueta="ConfiguracionIMSSGastoPens" class="mainPanelContentComponents" style="width: 100%;">Gastos pensionados</label>
+                            <input id="txtConfigIMSSGastosPensio" type="text" class="mainPanelContentComponents" style="width: 100%;" onkeypress="return isNumberKey(event,this)">
+                        </div>
+                    </div>
+                </div>
+                <div id="row6Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol  col-12 bordersubtitulo" style="visibility: visible;">
+                        <div id="DivGroupT13Fcol1Frow6Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup divgruoptitulo">
+                            <label id="T13Fcol1Frow6Fcon2FcTab2" idetiqueta="ConfiguracionIMSSTopesSalario" class="mainPanelContentComponents">Topes de salario</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="row7Fcon2FcTab2" class="mainPanelRow" style="width: 100%;margin-top:15px;">
+                    <div id="col1Frow7Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 16.6667%;">
+                        <div id="DivGroup12Fcol1Frow7Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblConfigIMSSEnfMat"  idetiqueta="ConfiguracionIMSSEnfMat" class="mainPanelContentComponents" style="width: 100%;">Enf. y Mat</label>
+                            <input id="txtConfigIMSSEnfMat" type="text" class="mainPanelContentComponents" style="width: 100%;" onkeypress="return isNumberKey(event,this)">
+                        </div>
+                    </div>
+                    <div id="col2Frow7Fcon2FcTab2" class="mainPanelCol borderCol col-1" style="visibility: visible;"></div>
+                    <div id="col3Frow7Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible;">
+                        <div id="DivGroupT16Fcol3Frow7Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblConfigIMSSInvaYVida" idetiqueta="ConfiguracionIMSSInvalidezVida" class="mainPanelContentComponents" style="width: 100%;">Invalidéz y Vida</label>
+                            <input id="txtConfigIMSSInvaYVida" type="text" class="mainPanelContentComponents" style="width: 100%;" onkeypress="return isNumberKey(event,this)">
+                        </div>
+                    </div>
+                </div>
+                <div id="row8Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow8Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible;">
+                        <div id="DivGroup14Fcol1Frow8Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblConfigIMSSRtGuarderia" idetiqueta="ConfiguracionIMSSRTGuarderia" class="mainPanelContentComponents" style="width: 100%;">R.T. y guardería</label>
+                            <input id="txtConfigIMSSRtGuarderia" type="text" class="mainPanelContentComponents" style="width: 100%;" onkeypress="return isNumberKey(event,this)">
+                        </div>
+                    </div>
+                    <div id="col2Frow8Fcon2FcTab2" class="mainPanelCol borderCol col-1" style="visibility: visible;"></div>
+                    <div id="col3Frow8Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible;">
+                        <div id="DivGroup15Fcol3Frow8Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblConfigIMSSRetiro" idetiqueta="ConfiguracionIMSSRetiro" class="mainPanelContentComponents" style="width: 100%;">Retiro</label>
+                            <input id="txtConfigIMSSRetiro" type="text" class="mainPanelContentComponents" style="width: 100%;" onkeypress="return isNumberKey(event,this)">
+                        </div>
+                    </div>
+                </div>
+                <div id="row9Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow9Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible;">
+                        <div id="DivGroup16Fcol1Frow9Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblConfigIMSSTopeCensatiaVejez" idetiqueta="ConfiguracionIMSSCensatiaVejez" class="mainPanelContentComponents" style="width: 100%;">Cesantía y Vejez</label>
+                            <input id="txtConfigIMSSTopeCensatiaVejez" type="text" class="mainPanelContentComponents" style="width: 100%;" onkeypress="return isNumberKey(event,this)">
+                        </div>
+                    </div>
+                    <div id="col2Frow9Fcon2FcTab2" class="mainPanelCol borderCol col-1" style="visibility: visible;"></div>
+                    <div id="col3Frow9Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible;">
+                        <div id="DivGroup17Fcol3Frow9Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblConfigIMSSInfonavit" idetiqueta="ConfiguracionIMSSInfonavit" class="mainPanelContentComponents" style="width: 100%;">Infonavit</label>
+                            <input id="txtConfigIMSSInfonavit" type="text" class="mainPanelContentComponents" style="width: 100%;" onkeypress="return isNumberKey(event,this)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="botones" class="contenedor" style="max-width: 100%; width: 100%;">
+            <button id="btnGuardar" class="mainPanelContentComponents defaultButton"  style="display: inline;" onclick="saveConfigIMSS()">
+                <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                <span idetiqueta="btnGuardar">Guardar</span>
+            </button>
+            <button id="btnActualizar" class="mainPanelContentComponents defaultButton"  style="display:none;" onclick="updateConfigIMSS()">
+                <img class="imgBoton" src="img/Iconos/editar.png" />
+                <span idetiqueta="btnActualizar">Actualizar</span>
+            </button>
+            <button id="btnEliminar" class="mainPanelContentComponents defaultButton"  style="display: none;" onclick="deleteConfigIMSS()">
+                <img class="imgBoton" clase="imgBoton" src="img/Iconos/eliminar.png" />
+                <span idetiqueta="btnEliminar">Eliminar</span>
+            </button>
+            <div id="ContenedoraBuscar" style="display: inline;">
+                <button id="btnBuscar" class="mainPanelContentComponents defaultButton"  dataEdit="selectorCnfIMSS" functEdit="selectorConfigIMSS" onclick="OpenSelector(this)" style="display: inline;">
+                    <img class="imgBoton" src="img/Iconos/buscar.png" />
+                    <span idetiqueta="btnBuscar">Buscar</span>
+                </button>
+            </div>
+            <button id="btnCancelar" class="mainPanelContentComponents defaultButton"  onclick="cancelConfigIMSS()" style="display: inline;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+        </div>
+
+    </div>
+</body>
+</html>

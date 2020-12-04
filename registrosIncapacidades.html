@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Registros de incapacidades</title>
+    <meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/funcionesRegistroIncapacidades.js"></script>
+   
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div class="contain" style="width: 100%;" id="con1">
+            <h1 id="titlecon1" class="titlecontain" cambiaridioma="true">Registro de Incapacidades</h1>
+            <div id="row2Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroup1Fcol1Frow2Fcon1" style="max-width: 100px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="RegistroIncapacidadesFolio" style="width: 100%;" id="lblFolio">Folio</label>
+                        <input type="text" class="mainPanelContentComponents" style="width: 100%;" id="txtFolio" maxlength="8">
+                    </div>
+                    <div id="DivGroupT3Fcol1Frow2Fcon1" class="mainPanelDivGroup" style="max-width: 400px;">
+                        <div class="editContainer">
+                            <label class="mainPanelContentComponents" idetiqueta="Empleados" id="lblEmpleados">Empleado</label>
+                            <div id="editEmpleados" class="edit small-large" dataedit="EditEmpleados" functedit="setEditEmpleados">
+                                <input id="search-text-input" class="editKey small" kind="filterKey" type="text" placeholder="">
+                                <input id="brief-text-input" class="editBrief large" type="text" disabled="" placeholder="">
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="row4Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow4Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 250px;">
+                    <div id="DivGroup3Fcol1Frow2Fcon1" style="max-width: 240px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="RegistroIncapacidadesRamoSeguro" style="width: 100%;" id="lblRamoSeguro">Ramo de seguro</label>
+                        <div class="select-style" style="width: 100%;">
+                            <select class="mainPanelContentComponents" style="width: 100%;" id="selRamoSeguro">
+                                <option value=""></option>
+                                <option value="1">1-Riesgo de trabajo</option>
+                                <option value="2">2-Enfermedad general</option>
+                                <option value="3">3-Maternidad</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="col2Frow4Fcon1" style="visibility: visible; width: 250px;" class="mainPanelCol borderCol col-3">
+                    <div id="DivGroupT7Fcol1Frow2Fcon1" style="max-width: 240px;margin-top: 19px;" class="mainPanelDivGroup">
+                        <div id="DivGroup4Fcol1Frow2Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                            <input type="checkbox" class="mainPanelContentComponents" id="ckbPagar3PrimerDias">
+                            <label id="T7Fcol1Frow2Fcon1" idetiqueta="RegistroIncapacidadesChkPaga3PrimeroDia" class="containerCheck" for="ckbPagar3PrimerDias">¿Pagar los 3 primeros días?</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="row5Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow5Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroup5Fcol1Frow2Fcon1" style="max-width: 240px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="RegistroIncapacidadesTipoRiesgo" style="width: 100%;" id="lblTipoRiesgo">Tipo de riesgo</label>
+                        <div class="select-style" style="width: 100%;">
+                            <select class="mainPanelContentComponents" style="width: 100%;" id="selTipoRiesgo">
+                                <option value=""></option>
+                                <option value="1">1-Accidente de trabajo</option>
+                                <option value="2">2-Accidente de trayecto</option>
+                                <option value="3">3-Enfermedad profesional</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="DivGroup6Fcol1Frow2Fcon1" style="max-width: 240px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="RegistroIncapacidadesSecuelConse" style="width: 100%;" id="lblSecuelaConsecuencia">Secuela o consecuencia</label>
+                        <div class="select-style" style="width: 100%;">
+                            <select class="mainPanelContentComponents" style="width: 100%;" id="selSecuelaConsecuencia">
+                                <option value=""></option>
+                                <option value="0">0-Ninguno</option>
+                                <option value="1">1-Incapacidad temporal</option>
+                                <option value="2">2-Valuacion inicial provisional</option>
+                                <option value="3">3-Valuacion inicial definitiva</option>
+                                <option value="4">4-Defunción</option>
+                                <option value="5">5-Recaida</option>
+                                <option value="6">6-Valuacion post a la fecha de alta</option>
+                                <option value="7">7-Revaluacion provisional</option>
+                                <option value="8">8-Recaída sin alta medica</option>
+                                <option value="9">9-Revaluación definitiva</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="DivGroup7Fcol1Frow2Fcon1" style="max-width: 240px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="RegistroIncapacidadesCtrlIncap" style="width: 100%;" id="lblControlIncapacidad">Control de incapacidad</label>
+                        <div class="select-style" style="width: 100%;">
+                            <select class="mainPanelContentComponents" style="width: 100%;" id="selControlIncapacidad">
+                                <option value=""></option>
+                                <option value="0">0-Ninguno</option>
+                                <option value="1">1-Única</option>
+                                <option value="2">2-Inicial</option>
+                                <option value="3">3-Subsecuente</option>
+                                <option value="4">4-Alta médica o ST2</option>
+                                <option value="5">5-Valuación o ST3</option>
+                                <option value="6">6-Defunción o ST3</option>
+                                <option value="7">7-Prenatal</option>
+                                <option value="8">8-Enlace</option>
+                                <option value="9">9-Postnatal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="DivGroupT10Fcol1Frow2Fcon1" class="mainPanelDivGroup" style="max-width: 300px;">
+                        <div class="editContainer">
+                            <label id="lblIncapacidadRevalua" idetiqueta="RegistroIncapacidadesIncapRevaluar" class="mainPanelContentComponents">Incapacidad que revalua</label>
+                            <div id="editIncapacidad" class="edit medium-large" dataedit="EditIncapacidad" functedit="setEditIncapacidad">
+                                <input id="search-text-input" class="editKey medium" kind="filterKey" type="text" placeholder="">
+                                <input id="brief-text-input" class="editBrief large" type="text" disabled="" placeholder="">
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="row6Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow6Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 150px;margin-left: 0.5%;">
+                    <div id="DivGroup9Fcol1Frow2Fcon1" style="max-width: 130px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="RegistroIncapacidadesFechaInical" style="width: 100%;" id="lblFechaInicio">Fecha Inicial</label>
+                        <input type="date" class="mainPanelContentComponents" style="width: 100%;" id="dpFechaInicio">
+                    </div>
+
+                </div>
+                <div id="col2Frow6Fcon1" class="mainPanelCol borderCol col-2" style="visibility: visible;width: 170px">
+                    <div id="DivGroup10Fcol1Frow2Fcon1" style="max-width: 150px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="RegistroIncapacidadesDiasIncap" style="width: 100%;" id="lblDiasIncapacidad">Dias de incapacidad</label>
+                        <input type="text" class="mainPanelContentComponents" style="width: 50%;" id="txtDiasIncapacidad">
+                    </div>
+                </div>
+                <div id="col3Frow6Fcon1" style="visibility: visible;width: 150px" class="mainPanelCol borderCol col-2 ">
+                    <div id="DivGroup11Fcol1Frow2Fcon1" style="max-width: 130px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="RegistroIncapacidadesFechaTermino" style="width: 100%;" id="lblFechaFInal">Fecha Termino</label>
+                        <input type="date" class="mainPanelContentComponents" style="width: 100%;" id="dpFechaFinal">
+                    </div>
+                </div>
+            </div>
+            <div id="row7Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow7Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupPorcentaje" style="max-width: 100px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="Empleados" style="width: 100%;" id="lblPorcentaje">Porcentaje</label>
+                        <input type="text" class="mainPanelContentComponents" style="width: 100%;" id="txtPorcentaje">
+                    </div>
+                    <div id="DivGroupT15Fcol1Frow2Fcon1" style="max-width: 200px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="RegistroIncapacidadesHisIncapa" style="width: 100%;" id="lblHistorial">Historial de Incapacidades</label>
+                    </div>
+                    <div id="contTable" class="divTable" functEdit="editTableHistorialIncapacidad" style="width: 100%;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Gruopbotones" class="mainPanelDivGroup" style="width:100%">
+            <button id="btnGuarda" class="mainPanelContentComponents defaultButton" onclick="saveRegIncap()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/aceptar.png"/>
+                <span idetiqueta="btnGuardar">Guardar</span>
+            </button>
+            <button id="btnActualizar" class="mainPanelContentComponents defaultButton" onclick="updateRegIncap()" style="display: none;">
+                <img class="imgBoton" src="img/Iconos/editar.png" />
+                <span idetiqueta="btnActualizar">Actualizar</span>
+            </button>
+            <button id="btnEliminar" class="mainPanelContentComponents defaultButton" onclick="deleteRegIncap()" style="display:none;">
+                <img class="imgBoton" clase="imgBoton" src="img/Iconos/eliminar.png" />
+                <span idetiqueta="btnEliminar">Eliminar</span>
+            </button>
+            <div id="ContenedoraBuscar" style="display: inline;">
+                <button id="btnBuscarRegistrarIncap" class="mainPanelContentComponents defaultButton"  dataEdit="selectorCatalogoRegistrarIncap" functEdit="selectorRegistrarIncap" onclick="OpenSelector(this)" style="display: inline;">
+                    <img class="imgBoton" src="img/Iconos/buscar.png" />
+                    <span idetiqueta="btnBuscar">Buscar</span>
+                </button>
+            </div>
+            <button id="btnLimpiar" class="mainPanelContentComponents defaultButton" onclick="limpiarIcapacidades()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

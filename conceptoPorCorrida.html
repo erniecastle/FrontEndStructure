@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Concepto Por Corrida</title>
+    <link href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script class="AD" type="text/javascript" src="js/funcionesConcepPorCorrida.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div id="content" class="contentTitle">
+            <h2 class="subTitle">Concepto Por Corrida</h2>
+        </div>
+        <div id="con1" class="contain" style="width:100%">
+            <div id="row1Fcon1" class="mainPanelRow" style="width:100%">
+                <div id="col1row1Fcon1" class="mainPanelCol" style="width:100%">
+                    <div id="DivGroupTipoCorrida" class="mainPanelDivGroup" style="width:340px">
+                        <label id="lblTipoCorrida" idetiqueta="TipoCorrida" class="mainPanelContentComponents">Tipo Corrida</label>
+                        <div id="editTipoCorrida" class="edit small-medium" dataedit="EditTipoCorrida" functedit="setEditTipoCorrida">
+                            <input id="S1FT3Fcol1Frow1Fcon2FcTab2" class="editKey small" type="text" source="4" kind="filterKey" required="true" persist="TipoCorrida" maxlength="undefined" pattern="undefined" />
+                            <input id="B1FT3Fcol1Frow1Fcon2FcTab2" class="editBrief medium" type="text" disabled="" />
+                            <button id="BU1FT3Fcol1Frow1Fcon2FcTab2" class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/colores/puntos.png" /></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="row2Fcon1" class="mainPanelRow" style="width:100%;margin-top: 20px;">
+                <div id="col1row2Fcon1" class="mainPanelCol" style="width:100%">
+
+                    <div class="divTable" style="width: 100%;">
+                        <div class="modalEdit-filters">
+                            <!--  <button id="btnModificarPER" class="mainPanelContentComponents defaultButton right" onclick="ConstruirModificarPer()" style="float: right;margin-top: 20px;">Modificar</button>-->
+                            <button id="btnAgregarConcep" class="mainPanelContentComponents defaultButton" onclick="mostrarCaptura(true)">
+                                <img class="imgBoton" src="img/Iconos/nuevo.png">
+                                <span idetiqueta="btnAgregar">Agregar</span>
+                            </button>
+                        </div>
+                        <div id="ConceptosPorCorrida" class="divTable" dataTbl="ConceptosPorCorrida" paginado="true" functEdit="editTableConceptosPorCorrida" style="width: 100%;">
+
+                        </div>
+                    </div>
+                    <div id="DivGroupBotonesSel" class="mainPanelDivGroup" style="width:100%;margin-top: 20px;">
+                        <button id="btnGuardar" class="mainPanelContentComponents defaultButton" onclick="guardar()" style="display:inline-block">
+                            <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                            <span idetiqueta="btnGuardar">Guardar</span>
+                        </button>
+                        <button id="btnCancelar" class="mainPanelContentComponents defaultButton" style="display:inline-block">
+                            <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                            <span idetiqueta="btnCancelar">Cancelar</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="con2" class="contain" style="width:100%; display:none">
+            <div id="row1Fcon2" class="mainPanelRow" style="width:100%">
+                <div id="col1row1Fcon2" class="mainPanelCol" style="width:100%">
+                    <div id="DivGroupTipoCorridaCap" class="mainPanelDivGroup" style="width:350px;">
+                        <label id="lblTipoCorridaCap" idetiqueta="TipoCorrida" class="mainPanelContentComponents">Tipo Corrida</label>
+                        <div id="editTipoCorridaDet" class="edit small-medium" dataedit="EditTipoCorridaDet" functedit="setEditTipoCorridaDet">
+                            <input id="S1FT3Fcol1Frow1Fcon2FcTab2" class="editKey small" type="text" source="4" kind="filterKey" persist="TipoCorrida"   />
+                            <input id="B1FT3Fcol1Frow1Fcon2FcTab2" class="editBrief medium" type="text" disabled="" />
+                            <button id="BU1FT3Fcol1Frow1Fcon2FcTab2" class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/colores/puntos.png" /></button>
+                        </div>
+                    </div>
+                    <div id="DivGroupConceptoNomina" class="mainPanelDivGroup" style="width:450px">
+                        <label id="lblConceptoNomina" idetiqueta="TipoNomina" class="mainPanelContentComponents">Concepto nomina</label>
+                        <div id="editConcepNomina" class="edit medium-large" dataedit="EditConcepNomina" functedit="setEditConcepNomina">
+                            <input id="search-text-input" class="editKey medium" type="text" kind="filterKey" placeholder="">
+                            <input id="brief-text-input" class="editBrief large" type="text" placeholder="" disabled="">
+                            <button id="btnBuscar" class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                        </div>
+                    </div>
+                    <div id="DivGroupConcepDescripcion" class="mainPanelDivGroup" style="width:300px;">
+                        <label id="lblConceptoDescripcion"  idetiqueta="ConceptoXTipoCorridaConceptoDescripcion" class="mainPanelContentComponents">Concepto descripcion</label>
+                        <input id="txtConceptoDescripcion" class="mainPanelContentComponents" type="text" style="width:100%" disabled />
+                    </div>
+
+                    <div id="DivGroupOpcional" class="mainPanelDivGroup" style="width:100%">
+                        <input id="chkOpcional" class="mainPanelContentComponents" type="checkbox" style="display: none;" />
+                        <label id="chkOpcional" idetiqueta="ConceptoXTipoCorridaOpcional" for="chkOpcional" class="containerCheck">
+                            Opcional
+                        </label>
+                    </div>
+                    <div id="DivGroupMostar" class="mainPanelDivGroup" style="width:100%">
+                        <input id="chkMostrar" class="mainPanelContentComponents" type="checkbox" style="display:none;" />
+                        <label id="chkMostrar" idetiqueta="ConceptoXTipoCorridaMostrar" for="chkMostrar" class="containerCheck">Mostrar</label>
+                    </div>
+                    <div id="DivGroupModificarImporte" class="mainPanelDivGroup" style="width:100%">
+                        <input id="chkModificarImporte" class="mainPanelContentComponents" type="checkbox" style="display:none;" />
+                        <label id="chkModificarImporte" idetiqueta="ConceptoXTipoCorridaModificarImporte" for="chkModificarImporte" class="containerCheck">Modificar Importe</label>
+                    </div>
+                    <div id="DivGroupModificarCantidad" class="mainPanelDivGroup" style="width:100%">
+                        <input id="chkModificarCantidad" class="mainPanelContentComponents" type="checkbox" style="display:none;" />
+                        <label id="chkModificarCantidad" idetiqueta="ConceptoXTipoCorridaModificarCantidad" for="chkModificarCantidad" class="containerCheck">Modificar Cantidad</label>
+                    </div>
+                    <div id="DivGroupIncluir" class="mainPanelDivGroup" style="width:100%">
+                        <input id="chkIncluir" class="mainPanelContentComponents" type="checkbox" style="display:none;" />
+                        <label id="chkIncluir" idetiqueta="ConceptoXTipoCorridaIncluir" for="chkIncluir" class="containerCheck">Incluir</label>
+                    </div>
+                    <div id="DivGroupCantidad" class="mainPanelDivGroup" style="width:200px;">
+                        <label id="lblCantidad" idetiqueta="ConceptoxTipoCorridaCantidad" class="mainPanelContentComponents">Cantidad</label>
+                        <input id="txtCantidad"  class="mainPanelContentComponents" type="text" style="width:100%" />
+                    </div>
+                    <div id="DivGroupDescuento" class="mainPanelDivGroup" style="width:330px">
+                        <label id="lblDescuento" idetiqueta="ConceptoXTipoCorridaDecuento" class="mainPanelContentComponents">Decuento</label>
+                        <div class="select-style" style="width:100%">
+                            <select id="selDescuento" name="selDescuento">
+                                <option value=""></option>
+                                <option value="1">No descontar</option>
+                                <option value="2">Descontar solo en el periodo Correspondiente</option>
+                                <option value="3">Descontar solo en el mes correspondiente</option>
+                                <option value="4">Descontar saldo actual</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="DivGroupBotonesCap" class="mainPanelDivGroup" style="width:100%">
+                        <button id="btnAceptar" class="mainPanelContentComponents defaultButton" onclick="addConcepto()" style="display:inline-block">
+                            <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                            <span idetiqueta="btnAceptar">Aceptar</span>
+                        </button>
+                        <button id="btnCancelarCap" class="mainPanelContentComponents defaultButton" onclick="mostrarCaptura(false)" style="display:inline-block">
+                            <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                            <span idetiqueta="btnCancelar">Cancelar</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

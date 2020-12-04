@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Configuracion de Masacaras</title>
+    <script class="AD" type="text/javascript" src="js/funcionesConfigMascara.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div class="contain" style="width: 100%;" id="con1">
+            <h1 id="titlecon1" class="titlecontain" cambiaridioma="true">Configuracion de mascara</h1>
+            <div id="row2Fcon1" class="mainPanelRow" style="width: 100%;display:none">
+                <div id="col1Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroup1Fcol1Frow2Fcon1" style="max-width: 120px;" class="mainPanelDivGroup">
+                        <label id="lblCaracterReempleazo" class="mainPanelContentComponents" style="width: 100%;">Carac. reemplazo</label>
+                        <input id="txtCaracterReempleazo" type="text" class="mainPanelContentComponents" style="width: 40%;" />
+                    </div>
+                </div>
+            </div>
+            <div id="row3Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="contTable" class="divTable" dataTbl="contTable" paginado="true" functedit="editConfigMascaras" style="width: 100%;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Gruopbotones" class="mainPanelDivGroup" style="width:100%">
+            <button id="btnGuarda" class="mainPanelContentComponents defaultButton" onclick="saveConfigMascara()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                <span>Guardar</span>
+            </button>
+            <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="cancelar()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span>Cancelar</span>
+            </button>
+            <!-- <button id="btnAgregarMov" class="mainPanelContentComponents defaultButton" onclick="agregarMov()" style="display: none;">Agregar</button>
+         <button id="btnLimpiar" class="mainPanelContentComponents defaultButton" onclick="limpiar()" style="display: none">Volver</button>
+         <button id="btnSalir" class="mainPanelContentComponents defaultButton" onclick="salir()" style="display: inline-block;">Salir</button>-->
+        </div>
+    </div>
+</body>
+</html>

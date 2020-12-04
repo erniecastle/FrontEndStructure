@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Envío de correo</title>
+    <meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsEditor.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsPerCorreo.js"></script>
+    
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div id="content" class="contentTitle">
+            <h2 class="subTitle">Personalización de correo</h2>
+        </div>
+        <div class="contain" style="width: 100%; display: block;" id="con2FcTab2">
+            <div id="row1Fcon3FcTab2" class="mainPanelRow" style="width: 100%;">
+              
+                <div id="col2Frow1Fcon3FcTab2" class="mainPanelCol borderCol col-9" style="visibility: visible;">
+                    <div id="DivGroup16Fcol2Frow1Fcon3FcTab2" style="max-width: 300px;" class="mainPanelDivGroup">
+                        <label id="lblTipoArchivo" idetiqueta="PerCorreoTipoArchivo" class="mainPanelContentComponents" style="width: 100%;">Tipo de archivo</label>
+                        <div class="select-style" style="width: 100%;">
+                            <select id="cbxPerMailTipoArchivo" class="mainPanelContentComponents" onchange="setTypeFilePer(this);" style="width: 100%;">
+                                <option value=""></option>
+                                <option value="1">Comprobante de nómina</option>
+                                <option value="2">XML</option>
+                                <option value="3">PDF</option>
+                                <option value="4">Otro</option>
+                                <option value="5">Acuse</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="row2Fcon3FcTab2" class="mainPanelRow" style="width: 100%;">
+             
+                <div id="col2Frow2Fcon3FcTab2" class="mainPanelCol borderCol col-9" style="visibility: visible;">
+                    <div id="DivGroup18Fcol2Frow2Fcon3FcTab2" style="max-width: 500px;" class="mainPanelDivGroup">
+                        <label id="T19Fcol1Frow2Fcon3FcTab2" idetiqueta="PerCorreoAsunto" class="mainPanelContentComponents" style="width: 100%;">Asunto</label>
+                        <input id="txtPerMailAsunto" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+            <div id="row3Fcon3FcTab2" class="mainPanelRow" style="width: 100%;margin-top:15px;">
+                <div id="col1Frow3Fcon3FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 100%;">
+                    <div id="DivGroupT21Fcol1Frow3Fcon3FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <!--<label id="T21Fcol1Frow3Fcon3FcTab2" class="mainPanelContentComponents" style="width: 100%;">2do. Componente de edición (Desarrollo)</label>-->
+                        <textarea id="txtPerMailTexto" name="textarea" rows="10" cols="78"></textarea>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="botones" class="contenedor" style="max-width: 100%; width: 100%;">
+            <button id="btnGuardar" class="mainPanelContentComponents defaultButton"  style="display: inline;" onclick="savePerMail()">
+                <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                <span idetiqueta="btnGuardar">Guardar</span>
+            </button>
+            <button id="btnCancelar" class="mainPanelContentComponents defaultButton"  onclick="cancelPerMail()" style="display: inline;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+        </div>
+
+    </div>
+</body>
+</html>
+

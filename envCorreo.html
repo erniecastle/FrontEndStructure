@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Envío de correo</title>
+    <meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsEnvCorreo.js"></script>
+</head>
+
+<body>
+    <div id="mainContent" class="mainContents">
+        <div id="content" class="contentTitle">
+            <h2 class="subTitle">Envío de correo</h2>
+        </div>
+
+        <div class="contain" style="width: 100%; display: block;" id="con4FcTab2">
+            <div id="row1Fcon4FcTab2" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow1Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 400px;">
+                    <div id="DivGroupT22Fcol1Frow1Fcon4FcTab2" style="max-width: 300px;" class="mainPanelDivGroup">
+                        <label id="T22Fcol1Frow1Fcon4FcTab2" class="mainPanelContentComponents" style="width: 100%;">Tipo de archivo</label>
+                        <div class="select-style" style="width: 100%;">
+                            <select id="cbxEnvMailTipoArchivo" class="mainPanelContentComponents" style="width: 100%;" onchange="setTypeFile(this);"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="rowFile" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow3Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 400px;">
+                    <div id="DivGroupT24Fcol1Frow3Fcon4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="T24Fcol1Frow3Fcon4FcTab2" class="mainPanelContentComponents" style="width: 100%;">Archivo</label>
+                        <div id="DivGroupArchivo" class="mainPanelDivGroup">
+                            <label id="selectorFile" class="file" style="">
+                                <input id="fileTable" class="inputFile" type="file">
+                                <span class="file-custom" filetitle="Buscar">
+                                    <a class="file-watch" href="" target="_blank">
+                                    </a>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rowTipoCorrida" class="mainPanelRow" style="width: 100%;">
+
+                <!-- Pendiente ya esta listo su selector
+                    <div id="col2Frow10Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupT31Fcol1Frow10Fcon4FcTab2" class="mainPanelDivGroup">
+                        <label id="lblTipoDeCorrida" idetiqueta="TipoCorrida" class="mainPanelContentComponents" style="width: 100%;">Tipo de corrida</label>
+                        <div class="editContainer">
+                            <div id="editEnvMailTipoCorrida" class="edit small-medium" dataedit="editEnvMailTipoCorrida" functedit="setEditEnvMailTipoCorrida">
+                                <input id="txtEditEnvMailTipoCorrida" class="editKey small" kind="filterKey" type="text">
+                                <input id="txtEditEnvMail" class="editBrief medium" type="text" disabled="">
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
+
+                <div id="col2Frow10Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 350px;">
+                    <div id="DivGroupT31Fcol1Frow10Fcon4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="T31Fcol1Frow10Fcon4FcTab2" class="mainPanelContentComponents" style="width: 100%;">Tipo de corrida</label>
+                        <div class="select-style" style="width: 100%;">
+                            <select id="cbxEnvMailTipoCorrida" class="mainPanelContentComponents" style="width: 100%;"></select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="divTipoNom">
+
+
+            </div>
+
+            <div id="divTipNomOr">
+                <!--<div id="rowEnvMailTipoNomina" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow4Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 15%;">
+                        <div id="DivGroupT25Fcol1Frow4Fcon4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblTipoNomina" class="mainPanelContentComponents" style="width: 100%;">Tipo de nomina</label>
+                        </div>
+                    </div>
+                    <div id="col2Frow4Fcon4FcTab2" class="mainPanelCol borderCol col-9" style="visibility: visible;">
+                        <div id="DivGroupTipoNomina" class="mainPanelDivGroup" style="width: 400px;">
+                            <div class="editContainer">
+                                <div id="editEnvMailTipoNom" class="edit" dataedit="editEnvMailTipoNom" functedit="setEditEnvMailTipoNom">
+                                    <input id="txtEditMailTipoNom" class="editKey" kind="filterKey" type="text">
+                                    <input id="txtEditMailTipoNom" class="editBrief" type="text" disabled="">
+                                    <button class="editButton" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+
+            <div id="row5Fcon4FcTab2" class="mainPanelRow" style="width: 100%;">
+
+                <!--<div id="col1Frow5Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 15%;">
+                    <div id="DivGroupT26Fcol1Frow5Fcon4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+
+                    </div>
+                </div>-->
+
+                <div id="col2Frow5Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupPeriodo" class="mainPanelDivGroup">
+                        <label id="T26Fcol1Frow5Fcon4FcTab2" idetiqueta="PeriodosNomina" class="mainPanelContentComponents" style="width: 100%;">Periodo</label>
+                        <div class="editContainer">
+                            <div id="editEnvMailPeriodo" class="edit small-extralarge" dataedit="editEnvMailPeriodo" functedit="setEditEnvMailPeriodos">
+                                <input id="txtEditMailPeriodo" class="editKey small" kind="filterKey" type="text">
+                                <input id="txtEditMailPeriodo" class="editBrief extralarge" type="text" disabled="">
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="row6Fcon4FcTab2" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow6Fcon4FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 135px;">
+                    <div id="DivGroupT27Fcol1Frow6Fcon4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="T27Fcol1Frow6Fcon4FcTab2" class="mainPanelContentComponents" style="width: 100%;">De la fecha</label>
+                        <input id="txtDeFecha" type="date" class="mainPanelContentComponents" style="width: 100%;" disabled="">
+                    </div>
+                </div>
+                <div id="col3Frow6Fcon4FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 145px;">
+                    <div id="DivGroupT35Fcol3Frow6Fcon4FcTab2" style="max-width: 100%; margin-left:10px;" class="mainPanelDivGroup">
+                        <label id="T35Fcol3Frow6Fcon4FcTab2" class="mainPanelContentComponents" style="width: 100%;"> A la fecha</label>
+                        <input id="txtAFecha" type="date" class="mainPanelContentComponents" style="width: 100%;" disabled="">
+                    </div>
+                </div>
+            </div>
+
+            <!--Row de registro patronal-->
+            <div id="divRegistroPatronal" style="margin-top:20px;">
+
+
+            </div>
+
+            <div id="rowSerie" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow2Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupSerie" class="mainPanelDivGroup">
+                        <label id="T33Fcol1Frow2Fcon4FcTab2" idetiqueta="Serie" class="mainPanelContentComponents" style="width: 100%;">Serie</label>
+                        <div class="editContainer">
+                            <div id="editEnvMailSerie" class="edit small-small" dataedit="editEnvMailSerie" functedit="setEditEnvMailSerie">
+                                <input id="txtEditMailSerie" class="editKey small" kind="filterKey" type="text">
+                                <input id="txtEditMailSerie" class="editBrief small" type="text" disabled="">
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="row7Fcon4FcTab2" class="mainPanelRow" style="width: 100%; margin-top:20px;">
+                <div id="col1Frow7Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupCentroCostos" class="mainPanelDivGroup">
+                        <label id="T28Fcol1Frow7Fcon4FcTab2" idetiqueta="CentroDeCosto" class="mainPanelContentComponents" style="width: 100%;">Centro de costos</label>
+                        <div class="editContainer">
+                            <div id="editEnvMailCentroCostos" class="edit medium-large" dataedit="editEnvMailCentroCostos" functedit="setEditEnvMailCentroCostos">
+                                <input id="txtEditMailCentroCostos" class="editKey medium" kind="filterKey" type="text">
+                                <input id="txtEditMailCentroCostos" class="editBrief large" type="text" disabled="">
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="row8Fcon4FcTab2" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow8Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <label id="T29Fcol1Frow8Fcon4FcTab2" idetiqueta="EmpleadoIni" class="mainPanelContentComponents" style="width: 100%;">Del empleado</label>
+                    <div id="DivGroupDelEmpleado" class="mainPanelDivGroup">
+                        <div class="editContainer">
+                            <div id="editEnvMailDelEmpleados" class="edit small-large" dataedit="editEnvMailDelEmpleados" functedit="setEditEnvMailDelEmpleados">
+                                <input id="txtEditMailDelEmpleado" class="editKey small" kind="filterKey" type="text">
+                                <input id="txtEditMailDelEmpleado" class="editBrief large" type="text" disabled="">
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="row9Fcon4FcTab2" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow9Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupAlEmpleado" class="mainPanelDivGroup">
+                        <label id="T30Fcol1Frow9Fcon4FcTab2" idetiqueta="EmpleadoFin" class="mainPanelContentComponents" style="width: 100%;">Al empleado</label>
+                        <div class="editContainer">
+                            <div id="editEnvMailAlEmpleados" class="edit small-large" dataedit="editEnvMailAlEmpleados" functedit="setEditEnvMailAlEmpleados">
+                                <input id="txtEditMailAlEmpleado" class="editKey small" kind="filterKey" type="text">
+                                <input id="txtEditMailAlEmpleado" class="editBrief large" type="text" disabled="">
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rowStatus" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow10Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroup34Fcol2Frow10Fcon4FcTab2" style="max-width: 200px;" class="mainPanelDivGroup">
+                        <label id="T31Fcol1Frow10Fcon4FcTab2" class="mainPanelContentComponents" style="width: 100%;">Status</label>
+                        <div class="select-style" style="width: 100%;">
+                            <select id="cbxEnvMailStatus" class="mainPanelContentComponents" style="width: 100%;"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="row11Fcon4FcTab2" class="mainPanelRow" style="width: 100%; margin-top:15px;">
+                <div id="col1Frow15Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="col1Frow2Fcon3FcTab2" class="mainPanelCol borderCol col-12" style="visibility:visible;">
+                        <div id="tblFiltroEmpleados" class="divTable" datatbl="tblFiltroEmpleados" functedit="editTableFiltroEmpleados" paginado="true" style="width: 100%;"> </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Ejemplos Edit-->
+            <!--End Edit-->
+
+
+        </div>
+
+        <div id="botones" class="contenedor" style="max-width: 100%; width: 70%;">
+            <button id="btnEnviar" class="mainPanelContentComponents defaultButton"  style="display: inline; float:right;" onclick="sendMasive()">
+                <img class="imgBoton" src="img/Iconos/listado.png" />
+                <span idetiqueta="btnEnviar">Enviar</span>
+            </button>
+            <button id="btnGuardar" class="mainPanelContentComponents defaultButton"  style="display: inline; float:right;" onclick="callListener()">
+                <img class="imgBoton" src="img/Iconos/buscar.png" />
+                <span idetiqueta="btnBuscar">Buscar</span>
+            </button>
+        </div>
+
+    </div>
+</body>
+</html>
+
+

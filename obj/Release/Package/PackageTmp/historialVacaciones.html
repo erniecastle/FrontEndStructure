@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Historial Vacaciones</title>
+    <script class="AD" type="text/javascript" src="js/funcionesHistorialVacaciones.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div class="contain" style="width: 100%;" id="con1">
+            <h1 id="titlecon1" class="titlecontain" cambiaridioma="true">Historial Vacaciones</h1>
+            <div id="row2Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupT2Fcol1Frow2Fcon1" class="mainPanelDivGroup" style="max-width: 420px;">
+                        <div id="T2Fcol1Frow2Fcon1" class="editContainer">
+                            <label id="lblEmpleados" idetiqueta="Empleados" class="mainPanelContentComponents">Empleado</label>
+                            <div id="editEmpleado" class="edit small-large" dataedit="EditEmpleado" functedit="setEditEmpleado">
+                                <input id="search-text-input" class="editKey small" type="text" kind="filterKey" placeholder="">
+                                <input id="brief-text-input" class="editBrief large" type="text" placeholder="" disabled="">
+                                <button id="btnBuscar" class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="DivGroupT3Fcol1Frow2Fcon1" style="max-width: 150px; margin-left:3px;" class="mainPanelDivGroup">
+                        <label id="lblFechaIngreso" idetiqueta="CatalogoHisVacacionesFecIngrEmp" class="mainPanelContentComponents" style="width: 100%;">Fecha ingreso empleado</label>
+                        <input id="dpkFechaIngreso" type="date" class="mainPanelContentComponents" style="width: 100%;" disabled />
+                    </div>
+                </div>
+            </div>
+            <div id="row3Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 19%;">
+                    <div id="DivGroup2Fcol1Frow3Fcon1" style="max-width: 150px; margin-left:3px;" class="mainPanelDivGroup">
+                        <label id="lblFechaDesde" idetiqueta="CatalogoHisVacacionesFechaDesde" class="mainPanelContentComponents" style="width: 100%;">Fecha desde</label>
+                        <input id="dpkFechaDesde" type="date" class="mainPanelContentComponents" style="width: 100%;" />
+                    </div>
+                </div>
+                <div id="col2Frow3Fcon1" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 13%;">
+                    <div id="DivGroup3Fcol2Frow3Fcon1" style="max-width: 100px; margin-top: 18px;" class="mainPanelDivGroup">
+                        <button id="btnGenerar" idetiqueta="btnGenerar" class="mainPanelContentComponents defaultButton" style="width: 100%; " onclick="btnInicializaVac()">Generar</button>
+                    </div>
+                </div>
+            </div>
+            <div id="row4Fcon1" class="mainPanelRow" style="width: 100%;margin-top: 20px;">
+                <div id="col1Frow4Fcon1" class="mainPanelCol borderCol col-3 " style="visibility: visible; width: 100%;">
+                    <div id="contTable" class="divTable" dataTbl="contTable" paginado="true" functedit="editVacaciones" style="width: 100%;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Gruopbotones" class="mainPanelDivGroup" style="width:100%">
+            <button id="btnGuarda" class="mainPanelContentComponents defaultButton" onclick="saveVacaciones()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                <span idetiqueta="btnGuardar">Guardar</span>
+            </button>
+            <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="cancelar()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+           <!-- <button id="btnAgregarMov" class="mainPanelContentComponents defaultButton" onclick="agregarMov()" style="display: none;">Agregar</button>
+            <button id="btnLimpiar" class="mainPanelContentComponents defaultButton" onclick="limpiar()" style="display: none">Volver</button>
+            <button id="btnSalir" class="mainPanelContentComponents defaultButton" onclick="salir()" style="display: inline-block;">Salir</button>-->
+        </div>
+    </div>
+</body>
+</html>

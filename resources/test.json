@@ -1,0 +1,36 @@
+﻿{
+  "TipoNomina": {
+    "nameColsObl": [
+      "Clave",
+      "Descripcion",
+      "Periodicidad"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion", "periodicidad.descripcion" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "clave", "descripcion", "periodicidad.descripcion" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [ "periodicidad" ],
+    "subEntitiesFull": [],
+    "camposWhere": [],
+    "camposValor": []
+  },
+
+  "PeriodosNomina": {
+    "nameColsObl": [
+      "No. periodo",
+      "Descripcion",
+      "Año"
+    ],
+    "nameColsFull": [],
+    "camposObl": [ "clave", "descripcion", "aññññññño" ],
+    "camposFull": [],
+    "camposObtenerObl": [ "clave", "descripcion", "año", "fechaAsistenciInicial", "fechaAsistenciaFinal", "status" ],
+    "camposObtenerFull": [],
+    "subEntitiesObl": [ "tipoNomina" ],
+    "subEntitiesFull": [],
+    "camposWhere": [ "tipoNomina.id" ],
+    "camposValor": ["TipoNomina"]
+  }
+
+}

@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Difinir Parametros</title>
+    <meta charset="utf-8" />
+    <link href="css/stylepreview.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script> 
+    <script type="text/javascript" src="js/functionsDefinirParametros.js"></script> 
+</head>
+<body>
+    <div id="container" class="contenedor">
+        <div id="content" class="contentTitle">
+            <h2 class="subTitle">Difinir Parametros</h2>
+        </div>
+        <div id="slectorCapturas">
+            <div id="con1" class="contain" style="width:100%">
+                <div id="row1Fcon1" class="mainPanelRow" style="width:100%">
+                    <div id="col1row1Fcon1" class="mainPanelCol" style="width:100%">
+                        <div id="DivGroupClasificacion" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblClasificacion" class="mainPanelContentComponents">Clasificación</label>
+                            <div class="select-style" style="width:100%">
+                                <select id="selClasificacion" name="Clasificacion" onchange="buscarPorClasificacion(this.value)">
+                                    <option value=""></option>
+                                    <option value="0">Global</option>
+                                    <option value="1">Horarios y turnos</option>
+                                    <option value="2">Calculo</option>
+                                    <option value="3">ISR</option>
+                                    <option value="4">IMSS</option>
+                                    <option value="5">Sueldos</option>
+                                    <option value="6">Prestaciones</option>
+                                    <option value="7">Información nominal</option>
+                                    <option value="8">Movimientos</option>
+                                    <option value="9">Conceptos</option>
+                                    <option value="10">Reportes</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button class="mainPanelContentComponents  defaultButton right" onclick="mostrarCaptura()" style="float:right;margin-top:20px;">Agregar</button>
+                        <nav id="containerPag">
+                            <ul id="listPag" class="pagination">
+                                <li><a href="#" onclick="previous()" class="first_link">◀</a></li>
+                                <li><a href="#" onclick="next()" class="last_link">▶</a></li>
+                            </ul>
+                        </nav>
+                        <div id="scrollBaseNominaDetail" class="mainPanelContentComponents scrollit">
+                            <table id="tableSelector" style="width:100%;table-layout: fixed;" border="1">
+                                <thead id="bodyTableSelector">
+                                    <tr>
+                                        <th id="clave" style="width: 60px;">Clave</th>
+                                        <th id="nombre" style="width: 300px;">Nombre</th>
+                                        <th id="valor" style="width: 250px;">Valor</th>
+                                        <th id="infoAdicional" style="width: 350px;">Info. adicional</th>
+                                        <th id="clasificacion" style="width: 150px;">Clasificación</th>
+                                        <th id="elemento" style="width: 250px;">Elemento</th>
+                                        <th id="editar" style="width: 65px;">Editar</th>
+                                        <th id="eliminar" style="width: 75px;">Eliminar</th>
+                                    </tr>
+                                </thead>
+
+                            </table>
+                        </div>
+                       <!--<button class="mainPanelContentComponents  defaultButton" onclick="" style="margin-top:40px">Guardar</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Captura" style="display:none">
+            <div id="con2" class="contain" style="width:100%;">
+                <div id="row1Fcon2" class="mainPanelRow" style="width:100%">
+                    <div id="col1row1Fcon2" class="mainPanelCol col-12" style="width:50%">
+                       
+                        <div id="DivGroupClaveCap" class="mainPanelDivGroup" style="width:70px">
+                            <label id="lblClaveCap" class="mainPanelContentComponents" style="width:100%">Clave</label>
+                            <input id="txtClaveCap" class="mainPanelContentComponents" type="text" style="width:100%"/>
+                        </div>
+                        <div id="DivGroupNombreCap" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblNombreCap" class="mainPanelContentComponents" style="width:100%">Nombre</label>
+                            <input id="txtNombreCap" class="mainPanelContentComponents" type="text" style="width:100%" />
+                        </div>
+                        <div id="DivGroupOpcParametrosCap" class="mainPanelDivGroup" style="width:200px">
+                            <button id="btnOpcParametrosCap" class="mainPanelContentComponents defaultButton" onclick="OpcionesParamCap(true)" style="width:100%; display: inline-block;height:30px;">Opciones de parametros</button>
+                        </div>
+                        <div id="DivGroupValorCap1" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblValorCap" class="mainPanelContentComponents" style="width:100%">Valor</label>
+                            <input id="txtValorCap" class="mainPanelContentComponents" type="text" style="width:100%"   />
+                        </div>
+                        <div id="DivGroupValorCap2" class="mainPanelDivGroup" style="width:200px; display:none">
+                            <input id="chkValorCap" class="mainPanelContentComponents" type="checkbox" style="width:100%" />
+                            <label for="chkValorCap" class="containerCheck" style="width:100%">Valor</label>
+                        </div>
+                        <div id="DivGroupValorCap3" class="mainPanelDivGroup" style="width:200px; display:none">
+                            <label id="lblValorCap" class="mainPanelContentComponents" style="width:100%">Valor</label>
+                            <div class="select-style" style="width:100%">
+                                <select id="selValor" style="width:100%;"></select>
+                            </div>
+                        </div>
+                        <div id="DivGroupValorCap4" class="mainPanelDivGroup" style="width:200px; display:none">
+                            <label id="lblValorCap" class="mainPanelContentComponents" style="width:100%">Valor</label>
+                            <input id="txtfilevalorCap" name="adjunto" onchange="selectFolder(event)" class="mainPanelContentComponents" type="file" style="width:100%" />
+                        </div>
+                        <div id="DivGroupInfoAdicCap" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblInfoAdicCap" class="mainPanelContentComponents" style="width:100%">Info. Adicional</label>
+                            <textarea id="txtInfoAdicCap" rows="2" cols="30" class="mainPanelContentComponents" style="width:100%"></textarea>
+                        </div>
+                        <div id="DivGroupElementoCap" class="mainPanelDivGroup" style="width:200px;display:inline-block">
+                            <label id="lblElementoCap" class="mainPanelContentComponents" style="width:100%">Elemento</label>
+                            <textarea id="txtElementoCap" rows="2" cols="30" class="mainPanelContentComponents" type="text" style="width:100%" disabled ></textarea>
+                            
+                        </div>
+                       <!-- <div id="DivGroupElementoAplicacionCap" class="mainPanelDivGroup" style="width:200px;display:inline-block">
+                            <button id="btnElementoAplicacion" class="mainPanelContentComponents defaultButton" style="width:20%; height:28px;">+</button>
+                        </div>-->
+                       <div id="DivGroupPrueba" class="mainPanelDivGroup" style="width:300px">
+                           <div class="select-style" style="width:100%">
+                               <select id="myFilter" class="multiple_select2" multiple style="height:140px; width:100%" ;>
+                                  
+                               </select>
+                           </div>
+                        </div>
+                        
+                        <div id="DivGroupClasificacionCap" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblClasificacionCap" class="mainPanelContentComponents" style="width:100%">Clasificación</label>
+                            <div class="select-style" style="width:100%">
+                                <select id="selClasificacionCap" name="selClasificacionCap" style="width:100%">
+                                    <option value=""></option>
+                                    <option value="0">Global</option>
+                                    <option value="1">Horarios y turnos</option>
+                                    <option value="2">Calculo</option>
+                                    <option value="3">ISR</option>
+                                    <option value="4">IMSS</option>
+                                    <option value="5">Sueldos</option>
+                                    <option value="6">Prestaciones</option>
+                                    <option value="7">Información nominal</option>
+                                    <option value="8">Movimientos</option>
+                                    <option value="9">Conceptos</option>
+                                    <option value="10">Reportes</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="col2row1Fcon2" class="mainPanelCol col-6" >
+                       <div id="opcionesParametros" style="display:none;">
+                           <div id="DivGroupTipoOpciones" class="mainPanelCol" style="width:150px;">
+                               <label id="lblTipoDeOpciones" class="mainPanelCol" style="width:100%">Tipo de opciones:</label>
+                           </div>
+                           <div id="grupo1" style="width:100%;">
+                               <div id="DivGrouprbnSiNo" class="mainPanelDivGroup" style="width:100px; margin-top:20px;display: inline-block;">
+                                   <input id="rbnSiNo" name="btnGroup" type="radio" onclick="eventoOpcionesParam(this)" style="width:100%" />
+                                   <label for="rbnSiNo" class="containerRadio" style="width:100%">Sí o No</label>
+                               </div>
+                               <div id="DivGrouprbnMultiple" class="mainPanelDivGroup" style="width:170px;margin-top:10px;display: inline-block;">
+                                   <input id="rbnMultiple" name="btnGroup" type="radio" onclick="eventoOpcionesParam(this)" style="width:100%" />
+                                   <label for="rbnMultiple" class="containerRadio" style="width:100%">Multiples opciones</label>
+                               </div>
+                               <div id="DivGrouprbnComponente" class="mainPanelDivGroup" style="/*! width:170px; */margin-top:10px;display: inline-block;">
+                                   <input id="rbnComponente" name="btnGroup" type="radio" onclick="eventoOpcionesParam(this)" style="width:100%" />
+                                   <label for="rbnComponente" class="containerRadio" style="width:100%">Por componente</label>
+                               </div>
+                           </div>
+                          <div id="grupo2" style="width:100%">
+
+                              <div id="DivGrouprbnNumerico" class="mainPanelDivGroup" style="width:100px;margin-top:10px;display: inline-block;">
+                                  <input id="rbnNumerico" name="btnGroup" type="radio" onclick="eventoOpcionesParam(this)" style="width:100%" />
+                                  <label for="rbnNumerico" class="containerRadio" style="width:100%">Numérico</label>
+                              </div>
+                              <div id="DivGrouprbnMascaraNumerica" class="mainPanelDivGroup" style="width:170px;margin-top:10px;display: inline-block;">
+                                  <input id="rbnMascaraNumerica" name="btnGroup" type="radio" onclick="eventoOpcionesParam(this)" style="width:100%" />
+                                  <label for="rbnMascaraNumerica" class="containerRadio" style="width:100%">Mascara numérica</label>
+                              </div>
+                              <div id="DivGrouprbnCaracteres" class="mainPanelDivGroup" style="width:100px;margin-top:10px;display: inline-block;">
+                                  <input id="rbnCaracteres" name="btnGroup" type="radio" onclick="eventoOpcionesParam(this)" style="width:100%" />
+                                  <label for="rbnCaracteres" class="containerRadio" style="width:100%">Cadena</label>
+                              </div>
+                          </div>
+                           <div id="grupo3" style="width:100%;">
+                               <div id="DivGrouprbnImagen" class="mainPanelDivGroup" style="width:100px;margin-top:10px;display: inline-block;">
+                                   <input id="rbnImagen" name="btnGroup" type="radio" onclick="eventoOpcionesParam(this)" style="width:100%" />
+                                   <label for="rbnImagen" class="containerRadio" style="width:100%">Imagen</label>
+                               </div>
+                               <div id="DivGrouprbnCarpeta" class="mainPanelDivGroup" style="width:170px;margin-top:10px;display: inline-block;">
+                                   <input id="rbnCarpeta" name="btnGroup" type="radio" onclick="eventoOpcionesParam(this)" style="width:100%" />
+                                   <label for="rbnCarpeta" class="containerRadio" style="width:100%">Carpeta</label>
+                               </div>
+                           </div>
+                           <div id="grupoNumerico" style="width:100%; display:none;">
+                               <div id="DivGrouptxtEnteros" class="mainPanelDivGroup" style="width:100px; display:inline-block">
+                                   <label id="lblEnteros" class="mainPanelContentComponents" style="width:100%">No. caracteres</label>
+                                   <input id="txtEnteros" class="mainPanelContentComponents" type="text" style="width:100%;"  />
+                               </div>
+                               <div id="DivGrouptxtDecimales" class="mainPanelDivGroup" style="width:100px; display:inline-block">
+                                   <label id="lblDecimales" class="mainPanelContentComponents" style="width:100%">No. decimales</label>
+                                   <input id="txtDecimales" class="mainPanelContentComponents" type="text" style="width:100%;"  />
+                               </div>
+                           </div>
+                           <div id="grupoMascaraNumerica" style="width:100%; display:none;">
+                               <div id="DivGrouptxtEnteros1" class="mainPanelDivGroup" style="width:100px; display:inline-block">
+                                   <label id="lblEnteros1" class="mainPanelContentComponents" style="width:100%">No. caracteres</label>
+                                   <input id="txtEnteros1" class="mainPanelContentComponents" type="text" style="width:100%;"  />
+                               </div>
+                               <div id="DivGrouptxtDecimales1" class="mainPanelDivGroup" style="width:100px; display:inline-block">
+                                   <label id="lblDecimales1" class="mainPanelContentComponents" style="width:100%">No. decimales</label>
+                                   <input id="txtDecimales1" class="mainPanelContentComponents" type="text" style="width:100%;"  />
+                               </div>
+                           </div>
+                           <div id="grupoCadena" style="width:100%;display:none;">
+                               <div id="DivGrouptxtCaracteres" class="mainPanelDivGroup" style="width:100px;">
+                                   <label id="lblCaracteres" class="mainPanelContentComponents" style="width:100%">No. caracteres</label>
+                                   <input id="txtCaracteres" class="mainPanelContentComponents" type="text" style="width:100%;"  />
+                               </div>
+                           </div>
+                           <div id="grupoMultiplesOpciones" style="width:100%;display:none;">
+                               <div id="DivGrouptxtNombreOpcion" class="mainPanelDivGroup" style="width:200px; display:inline-block">
+                                   <label id="lblNombre" class="mainPanelContentComponents" style="width:100%">Nombre opción</label>
+                                   <input id="txtNombreOpcion" class="mainPanelContentComponents" type="text"  style="width:100%"/>
+                               </div>
+                               <div id="GruopButonesMulOpciones" class="mainPanelContentComponents" style="width:100px; display:inline-block" >
+                                   <button id="btnAddOpcion" class="mainPanelContentComponents defaultButton" onclick="AddOpcion()" style="width:40px; display: inline-block;height: 30px;">+</button>
+                                   <button id="btnQuitOpcion" class="mainPanelContentComponents defaultButton" onclick="QuitOpcion()" style="width:40px; display: inline-block;height: 30px;">-</button>
+                               </div>
+                               <div id="DivGrouplistaopciones" class="mainPanelDivGroup" style="width:250px">
+                                   <div class="select-style" style="width:100%">
+                                       <select id="listaopciones" style="width:100%" size="6">
+                                           
+                                       </select>
+                                   </div>
+                               </div>
+                           </div>
+                           <div id="grupoPorComponente" style="width:100%; display:none;">
+                               <div id="DivGroupTabla" class="mainPanelDivGroup" style="width:150px;">
+                                   <label id="lblTabla" class="mainPanelContentComponents" style="width:100%">Tabla</label>
+                                   <input id="txtTabla" class="mainPanelContentComponents" type="text" style="width:100%;"/>
+                               </div>
+                               <div id="DivGroupCampoClave" class="mainPanelDivGroup" style="width:200px">
+                                   <label id="lblCampoClave" class="mainPanelContentComponents">Campo clave para buscar el dato</label>
+                                   <input id="txtCampoClave" class="mainPanelContentComponents" type="text" style="width:100%"/>
+                               </div>
+                               <div id="DivGroupCampoMostrar" class="mainPanelDivGroup" style="width:200px">
+                                   <label id="lblCampoMostrar" class="mainPanelContentComponents" style="width:100%">Campo a mostrar selecionado</label>
+                                   <input id="txtCamposMostrar" class="mainPanelContentComponents" type="text" style="width:100%" />
+                               </div>
+                           </div>
+                           <div id="GruopButonesParametros" class="mainPanelContentComponents" style="width:100%">
+                               <button id="btnGuardaOpcPar" class="mainPanelContentComponents defaultButton" onclick="crearOpcionesParam()" style="width:100px; display: inline-block;height: 35px;">Aceptar</button>
+                               <button id="btnCancelarOpcpar" class="mainPanelContentComponents defaultButton" onclick="OpcionesParamCap(false)" style="width:100px; display: inline-block;height: 35px;">Cancelar</button>
+                           </div>
+                       </div>
+                    </div>
+                    <div id="row2Fcon2" class="mainPanelRow" style="width:100%">
+                        <div id="col1row2Fcon2" class="mainPanelCol" style="width:100%">
+                            <div id="GruopButones" class="mainPanelContentComponents" style="width:100%">
+                                <button id="btnGuarda" class="mainPanelContentComponents defaultButton" onclick="saveParametros()" style="width:100px; display: inline-block;height: 35px;">Guardar</button>
+                                <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="ocultarCaptura()" style="width:100px; display: inline-block;height: 35px;">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

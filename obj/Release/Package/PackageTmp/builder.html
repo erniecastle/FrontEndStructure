@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+ Created on : 19/02/2018, 10:37:59 AM
+ Author     : Ernesto Castillo
+-->
+<html>
+<head>
+    <title>Forma dinámica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+    <script type="text/javascript" src="js/functionsBuilder.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div id="content" class="content">
+            <h2 class="subTitle">Configuración de pantallas dinámicas</h2>
+            <div id="mainContent">
+            </div>
+            <div id="ocultosConte" style="margin-top: 30px;float: left;width: 100%;display:none">
+                <h3>Campos Ocultos</h3>
+                <div id="contOcultos" class="contentOculto">
+                    <div id="compOcultos" class="compOcultos">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="moveIn" class="moveIn">
+
+            <div class="configuration">
+                <br>
+                <label class="optionCFG">Elemento seleccionado:</label>
+                <br>
+                <label id="selecter" class="optionCFG selecter"></label>
+                <br>
+                <label class="optionCFG">Contenedor con pestañas</label>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <button title="Agregar contenedor con pestañas" id="button-add-tabs" type="button" class="btn btn-default"
+                                    href="javascript:void(0);" onclick="addContainerTabs();
+                                                return false;"></button>
+                            <button title="Eliminar contenedor con pestañas" id="button-delete-tabs" type="button" class="btn btn-default" href="javascript:void(0);" onclick="quitContainerTabs();
+                                        return false;"></button>
+                        </div>
+                    </div>
+                    <br>
+                    <label class="optionCFG">Contenedores</label>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <button title="Agregar contenedor" id="button-add" type="button" class="btn btn-default"
+                                        href="javascript:void(0);" onclick="addContainer();
+                                                    return false;"></button>
+                                <!--
+                                <button title="Eliminar contenedor" id="button-delete" type="button" class="btn btn-default" href="javascript:void(0);" onclick="quitContainer();
+                                        return false;"></button>-->
+                            </div>
+                        </div>
+                        <br>
+                        <label class="optionCFG">Renglones</label>
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <button title="Agregar filas" id="button-add-rows" type="button" class="btn btn-default"
+                                        href="javascript:void(0);" onclick="addRows();
+                                                    return false;"></button>
+                                <!-- <button title="Eliminar filas" id="button-delete-rows" type="button" class="btn btn-default" href="javascript:void(0);" onclick="quitRows();
+                                         return false;"></button> -->
+                            </div>
+                        </div>
+                        <br>
+                        <label class="optionCFG">Columnas:</label>
+                        <br>
+                        <div class="sameLine">
+                            <label class="optionCFG">Ancho: (⇄)</label>
+                            <div class="row">
+                                <select id="widhtCol" class="form-input small">
+                                    <option value="8.33333">8.33 %</option>
+                                    <option value="16.66666">16.66 %</option>
+                                    <option value="25">25 %</option>
+                                    <option value="33.33333">33.33 %</option>
+                                    <option value="41.66666">41.66 %</option>
+                                    <option value="50">50 %</option>
+                                    <option value="58.33333">58.33 %</option>
+                                    <option value="66.66666">66.66 %</option>
+                                    <option value="75">75 %</option>
+                                    <option value="83.33333">83.33 %</option>
+                                    <option value="91.66666">91.66 %</option>
+                                    <option value="100">100 %</option>
+                                </select>
+                                <button title="Agregar columnas" id="button-add-column" type="button" class="btn btn-info"
+                                        href="javascript:void(0);" onclick="addColumn();
+                                                    return false;"></button>
+                                <button title="Actualizar columna" id="button-update-column" type="button" class="btn btn-default" href="javascript:void(0);" onclick="updateColumn();
+                                            return false;"></button>
+                                <!--
+                                <button title="Eliminar columna" id="button-delete-column" type="button" class="btn btn-default" href="javascript:void(0);" onclick="quitColumn();
+                                        return false;"></button> -->
+                            </div>
+                        </div>
+                        <br>
+                        <label class="optionCFG">Eliminar componentes</label>
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <button title="Eliminar componente" id="button-delete" type="button" class="btn btn-default" href="javascript:void(0);" onclick="quitGlobalComponent();
+                                            return false;"></button>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="centered text-center">
+                            <button id="" type="button" class="btn btn-default" href="javascript:void(0);" onclick="clearSelectedColumn();
+                                    return false;">
+                                Limpiar panel
+                            </button>
+
+                            <button id="" type="button" class="btn btn-default" href="javascript:void(0);" onclick="clearSelectedPanelComponents();
+                                    return false;">
+                                Limpiar componentes
+                            </button>
+                        -->
+                    </div>
+                    <br>
+                    <div id="containerMoveCmp" class="panel panel-default">
+                        <div class="panel-heading">
+                            Funciones generales
+                        </div>
+                        <div id="moveComponents">
+                            <label id="labelBtnMove" class="optionCFG">Mover componentes</label>
+                            <div id="divBtnMove">
+                                &nbsp;<button id="btnUp" class="defaultButton" onclick="moveUP()">⯅</button>
+                                <button id="btnDown" class="defaultButton" onclick="moveDown()">⯆</button>
+                                <button id="btnExtract" class="defaultButton" onclick="getHml()">Extraer</button>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+
+                    <!--FESTY-->
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Componentes</div>
+                        <div class="sameLine">
+                            <select id="getComponent" class="form-input medium" onchange="getPropertiesComponent()">
+                                <option value="0">Selecione un Componente</option>
+                                <option value="LABEL">Texto</option>
+                                <option value="H1">Titulo(Muy Grande)</option>
+                                <option value="H2">Titulo(Grande)</option>
+                                <option value="H3">Titulo(Mediano)</option>
+                                <option value="H4">Titulo(Pequeño)</option>
+                                <option value="HR">Linea</option>
+                                <option value="TextBox">TextBox</option>
+                                <option value="DateTimePicker">Date Time Picker</option>
+                                <option value="ComboBox">ComboBox</option>
+                                <option value="CheckBox">CheckBox</option>
+                                <option value="RadioButton">RadioButton</option>
+                                <option value="Edit">Edit</option>
+                                <option value="Table">Tabla</option>
+                                <option value="Button">Boton</option>
+                                <option value="BS">Boton guardar</option>
+                                <option value="BU">Boton modificar</option>
+                                <option value="BD">Boton eliminar</option>
+                            </select>
+                            <button title="Agregar componente" id="button-add" type="button" class="btn btn-info"
+                                    href="javascript:void(0);" onclick="addComponent();
+                                                return false;"></button>
+                            <!--
+            <button title="Actualizar componente" id="button-update" type="button" class="btn btn-default" href="javascript:void(0);" onclick="setWidthAndHeigth(null);
+                    return false;"></button>
+            -->
+                            <!--
+            <button title="Eliminar componente" id="button-delete" type="button" class="btn btn-default" href="javascript:void(0);" onclick="quitComponent();
+                    return false;"></button>
+            -->
+                        </div>
+                        <div class="sameLine">
+                            <label class="optionCFG">Altura: (⇅)</label>
+                            <input id="heightDivComp" class="form-input miniSmall" type="text">
+                            <!--
+            <label class="optionCFG">Ancho: (⇄)</label>
+            <input id="widhtDivComp" class="form-input miniSmall" type="text">
+            <select id="compWay" class="form-input miniSmall">
+                <option value="%">%</option>
+                <option value="px">px</option>
+            </select>
+            -->
+                        </div>
+
+                        <div id="panelProp" class="panel panel-default" style="display:block;">
+                            <div class="panel-heading">Otras propiedades:</div>
+                            <div id="propertiesComp">
+                            </div>
+                            <div class="panel-heading" style="text-align: right;">
+                                <button title="Actualizar" id="" type="button" class="btn btn-default"
+                                        href="javascript:void(0);" onclick="updateProperties(null, false);
+                                                    return false;">
+                                    Actualizar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Setter HTML
+                        </div>
+                        <textarea id="getterHtml"></textarea>
+                        <br />
+                        <br />
+                        <button title="Setter Html" id="updateHtml" type="button" class="btn"
+                                href="javascript:void(0);" onclick="setterHtml(); return false;">
+                            Actualizar
+                        </button>
+                    </div>
+
+
+                    <!-- END FESTY-->
+
+
+
+
+                    <div class="panel panel-default" style="display:none">
+                        <div id="Fuente" class="panel-heading">Campos de tabla</div>
+                        <div id="camposFuentes" class="sameLine">
+                            <select id="getNameColumn" class="form-input medium" onchange="createComponent(this)">
+                                <option value="0">Selecione un campo</option>
+
+                            </select>
+                            <button title="Agregar componente" id="button-add" type="button" class="btn btn-info"
+                                    href="javascript:void(0);" onclick="addCamposTabla();
+                                                return false;"></button>
+                            <!--
+                            <button title="Actualizar componente" id="button-update" type="button" class="btn btn-default" href="javascript:void(0);" onclick="setWidthAndHeigth(null);
+                                    return false;"></button>
+                            -->
+                            <!--
+                            <button title="Eliminar componente" id="button-delete" type="button" class="btn btn-default" href="javascript:void(0);" onclick="quitComponent();
+                                    return false;"></button>
+                             -->
+                        </div>
+                        <div id="parametrosProceso" class="sameLine" style="display:none">
+                            <select id="getNameParam" class="form-input medium" onchange="createComponent(this)">
+                                <option value="0">Selecione un parametro</option>
+
+                            </select>
+                            <button title="Agregar Parametro" id="button-addParam" type="button" class="btn btn-info"
+                                    href="javascript:void(0);" onclick="addParamProceso();
+                                                return false;"></button>
+
+                            <button title="Agregar Parametros ocultos" id="button-ocultarParam" type="button" class="btn btn-default" href="javascript:void(0);" onclick="addCamposOcultos();
+                                    return false;">
+                                Agregar ocultos
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                    <div class="panel panel-default" style="display:none">
+                        <div id="Fuente" class="panel-heading">Campos de tabla</div>
+                        <div id="camposFuentes" class="sameLine">
+                            <select id="getNameColumn" class="form-input medium" onchange="createComponent(this)">
+                                <option value="0">Selecione un campo</option>
+
+                            </select>
+                            <button title="Agregar componente" id="button-add" type="button" class="btn btn-info"
+                                    href="javascript:void(0);" onclick="addCamposTabla();
+                                                return false;"></button>
+                            <!--
+                            <button title="Actualizar componente" id="button-update" type="button" class="btn btn-default" href="javascript:void(0);" onclick="setWidthAndHeigth(null);
+                                    return false;"></button>
+                            -->
+                            <!--
+                            <button title="Eliminar componente" id="button-delete" type="button" class="btn btn-default" href="javascript:void(0);" onclick="quitComponent();
+                                    return false;"></button>
+                             -->
+                        </div>
+                        <div id="parametrosProceso" class="sameLine" style="display:none">
+                            <select id="getNameParam" class="form-input medium" onchange="createComponent(this)">
+                                <option value="0">Selecione un parametro</option>
+
+                            </select>
+                            <button title="Agregar Parametro" id="button-addParam" type="button" class="btn btn-info"
+                                    href="javascript:void(0);" onclick="addParamProceso();
+                                                return false;"></button>
+
+                            <button title="Agregar Parametros ocultos" id="button-ocultarParam" type="button" class="btn btn-default" href="javascript:void(0);" onclick="addCamposOcultos();
+                                    return false;">
+                                Agregar ocultos
+                            </button>
+                        </div>
+                    </div>
+                    <div id="AgregarDetalles" class="panel panel-default" style="display:none">
+                        <div id="Detallesorigen" class="panel-heading">
+                            Detalles de la fuente datos
+                        </div>
+                        <div id="detallesFuenteDatos" class="sameLine">
+                            <select id="cbxDetalle" class="form-input medium" onchange="getCamposOrigenDetalle()">
+                                <option value="0">Seleccione un detalle</option>
+                                <!-- <option value="4">Ciudades</option>
+                                  <option value="3">Municipios</option>-->
+                            </select>
+                            <button title="Agregar componente" id="button-add" type="button" class="btn btn-info"
+                                    href="javascript:void(0);" onclick="addTable();
+                                                return false;"></button>
+
+                            <!--
+                              <button title="Eliminar componente" id="button-delete" type="button" class="btn btn-default" href="javascript:void(0);" onclick="quitComponent();
+                               return false;"></button>
+                            -->
+                        </div>
+                        <div id="accionesProceso" class="sameLine" style="display:none">
+                            <select id="cbxAcciones" class="form-input medium">
+                                <option value="0">Seleccione una Accion</option>
+                            </select>
+                            <button title="Agregar Accion" id="button-addAccion" type="button" class="btn btn-info"
+                                    href="javascript:void(0);" onclick="addTable();
+                                                return false;"></button>
+                        </div>
+                    </div>
+                    <div id="SelectorRegistro" class="panel panel-default" style="display:none">
+                        <div class="panel-heading">
+                            Agregar tabla para el selector de registro
+                        </div>
+                        <div id="detallesFuenteDatos1" class="sameLine">
+                            <!--   <select id="cbxDetalle" class="form-input medium" onchange="getCamposOrigenDetalla()">
+                                              <option value="0">Seleccione un detalle</option>
+                                               <option value="4">Ciudades</option>
+                            <option value="3">Municipios</option>
+                                          </select>-->
+                            <button title="Agregar componente" id="button-add" type="button" class="btn btn-info"
+                                    href="javascript:void(0);" onclick="addTable();
+                                                return false;"></button>
+
+                            <!--
+                            <button title="Eliminar componente" id="button-delete" type="button" class="btn btn-default" href="javascript:void(0);" onclick="quitComponent();
+                                    return false;"></button>
+                            -->
+                        </div>
+
+                    </div>
+                    <div id="SelectorBusqueda" class="panel panel-default" style="display:none">
+                        <div class="panel-heading">
+                            Agregar tabla para el selector de busqueda
+                        </div>
+                        <div id="detallesFuenteDatos2" class="sameLine">
+                            <!--   <select id="cbxDetalle" class="form-input medium" onchange="getCamposOrigenDetalla()">
+                                              <option value="0">Seleccione un detalle</option>
+                                               <option value="4">Ciudades</option>
+                            <option value="3">Municipios</option>
+                                          </select>-->
+                            <button title="Agregar componente" id="button-add" type="button" class="btn btn-info"
+                                    href="javascript:void(0);" onclick="addTable();
+                                                return false;"></button>
+
+                            <!--
+                             <button title="Eliminar componente" id="button-delete" type="button" class="btn btn-default" href="javascript:void(0);" onclick="quitComponent();
+                             return false;"></button>
+                            -->
+                        </div>
+
+                    </div>
+                    
+                </div>
+                <label class="optionCFG">Otras funciones</label>
+                <div id="normalRules">
+                    <div class="row">
+                        <div class="centered text-center">
+                            <button title="Guardar configuración" type="button" class="btn btn-default"
+                                    href="javascript:void(0);" onclick="saveFile();
+                                                return false;">
+                                Guardar
+                            </button>
+                            <button title="Importar configuración" id="button-import" type="button" class="btn btn-default" onclick="showPreview();">
+                                Vista previa
+                            </button>
+                            <button title="Importa en diseño" id="button-preview" type="button" class="btn btn-default" onclick="importFile();">
+                                <!--redirect();--> <!--importScreen();-->
+                                Importar
+                            </button>
+                            <!-- The Modal -->
+                            <div id="myModal" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <p>Pantallas existentes</p>
+                                    <p>
+                                        <select id="cbfile" name="cbfile"></select>
+                                    </p>
+                                    <p>
+                                        <button title="Vista previa" id="button-aceppt" type="button" class="btn btn-primary" onclick="redirect();">
+                                            <!--redirect();--> <!--importScreen();-->
+                                            Aceptar
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                            <p id="demo"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="typeOfRules">
+                    <button title="Guardar pantalla" type="button" class="btn btn-default"
+                            href="javascript:void(0);" onclick="saveFileToCapture();
+                                        return false;">
+                        Guardar
+                    </button>
+                    <button title="Vista previa de pantalla" id="button-import" type="button" class="btn btn-default" onclick="showPreview();">
+                        Vista previa
+                    </button>
+                    <button title="Cancelar" id="button-import" type="button" class="btn btn-default" onclick="cancelToCapture();">
+                        Cancelar
+                    </button>
+                    <button title="Testing" id="button-import" type="button" class="btn btn-default" onclick="dd();">
+                        Testing
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      <!-- The Modal -->
+    <div id="modalBuilder" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+               <!-- <span class="close">&times;</span>-->
+                <h2>Codigo Html generado</h2>
+            </div>
+            <div class="modal-body">
+                <div class="" style="width: 100%;">
+                    <textarea id="codeHtml" cols="40" rows="30"></textarea>
+                   
+                </div>
+            </div>
+            <div class="modal-footer" style="float:right">
+                <button class="mainPanelContentComponents modal-defaultButton" onclick="acceptHtml()">Copiar</button>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
+

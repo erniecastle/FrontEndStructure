@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Resumen percepciones y deducciones</title>
+    <meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsReporteResPercDeduc.js"></script>
+</head>
+
+<body>
+    <div id="mainContent" class="mainContents">
+        <div id="content" class="contentTitle">
+            <h2 class="subTitle" idetiqueta="ReporteResumenPercepcionDeduccion">Resumen percepciones y deducciones</h2>
+        </div>
+
+        <div class="contain" style="width: 100%; display: block;" id="con4FcTab2">
+
+            <div id="rowTipoCorrida" class="mainPanelRow" style="width: 100%;">
+                <div id="col2Frow5Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupCorrida" class="mainPanelDivGroup">
+                        <label id="lblTipoDeCorrida" idetiqueta="TipoCorrida" class="mainPanelContentComponents" style="width: 100%;">Tipo de corrida</label>
+                        <div class="editContainer">
+                            <div id="editRepPerDedTipoCorrida" class="edit small-medium" dataedit="editRepPerDedTipoCorrida" functedit="setEditRepPerDedTipoCorrida">
+                                <input id="txtEditRepPerDedTipoCorrida" class="editKey small" kind="filterKey" type="text">
+                                <input id="txtEditRepPerDedTipoCorrida" class="editBrief medium" type="text" disabled="">
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rowTipoNomina" class="mainPanelRow" style="width: 100%;">
+                <div id="col2Frow5Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupTipoNomina" class="mainPanelDivGroup">
+                        <label id="lblTipoNomina" idetiqueta="TipoNomina" class="mainPanelContentComponents" style="width: 100%;">Tipo de nómina</label>
+                        <div class="editContainer">
+                            <div id="editRepPerDedTipoNomina" class="edit medium-large" dataedit="editRepPerDedTipoNomina" functedit="setEditRepPerDedTipoNomina">
+                                <input id="txtEditRepPerDedTipoNomina" class="editKey medium" kind="filterKey" type="text">
+                                <input id="txtEditRepPerDedTipoNomina" class="editBrief large" type="text" disabled="">
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rowPeriodo" class="mainPanelRow" style="width: 100%;">
+                <div id="col2Frow5Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupPeriodo" class="mainPanelDivGroup">
+                        <label id="lblPeriodo" idetiqueta="PeriodosNomina" class="mainPanelContentComponents" style="width: 100%;">Periodo</label>
+                        <div class="editContainer">
+                            <div id="editRepPerDedPeriodo" class="edit small-extralarge" dataedit="editRepPerDedPeriodo" functedit="setEditRepPerDedPeriodo">
+                                <input id="txtEditRepPerDed" class="editKey small" kind="filterKey" type="text">
+                                <input id="txtEditRepPerDed" class="editBrief extralarge" type="text" disabled="">
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="row6Fcon4FcTab2" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow6Fcon4FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 125px;">
+                    <div id="DivGroupT27Fcol1Frow6Fcon4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="T27Fcol1Frow6Fcon4FcTab2" idetiqueta="FechaIni" class="mainPanelContentComponents" style="width: 100%;">De la fecha</label>
+                        <input id="txtDeFecha" type="date" class="mainPanelContentComponents" style="width: 100%;" disabled="">
+                    </div>
+                </div>
+                <div id="col3Frow6Fcon4FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 131px;">
+                    <div id="DivGroupT35Fcol3Frow6Fcon4FcTab2" style="max-width: 100%; margin-left:10px;" class="mainPanelDivGroup">
+                        <label id="T35Fcol3Frow6Fcon4FcTab2" idetiqueta="FechaFin" class="mainPanelContentComponents" style="width: 100%;"> A la fecha</label>
+                        <input id="txtAFecha" type="date" class="mainPanelContentComponents" style="width: 100%;" disabled="">
+                    </div>
+                </div>
+            </div>
+
+            <div id="rowCentroDeCostos" class="mainPanelRow" style="width: 100%; margin-top:20px">
+                <div id="col1Frow7Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupCentroCostos" class="mainPanelDivGroup">
+                        <label id="T28Fcol1Frow7Fcon4FcTab2" idetiqueta="CentroDeCosto" class="mainPanelContentComponents" style="width: 100%;">Centro de costos</label>
+                        <div class="editContainer">
+                            <div id="editRepPerDedCentroCostos" class="edit medium-large" dataedit="editRepPerDedCentroCostos" functedit="setEditRepPerDedCentroCostos">
+                                <input id="txtEditRepPerDedCentroCostos" class="editKey medium" kind="filterKey" type="text">
+                                <input id="txtEditRepPerDedCentroCostos" class="editBrief large" type="text" disabled="">
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="row8Fcon4FcTab2" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow8Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <label id="T29Fcol1Frow8Fcon4FcTab2" idetiqueta="EmpleadoIni" class="mainPanelContentComponents" style="width: 100%;">Del empleado</label>
+                    <div id="DivGroupDelEmpleado" class="mainPanelDivGroup">
+                        <div class="editContainer">
+                            <div id="editRepPerDedDelEmpleados" class="edit small-large" dataedit="editRepPerDedDelEmpleados" functedit="setEditRepPerDedDelEmpleados">
+                                <input id="txtEditRepPerDedDelEmpleados" class="editKey small" kind="filterKey" type="text">
+                                <input id="txtEditRepPerDedDelEmpleados" class="editBrief large" type="text" disabled="">
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="row9Fcon4FcTab2" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow9Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupAlEmpleado" class="mainPanelDivGroup">
+                        <label id="T30Fcol1Frow9Fcon4FcTab2" idetiqueta="EmpleadoFin" class="mainPanelContentComponents" style="width: 100%;">Al empleado</label>
+                        <div class="editContainer">
+                            <div id="editRepPerDedAlEmpleados" class="edit small-large" dataedit="editRepPerDedAlEmpleados" functedit="setEditRepPerDedAlEmpleados">
+                                <input id="txtEditRepPerDedAlEmpleado" class="editKey small" kind="filterKey" type="text">
+                                <input id="txtEditRepPerDedlAlEmpleado" class="editBrief large" type="text" disabled="">
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rowTotales" class="mainPanelRow" style="width: 100%;">
+                <div id="DivGroupT5Fcol1Frow2FconTab2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                    <div id="DivGroup23Fcol1Frow2FconTab2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                        <input id="chkRepPerDedTotales" name="chks" type="checkbox" class="mainPanelContentComponents">
+                        <label class="containerCheck" for="chkRepPerDedTotales">Totalizar Percepciones, Deducciones y Neto a Pagar</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="botones" class="contenedor" style="max-width: 100%; width: 70%;">
+            <button id="btnGenerar" class="mainPanelContentComponents defaultButton" idetiqueta="btnGenerar" style="display: inline; float:right;" onclick="genReportResPerDeduc()">
+                <img class="imgBoton" src="img/Iconos/listado.png" />
+                <span>Generar</span>
+            </button>
+            <!--<button id="btnEnviar" idetiqueta="btnGenerar"  class="mainPanelContentComponents defaultButton" style="display: inline; float:right;" onclick="genReportResPerDeduc()">Generar</button>-->
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+

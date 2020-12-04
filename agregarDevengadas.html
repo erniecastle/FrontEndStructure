@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Vacaciones Devengadas</title>
+    <script class="AD" type="text/javascript" src="js/funcionesAddDevengadas.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div class="contain" style="width: 100%;" id="con1">
+            <h1 id="titlecon1" class="titlecontain" cambiaridioma="true">Vacaciones de Devengadas</h1>
+            <div id="row2Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupT2Fcol1Frow2Fcon1" class="mainPanelDivGroup" style="max-width: 400px;margin-left: 0px;">
+                        <div class="editContainer">
+                            <label id="lblEmpleados"  idetiqueta="Empleados" class="mainPanelContentComponents">Empleados</label>
+                            <div id="editEmpleado" class="edit small-large" dataedit="EditEmpleado" functedit="setEditEmpleado">
+                                <input id="search-text-input" class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                <input id="brief-text-input" class="editBrief large" type="text" placeholder="" disabled="" />
+                                <button id="btnBuscar" class="editButton small" onclick="OpenEditModal(this)">
+                                    <img class="imgBoton" src="img/Iconos/colores/puntos.png" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="row3Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 11.667%;">
+                    <div id="DivGroup2Fcol1Frow3Fcon1" style="max-width: 100px;" class="mainPanelDivGroup">
+                        <label id="lblSalarioActual" idetiqueta="DevengadasSalarioActual" class="mainPanelContentComponents" style="width: 100%;">Salario actual</label>
+                        <input id="txtSalarioActual" type="text" class="mainPanelContentComponents" style="width: 80%;" disabled />
+                    </div>
+                </div>
+                <div id="col2Frow3Fcon1" class="mainPanelCol borderCol col-2" style="visibility: visible;">
+                    <div id="DivGroup3Fcol2Frow3Fcon1" style="max-width: 100px;" class="mainPanelDivGroup">
+                        <label id="lblFechaIngreso" idetiqueta="DevengadasFechaIngreso" class="mainPanelContentComponents" style="width: 100%;">Fecha ingreso</label>
+                        <input id="txtFechaIngreso" type="text" class="mainPanelContentComponents" style="width: 80%;" disabled />
+                    </div>
+                </div>
+            </div>
+            <div id="row4Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow4Fcon1" class="mainPanelCol borderCol col-2" style="visibility: visible;width: 8.667%;">
+                    <div id="DivGroup4Fcol1Frow4Fcon1" style="max-width: 50px;" class="mainPanelDivGroup">
+                        <label id="lblDiasVac" idetiqueta="DevengadasDiasVac" class="mainPanelContentComponents" style="width: 100%;">Dias vac.</label>
+                        <input id="txtDiasVac" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled/>
+                    </div>
+                </div>
+                <div id="col2Frow4Fcon1" class="mainPanelCol borderCol col-2" style="visibility: visible;">
+                    <div id="DivGroup5Fcol2Frow4Fcon1" style="max-width: 61px;" class="mainPanelDivGroup">
+                        <label id="lblDiasPrima" idetiqueta="DevengadasDiasPrima" class="mainPanelContentComponents" style="width: 100%;">Dias prima</label>
+                        <input id="txtDiasPrima" type="text" class="mainPanelContentComponents" style="width: 81%;" disabled />
+                    </div>
+                </div>
+            </div>
+        
+            <div id="row6Fcon1" class="mainPanelRow" style="width: 100%; margin-top: 15px;">
+                <div id="col1Frow6Fcon1" class="mainPanelCol borderCol col-2 " style="visibility: visible; width: 100%;">
+                    <label id="lblAñoAgregar2" idetiqueta="DevengadasTblHisVac" class="mainPanelContentComponents" style="margin-bottom: -10px;">Historial de vacaciones devengadas:</label>
+                    <div id="VacDeven" class="divTable" dataTbl="tblVacDeven" functedit="editTableVacDeven" style="width: 100%;margin-top: -5px;">
+
+                    </div>
+                </div>
+            </div>
+            <div id="row6Fcon1" class="mainPanelRow" style="width: 100%;margin-top: 15px;">
+                <div id="col1Frow6Fcon1" class="mainPanelCol borderCol col-2 " style="visibility: visible; width: 100%;">
+               
+                    <label id="lblAñoAgregar" idetiqueta="DevengadasTblDiasAdd" class="mainPanelContentComponents" style="margin-bottom: -10px;">Dias a agregar correspondientes al N año:</label>
+                  
+                    <div id="tblVacaAdd" class="divTable" dataTbl="tblVacaAdd" paginado="true" functedit="editTabletblVacaAdd" style="width: 100%;margin-top: -5px;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Gruopbotones" class="mainPanelDivGroup" style="width: 100%;">
+            <button id="btnGuarda" class="mainPanelContentComponents defaultButton" onclick="saveVacDeven()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                <span idetiqueta="btnGuardar">Guardar</span>
+            </button>
+          <!--  <button id="btnActualizar" class="mainPanelContentComponents defaultButton" onclick="" style="display: none;">
+                <img class="imgBoton" src="img/Iconos/editar.png" />
+                <span>Actualizar</span>
+            </button>
+            <button id="btnEliminar" class="mainPanelContentComponents defaultButton" onclick="" style="display: none;">
+                <img class="imgBoton" clase="imgBoton" src="img/Iconos/eliminar.png" />
+                <span>Eliminar</span>
+            </button>
+            <div id="ContenedoraBuscar" style="display: inline;">
+                <button id="btnBuscarRegistrarIncap" class="mainPanelContentComponents defaultButton" idetiqueta="btnBuscarConfigVaca" dataedit="selectorCatalogoConfigVaca" functedit="selectorConfigVaca" onclick=" buscar(true);" style="display: inline;">
+                    <img class="imgBoton" src="img/Iconos/buscar.png" />
+                    <span>Buscar</span>
+                </button>
+            </div>-->
+            <button id="btnLimpiar" class="mainPanelContentComponents defaultButton" onclick="cancelar()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

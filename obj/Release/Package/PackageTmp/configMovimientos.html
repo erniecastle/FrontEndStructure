@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Configuracion de movimientos de nomina</title>
+    <meta charset="utf-8" />
+    <link href="css/stylepreview.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script> 
+    <script class="AD" type="text/javascript" src="js/ConfiguracionMovimientos.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div id="content" class="contentTitle">
+            <h2 class="subTitle">Configuracion de movimientos de nomina</h2>
+        </div>
+        <div id="SelectCapturas">
+            <div id="con1" class="contain" style="width:100%">
+                <div id="row1Fcon1" class="mainPanelRow" style="width:100%">
+                    <div id="col1row1Fcon1" class="mainPanelCol" style="width:100%">
+                        <div id="containerTable" class="containerTable">
+                            <div id="divGroupMenu" class="mainPanelDivGroup" style="width:200px;display:none">
+                                <label id="lblGrupoMenu" class="mainPanelContentComponents">Grupo de menú</label>
+                                <div class="select-style" style="width:100%">
+                                    <select id="txtGrupoMenu" name="GrupoMenu" onchange="">
+                                        <option value=""></option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="mainPanelContentComponents defaultButton right" onclick="mostrarCaptura(true)" style="float:right;margin-top:20px">
+                                <img class="imgBoton" src="img/Iconos/nuevo.png">
+                                <span>Agregar</span>
+                            </button>
+                            <table id="tableSelector" style="width:100%;" border="1">
+                                <thead id="bodyTableSelector">
+                                    <tr>
+                                        <th>Nombre del Modulo</th>
+                                        <th>Filtar Por</th>
+                                        <th>Movientos Por</th>
+                                        <th style="display:none;">Grupo de Menu</th>
+                                        <th>Editar</th>
+                                        <th>Eliminar</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbodyConfigMov">
+
+                                </tbody>
+                            </table>
+
+                            <nav id="containerPag">
+                                <ul id="listPag" class="pagination">
+                                    <li>
+                                        <a href="#" onclick="previous()" class="first_link">◀</a>
+                                    </li>
+                                    <li><a href="#" onclick="next()" class="last_link">▶</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Captura" style="display:none">
+            <div id="con2" class="contain" style="width:100%">
+                <div id="row1Fcon2" class="mainPanelRow" style="width:100%">
+                    <div id="col1row1Fcon2" class="mainPanelCol" style="width:100%">
+                        <div id="GruopNombreModulo" class="mainPanelDivGroup" style="width:300px;/*! display:inline-block; */ /*! float: left; */">
+                            <label id="lblNombreModulo" class="mainPanelContentComponents">Nombre Modulo</label>
+                            <input id="txtNombreModulo" class="mainPanelContentComponents" type="text" style="width: 100%;" />
+                        </div>
+                        <div id="GruopMenuCaptura" class="mainPanelDivGroup" style="width:200px; display:none">
+                            <label id="lblGrupoMenu" class="mainPanelContentComponents">Grupo de menu</label>
+                            <div class="select-style" style="width:100%">
+                                <select id="txtGrupoMenu" name="GrupoMenu">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="GruopFiltrosMovientos" class="mainPanelDivGroup" style="width: 500px;">
+                            <label class="mainPanelContentComponents">Filtros y Movimientos</label>
+                            <div class="mainPanelDivGroup" style="width:100%; border:1px solid;">
+                                <div id="GruopFiltraPor" class="mainPanelDivGroup" style="width:200px;display: inline-block;float:left;">
+                                    <label class="mainPanelContentComponents">Filtrar Por</label>
+                                    <div id="GruopCompo" class="mainPanelDivGroup" style="width:100%;border:1px solid;">
+                                        <div id="GruopEmpleado" class="mainPanelDivGroup" style="width:100%; margin:7px;">
+                                            <input id="txtEmpleado" name="Empleado" type="radio" onclick="actionchecked(this)" />
+                                            <label for="txtEmpleado" class="containerRadio">Empleado</label>
+                                        </div>
+                                        <div id="GruopConcepto" class="mainPanelDivGroup" style="width:100%; margin:7px;">
+                                            <input id="txtConcepto" name="Empleado" type="radio" onclick="actionchecked(this)" />
+                                            <label for="txtConcepto" class="containerRadio">Conceptos</label>
+                                        </div>
+                                        <div id="GrupoCentroCosto" class="mainPanelDivGroup" style="width:100%; margin:7px;">
+                                            <input id="txtCentroCosto" name="CentroCosto" type="checkbox" onclick="actionchecked(this)" />
+                                            <label for="txtCentroCosto" class="containerCheck">Centro de Costo</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="GruopMovimientosPor" class="mainPanelDivGroup" style="width:200px;display: inline-block;margin-left: 30px;">
+                                    <label class="mainPanelContentComponents">Movimientos Por</label>
+                                    <div id="GruopCompo" class="mainPanelDivGroup" style="width:100%;border:1px solid;">
+                                        <div id="GruopEmpleado1" class="mainPanelDivGroup" style="width:100%; margin:7px;">
+                                            <input id="txtEmpleado1" name="Empleado1" type="radio" onclick="actionchecked(this)" />
+                                            <label for="txtEmpleado1" class="containerRadio">Empleado</label>
+                                        </div>
+                                        <div id="GruopConcepto1" class="mainPanelDivGroup" style="width:100%; margin:7px;">
+                                            <input id="txtConcepto1" name="Empleado1" type="radio" onclick="actionchecked(this)" />
+                                            <label for="txtConcepto1" class="containerRadio">Conceptos</label>
+                                        </div>
+                                        <div id="GrupoCentroCosto1" class="mainPanelDivGroup" style="width:100%; margin:7px;">
+                                            <input id="txtCentroCosto1" name="CentroCosto1" type="checkbox" onclick="actionchecked(this)" />
+                                            <label for="txtCentroCosto1" class="containerCheck">Centro de Costo</label>
+                                        </div>
+                                        <div id="GrupoFechaInicial" class="mainPanelDivGroup" style="width:100%; margin:7px; display:none">
+                                            <input id="txtFechaInicial" name="FechaInicial" type="checkbox">
+                                            <label for="txtFechaInicial" class="containerCheck">Fecha inicial</label>
+                                        </div>
+                                        <div id="GrupoFechaFinal" class="mainPanelDivGroup" style="width:100%; margin:7px; display:none">
+                                            <input id="txtFechaFinal" name="FechaFinal" type="checkbox">
+                                            <label for="txtFechaFinal" class="containerCheck">Fecha final</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="GrupoMovExiten" class="mainPanelDivGroup" style="width:100%; margin:7px;">
+                                    <input id="txtMovExitentes" name="MovExitentes" type="checkbox">
+                                    <label for="txtMovExitentes" class="containerCheck">Mostrar movimientos existentes</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="GruopButones" class="mainPanelContentComponents" style="width:100%">
+                            <button id="btnGuarda" class="mainPanelContentComponents defaultButton" onclick="saveOrUpdate()" style="display: inline-block;">
+                                <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                                <span>Guardar</span>
+                            </button>
+                            <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="limpiar()" style="display: inline-block;">
+                                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                                <span>Cancelar</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

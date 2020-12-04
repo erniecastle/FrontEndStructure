@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Finiquitos</title>
+    <meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsFiniquitos.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div class="contain" style="width: 100%;" id="con1">
+            <h1 id="titlecon1" class="titlecontain" cambiaridioma="true">Finiquitos</h1>
+
+            <div id="row13Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow13Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 85px;">
+                    <div id="DivGroup33Fcol1Frow13Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="lblFinReferencia" idetiqueta="FinLiqReferencia" class="mainPanelContentComponents" style="width: 100%;">Referencia</label>
+                        <input id="txtFinReferencia" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+
+            <div id="row2Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <label id="lblFinEmpleado" idetiqueta="Empleados" class="mainPanelContentComponents" style="width: 100%;">Empleado</label>
+                    <div id="DivGroupEmpleadoFin" class="mainPanelDivGroup">
+                        <div class="editContainer">
+                            <div id="editFinEmpleados" class="edit small-large" dataedit="editFinEmpleados" functedit="setEditFinEmpleados">
+                                <input id="txtKeyEditFinEmpleado" class="editKey small" kind="filterKey" type="text">
+                                <input id="txtEditFinEmpleado" class="editBrief large" type="text" disabled="">
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Table Plazas-->
+            <div id="row3Fcon1" class="mainPanelRow" style="width: 100%; height: auto;">
+                <div id="col1Frow1Fcon3FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupT43Fcol1Frow1Fcon3FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="lblFinPlazas" idetiqueta="FinLiqPlazas" class="mainPanelContentComponents">Plazas</label>
+                        <div id="tblPlazasFin" class="divTable" dataTbl="tblPlazasFin" functEdit="editTablePlazasFin" style="width: 100%;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="row4Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow4Fcon1" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 123px;">
+                    <div id="DivGroup2Fcol1Frow4Fcon1" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="lblFinFechaBaja" idetiqueta="FinLiqFechaBaja" class="mainPanelContentComponents" style="width: 100%;">Fecha baja</label>
+                        <input id="txtFinFechaBaja" type="date" class="mainPanelContentComponents" style="width: 100%;">
+                    </div>
+                </div>
+                <div id="col1Frow4Fcon1" class="mainPanelCol borderCol" style="visibility: visible; width: 20px;">
+                </div>
+                <div id="col2Frow4Fcon1" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 123px;">
+                    <div id="DivGroup3Fcol2Frow4Fcon1" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="lblFinFechaCalculo" idetiqueta="FinLiqFechaCalculo" class="mainPanelContentComponents" style="width: 100%;">Fecha cálculo</label>
+                        <input id="txtFinFechaCalculo" type="date" class="mainPanelContentComponents" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+            <div id="row5Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow5Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 33.3333%;">
+                    <div id="DivGroup4Fcol1Frow5Fcon1" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="T6Fcol1Frow5Fcon1" idetiqueta="FinLiqCuasaBaja" class="mainPanelContentComponents" style="width: 100%;">Causa de baja</label>
+                        <div class="select-style" style="width: 100%;">
+                            <select id="cbxFiniCausasDeBaja" class="mainPanelContentComponents" style="width: 100%;"></select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="col1Frow5Fcon1" class="mainPanelCol borderCol col-1" style="visibility: visible;">
+                </div>
+
+                <div id="col1Frow5Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 120px;">
+
+
+                    <div id="DivGroup4Fcol1Frow5Fcon1" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="T6Fcol1Frow5Fcon1" idetiqueta="FinLiqPorRiesgoTra" class="mainPanelContentComponents" style="width: 100%;margin-left: 3px;">Por riesgo de trabajo</label>
+                        <div style="border-style: solid; border-width: 1px; width: 110px; margin-left: 5px;">
+                            <div style="width: 350px; display:flex; margin-top:10px; margin-bottom:10px;">
+                                <div style="display:flex; flex-wrap: wrap; width: 100%; margin-top:5px; margin-left:3px;">
+                                    <div id="col2Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 50px;">
+                                        <div id="DivGroupT13Fcol2Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                            <div id="DivGroup8Fcol2Frow4Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                                <input type="radio" class="mainPanelContentComponents" name="riesgoTrabajo" id="rbnFinSi">
+                                                <label id="rbnFinSi" idetiqueta="FinLiqRbSi" class="containerRadio" for="rbnFinSi">Sí</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="col3Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 50px;">
+                                        <div id="DivGroupT15Fcol3Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                            <div id="DivGroup9Fcol3Frow4Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                                <input type="radio" class="mainPanelContentComponents" name="riesgoTrabajo" id="rbnFinNo">
+                                                <label id="rbnFinNo" idetiqueta="FinLiqRbNo" class="containerRadio" for="rbnFinNo">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!--Table Conceptos negociables-->
+            <div id="row6Fcon1" class="mainPanelRow" style="width: 100%; height: auto;">
+                <div id="col1Frow1Fcon3FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupT43Fcol1Frow1Fcon3FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="T43Fcol1Frow1Fcon3FcTab2" idetiqueta="FinLiqConceptoNego" class="mainPanelContentComponents">Conceptos negociables</label>
+                        <div id="tblConceptosFin" class="divTable" dataTbl="tblConceptosFin" functEdit="editTableCncFin" style="width: 100%;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mainPanelRow" style="width:120px; height:30px; margin-top:5px; margin-left: 252px;">
+                <button onclick="loadConceptos()" idetiqueta="btnCargarConceptos" class="mainPanelContentComponents defaultButton">Cargar conceptos</button>
+            </div>
+
+            <div id="row2Frow7Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow2Frow7Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width:60%">
+                    <div id="DivGroup5Fcol1Frow2Frow7Fcon1" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="lblFinDesripcionBaja" idetiqueta="FinLiqDescripcionMtvBaja" class="mainPanelContentComponents" style="width: 100%;">Descripción motivo baja</label>
+                        <input id="txtFinDesripcionBaja" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+
+            <div id="row9Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow9Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroup6Fcol1Frow9Fcon1" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="lblFinObservaciones" idetiqueta="FinLiqObservaciones" class="mainPanelContentComponents" style="width: 100%;">Observaciones</label>
+                        <br />
+                        <textarea id="txtFinObservaciones" rows="4" style="position: relative; max-height: 100px; width:65%"></textarea>
+                    </div>
+                </div>
+            </div>
+            <br />
+
+            <div id="botones" class="contenedor" style="max-width: 100%; width: 100%;">
+                <button id="btnGuardar" class="mainPanelContentComponents defaultButton" style="display: inline;" onclick="saveFiniquitos()">
+                    <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                    <span idetiqueta="btnGuardar">Guardar</span>
+                </button>
+                <button id="btnActualizar" class="mainPanelContentComponents defaultButton" style="display: none;" onclick="updateFiniquitos()">
+                    <img class="imgBoton" src="img/Iconos/editar.png" />
+                    <span idetiqueta="btnActualizar">Actualizar</span>
+                </button>
+                <button id="btnEliminar" class="mainPanelContentComponents defaultButton" style="display: none;" onclick="deleteFiniquitos()">
+                    <img class="imgBoton" clase="imgBoton" src="img/Iconos/eliminar.png" />
+                    <span idetiqueta="btnEliminar">Eliminar</span>
+                </button>
+                <div id="ContenedoraBuscar" style="display: inline;">
+                    <button id="btnBuscar" class="mainPanelContentComponents defaultButton" dataEdit="selectorFin" functEdit="selectorFiniquitos" onclick="OpenSelector(this)" style="display: inline;">
+                        <img class="imgBoton" src="img/Iconos/buscar.png" />
+                        <span idetiqueta="btnBuscar">Buscar</span>
+                    </button>
+                </div>
+                <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="cancelFiniquitos()" style="display: inline;">
+                    <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                    <span idetiqueta="btnCancelar">Cancelar</span>
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

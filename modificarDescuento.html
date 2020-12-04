@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Modificar descuentos</title>
+    <meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/funcionesModificarDescuento.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContent2">
+        <div class="contain" style="width:100%;" id="con1">
+            <h1 id="titlecon1" class="titlecontain" cambiaridioma="true">Modificar descuento</h1>
+            <div id="row2con1" class="mainPanelRow" style="width:100%;">
+                <div id="col1Frow2con1" class="mainPanelCol borderCol col-12" style="visibility:visible;">
+                    <div id="DivGroup1Fcol1Frow2Fcon1" style="max-width:250px;" class="mainPanelDivGroup">
+                        <label id="lblTipoPrestamo" idetiqueta="CreditoTipoCredito" class="mainPanelContentComponents" style="width: 100%;">Tipo de credito</label>
+                        <div class="select-style" style="width: 100%;">
+                            <select class="mainPanelContentComponents" style="width: 100%;" id="selTipoCredito" onchange="valorSelecionadoDescu()">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="DivGroup2Fcol1Frow2Fcon1" style="max-width: 150px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="CrediAhorrFecha" style="width: 100%;" id="lblFechaSolicitud">Fecha</label>
+                        <input type="date" class="mainPanelContentComponents" style="width: 100%;" id="dpkFecha" onchange="valorSelecionadoDescu()">
+                    </div>
+                </div>
+            </div>
+            <div id="contTable" class="divTable"  dataTbl="contTable" paginado="true" functEdit="editTableModificarDescuento" style="width: 100%;margin-top: 20px;">
+
+            </div>
+            <div id="Gruopbotones" class="mainPanelDivGroup" style="width:100%">
+                <button id="btnGuarda" class="mainPanelContentComponents defaultButton" onclick="saveCredMovDescCred()" style="display: inline-block;">
+                    <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                    <span idetiqueta="btnGuardar">Guardar</span>
+                </button>
+                <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="limpiarCredMovDescCred()" style="display: inline-block;">
+                    <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                    <span idetiqueta="btnCancelar">Cancelar</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

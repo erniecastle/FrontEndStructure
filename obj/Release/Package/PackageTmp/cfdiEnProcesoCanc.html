@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Comprobantes en proceso de cancelacion</title>
+    <meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/cfdiEnProcesoCanc.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div id="content" class="contentTitle">
+            <h2 class="subTitle">Comprobantes en proceso de cancelación</h2>
+        
+            <div id="row3Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="row3Fcon1" class="mainPanelRow" style="width: 100%;">
+                        <div id="col1Frow3Fcon1" class="mainPanelCol borderCol col-12 " style="visibility: visible;">
+                            <div id="contTable" class="divTable" datatbl="contTable" functEdit="editTableCanc" paginado="true"  style="width: 100%;">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="Gruopbotones" class="mainPanelDivGroup" style="width:100%">
+                <button id="btnCargar" class="mainPanelContentComponents defaultButton" onclick="desplegarInfo()" style="display:  inline-block;">
+                    <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                    <span idetiqueta="btnCargar">Cargar</span>
+                </button>
+                <button id="btnVisualizarStatus" class="mainPanelContentComponents defaultButton" onclick="EjecutarCancelado()" style="display:  inline-block;">
+                    <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                    <span idetiqueta="btnVisualizarStatus">Verificar status</span>
+                </button>
+                
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+</html>

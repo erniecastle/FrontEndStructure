@@ -1,0 +1,77 @@
+﻿{
+  "Bancos": {
+    "Metodos": {
+
+      "exiteClave": {
+        "parametros": [ "tabla", "Campo" ],
+        "descripcion": "Este metodo hace una consulta a la base de datos 1.-Tabla:nombre del origen de datos 2.-Campo del origen de dato"
+      },
+
+      "hola": { "descripcion": "Este metodo hace una consulta a la base de datos " }
+
+    }
+
+  },
+  "Paises": {
+    "Metodos": {
+      "exiteClave": {
+        "parametros": [ "tabla", "Campo" ],
+        "descripcion": "Este metodo hace una consulta a la base de datos 1.-Tabla:nombre del origen de datos 2.-Campo del origen de dato"
+      },
+      "generarMascara": {}
+
+    }
+
+  },
+
+  "CentroDeCosto": {
+    "Metodos": {
+      "exiteClave": {
+        "parametros": [ "tabla", "Campo" ],
+        "descripcion": "Este metodo hace una consulta a la base de datos 1.-Tabla:nombre del origen de datos 2.-Campo del origen de dato"
+      },
+      "hola": {},
+      "acortarDescripcion": {
+        "parametros": [ "nombredelCampo" ],
+        "descripcion": "Este metodo Acorta la descripcion y la pasa a otro componente. 1.nombreDelCampo: es el nombre al campo cual se lo va a pasar. "
+      }
+    }
+
+  },
+  "Puestos": {
+    "Metodos": {
+      "exiteClave": {
+        "parametros": [ "tabla", "Campo" ],
+        "descripcion": "Este metodo hace una consulta a la base de datos 1.-Tabla:nombre del origen de datos 2.-Campo del origen de dato"
+      },
+      "hola": {},
+      "acortarDescripcion": {
+        "parametros": [ "nombredelCampo" ],
+        "descripcion": "Este metodo Acorta la descripcion y la pasa a otro componente. 1.nombreDelCampo: es el nombre al campo cual se lo va a pasar. "
+      }
+    }
+
+  },
+  "Ciudades": {
+    "Metodos": {
+      "exiteClave": {
+        "parametros": [ "tabla", "Campo" ],
+        "descripcion": "Este metodo hace una consulta a la base de datos 1.-Tabla:nombre del origen de datos 2.-Campo del origen de dato"
+      },
+      "generarMascara": {}
+
+    }
+
+  },
+  "Municipios": {
+    "Metodos": {
+      "exiteClave": {
+        "parametros": [ "tabla", "Campo" ],
+        "descripcion": "Este metodo hace una consulta a la base de datos 1.-Tabla:nombre del origen de datos 2.-Campo del origen de dato"
+      },
+      "generarMascara": {}
+
+    }
+
+  }
+}

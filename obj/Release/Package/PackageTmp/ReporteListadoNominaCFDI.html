@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script class="AD" type="text/javascript" src="js/funcionesReporteNominaListCFDI.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div class="contain" style="width: 100%;" id="con1">
+            <h1 id="titlecon1" class="titlecontain" cambiaridioma="true">Reporte de nomina CFDI</h1>
+            <div id="row2Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupT2Fcol1Frow2Fcon1" class="mainPanelDivGroup">
+                        <div id="T2Fcol1Frow2Fcon1" class="editContainer">
+                            <label id="1Fcol1Frow2Fcon1" idetiqueta="TipoCorrida" class="mainPanelContentComponents">Tipo Corrida</label>
+                            <div id="editTipoCorrida" class="edit small-medium" dataedit="EditTipoCorrida" functedit="setEditTipoCorrida">
+                                <input id="S1Fcol1Frow2Fcon1" class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                <input id="B1Fcol1Frow2Fcon1" class="editBrief medium" type="text" placeholder="" disabled="" />
+                                <button id="BU1Fcol1Frow2Fcon1" class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="DivGroupT3Fcol1Frow2Fcon1" class="mainPanelDivGroup">
+                        <div id="T3Fcol1Frow2Fcon1" class="editContainer">
+                            <label id="2Fcol1Frow2Fcon1" idetiqueta="TipoNomina" class="mainPanelContentComponents">Tipo Nomina</label>
+                            <div id="editTipoNomina" class="edit medium-large" dataedit="EditTipoNomina" functedit="setEditTipoNomina">
+                                <input class="editKey medium" type="text" kind="filterKey" placeholder="" />
+                                <input class="editBrief large" type="text" placeholder="" disabled="" />
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="DivGroupT4Fcol1Frow2Fcon1" class="mainPanelDivGroup">
+                        <div id="T4Fcol1Frow2Fcon1" class="editContainer">
+                            <label id="3Fcol1Frow2Fcon1" idetiqueta="PeriodosNomina" class="mainPanelContentComponents">Periodo de Nomina</label>
+                            <div id="editPeriododNomina"  class="edit small-extralarge" dataedit="EditPeriodoNomina" functedit="setEditPeriodoNomina">
+                                <input class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                <input class="editBrief extralarge" type="text" placeholder="" disabled="" />
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="row3Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 16.6667%;">
+                    <div id="DivGroup4Fcol1Frow3Fcon1" style="max-width: 90px;" class="mainPanelDivGroup">
+                        <label id="lblFechaIni" idetiqueta="FechaIni" class="mainPanelContentComponents" style="width: 100%;">De la fecha</label>
+                        <input id="txtFechaIni" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled />
+                    </div>
+                </div>
+                <div id="col2Frow3Fcon1" class="mainPanelCol borderCol col-2" style="visibility: visible;">
+                    <div id="DivGroup5Fcol2Frow3Fcon1" style="max-width: 90px;" class="mainPanelDivGroup">
+                        <label id="lblFechaFin" idetiqueta="FechaFin" class="mainPanelContentComponents" style="width: 100%;">A la fecha</label>
+                        <input id="txtFechaFin" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled />
+                    </div>
+                </div>
+            </div>
+            <!--  <div id="row4Fcon1" class="mainPanelRow" style="width: 100%;">
+          <div id="col1Frow4Fcon1" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 20%;">
+              <div id="DivGroup6Fcol1Frow4Fcon1" style="max-width: 150px;" class="mainPanelDivGroup">
+                  <label id="lblFechaCalculo" class="mainPanelContentComponents" style="width: 100%;">Fecha de Calculo</label>
+                  <input id="txtFechaCalculo" type="date" class="mainPanelContentComponents" style="width: 100%;" />
+              </div>
+          </div>
+      </div>-->
+            <div id="row5Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow5Fcon1" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 100%;">
+                    <div id="DivGroupT12Fcol1Frow5Fcon1" class="mainPanelDivGroup" style="margin-top: 15px;">
+                        <div id="T12Fcol1Frow5Fcon1" class="editContainer">
+                            <label id="10Fcol1Frow5Fcon1" idetiqueta="CentroDeCosto" class="mainPanelContentComponents">Centro de Costo</label>
+                            <div id="editCentroDeCostos" class="edit medium-large" dataedit="EditCentroCosto" functedit="setEditCentroCosto">
+                                <input class="editKey medium" type="text" kind="filterKey" placeholder="" />
+                                <input class="editBrief large" type="text" placeholder="" disabled="" />
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="DivGroupT9Fcol1Frow5Fcon1" class="mainPanelDivGroup" style="margin-top: 15px;">
+                        <div id="T9Fcol1Frow5Fcon1" class="editContainer">
+                            <label id="7Fcol1Frow5Fcon1" idetiqueta="Departamentos" class="mainPanelContentComponents">Departamento</label>
+                            <div id="editoDepartamento" class="edit small-large" dataedit="EditDepartamento" functedit="setEditDepartamento">
+                                <input class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                <input class="editBrief large" type="text" placeholder="" disabled="" />
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="DivGroupT10Fcol1Frow5Fcon1" class="mainPanelDivGroup" style="margin-top: 15px;">
+                        <div id="T10Fcol1Frow5Fcon1" class="editContainer">
+                            <label id="8Fcol1Frow5Fcon1" idetiqueta="EmpleadoIni" class="mainPanelContentComponents">Del empelado</label>
+                            <div id="editEmpeladoInicio" class="edit small-large" dataedit="EditDelEmpleado" functedit="setEditDelEmpleado">
+                                <input class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                <input class="editBrief large" type="text" placeholder="" disabled="" />
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="DivGroupT11Fcol1Frow5Fcon1" class="mainPanelDivGroup">
+                        <div id="T11Fcol1Frow5Fcon1" class="editContainer">
+                            <label id="9Fcol1Frow5Fcon1" idetiqueta="EmpleadoFin" class="mainPanelContentComponents">Al empleado</label>
+                            <div id="editEmpleadoFin" class="edit small-large" dataedit="EditAlEmpleado" functedit="setEditAlEmpleado">
+                                <input class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                <input class="editBrief large" type="text" placeholder="" disabled="" />
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="row6Fcon1" class="mainPanelRow" style="width: 100%;margin-top:15px">
+                <div id="col1Frow6Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div id="DivGroupT13Fcol1Frow6Fcon1" style="max-width: 150px;" class="mainPanelDivGroup">
+                        <label id="T13Fcol1Frow6Fcon1" idetiqueta="ReporteListNomCFDICompAmostrar" class="mainPanelContentComponents" style="width: 100%;">Comprobantes a mostrar</label>
+                    </div>
+                </div>
+            </div>
+            <div id="row7Fcon1" class="mainPanelRow" style="width: 100%;margin-top: -8px;">
+                <div id="col1Frow7Fcon1" class="mainPanelCol col-12" style="visibility: visible; width: 35%; border-style: solid; border-width: 1px;">
+                    <div id="DivGroupT15Fcol1Frow7Fcon1" style="max-width: 170px; margin-top:15px;margin-left: 5px;" class="mainPanelDivGroup">
+                        <div id="DivGroup12Fcol1Frow7Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                            <input type="radio" class="mainPanelContentComponents" name="EmpleadoMos" id="rbPendientesTimbrar" />
+                            <label class="containerRadio" idetiqueta="ReporteListNomCFDIRbPenATimbrar" id="rbPendientesTimbrar" for="rbPendientesTimbrar">Pendientes a timbrar</label>
+                        </div>
+                    </div>
+                    <div id="DivGroupT16Fcol1Frow7Fcon1" style="max-width: 110px;margin-top: -6px;margin-left: 5px;" class="mainPanelDivGroup">
+                        <div id="DivGroup13Fcol1Frow7Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                            <input type="radio" class="mainPanelContentComponents" name="EmpleadoMos" id="rbTimbrados" />
+                            <label class="containerRadio" idetiqueta="ReporteListNomCFDIRbTimbrados" id="rbTimbrados" for="rbTimbrados">Timbrados</label>
+                        </div>
+                    </div>
+                    <div id="DivGroupT17Fcol1Frow7Fcon1" style="max-width: 120px;margin-top: -6px;margin-left: 5px;" class="mainPanelDivGroup">
+                        <div id="DivGroup14Fcol1Frow7Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                            <input type="radio" class="mainPanelContentComponents" name="EmpleadoMos" id="rbCancelados" />
+                            <label class="containerRadio" idetiqueta="ReporteListNomCFDIRbCancelados" id="rbCancelados" for="rbCancelados">Cancelados</label>
+                        </div>
+                    </div>
+                    <div id="DivGroupT17Fcol1Frow7Fcon1" style="max-width: 140px;margin-top: -6px;margin-left: 5px;" class="mainPanelDivGroup">
+                        <div id="DivGroup14Fcol1Frow7Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                            <input type="radio" class="mainPanelContentComponents" name="EmpleadoMos" id="rbPendienteCancelados" />
+                            <label class="containerRadio" idetiqueta="ReporteListNomCFDIRbPenACancelar" id="rbPendienteCancelados" for="rbPendienteCancelados">Pendiente a cancelar</label>
+                        </div>
+                    </div>
+                    <div id="DivGroupT18Fcol1Frow7Fcon1" style="max-width: 215px;margin-top: -6px;margin-left: 5px;" class="mainPanelDivGroup">
+                        <div id="DivGroup15Fcol1Frow7Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                            <input type="radio" class="mainPanelContentComponents" id="rbUltimoCompEmpleado" name="EmpleadoMos" />
+                            <label class="containerRadio" idetiqueta="ReporteListNomCFDIRbUltiCompEmpleado" id="rbUltimoCompEmpleado" for="rbUltimoCompEmpleado">Ultimo comprobante del empleado</label>
+                        </div>
+                    </div>
+                    <div id="DivGroupT18Fcol1Frow7Fcon1" style="max-width: 100px;margin-top: -6px;margin-bottom:15px;margin-left: 5px;" class="mainPanelDivGroup">
+                        <div id="DivGroup15Fcol1Frow7Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                            <input type="radio" class="mainPanelContentComponents" id="rbTodos" name="EmpleadoMos" />
+                            <label class="containerRadio" idetiqueta="ReporteListNomCFDIRbTodos" id="rbTodos" for="rbTodos">Todos</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Gruopbotones" class="mainPanelDivGroup" style="width:100%;margin-top:20px">
+            <button id="btnVisualizar" class="mainPanelContentComponents defaultButton" onclick="visualizarRepNomCFDI()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/listado.png" />
+                <span idetiqueta="btnListado">Listado</span>
+            </button>
+            <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="limpiarRepNomCFDI()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+
+
+        </div>
+    </div>
+</body>
+</html>

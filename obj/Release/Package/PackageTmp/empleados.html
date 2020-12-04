@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Empleados</title>
+    <meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsEmpleados.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsGeneradores.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+
+        <div id="row13Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+            <div id="col1Frow13Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 200px;">
+                <div id="DivGroup33Fcol1Frow13Fcon2FcTab2" style="max-width: 35%;" class="mainPanelDivGroup">
+                    <label id="T42Fcol1Frow13Fcon2FcTab2" idetiqueta="EmpleadosClave" class="mainPanelContentComponents" style="width: 100%;">Clave</label>
+                    <input id="txtClaveEmp" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                </div>
+                <!--<button id="btnCancelar" class="mainPanelContentComponents defaultButton" idetiqueta="btnCancelar" onclick="InitAction()" style="display: inline;">Init</button>-->
+            </div>
+        </div>
+
+        <div class="cTab" style="width: 100%; height: auto;" id="cTab2">
+            <div class="tab" id="tab2FcTab2">
+                <button id="btnTab1Ftab2FcTab2" class="tablinks Selected" onclick="openTab(event,'con2FcTab2')" idetiqueta="EmpleadosPestGenerales">Generales</button>
+                <button id="btnTab3Ftab2FcTab2" class="tablinks borderleft" onclick="openTab(event,'con3FcTab2')" idetiqueta="EmpleadosPestFamiliares">Familiares</button>
+                <button id="btnTab4Ftab2FcTab2" class="tablinks borderleft" onclick="openTab(event,'con4FcTab2')" idetiqueta="EmpleadosPestEstudios">Estudios</button>
+                <button id="btnTab5Ftab2FcTab2" class="tablinks borderleft" onclick="openTab(event,'con5FcTab2')" idetiqueta="EmpleadosPestExperiencia">Experiencia</button>
+                <button id="btnTab6Ftab2FcTab2" class="tablinks borderleft" onclick="openTab(event,'con6FcTab2')" idetiqueta="EmpleadosPestDoucmentos">Documentos</button>
+            </div>
+
+
+            <div class="contain" style="width: 100%; display: block;" id="con2FcTab2">
+                <div id="row1Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow1Fcon2FcTab2" class="mainPanelCol borderCol col-12 bordersubtitulo" style="visibility: visible;">
+                        <div id="DivGroupT2Fcol1Frow1Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup divgruoptitulo">
+                            <label id="T2Fcol1Frow1Fcon2FcTab2" idetiqueta="EmpleadosDatosPersonales" class="mainPanelContentComponents">Datos personales</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="row2Fcon2FcTab2" class="mainPanelRow" style="width:100%;margin-top:15px;">
+                    <div id="col1Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 250px;">
+                        <div id="DivGroup3Fcol1Frow2Fcon2FcTab2" style="max-width: 300px;" class="mainPanelDivGroup">
+                            <label id="T6Fcol1Frow2Fcon2FcTab2" idetiqueta="EmpleadosApePaterno" class="mainPanelContentComponents" style="width: 100%;">Apellido paterno</label>
+                            <input id="txtApellPatEmp" type="text" class="mainPanelContentComponents" style="width:100%;">
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width:15px;"></div>
+                    <div id="col2Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-4" style="visibility: visible; width:250px;">
+                        <div id="DivGroup5Fcol2Frow2Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T9Fcol2Frow2Fcon2FcTab2" idetiqueta="EmpleadosApeMaterno" class="mainPanelContentComponents" style="width: 100%;">Apellido materno</label>
+                            <input id="txtApellMatEmp" type="text" class="mainPanelContentComponents" style="width:100%;">
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 15px;"></div>
+                    <div id="col3Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-4" style="visibility: visible; width: 320px;">
+                        <div id="cddssdsddssd" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T10Fcol3Frow2Fcon2FcTab2" idetiqueta="EmpleadosNombre" class="mainPanelContentComponents" style="width:100%;">Nombre</label>
+                            <input id="txtNombreEmp" type="text" class="mainPanelContentComponents" style="width:100%;">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="row4Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="" style="display:flex; width: 100%">
+                        <div id="containInfo" style="width: 60%;">
+                            <div id="" style="display:flex; flex-wrap: wrap; width: 100%">
+                                <div id="col1Frow3Fcon2FcTab2" class="mainPanelCol borderCol col-4" style="visibility: visible; width: 250px;  ">
+                                    <div id="DivGroup6Fcol1Frow3Fcon2FcTab2" style="max-width: 65%;" class="mainPanelDivGroup">
+                                        <label id="T12Fcol1Frow3Fcon2FcTab2" idetiqueta="EmpleadosNombreAbre" class="mainPanelContentComponents" style="width: 100%;">Nombre Abreviado</label>
+                                        <input id="txtNombreAbrevEmp" type="text" class="mainPanelContentComponents" style="width:100%;">
+                                    </div>
+                                </div>
+                                <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol" style="visibility: visible; width: 2%; "></div>
+                                <div id="col1Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-4" style="visibility: visible; width: 135px;  ">
+                                    <div id="DivGroup7Fcol1Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                        <label id="T14Fcol1Frow4Fcon2FcTab2" idetiqueta="EmpleadosFechaNacimiento" class="mainPanelContentComponents" style="width: 100%;">Fecha de nacimiento</label>
+                                        <input id="txtFechaNacEmp" type="date" class="mainPanelContentComponents" style="width:100%;">
+                                    </div>
+                                </div>
+                                <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width:2%;"></div>
+                                <div id="col2Frow2Frow11Fcon2FcTabw2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                    <div id="DivGroupT3Fcol1Frow15Fcon2FcTab2" class="mainPanelDivGroup" style="width: 80%;">
+                                        <div class="editContainer">
+                                            <label id="lblPaisOr" idetiqueta="EmpleadosPaisOrigen" class="mainPanelContentComponents">País de origen</label>
+                                            <div id="editEmpleadosPaisOr" class="edit medium-large" dataedit="editEmpleadosPaisOr" functedit="setEditEmpleadosPaisOr">
+                                                <input id="txtEditKeyEmpleadosPaisOr" class="editKey medium" kind="filterKey" type="text">
+                                                <input id="txtEditBriefEmpleadosPaisOr" class="editBrief large" type="text" disabled="">
+                                                <button id="btnEmpleadosPaisOr" class="editButton small" onclick="OpenEditModal(this)">
+                                                    <img class="imgBoton" src="img/Iconos/puntos.png" />
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--<div id="col4Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 250px; ">
+                                    <div id="DivGroup10Fcol4Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                        <label id="T17Fcol4Frow4Fcon2FcTab2" class="mainPanelContentComponents" style="width: 100%;">País de origen</label>
+                                        <div class="select-style" style="width:100%;">
+                                            <select id="cbxPaisesOrEm" class="mainPanelContentComponents" style="width: 100%;"></select>
+                                        </div>
+                                    </div>
+                                </div>-->
+
+                                <div id="col1Frow5Fcon2FcTab2" class="mainPanelCol borderCol" style="visibility: visible; width: 170px;margin-top: 5px;">
+                                    <div id="DivGroup3Fcol1Frow2Fcon2FcTab2" style="max-width:300px;" class="mainPanelDivGroup">
+                                        <label id="T6Fcol1Frow2Fcon2FcTab2" idetiqueta="EmpleadosNacionalidad" class="mainPanelContentComponents" style="width: 100%;">Nacionalidad</label>
+                                        <input id="txtNacionEmp" type="text" class="mainPanelContentComponents" style="width:100%;">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <div id="containInfo" style="width: 40%; margin-left:30px;">
+                            <div id="col3Frow2Fcon2FcTab2x" class="mainPanelCol borderCol col-4" style="visibility: visible; width: 50px;">
+                                <div id="DivGroupImage" class="mainPanelDivGroup" style="max-width: 100%; ">
+                                    <!--Label-->
+                                    <img id="imageToView" src="img/profile.png" style="display: block; margin-bottom:5px;margin-top:5%; border-radius: 50%;">
+                                    <label for="imageUpload" class="file-custom-upload">
+                                        <i class="fileButtonLink"></i>Buscar
+                                    </label>
+                                    <input id="imageUpload" class="fileButton" type="file" onchange="readImage(this, 0);" multiple="" accept="image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="row2513Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col2Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 355px;">
+
+                        <div id="DivGroupT3Fcol1Frow15Fcon2FcTab2" class="mainPanelDivGroup" style="width: 100%;">
+                            <div class="editContainer">
+                                <label id="lblEstado" idetiqueta="EmpleadosEstadoNacimiento" class="mainPanelContentComponents">Estado de nacimiento</label>
+                                <div id="editEmpleadosEstadoNac" class="edit medium-medium" dataedit="editEmpleadosEstadoNac" functedit="setEditEmpleadosEstadoNac">
+                                    <input id="txtEditKeyEmpleadosEstadoNac" class="editKey medium" kind="filterKey" type="text">
+                                    <input id="txtEditBriefEmpleadosEstadoNac" class="editBrief medium" type="text" disabled="">
+                                    <button id="btnEmpleadosEstado" class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol" style="visibility: visible; width:15px;"></div>
+                    <div id="col3Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width:230px;">
+                        <div id="DivGroup9Fcol3Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T16Fcol3Frow4Fcon2FcTab2" idetiqueta="EmpleadosLugarNacimiento" class="mainPanelContentComponents" style="width: 100%;">Lugar de nacimiento</label>
+                            <input id="txtLugarNacEmp" type="text" class="mainPanelContentComponents" style="width:100%;">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="row5Fcon2FcTab2" class="mainPanelRow" style="width:100%;">
+                    <div id="col2Frow5Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 170px;">
+                        <div id="DivGroup12Fcol2Frow5Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T19Fcol2Frow5Fcon2FcTab2" idetiqueta="Genero" class="mainPanelContentComponents" style="width: 100%;">Genero</label>
+                            <div class="select-style" style="width:70%;">
+                                <select id="cbxGeneroEm" class="mainPanelContentComponents" style="width:100%;"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width:15px;"></div>
+                    <div id="col3Frow5Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width:170px;">
+                        <div id="DivGroup13Fcol3Frow5Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T20Fcol3Frow5Fcon2FcTab2" idetiqueta="EmpleadosEstadoCivil" class="mainPanelContentComponents" style="width: 100%;">Estado civil</label>
+                            <div class="select-style" style="width:75%;">
+                                <select id="cbxEstadoCivEm" class="mainPanelContentComponents" style="width: 100%;"></select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width:15px;"></div>
+                    <div id="col1Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-5" style="visibility: visible; width: 135px;">
+                        <div id="DivGroup7Fcol1Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T14Fcol1Frow4Fcon2FcTab2" idetiqueta="EmpleadosFechaIngreso" class="mainPanelContentComponents" style="width: 100%;">Fecha de ingreso</label>
+                            <input id="txtFechaIngreEmp" type="date" class="mainPanelContentComponents" style="width:100%;" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div id="row6Fcon2FcTab2" class="mainPanelRow" style="width:100%;margin-top:15px;">
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-3 bordersubtitulo" style="visibility: visible; width:100%;">
+                        <div id="DivGroupT21Fcol1Frow6Fcon2FcTab2" style="max-width:100%;" class="mainPanelDivGroup divgruoptitulo">
+                            <label id="T21Fcol1Frow6Fcon2FcTab2" idetiqueta="EmpleadosDatosIdetificativos" class="mainPanelContentComponents">Datos Identificativos</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="row7Fcon2FcTab2" class="mainPanelRow" style="width:100%;margin-top:15px;">
+                    <div id="col1Frow7Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 130px;">
+                        <div id="DivGroup16Fcol1Frow7Fcon2FcTab2" style="max-width:100%;" class="mainPanelDivGroup">
+                            <label id="T24Fcol1Frow7Fcon2FcTab2" idetiqueta="EmpleadosRFC" class="mainPanelContentComponents" style="width: 100%;">RFC</label>
+                            <input id="txtRFCEmp" type="text" pattern="^([A-ZÑ\x26]{3,4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1]))([A-Z\d]{3})?$"
+                                   title="Debes introducir un RFC valido"
+                                   class="mainPanelContentComponents" style="width:100%;">
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width:15px;"></div>
+                    <div id="col2Frow7Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width:165px;">
+                        <div id="DivGroup17Fcol2Frow7Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T25Fcol2Frow7Fcon2FcTab2" idetiqueta="EmpleadosCURP" class="mainPanelContentComponents" style="width:100%;">CURP</label>
+                            <input id="txtCurpEmp" type="text"
+                                   pattern="^[A-Z]{1}[AEIOU]{1}[A-Z]{2}[0-9]{2}(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1])[HM]{1}(AS|BC|BS|CC|CS|CH|CL|CM|DF|DG|GT|GR|HG|JC|MC|MN|MS|NT|NL|OC|PL|QT|QR|SP|SL|SR|TC|TS|TL|VZ|YN|ZS|NE)[B-DF-HJ-NP-TV-Z]{3}[0-9A-Z]{1}[0-9]{1}$"
+                                   title="Debes de introducir un CURP valido"
+                                   class="mainPanelContentComponents" style="width:100%;">
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width:15px;"></div>
+                    <div id="col3Frow7Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width:130px;">
+                        <div id="DivGroup18Fcol3Frow7Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T26Fcol3Frow7Fcon2FcTab2" idetiqueta="EmpleadosNumSeguroSocial" class="mainPanelContentComponents" style="width:100%;">No. Seguro Social</label>
+                            <input id="txtNoSegSocialEmp" type="text" class="mainPanelContentComponents" style="width:100%;" onkeypress="return isNumber(event, this)">
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width:15px;"></div>
+                    <div id="col4Frow7Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width:90px;">
+                        <div id="DivGroup19Fcol4Frow7Fcon2FcTab2" style="max-width:100%;" class="mainPanelDivGroup">
+                            <label id="T27Fcol4Frow7Fcon2FcTab2" idetiqueta="EmpleadosClinica" class="mainPanelContentComponents" style="width:100%;">Clínica</label>
+                            <input id="txtClinicaEmp" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+                <div id="row8Fcon2FcTab2" class="mainPanelRow" style="width:100%;">
+                    <div id="col1Frow8Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 230px;">
+                        <div id="DivGroup20Fcol1Frow8Fcon2FcTab2" style="max-width:100%;" class="mainPanelDivGroup">
+                            <label id="T28Fcol1Frow8Fcon2FcTab2" idetiqueta="EmpleadosCorreoElectronico" class="mainPanelContentComponents" style="width:100%;">Correo electrónico</label>
+                            <input id="txtCorreoElEmp" type="text" class="mainPanelContentComponents" style="width:100%;">
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width:15px;"></div>
+                    <div id="col2Frow8Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width 230px;">
+                        <div id="DivGroup21Fcol2Frow8Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T29Fcol2Frow8Fcon2FcTab2" idetiqueta="EmpleadosTelefono" class="mainPanelContentComponents" style="width: 100%;">Teléfono</label>
+                            <input id="txtTelefonoEmp" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+                <div id="row9Fcon2FcTab2" class="mainPanelRow" style="width:100%;margin-top:15px;">
+                    <div id="col1Frow9Fcon2FcTab2" class="mainPanelCol borderCol col-2 bordersubtitulo" style="visibility: visible; width:100%;">
+                        <div id="DivGroupT30Fcol1Frow9Fcon2FcTab2" style="max-width:100%;" class="mainPanelDivGroup divgruoptitulo">
+                            <label id="T30Fcol1Frow9Fcon2FcTab2" idetiqueta="EmpleadosDatosDomicilio" class="mainPanelContentComponents">Datos del domicilio</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="row10Fcon2FcTab2" class="mainPanelRow" style="width:100%;margin-top:15px;">
+                    <div id="col1Frow10Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width:450px;">
+                        <div id="DivGroup24Fcol1Frow10Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T32Fcol1Frow10Fcon2FcTab2" idetiqueta="EmpleadosCalle" class="mainPanelContentComponents" style="width:100%;">Calle</label>
+                            <input id="txtCalleEmp" type="text" class="mainPanelContentComponents" style="width:100%;">
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width:15px;"></div>
+                    <div id="col2Frow10Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width:90px;">
+                        <div id="DivGroup25Fcol2Frow10Fcon2FcTab2" style="max-width:100%;" class="mainPanelDivGroup">
+                            <label id="T33Fcol2Frow10Fcon2FcTab2" idetiqueta="EmpleadosNumExterior" class="mainPanelContentComponents" style="width:100%;">Núm. Exterior</label>
+                            <input id="txtNumExtEmp" type="text" class="mainPanelContentComponents" style="width:100%;">
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 15px;"></div>
+                    <div id="col3Frow10Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 90px;">
+                        <div id="DivGroup26Fcol3Frow10Fcon2FcTab2" style="max-width:100%;" class="mainPanelDivGroup">
+                            <label id="T34Fcol3Frow10Fcon2FcTab2" idetiqueta="EmpleadosNumInterior" class="mainPanelContentComponents" style="width:100%;">Núm. Interior</label>
+                            <input id="txtNumIntEmp" type="text" class="mainPanelContentComponents" style="width:100%;">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 15px;"></div>
+                <div id="row2Frow11Fcon2FcTab2" class="mainPanelRow" style="width:100%;">
+                    <div id="col2Frow2Frow11Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 400px;">
+                        <div id="DivGroupT3Fcol1Frow15Fcon2FcTab2" class="mainPanelDivGroup" style="width: 100%;">
+                            <div class="editContainer">
+                                <label id="lblCodigoPostal" idetiqueta="Cp" class="mainPanelContentComponents">Código Postal</label>
+                                <div id="editEmpleadosCp" class="edit small-large" dataedit="editEmpleadosCp" functedit="setEditEmpleadosCp">
+                                    <input id="txtEditKeyEmpleadosCp" class="editKey small" kind="filterKey" type="text">
+                                    <input id="txtEditBriefEmpleadosCp" class="editBrief large" type="text" disabled="">
+                                    <button id="btnEmpleadosCp" class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width:40px;"></div>
+                    <div id="col1Frow2Frow11Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width:230px;">
+                        <div id="DivGroup27Fcol1Frow2Frow11Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T35Fcol1Frow2Frow11Fcon2FcTab2" idetiqueta="EmpleadosColonia" class="mainPanelContentComponents" style="width:100%;">Colonia</label>
+                            <input id="txtColoniaEmp" type="text" class="mainPanelContentComponents" style="width:100%;">
+                        </div>
+                    </div>
+
+
+
+                    <!--<div id="col2Frow2Frow11Fcon2FcTab2" class="mainPanelCol borderCol col-5" style="visibility: visible; width:250px;">
+                        <div id="DivGroup28Fcol2Frow2Frow11Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T36Fcol2Frow2Frow11Fcon2FcTab2" class="mainPanelContentComponents" style="width: 100%;">Código Postal</label>
+                            <div class="select-style" style="width:100%;">
+                                <select id="cbxCpEm" class="mainPanelContentComponents" style="width: 100%;"></select>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+
+                <div id="row12Fcon2FcTab2" class="mainPanelRow" style="width:100%;">
+                    <div id="col2Frow2Frow11Fcon2FcTabw2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 440px;">
+                        <div id="DivGroupT3Fcol1Frow15Fcon2FcTab2" class="mainPanelDivGroup" style="width: 100%;">
+                            <div class="editContainer">
+                                <label id="lblPais" idetiqueta="Paises" class="mainPanelContentComponents">País</label>
+                                <div id="editEmpleadosPais" class="edit medium-large" dataedit="editEmpleadosPais" functedit="setEditEmpleadosPais">
+                                    <input id="txtEditKeyEmpleadosPais" class="editKey medium" kind="filterKey" type="text">
+                                    <input id="txtEditBriefEmpleadosPais" class="editBrief large" type="text" disabled="">
+                                    <button id="btnEmpleadosPais" class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div id="col1Frow12Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width:250px;">
+                        <div id="DivGroup29Fcol1Frow12Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T37Fcol1Frow12Fcon2FcTab2" class="mainPanelContentComponents" style="width: 100%;">Ciudad</label>
+                            <div class="select-style" style="width:100%;">
+                                <select id="cbxCiudadesEm" class="mainPanelContentComponents" style="width:100%;"></select>
+                            </div>
+                        </div>
+                    </div>-->
+                    <!-- <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width:40px;"></div>-->
+                    <div id="col2Frow2Frow11Fcon2FcTabw2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 400px;">
+                        <div id="DivGroupT3Fcol1Frow15Fcon2FcTab2" class="mainPanelDivGroup" style="width: 100%;">
+                            <div class="editContainer">
+                                <label id="lblEstado" idetiqueta="Estados" class="mainPanelContentComponents">Estado</label>
+                                <div id="editEmpleadosEstado" class="edit medium-medium" dataedit="editEmpleadosEstado" functedit="setEditEmpleadosEstado">
+                                    <input id="txtEditKeyEmpleadosEstado" class="editKey medium" kind="filterKey" type="text">
+                                    <input id="txtEditBriefEmpleadosEstado" class="editBrief medium" type="text" disabled="">
+                                    <button id="btnEmpleadosEstado" class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!--<div id="col2Frow12Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width:250px;">
+                        <div id="DivGroup32Fcol2Frow12Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T41Fcol2Frow12Fcon2FcTab2" class="mainPanelContentComponents" style="width: 100%;">Municipio</label>
+                            <div class="select-style" style="width:100%;">
+                                <select id="cbxMunicipiosEm" class="mainPanelContentComponents" style="width:100%;"></select>
+                            </div>
+                        </div>
+                    </div>-->
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width:15px;"></div>
+                    <div id="col2Frow2Frow11Fcon2FcTabw2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 440px;">
+                        <div id="DivGroupT3Fcol1Frow15Fcon2FcTab2" class="mainPanelDivGroup" style="width: 100%;">
+                            <div class="editContainer">
+                                <label id="lblMunicipio" idetiqueta="Municipios" class="mainPanelContentComponents">Municipio</label>
+                                <div id="editEmpleadosMunicipio" class="edit medium-large" dataedit="editEmpleadosMunicipio" functedit="setEditEmpleadosMunicipio">
+                                    <input id="txtEditKeyEmpleadosMunicipio" class="editKey medium" kind="filterKey" type="text">
+                                    <input id="txtEditBriefEmpleadosMunicipio" class="editBrief large" type="text" disabled="">
+                                    <button id="btnEmpleadosMunicipio" class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div id="col3Frow12Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width:250px;">
+                        <div id="DivGroup31Fcol3Frow12Fcon2FcTab2" style="max-width:100%;" class="mainPanelDivGroup">
+                            <label id="T39Fcol3Frow12Fcon2FcTab2" class="mainPanelContentComponents" style="width: 100%;">Estado</label>
+                            <div class="select-style" style="width:100%;">
+                                <select id="cbxEstadosEm" class="mainPanelContentComponents" style="width:100%;"></select>
+                            </div>
+                        </div>
+                    </div>-->
+                    <!--  <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width:40px;"></div>-->
+                    <div id="col2Frow2Frow11Fcon2FcTabw2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 400px;">
+                        <div id="DivGroupT3Fcol1Frow15Fcon2FcTab2" class="mainPanelDivGroup" style="width: 100%;">
+                            <div class="editContainer">
+                                <label id="lblCiudades" idetiqueta="Ciudades" class="mainPanelContentComponents">Ciudad</label>
+                                <div id="editEmpleadosCiudades" class="edit medium-large" dataedit="editEmpleadosCiudades" functedit="setEditEmpleadosCiudades">
+                                    <input id="txtEditKeyEmpleadosCiudades" class="editKey medium" kind="filterKey" type="text">
+                                    <input id="txtEditBriefEmpleadosCiudades" class="editBrief large" type="text" disabled="">
+                                    <button id="btnEmpleadosCiudades" class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div id="col4Frow12Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width:250px;">
+                        <div id="DivGroup32Fcol4Frow12Fcon2FcTab2" style="max-width:100%;" class="mainPanelDivGroup">
+                            <label id="T40Fcol4Frow12Fcon2FcTab2" class="mainPanelContentComponents" style="width: 100%;">País</label>
+                            <div class="select-style" style="width:100%;">
+                                <select id="cbxPaisesEm" class="mainPanelContentComponents" style="width: 100%;"></select>
+                            </div>
+                        </div>
+                    </div>-->
+
+
+                </div>
+            </div>
+
+            <div class="contain" style="width:100%; display:none;" id="con3FcTab2">
+                <div id="row1Fcon3FcTab2" class="mainPanelRow" style="width:100%;margin-top:15px;">
+                    <div id="col1Frow1Fcon3FcTab2" class="mainPanelCol borderCol col-12 bordersubtitulo" style="visibility: visible;">
+                        <div id="DivGroupT43Fcol1Frow1Fcon3FcTab2" style="max-width: 100%;" class="mainPanelDivGroup divgruoptitulo">
+                            <label id="T43Fcol1Frow1Fcon3FcTab2" idetiqueta="EmpleadosFamiliares" class="mainPanelContentComponents">Familiares</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="row2Fcon3FcTab2" class="mainPanelRow" style="width:100%;margin-top:15px; ">
+                    <div id="col1Frow2Fcon3FcTab2" class="mainPanelCol borderCol col-12" style="visibility:visible;">
+                        <div id="tblFamiliares" class="divTable" dataTbl="tblFamiliares" functEdit="editTableFamiliares" style="width: 100%;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contain" style="width:100%; display:none;" id="con4FcTab2">
+                <div id="row1Fcon4FcTab2" class="mainPanelRow" style="width:100%;margin-top:15px;">
+                    <div id="col1Frow1Fcon4FcTab2" class="mainPanelCol borderCol col-12 bordersubtitulo" style="visibility:visible;">
+                        <div id="DivGroupT45Fcol1Frow1Fcon4FcTab2" style="max-width:100%;" class="mainPanelDivGroup divgruoptitulo">
+                            <label id="T45Fcol1Frow1Fcon4FcTab2" idetiqueta="Estudios" class="mainPanelContentComponents">Estudios</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="row2Fcon4FcTab2" class="mainPanelRow" style="width:100%;margin-top:15px;">
+                    <div id="col1Frow2Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility:visible;">
+                        <div id="tblEstudios" class="divTable" dataTbl="tblEstudios" functEdit="editTableEstudios" style="width: 100%;">
+                        </div>
+                    </div>
+                    <div id="col1Frow2Fcon4FcTab2" class="mainPanelCol borderCol col-12 bordersubtitulo" style="visibility:visible;">
+                        <br />
+                        <div id="DivGroupT45Fcol1Frow1Fcon4FcTab2" style="max-width:100%;" class="mainPanelDivGroup divgruoptitulo">
+                            <label id="T45Fcol1Frow1Fcon4FcTab2" idetiqueta="EmpleadosCapacitaciones" class="mainPanelContentComponents">Capacitaciones</label>
+                        </div>
+
+                    </div>
+                    <div id="col1Frow2Fcon4FcTabewq2" class="mainPanelCol borderCol col-12" style="visibility:visible;">
+                        <br />
+
+                        <div id="tblCapacitacion" class="divTable" dataTbl="tblCapacitacion" functEdit="editTableCapacitacion" style="width: 100%;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contain" style="width:100%; display:none;" id="con5FcTab2">
+                <div id="row1Fcon5FcTab2" class="mainPanelRow" style="width:100%;margin-top:15px;">
+                    <div id="col1Frow1Fcon5FcTab2" class="mainPanelCol borderCol col-12 bordersubtitulo" style="visibility: visible;">
+                        <div id="DivGroupT47Fcol1Frow1Fcon5FcTab2" style="max-width: 100%;" class="mainPanelDivGroup divgruoptitulo">
+                            <label id="T47Fcol1Frow1Fcon5FcTab2" idetiqueta="EmpleadosExpLabExterna" class="mainPanelContentComponents">Experiencia laboral fuera de la empresa</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="row1Fcon5FcTab26" class="mainPanelRow" style="width:100%;margin-top:15px;">
+                    <div id="col1Frow1Fcon5FcTab2" class="mainPanelCol borderCol col-12 " style="visibility: visible;">
+
+                        <div id="tblExpeLaboExt" class="divTable" dataTbl="tblExpeLaboExt" functEdit="editTableExpeLaboExt" style="width: 100%;">
+
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div id="row1Fcon5FcTab22" class="mainPanelRow" style="width:100%;margin-top:15px;">
+                    <div id="col1Frow1Fcon5FcTab22" class="mainPanelCol borderCol col-12 bordersubtitulo" style="visibility: visible;">
+                        <div id="DivGroupT47Fcol1Frow1Fcon5FcTab22" style="max-width: 100%;" class="mainPanelDivGroup divgruoptitulo">
+                            <label id="T47Fcol1Frow1Fcon5FcTab22" idetiqueta="EmpleadosExpeLabInterna" class="mainPanelContentComponents">Experiencia laboral dentro de la empresa</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="row1Fcon5FcTab24" class="mainPanelRow" style="width:100%;margin-top:15px;">
+                    <div id="col1Frow1Fcon5FcTab22" class="mainPanelCol borderCol col-12 " style="visibility: visible;">
+
+                        <div id="tblExpeLaboInt" class="divTable" dataTbl="tblExpeLaboInt" functEdit="editTableExpeLaboInt" style="width: 100%;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contain" style="width:100%; display:none;" id="con6FcTab2">
+                <div id="row1Fcon5FcTab2" class="mainPanelRow" style="width:100%; margin-top:15px;">
+                    <div id="col1Frow1Fcon5FcTab2" class="mainPanelCol borderCol col-12 bordersubtitulo" style="visibility: visible;">
+                        <div id="DivGroupT47Fcol1Frow1Fcon5FcTab2" style="max-width: 100%;" class="mainPanelDivGroup divgruoptitulo">
+                            <label id="T47Fcol1Frow1Fcon5FcTab2" class="mainPanelContentComponents">Documentos</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="row1Fcon5FcTab23" class="mainPanelRow" style="width:100%;margin-top:15px;">
+                    <div id="col1Frow1Fcon5FcTab23" class="mainPanelCol  col-12" style="visibility: visible;">
+
+                        <div id="tblDocumentos" class="divTable" dataTbl="tblDocumentos" functEdit="editTableDocumentos" style="width: 100%;">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="botones" class="contenedor" style="max-width: 100%; width: 100%;">
+            <button id="btnGuardar" class="mainPanelContentComponents defaultButton" style="display:inline;" onclick="saveEmp()">
+                <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                <span idetiqueta="btnGuardar">Guardar</span>
+            </button>
+            <button id="btnActualizar" class="mainPanelContentComponents defaultButton" style="display:none;" onclick="updateEmp()">
+                <img class="imgBoton" src="img/Iconos/editar.png" />
+                <span idetiqueta="btnActualizar">Actualizar</span>
+            </button>
+            <button id="btnEliminar" class="mainPanelContentComponents defaultButton" style="display: none;" onclick="deleteEmp()">
+                <img class="imgBoton" clase="imgBoton" src="img/Iconos/eliminar.png" />
+                <span idetiqueta="btnEliminar">Eliminar</span>
+            </button>
+            <div id="ContenedoraBuscar" style="display: inline;">
+                <button id="btnBuscar" class="mainPanelContentComponents defaultButton" dataEdit="selectorEmp" functEdit="selectorEmpleados" onclick="OpenSelector(this)" style="display: inline;">
+                    <img class="imgBoton" src="img/Iconos/buscar.png" />
+                    <span idetiqueta="btnBuscar">Buscar</span>
+                </button>
+            </div>
+            <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="cancelEmp()" style="display: inline;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+        </div>
+
+    </div>
+</body>
+</html>

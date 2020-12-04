@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsConceptosNom.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+            <div id="questionVersion" class="custom-message" style="width:495px;">
+                <div class="message"></div>
+                <span class="button yes" idetiqueta="ConceptosNominaAddVersion">Agregar versión</span>
+                <span class="button no" idetiqueta="ConceptosNominaEditVersion">Modificar versión</span>
+            </div>
+        <div id="contentCnc">
+
+            <div id="row1Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                <div id="colKey" class="mainPanelCol borderCol col-3" style="visibility: visible;width:5%; margin-top:1px;">
+                    <div id="DivGroup2Fcol1Frow1Fcon2FcTab2" style="" class="mainPanelDivGroup">
+                        <label id="lblClaveCn" idetiqueta="ConceptosNominaClave" class="mainPanelContentComponents" style="width: 100%;">Clave</label>
+                        <input id="txtClaveCn" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                    </div>
+                </div>
+                <div id="colSeparator" class="mainPanelCol bordderCol" style="visibility: visible; width:3%;"></div>
+                <div id="colBrief" class="mainPanelCol bordderCol col-7" style="visibility: visible;width: 28.333%;">
+                    <div id="DivGroup2Fcol2Frow1Fcon2FcTab2" style="" class="mainPanelDivGroup">
+                        <label id="lblDescripcionCn" idetiqueta="ConceptosNominaDescripcion" class="mainPanelContentComponents" style="width: 100%;">Descripción</label>
+                        <input id="txtDescripcionCn" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                    </div>
+                </div>
+                <div id="colSeparator" class="mainPanelCol bordderCol" style="visibility: visible; width:3%;"></div>
+                <div id="col1Frow3Fcon2FcTab2" class="mainPanelCol borderCol" style="visibility: visible; width: 230px;">
+                    <div id="DivGroupT10Fcol1Frow3Fcon2FcTab2" style="max-width: 300px;" class="mainPanelDivGroup">
+                        <label id="lblDescripcionBreve" idetiqueta="ConceptosNominaDescripcionAbre" class="mainPanelContentComponents" style="width: 100%; padding-top:3px;">Descripción breve</label>
+                        <input id="txtDescripcionBreveCn" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+
+            <div id="rowVersion" class="mainPanelRow" style="width: 100%; display:none;">
+                <div id="colVerion" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 250px;">
+                    <div id="DivGroupVersion" style="max-width: 230px;" class="mainPanelDivGroup">
+                        <div style="display:inline-grid; /*! height:55px; */ /*! padding-left:5px; */">
+                            <label id="lblVigente" idetiqueta="ConceptosNominaVigente" class="mainPanelContentComponents" style="width: 100%;">Vigente</label>
+                            <input id="txtVigenteCn" type="date" class="mainPanelContentComponents" style="width:100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cTab" style="width: 100%; height: auto;" id="cTab2">
+                <div class="tab" id="tab2FcTab2">
+                    <button id="btnTab1Ftab2FcTab2" class="tablinks Selected" onclick="openTab(event,'con2FcTab2')" idetiqueta="ConceptosNomina">Conceptos de nómina</button>
+                    <button id="btnTabTab2Ftab2FcTab2" class="tablinks borderleft" onclick="openTab(event,'conTab2FcTab2')" idetiqueta="ConceptosNominaPestBaseAfec">Bases afectadas</button>
+                    <button id="btnTabTab3Ftab2FcTab2" class="tablinks borderleft" onclick="openTab(event,'conTab3FcTab2')" idetiqueta="ConceptosNominaPestExentoISRIMSS">Exento ISR e IMSS</button>
+                    <button id="btnTabTab4Ftab2FcTab2" class="tablinks borderleft" onclick="openTab(event,'conTab4FcTab2')" idetiqueta="ConceptosNominaDatosAdicionales">Datos Adicionales</button>
+                </div>
+                <div class="contain" style="width: 100%; display: block;" id="con2FcTab2">
+                    <div id="row2Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                        <div id="col1Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-8 bordersubtitulo" style="visibility: visible; width: 100%;">
+                            <div id="DivGroupT7Fcol1Frow2Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup divgruoptitulo">
+                                <label id="lblDatosGenCn" idetiqueta="ConceptosNominaDatosGenerales" class="mainPanelContentComponents">Datos generales</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  <div id="row3Fcon2FcTab2" class="mainPanelRow" style="width: 100%;margin-top:15px">
+          <div id="col1Frow3Fcon2FcTab2" class="mainPanelCol borderCol" style="visibility: visible; width: 130px;">
+              <div id="DivGroupT10Fcol1Frow3Fcon2FcTab2" style="max-width: 300px;" class="mainPanelDivGroup">
+                  <label id="lblDescripcionBreve" idetiqueta="ConceptosNominaDescripcionAbre"  class="mainPanelContentComponents" style="width: 100%; padding-top:3px;">Descripción breve</label>
+              </div>
+          </div>
+          <div id="col2Frow3Fcon2FcTab2" class="mainPanelCol borderCol col-4" style="visibility: visible; width: 190px;">
+              <div id="DivGroup7Fcol2Frow3Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                  <input id="txtDescripcionBreveCn" type="text" class="mainPanelContentComponents" style="width: 100%;">
+              </div>
+          </div>
+      </div>-->
+                    <div id="row4Fcon2FcTab2" class="mainPanelRow" style="width: 100%;margin-top:15px;">
+                        <div id="col1Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 130px;">
+                            <div id="DivGroupT9Fcol1Frow4Fcon2FcTab2" style="max-width: 300px;" class="mainPanelDivGroup">
+                                <label id="T9Fcol1Frow4Fcon2FcTab2" idetiqueta="ConceptosNominaNaturaleza" class="mainPanelContentComponents" style="width: 100%;">Naturaleza</label>
+                            </div>
+                        </div>
+
+                        <div class="colborder" style="width: 750px; display:flex;">
+                            <div style="display:flex; flex-wrap: wrap; width: 100%; margin-top:5px; margin-left:3px;">
+                                <div id="col2Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 130px;">
+                                    <div id="DivGroupT13Fcol2Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                        <div id="DivGroup8Fcol2Frow4Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" name="naturaleza" id="rbnPercepcion">
+                                            <label id="rbnPercepcion" idetiqueta="ConceptosNominaRbPercepcion" class="containerRadio" for="rbnPercepcion">Percepción</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="col3Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 130px;">
+                                    <div id="DivGroupT15Fcol3Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                        <div id="DivGroup9Fcol3Frow4Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" name="naturaleza" id="rbnDeduccion">
+                                            <label id="rbnDeduccion" idetiqueta="ConceptosNominaRbDeduccion" class="containerRadio" for="rbnDeduccion">Deducción</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="col4Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 130px;">
+                                    <div id="DivGroupT17Fcol4Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                        <div id="DivGroup10Fcol4Frow4Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" name="naturaleza" id="rbnCalculo">
+                                            <label id="rbnCalculo" idetiqueta="ConceptosNominaRbCalculo" class="containerRadio" for="rbnCalculo">Cálculo</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="col5Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 130px;">
+                                    <div id="DivGroupT18Fcol5Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                        <div id="DivGroup11Fcol5Frow4Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" name="naturaleza" id="rbnDato">
+                                            <label id="rbnDato" idetiqueta="ConceptosNominaRbDato" class="containerRadio" for="rbnDato">Dato</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="col6Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 130px;">
+                                    <div id="DivGroupT19Fcol6Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                        <div id="DivGroup12Fcol6Frow4Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" name="naturaleza" id="rbnInformativo">
+                                            <label id="rbnInformativo" idetiqueta="ConceptosNominaRbInformativo" class="containerRadio" for="rbnInformativo">Informativo</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top:1%;"></div>
+                    <div id="row5" class="mainPanelRow" style="width: 100%;">
+                        <div id="col1Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 130px;">
+                            <div id="DivGroupT9Fcol1Frow4Fcon2FcTab2" style="max-width: 300px;" class="mainPanelDivGroup">
+                                <label id="T9Fcol1Frow4Fcon2FcTab2" idetiqueta="ConceptosNominaTipoPorceso" class="mainPanelContentComponents" style="width: 100%;">Tipo de proceso</label>
+                            </div>
+                        </div>
+                        <div class="colborder" style="width: 750px; display:flex;">
+                            <div style="display:flex; flex-wrap: wrap; width: 100%; margin-top:5px; margin-left:3px;">
+                                <div id="col2Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 130px;">
+                                    <div id="DivGroupT13Fcol2Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                        <div id="DivGroup8Fcol2Frow4Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" name="tipo" id="rbnRepetitivoCn">
+                                            <label id="rbnRepetitivoCn" idetiqueta="ConceptosNominaRbRepetitivo" class="containerRadio" for="rbnRepetitivoCn">Repetitivo</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="col3Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 180px;">
+                                    <div id="DivGroupT15Fcol3Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                        <div id="DivGroup9Fcol3Frow4Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" name="tipo" id="rbnSoloPeriodoCn">
+                                            <label id="rbnSoloPeriodoCn" idetiqueta="ConceptosNominaRbSoloPeriodo" class="containerRadio" for="rbnSoloPeriodoCn">Solo en el periodo</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="col4Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 130px;">
+                                    <div id="DivGroupT17Fcol4Frow4Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                        <div id="DivGroup10Fcol4Frow4Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" name="tipo" id="rbnAutomaticoCn">
+                                            <label id="rbnAutomaticoCn" idetiqueta="ConceptosNominaRbAutomatico" class="containerRadio" for="rbnAutomaticoCn">Automático</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row15Fcon2FcTab2" class="mainPanelRow" style="width: 100%; height: auto;margin-top:15px;">
+                        <div id="col1Frow15Fcon2FcTab2" class="mainPanelCol borderCol col-12 bordersubtitulo" style="visibility: visible;">
+                            <div id="DivGroupT7Fcol1Frow2Fcon2FcTab23" style="max-width: 100%;" class="mainPanelDivGroup divgruoptitulo">
+                                <label id="lblParametrosCn" idetiqueta="ConceptosNominaParametros" class="mainPanelContentComponents" style="width: 100%;">Parametros</label>
+                            </div>
+                        </div>
+                        <div id="col1Frow2Fcon3FcTab2" class="mainPanelCol borderCol col-12" style="visibility:visible; margin-top:15px;">
+                            <div id="tblParametros" class="divTable" datatbl="tblParametros" functedit="editTableParametros" style="width: 100%;"> </div>
+                        </div>
+                    </div>
+                    <div id="row15Fcon2FcTab2" class="mainPanelRow" style="width: 100%; /*! height: 40px; */"> </div>
+                    <div id="row15Fcon2FcTab233" class="mainPanelRow" style="width: 100%; height: 96px;">
+                        <div id="DivGroupT7Fcol1Frow2Fcon2FcTab23" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblParametrosCn" idetiqueta="ConceptosNominaFmCalConcep" class="mainPanelContentComponents" style="width: 100%;"> Fórmula del cálculo del concepto </label>
+                        </div>
+                        <div id="col1Frow15Fcon2FcTab233" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                            <div style="display:flex; flex-wrap: wrap; width: 100%;">
+                                <textarea id="formulaCn" rows="4" style="position: relative; max-height: 100px; width:65%"></textarea>
+                                <div style="display:inline-grid; height:55px;">
+                                    <button class="button-valid" style="visibility:hidden"> Validar</button>
+                                    <button style="visibility:hidden">Test2</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row15Fcon2FcTab2" class="mainPanelRow" style="width: 100%; /*! height: 40px; */"> </div>
+                    <div id="row16Fcon2FcTab2" class="mainPanelRow" style="width: 100%; height: 96px;margin-top:15px;">
+                        <div id="DivGroup443" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblParametrosCn" idetiqueta="ConceptosNominaCondicionCalConcepto" class="mainPanelContentComponents" style="width: 100%;"> Condición para el cálculo del concepto </label>
+                        </div>
+                        <div id="col1Frow15Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                            <div style="display:flex; flex-wrap: wrap; width: 100%;">
+                                <textarea id="formulaCondicionCn" rows="4" style="position: relative; max-height: 100px; width:65%;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row15Fcon2FcTab2" class="mainPanelRow" style="width: 100%; /*! height: 40px; */"> </div>
+                    <div id="row16Fcon2FcTab2" class="mainPanelRow" style="width: 100%; height: auto;margin-top:15px;">
+                        <div id="col1Frow17Fcon2FcTab2" class="mainPanelCol borderCol col-12 bordersubtitulo" style="visibility: visible;">
+                            <div id="DivGroupT7Fcol1Frow2Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup divgruoptitulo">
+                                <label id="lblParametrosCn" idetiqueta="ConceptosNominaTioCorridasConcepto" class="mainPanelContentComponents" style="width: 100%;"> Tipos de corrida en las que se incluye el concepto </label>
+                            </div>
+
+                        </div>
+                        <div id="col1Frow2Fcon3FcTab2" class="mainPanelCol borderCol col-12" style="visibility:visible;margin-top:15px;">
+                            <div id="tblTiposCorrida" class="divTable" datatbl="tblTiposCorrida" functedit="editTableTiposCorrida" style="width: 100%;"> </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contain" style="width: 100%; display: none;" id="conTab2FcTab2">
+                    <div id="row1FconTab2FcTab2" class="mainPanelRow" style="width: 100%;margin-top:15px;">
+                        <div id="col1Frow1FconTab2FcTab2" class="mainPanelCol borderCol col-12 bordersubtitulo" style="visibility: visible;">
+                            <div id="DivGroupT3Fcol1Frow1FconTab2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup divgruoptitulo">
+                                <label id="T3Fcol1Frow1FconTab2FcTab2" idetiqueta="ConceptosNominaPrincipales" class="mainPanelContentComponents">Principales</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row2FconTab2FcTab2" class="mainPanelRow" style="width: 100%; margin-top:15px;">
+                        <div id="col1Frow2FconTab2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 30%;">
+                            <div id="DivGroupT5Fcol1Frow2FconTab2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <div id="DivGroup23Fcol1Frow2FconTab2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                    <input id="chkAfectaISR"  name="chks" type="checkbox" class="mainPanelContentComponents">
+                                    <label class="containerCheck" idetiqueta="ConceptosNominaChkISR" for="chkAfectaISR">ISR</label>
+                                </div>
+                            </div>
+                            <div id="DivGroupT6Fcol1Frow2FconTab2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <div id="DivGroup24Fcol1Frow2FconTab2FcTab2" style="max-width: 100%; width: 100%; display:flex;" class="containerSelectors">
+                                    <div>
+                                        <input id="chkAfectaIMSS" name="chks" type="checkbox" class="mainPanelContentComponents">
+                                        <label class="containerCheck" idetiqueta="ConceptosNominaChkIMSS"  for="chkAfectaIMSS">IMSS</label>
+                                    </div>
+                                    <div style="padding-left:15px;">
+                                        <div class="colborder" style="width: 160px; display:flex; flex-wrap: wrap; margin-top:5px; margin-left:3px; margin-bottom:5px;">
+                                            <div style="margin-top:5px; margin-bottom:5px;">
+                                                <input id="rbnAfectaFijoCn" type="radio" class="mainPanelContentComponents" name="tipoAfecta">
+                                                <label class="containerRadio" idetiqueta="ConceptosNominaRbFijo" for="rbnAfectaFijoCn">Fijo</label>
+                                                <input id="rbnAfectaVariableCn" type="radio" class="mainPanelContentComponents" name="tipoAfecta">
+                                                <label class="containerRadio" idetiqueta="ConceptosNominaRbVariable" for="rbnAfectaVariableCn" style="padding-left:5px;">Variable</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="DivGroupT7Fcol1Frow2FconTab2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <div id="DivGroup25Fcol1Frow2FconTab2FcTab2" style="max-width: 100%;margin-top: 3px;" class="containerSelectors">
+                                    <input type="checkbox" class="mainPanelContentComponents" id="chkAfectaInfo">
+                                    <label class="containerCheck" idetiqueta="ConceptosNominaChkAfectaInfonavit" for="chkAfectaInfo">Afecta INFONAVIT</label>
+                                </div>
+                            </div>
+                            <div id="DivGroupT8Fcol1Frow2FconTab2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <div id="DivGroup26Fcol1Frow2FconTab2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                    <input type="checkbox" class="mainPanelContentComponents" id="chkAfectaPTU">
+                                    <label class="containerCheck" idetiqueta="ConceptosNominaChkPTU" for="chkAfectaPTU">Afecta PTU</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="col2Frow2FconTab2FcTab2" class="mainPanelCol borderCol col-6" style="visibility: visible;">
+                            <div id="DivGroupT9Fcol2Frow2FconTab2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <div id="DivGroup27Fcol2Frow2FconTab2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                    <input type="checkbox" class="mainPanelContentComponents" id="chkAfectaImpSoNom">
+                                    <label class="containerCheck" idetiqueta="ConceptosNominaChkAfecImpuestoNom" for="chkAfectaImpSoNom">Afecta impuesto sobre nómina</label>
+                                </div>
+                            </div>
+                            <div id="DivGroupT10Fcol2Frow2FconTab2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <div id="DivGroup28Fcol2Frow2FconTab2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                    <input type="checkbox" class="mainPanelContentComponents" id="chkAfectaDespensa">
+                                    <label class="containerCheck" idetiqueta="ConceptosNominaChkAfectDespensa" for="chkAfectaDespensa">Afecta despensa</label>
+                                </div>
+                            </div>
+                            <div id="DivGroupT11Fcol2Frow2FconTaab2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <div id="DivGroup29Fcol2Frow2FconTab2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                    <input type="checkbox" class="mainPanelContentComponents" id="chkAfectaFondoAhorro">
+                                    <label class="containerCheck" idetiqueta="ConceptosNominaChkAfectFondoAhorro" for="chkAfectaFondoAhorro">Afecta fondo de ahorro</label>
+                                </div>
+                            </div>
+                            <div id="DivGroupT12Fcol2Frow2FconTab2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <div id="DivGroup30Fcol2Frow2FconTab2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                    <input type="checkbox" class="mainPanelContentComponents" id="chkAfectaAguinaldo">
+                                    <label class="containerCheck" idetiqueta="ConceptosNominaChkAfectAgunaldo" for="chkAfectaAguinaldo">Afecta aguinaldo</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row3FconTab2FcTab2" class="mainPanelRow" style="width: 100%;margin-top:15px;">
+                        <div id="col1Frow3FconTab2FcTab2" class="mainPanelCol borderCol col-6 bordersubtitulo" style="visibility: visible; width: 100%;">
+                            <div id="DivGroupT12Fcol1Frow3FconTab2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup divgruoptitulo">
+                                <label id="T12Fcol1Frow3FconTab2FcTab2" idetiqueta="ConceptosNominaOtrasBases" class="mainPanelContentComponents">Otras bases</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row4FconTab2FcTab2" class="mainPanelRow" style="width: 100%; height: auto;margin-top:15px;">
+                        <div id="col1Frow4FconTab2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                            <div id="tblOtrasBases" class="divTable" datatbl="tblOtrasBases" functedit="editTableOtrasBasesAfecta" style="width: 100%;"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contain" style="width: 100%; display: none;" id="conTab3FcTab2">
+                    <div id="row1FconTab3FcTab2" class="mainPanelRow" style="width: 100%;">
+                        <div id="col1Frow1FconTab3FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                        </div>
+                    </div>
+                    <div id="row2FconTab3FcTab2" class="mainPanelRow" style="width: 100%; margin-top:15px;">
+                        <div id="col1Frow2FconTab3FcTab2" class="mainPanelCol borderCol col-12 bordersubtitulo" style="visibility: visible;">
+                            <div id="DivGroupT3Fcol1Frow2FconTab3FcTab2" style="max-width: 100%;" class="mainPanelDivGroup divgruoptitulo">
+                                <label id="lblFormulaExcentaIsr" idetiqueta="ConceptosNominaPestExentoISRIMSS" class="mainPanelContentComponents"> Exento ISR e IMSS</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row2FconTab3FcTab2" class="mainPanelRow" style="width: 100%;margin-top:15px;">
+                        <div id="col1Frow2FconTab3FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                            <div id="formulaExcentaIsr" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                <div style="display:grid; /*! flex-wrap: wrap; */ width: 100%;">
+                                    <label id="lblFormulaExcentaIsr" idetiqueta="ConceptosNominaFormulaExentaISR" class="mainPanelContentComponents">Fórmula de la parte exenta de ISR</label>
+                                    <textarea id="txtFormulaExcentaIsr" rows="4" style="position: relative; max-height: 100px; width:65%" disabled=""></textarea>
+                                    <div style="/*! display:inline-grid; */ /*! height:55px; */">
+                                        <button style="visibility:hidden">Test</button>
+                                        <button style="visibility:hidden">Test2</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row3FconTab3FcTab2" class="mainPanelRow" style="width: 100%; margin-top:15px;">
+                        <div id="col1Frow3FconTab3FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                            <div id="DivGroup36Fcol1Frow3FconTab3FcTab2" style="max-width: 350px;" class="mainPanelDivGroup">
+                                <label id="lblPeriodoAplExen" idetiqueta="ConceptosNominaPerAplicaForISR" class="mainPanelContentComponents" style="width: 100%;">Periodo en que aplica la parte exenta de ISR</label>
+                                <div class="select-style" style="width: 100%;">
+                                    <select id="cbxExentaPeriodoISR" class="mainPanelContentComponents" style="width: 100%;" disabled=""></select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div id="row4FconTab3FcTab2" class="mainPanelRow" style="width: 100%;margin-top:15px;">
+         <div id="col1Frow4FconTab3FcTab2" class="mainPanelCol borderCol col-12 bordersubtitulo" style="visibility: visible;">
+             <div id="DivGroupT7Fcol1Frow4FconTab3FcTab2" style="max-width: 100%;" class="mainPanelDivGroup divgruoptitulo">
+                 <label id="lblFormulaExcIMSS" idetiqueta="ConceptosNominaFormulaExentaIMSS" class="mainPanelContentComponents">Fórmula de la parte exenta de IMSS</label>
+             </div>
+
+         </div>
+     </div>-->
+                    <div id="row4FconTab3FcTab2" class="mainPanelRow" style="width: 100%;margin-top:15px;">
+                        <div id="col1Frow4FconTab3FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+
+                            <div id="formulaExcIMSS" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                <div style="display:grid; /*! flex-wrap: wrap; */ width: 100%;">
+                                    <label id="lblFormulaExcIMSS" idetiqueta="ConceptosNominaFormulaExentaIMSS" class="mainPanelContentComponents">Fórmula de la parte exenta de IMSS</label>
+                                    <textarea id="txtFormulaExcIMSS" rows="4" style="position: relative; max-height: 100px; width:65%" disabled=""></textarea>
+                                    <div style="/*! display:inline-grid; */ /*! height:55px; */">
+                                        <button style="visibility:hidden">Test</button>
+                                        <button style="visibility:hidden">Test2</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contain" style="width: 100%; display: none;" id="conTab4FcTab2">
+                    <div id="row1FconTab4FcTab2" class="mainPanelRow" style="width: 100%; margin-top:15px;">
+                        <div id="col1Frow1FconTab4FcTab2" class="mainPanelCol borderCol col-12 bordersubtitulo" style="visibility: visible;">
+                            <div id="DivGroupT3Fcol1Frow1FconTab4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup divgruoptitulo">
+                                <label id="T3Fcol1Frow1FconTab4FcTab2" idetiqueta="ConceptosNominaAdicionales" class="mainPanelContentComponents">Adicionales</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="row2FconTab4FcTab2" class="mainPanelRow" style="width: 100%;margin-top:15px;">
+                        <div id="col1Frow2FconTab4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 50%;">
+                            <div class="panel" style="">
+                                <div id="DivGroupT71246Fcol1Frow2FconTab4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                    <div id="DivGroup50Fcol1Frow2FconTab4FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                        <input type="checkbox" class="mainPanelContentComponents" id="chkActivarPlaza">
+                                        <label id="T71246Fcol1Frow2FconTab4FcTab2" idetiqueta="ConceptosNominaChkActivarPlaza" class="containerCheck" for="chkActivarPlaza">Activar por plaza</label>
+                                    </div>
+                                </div>
+                                <div id="DivGroupT71245Fcol1Frow2FconTab4FcTab2" style="max-width: 100%; /*padding-left:30px;*/" class="mainPanelDivGroup">
+                                    <div id="DivGroup49Fcol1Frow2FconTab4FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                        <input type="checkbox" class="mainPanelContentComponents" id="chkActivarDesgloPlaza" disabled>
+                                        <label id="T71245Fcol1Frow2FconTab4FcTab2" idetiqueta="ConceptosNominaChkActivarDesglose" class="containerCheck" for="chkActivarDesgloPlaza">Activar desgloce por plaza</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="DivGroup51Fcol1Frow2FconTab4FcTab2" class="mainPanelDivGroup" style="max-width: 100%; display:grid;">
+                                <div>
+                                    <div id="DivGroupT8Fcol1Frow3FconTab4FcTab2" style="max-width: 170px; width: 170px;" class="mainPanelDivGroup">
+                                        <label id="lblCategoriaFiltro" idetiqueta="ConceptosNominaCategoriaPuesto" class="mainPanelContentComponents" style="width: 100%;">Categoría puesto filtro</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="select-style" style="width: 250px;">
+                                        <select id="cbxCategoriaPuesto" class="mainPanelContentComponents" style="width: 100%;"></select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="row2FconTab4FcTab2" class="mainPanelRow" style="width: 100%;margin-top: 15px;">
+                        <div id="col1Frow2FconTab4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 50%;">
+
+
+                            <div id="DivGroupT5Fcol1Frow2FconTab4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <div id="DivGroup39Fcol1Frow2FconTab4FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                    <input type="checkbox" class="mainPanelContentComponents" id="chkActivarConcepto">
+                                    <label id="T5Fcol1Frow2FconTab4FcTab2" idetiqueta="ConceptosNominaChkActivarConcep" class="containerCheck" for="chkActivarConcepto">Activar concepto</label>
+                                </div>
+                            </div>
+                            <div id="DivGroupT6Fcol1Frow2FconTab4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <div id="DivGroup40Fcol1Frow2FconTab4FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                    <input type="checkbox" class="mainPanelContentComponents" id="chkImprimirListadoNom">
+                                    <label id="T6Fcol1Frow2FconTab4FcTab2" idetiqueta="ConceptosNominaChkImprlistNom" class="containerCheck" for="chkImprimirListadoNom">Imprimir en listado nómina</label>
+                                </div>
+                            </div>
+                            <div id="DivGroupT7Fcol1Frow2FconTab4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <div id="DivGroup41Fcol1Frow2FconTab4FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                    <input type="checkbox" class="mainPanelContentComponents" id="chkImprimirReciboNom">
+                                    <label id="T7Fcol1Frow2FconTab4FcTab2" idetiqueta="ConceptosNominaChkImprRecNom" class="containerCheck" for="chkImprimirReciboNom">Imprimir en recibo nómina</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="col2Frow2FconTab4FcTab2" class="mainPanelCol borderCol col-6" style="visibility: visible;display: none;">
+                            <div id="DivGroup42Fcol2Frow2FconTab4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <label id="lblMascara" idetiqueta="ConceptosNominaMascar" class="mainPanelContentComponents" style="width: 100%;">Máscara</label>
+                                <input id="txtMascara" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="row3FconTab4FcTab2" class="mainPanelRow" style="width: 100%;">
+                        <div id="col1Frow3FconTab4FcTab2" class="mainPanelCol borderCol col-6" style="visibility: visible; width: 100%;">
+                            <div id="DivGroup24Fcol1Frow2FconTab2FcTab2" style="max-width: 100%; width: 100%; display:grid;" class="containerSelectors">
+                                <div>
+                                    <div id="DivGroupT8Fcol1Frow3FconTab4FcTab2" style="max-width: 100px; width: 100px;" class="mainPanelDivGroup">
+                                        <label id="T8Fcol1Frow3FconTab4FcTab2" idetiqueta="ConceptosNominaAplicarAccion" class="mainPanelContentComponents" style="width: 100%;">Aplicar acción</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="">
+                                        <div class="mainPanelDivGroup colborder" style=" display:flex; flex-wrap: wrap; width: 215px;">
+                                            <div class="panelRadio" style="margin-top:5px; margin-left:3px; margin-bottom:5px;">
+                                                <input type="radio" class="mainPanelContentComponents" name="aplicarAccion" id="rbnRedondearCn">
+                                                <label id="rbnRedondearCn" idetiqueta="ConceptosNominaRbRedondear" class="containerRadio" for="rbnRedondearCn">Redondear</label>
+                                                <input type="radio" class="mainPanelContentComponents" name="aplicarAccion" id="rbnTruncarCn" style="margin-left: 25px;">
+                                                <label id="rbnTruncarCn" idetiqueta="ConceptosNominaRbTruncar" class="containerRadio" for="rbnTruncarCn" style="padding-left:3px;">Truncar</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="DivGroupT9Fcol1Frow3FconTab4FcTab2" style="max-width: 350px; display:none;" class="mainPanelDivGroup">
+                                <div>
+                                    <label id="T9Fcol1Frow3FconTab4FcTab2" idetiqueta="ConceptosNominaSubCuenta" class="mainPanelContentComponents" style="width: 100%;">Subcuenta</label>
+                                </div>
+                                <div style="padding-left:0px;">
+                                    <div id="DivGroup2Fcol2Frow1Fcon2FcTab2" style="max-width: 500px;" class="mainPanelDivGroup">
+                                        <input id="txtSubcuenta" type="text" class="mainPanelContentComponents" style="width:100px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="DivGroupT10Fcol1Frow3FconTab4FcTab2" style="max-width: 650px; display:grid;" class="mainPanelDivGroup">
+                                <div>
+                                    <label id="T10Fcol1Frow3FconTab4FcTab2" idetiqueta="ConceptosNominaComportamiento" class="mainPanelContentComponents" style="width: 100%;">Comportamiento</label>
+                                </div>
+                                <div style="padding-left:0px;">
+                                    <div id="DivGroup2Fcol2Frow1Fcon2FcTab2" style="max-width: 500px;" class="mainPanelDivGroup">
+                                        <input id="txtComportamiento" type="text" class="mainPanelContentComponents" style="width:550px;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="btnConceptos" class="contenedor" style="max-width: 100%; width: 100%;">
+                <button id="btnGuardar" class="mainPanelContentComponents defaultButton"  style="display:inline;" onclick="saveCn()">
+                    <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                    <span idetiqueta="btnGuardar">Guardar</span>
+                </button>
+                <button id="btnActualizar" class="mainPanelContentComponents defaultButton" style="display:none;" onclick="updateCn()">
+                    <img class="imgBoton" src="img/Iconos/editar.png" />
+                    <span  idetiqueta="btnActualizar">Actualizar</span>
+                </button>
+                <button id="btnEliminar" class="mainPanelContentComponents defaultButton"  style="display: none;" onclick="deleteCn()">
+                    <img class="imgBoton" clase="imgBoton" src="img/Iconos/eliminar.png" />
+                    <span idetiqueta="btnEliminar">Eliminar</span>
+                </button>
+                <div id="ContenedoraBuscar" style="display: inline;">
+                    <button id="btnBuscar" class="mainPanelContentComponents defaultButton"  dataedit="selectorCn" functedit="selectorConceptos" onclick="OpenSelector(this)" style="display: inline;">
+                        <img class="imgBoton" src="img/Iconos/buscar.png" />
+                        <span idetiqueta="btnBuscar">Buscar</span>
+                    </button>
+                </div>
+                <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="cancelCn()" style="display: inline;">
+                    <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                    <span  idetiqueta="btnCancelar">Cancelar</span>
+                </button>
+            </div>
+        </div>
+        <!-- The Modal Version-->
+        <div id="myModalVersion" class="modal">
+            <div class="modal-content" style="width:350px;">
+                <div class="modal-header">
+                    <!--<span class="close">&times;</span>-->
+                    <h2>Seleccione versión</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="select-style" style="width: 100%;">
+                        <select id="cbxDates" class="mainPanelContentComponents" style="width: 100%;"></select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="mainPanelContentComponents modal-defaultButton" onclick="setVersionCnc()">
+                        <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                        <span idetiqueta="btnAceptar">Aceptar</span>
+                    </button>
+                    <button class="mainPanelContentComponents modal-defaultButton" onclick="closeModalVersion()">
+                        <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                        <span idetiqueta="btnCancelar">Cancelar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

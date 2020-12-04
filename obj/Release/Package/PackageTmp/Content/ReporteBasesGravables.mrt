@@ -1,0 +1,886 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="0" />
+    <Databases isList="true" count="1">
+      <Datos Ref="2" type="Stimulsoft.Report.Dictionary.StiJsonDatabase" isKey="true">
+        <Alias>Datos</Alias>
+        <Key>72f08537e39c4e70a8a80ad40cd892f3</Key>
+        <Name>Datos</Name>
+        <PathData>http://localhost:1335/api/Testing/getReporteBaseGravables</PathData>
+      </Datos>
+    </Databases>
+    <DataSources isList="true" count="2">
+      <baseGravables Ref="3" type="DataTableSource" isKey="true">
+        <Alias>baseGravables</Alias>
+        <Columns isList="true" count="8">
+          <value>ORIGINAL,claveConcepNomDefi,claveConcepNomDefi,claveConcepNomDefi,System.String,_x0034_5768ee2cd254e87a723deb694ecf371</value>
+          <value>ORIGINAL,descripcionConcepNomDefi,descripcionConcepNomDefi,descripcionConcepNomDefi,System.String,e11db68407dc41a29f0b4036084ec6c2</value>
+          <value>ORIGINAL,naturalezaConcepNomDefi,naturalezaConcepNomDefi,naturalezaConcepNomDefi,System.Decimal,_x0035_3c32bff3925406ab4abb80494d6f717</value>
+          <value>ORIGINAL,importe,importe,importe,System.Decimal,_x0032_a836307dd6846dea26e8bae0fb32580</value>
+          <value>ORIGINAL,gravadoISR,gravadoISR,gravadoISR,System.Decimal,b048d826fd4f4bad8ba80c1b586eef0c</value>
+          <value>ORIGINAL,exentoISR,exentoISR,exentoISR,System.Decimal,_x0030_3f6290105d64c6f96233d417945fb6a</value>
+          <value>ORIGINAL,gravadoIMSS,gravadoIMSS,gravadoIMSS,System.Decimal,a0587047995e4607b1f1d9854cd0fb14</value>
+          <value>ORIGINAL,exentoIMSS,exentoIMSS,exentoIMSS,System.Decimal,e52f29014d4c455a81154c99cf93a217</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>b6f92df46c1547b79a57f30473794b37</Key>
+        <Name>baseGravables</Name>
+        <NameInSource>Datos.baseGravables</NameInSource>
+      </baseGravables>
+      <baseGravablesOtros Ref="4" type="DataTableSource" isKey="true">
+        <Alias>baseGravablesOtros</Alias>
+        <Columns isList="true" count="3">
+          <value>claveConcepNomDefi,System.String</value>
+          <value>descripcionConcepNomDefi,System.String</value>
+          <value>importe,System.Decimal</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Key>d70c066e1f47411ab79e0ecb6bc806cb</Key>
+        <Name>baseGravablesOtros</Name>
+        <NameInSource>Datos.baseGravablesOtros</NameInSource>
+      </baseGravablesOtros>
+    </DataSources>
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="19">
+      <value>,tituloEmpresa,tituloEmpresa,Titulo_x0020_de_x0020_la_x0020_empresa,System.String,,False,False,False,False,,_x0030_5a0445cb24a4df9a5a4744f87ed7b2f</value>
+      <value>,tituloDomicilio,tituloDomicilio,domicilio_x0020_de_x0020_la_x0020_empresa,System.String,,False,False,False,False,,_x0036_33fbb326e90473fb9e3a60411b31e4b</value>
+      <value>,tituloNombreReporte,tituloNombreReporte,nombre_x0020_del_x0020_reporte,System.String,,False,False,False,False,,a7a6cf3789504a4090d0af17d3b9b99d</value>
+      <value>,tituloPeriodo,tituloPeriodo,titulo_x0020_del_x0020_periodo,System.String,,False,False,False,False,,_x0032_3fac6be44974586b9390d1d21d9d35b</value>
+      <value>,tituloDatosEmpresa,tituloDatosEmpresa,datos_x0020_de_x0020_la_x0020_empresa,System.String,,False,False,False,False,,_x0035_9cb913c0bb84bdaa4c67147eb0458bd</value>
+      <value>,mensajeExtra,mensajeExtra,,System.String,,False,False,False,False,,bd61382911164794bf0bf9518817eab8</value>
+      <value>,TituloConcepto,TituloConcepto,titulo_x0020_del_x0020_concepto_x0020_nomina,System.String,,False,False,False,False,,ecac40ae157b498eb5c32ef816b3adc7</value>
+      <value>,TotalPercepciones,TotalPercepciones,,System.Double,SumD_x0028_DataBand1_x002C_Switch_x0028_baseGravables.naturalezaConcepNomDefi_x003D__x003D_1_x002C_baseGravables.importe_x0029__x0029_,True,True,False,False,,_x0037_5e75c56838a48e4a402090e1f03b869</value>
+      <value>,TotalDeduciones,TotalDeduciones,,System.Double,SumD_x0028_DataBand1_x002C_Switch_x0028_baseGravables.naturalezaConcepNomDefi_x003D__x003D_2_x002C_baseGravables.importe_x0029__x0029_,True,True,False,False,,_x0031_fd52181dcc24ec3956a9c6dcd61aeee</value>
+      <value>,TotalGravadoISRPer,TotalGravadoISRPer,,System.Double,SumD_x0028_DataBand1_x002C_Switch_x0028_baseGravables.naturalezaConcepNomDefi_x003D__x003D_1_x002C_baseGravables.gravadoISR_x0029__x0029_,True,True,False,False,,_x0037_fed769a08a24ad889f7bde14f13e84f</value>
+      <value>,TotalExentoISRPer,TotalExentoISRPer,,System.Double,SumD_x0028_DataBand1_x002C_Switch_x0028_baseGravables.naturalezaConcepNomDefi_x003D__x003D_1_x002C_baseGravables.exentoISR_x0029__x0029_,True,True,False,False,,_x0030_da07f7e9d264cb790d2bb306aed8f4f</value>
+      <value>,TotalGravadoIMSSPer,TotalGravadoIMSSPer,,System.Double,SumD_x0028_DataBand1_x002C_Switch_x0028_baseGravables.naturalezaConcepNomDefi_x003D__x003D_1_x002C_baseGravables.gravadoIMSS_x0029__x0029_,True,True,False,False,,bc2e60ef877e4137b69590076f42fbef</value>
+      <value>,TotalExentoIMSSPer,TotalExentoIMSSPer,,System.Double,SumD_x0028_DataBand1_x002C_Switch_x0028_baseGravables.naturalezaConcepNomDefi_x003D__x003D_1_x002C_baseGravables.exentoIMSS_x0029__x0029_,True,True,False,False,,_x0036_438067e31f54985a4fa0f563c1f9d5d</value>
+      <value>,TotalGravadoISRDedu,TotalGravadoISRDedu,,System.Double,SumD_x0028_DataBand1_x002C_Switch_x0028_baseGravables.naturalezaConcepNomDefi_x003D__x003D_2_x002C_baseGravables.gravadoISR_x0029__x0029_,True,True,False,False,,_x0035_5aa184d55b1464b82ab8d266dabdc81</value>
+      <value>,TotalExentoISRDedu,TotalExentoISRDedu,,System.Double,SumD_x0028_DataBand1_x002C_Switch_x0028_baseGravables.naturalezaConcepNomDefi_x003D__x003D_2_x002C_baseGravables.exentoISR_x0029__x0029_,True,True,False,False,,_x0033_301e7b234d149cba9d778abdf2cb7bb</value>
+      <value>,TotalGravadoIMSSDedu,TotalGravadoIMSSDedu,,System.Double,SumD_x0028_DataBand1_x002C_Switch_x0028_baseGravables.naturalezaConcepNomDefi_x003D__x003D_2_x002C_baseGravables.gravadoIMSS_x0029__x0029_,True,True,False,False,,fbfdb5c1f86c4cf68d86cd5a1d36c539</value>
+      <value>,TotalExentoIMSSDedu,TotalExentoIMSSDedu,,System.Double,SumD_x0028_DataBand1_x002C_Switch_x0028_baseGravables.naturalezaConcepNomDefi_x003D__x003D_2_x002C_baseGravables.exentoIMSS_x0029__x0029_,True,True,False,False,,_x0038_1918d4b333b49d9aeb2440d6faf84c9</value>
+      <value>,columnasISR,columnasISR,,System.Boolean,false,False,False,False,False,,_x0037_23828cb3eb3404394f44ab95df08e0c</value>
+      <value>,columnasIMSS,columnasIMSS,,System.Boolean,false,False,False,False,False,,_x0031_f52411c07bc4a94bf604cf4132c3f4e</value>
+    </Variables>
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="2">
+    <Page1 Ref="5" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="6">
+        <SubBaseGravablesOtro Ref="6" type="SubReport" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,11.9,19,3.8</ClientRectangle>
+          <Components isList="true" count="0" />
+          <Name>SubBaseGravablesOtro</Name>
+          <Page isRef="5" />
+          <Parameters isList="true" count="0" />
+          <Parent isRef="5" />
+          <SubReportPageGuid>bb5dddc29f7544c58ea3f3854ab01405</SubReportPageGuid>
+          <SubReportUrl />
+        </SubBaseGravablesOtro>
+        <ReportTitleBand1 Ref="7" type="ReportTitleBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,5.8</ClientRectangle>
+          <Components isList="true" count="8">
+            <Text36 Ref="8" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,19,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14.25,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text36</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Text>{tituloEmpresa}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text36>
+            <Text1 Ref="9" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0.8,19,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14.25,Regular,Point,False,0</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Text>{tituloDomicilio}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+            <Text2 Ref="10" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,1.6,19,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,14.25,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Text>{tituloNombreReporte}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text4 Ref="11" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,2.4,19,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,11.25</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Text>{tituloPeriodo}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text5 Ref="12" type="Text" isKey="true">
+              <AutoWidth>True</AutoWidth>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,3.2,19,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,11.25</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text5</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Text>{mensajeExtra}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text5>
+            <Text7 Ref="13" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>16.8,4.4,2.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Times New Roman,9.75,Regular,Point,False,0</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Text>Pagina:{PageNumber}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text7>
+            <Text8 Ref="14" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>15.8,5,3.2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+              <Text>{Today}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="15" type="DateFormat" isKey="true">
+                <StringFormat>dd/MM/yyyy</StringFormat>
+              </TextFormat>
+              <Type>SystemVariables</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
+            <Image1 Ref="16" type="Image" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,2.6,2.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <HorAlignment>Center</HorAlignment>
+              <ImageBytes>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</ImageBytes>
+              <Margins>0,0,0,0</Margins>
+              <Name>Image1</Name>
+              <Page isRef="5" />
+              <Parent isRef="7" />
+            </Image1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>ReportTitleBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </ReportTitleBand1>
+        <HeaderBand1 Ref="17" type="HeaderBand" isKey="true">
+          <Border>Top, Bottom;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,7,19,0.6</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text6 Ref="18" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,1.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="5" />
+              <Parent isRef="17" />
+              <Text>Concepto</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text9 Ref="19" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.8,0,4.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text9</Name>
+              <Page isRef="5" />
+              <Parent isRef="17" />
+              <Text>Descripción</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text9>
+            <Text10 Ref="20" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.2,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text10</Name>
+              <Page isRef="5" />
+              <Parent isRef="17" />
+              <Text>Importe</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text10>
+            <Text11 Ref="21" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.8,0,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>_x007B_columnasISR_x007D_,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text11</Name>
+              <Page isRef="5" />
+              <Parent isRef="17" />
+              <Text>Gravado ISR</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text11>
+            <Text12 Ref="22" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.2,0,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>_x007B_columnasISR_x007D_,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="5" />
+              <Parent isRef="17" />
+              <Text>Exento ISR</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text13 Ref="23" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.4,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>_x007B_columnasIMSS_x007D_,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="5" />
+              <Parent isRef="17" />
+              <Text>Gravado IMSS</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text14 Ref="24" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>_x007B_columnasIMSS_x007D_,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,8,Bold</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="5" />
+              <Parent isRef="17" />
+              <Text>Exento IMSS</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </HeaderBand1>
+        <GroupHeaderBand1 Ref="25" type="GroupHeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,8.4,19,0.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text22 Ref="26" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,5,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text22</Name>
+              <Page isRef="5" />
+              <Parent isRef="25" />
+              <Text>{IIF(baseGravables.naturalezaConcepNomDefi==1,"Percepciones","Deducciones")}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text22>
+          </Components>
+          <Condition>{baseGravables.naturalezaConcepNomDefi}</Condition>
+          <Conditions isList="true" count="0" />
+          <Name>GroupHeaderBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </GroupHeaderBand1>
+        <DataBand1 Ref="27" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,9.8,19,0.6</ClientRectangle>
+          <Components isList="true" count="7">
+            <Text15 Ref="28" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,1.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="5" />
+              <Parent isRef="27" />
+              <Text>{baseGravables.claveConcepNomDefi}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text15>
+            <Text16 Ref="29" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.8,0,4.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text16</Name>
+              <Page isRef="5" />
+              <Parent isRef="27" />
+              <Text>{baseGravables.descripcionConcepNomDefi}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text16>
+            <Text17 Ref="30" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.2,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="5" />
+              <Parent isRef="27" />
+              <Text>{baseGravables.importe}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="31" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+              </TextFormat>
+            </Text17>
+            <Text18 Ref="32" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.8,0,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>_x007B_columnasISR_x007D_,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="5" />
+              <Parent isRef="27" />
+              <Text>{baseGravables.gravadoISR}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="33" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+              </TextFormat>
+            </Text18>
+            <Text19 Ref="34" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.2,0,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>_x007B_columnasISR_x007D_,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text19</Name>
+              <Page isRef="5" />
+              <Parent isRef="27" />
+              <Text>{baseGravables.exentoISR}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="35" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+              </TextFormat>
+            </Text19>
+            <Text20 Ref="36" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.4,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>_x007B_columnasIMSS_x007D_,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text20</Name>
+              <Page isRef="5" />
+              <Parent isRef="27" />
+              <Text>{baseGravables.gravadoIMSS}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="37" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+              </TextFormat>
+            </Text20>
+            <Text21 Ref="38" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>_x007B_columnasIMSS_x007D_,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text21</Name>
+              <Page isRef="5" />
+              <Parent isRef="27" />
+              <Text>{baseGravables.exentoIMSS}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="39" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+              </TextFormat>
+            </Text21>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>baseGravables</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+          <Sort isList="true" count="0" />
+        </DataBand1>
+        <GroupFooterBand1 Ref="40" type="GroupFooterBand" isKey="true">
+          <Border>Top;Black;1;Solid;False;4;Black</Border>
+          <Brush>Transparent</Brush>
+          <CanGrow>False</CanGrow>
+          <ClientRectangle>0,11.2,19,0.6</ClientRectangle>
+          <Components isList="true" count="6">
+            <Text23 Ref="41" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,5,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text23</Name>
+              <Page isRef="5" />
+              <Parent isRef="40" />
+              <Text>{IIF(baseGravables.naturalezaConcepNomDefi==1,"Total Percepciones","Total Deducciones")}</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+            </Text23>
+            <Text24 Ref="42" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.2,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text24</Name>
+              <Page isRef="5" />
+              <Parent isRef="40" />
+              <Text>{IIF(baseGravables.naturalezaConcepNomDefi==1,TotalPercepciones,TotalDeduciones)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="43" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text24>
+            <Text25 Ref="44" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>9.8,0,1.8,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>_x007B_columnasISR_x007D_,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text25</Name>
+              <Page isRef="5" />
+              <Parent isRef="40" />
+              <Text>{IIF(baseGravables.naturalezaConcepNomDefi==1,TotalGravadoISRPer,TotalGravadoISRDedu)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="45" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text25>
+            <Text26 Ref="46" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>12.2,0,1.6,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>_x007B_columnasISR_x007D_,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text26</Name>
+              <Page isRef="5" />
+              <Parent isRef="40" />
+              <Text>{IIF(baseGravables.naturalezaConcepNomDefi==1,TotalExentoISRPer,TotalExentoISRDedu)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="47" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text26>
+            <Text27 Ref="48" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>14.4,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>_x007B_columnasIMSS_x007D_,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text27</Name>
+              <Page isRef="5" />
+              <Parent isRef="40" />
+              <Text>{IIF(baseGravables.naturalezaConcepNomDefi==1,TotalGravadoIMSSPer,TotalGravadoIMSSDedu)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="49" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text27>
+            <Text28 Ref="50" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>17,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="1">
+                <value>_x007B_columnasIMSS_x007D_,Red,Transparent,Arial_x002C_8,False,False,,,None</value>
+              </Conditions>
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text28</Name>
+              <Page isRef="5" />
+              <Parent isRef="40" />
+              <Text>{IIF(baseGravables.naturalezaConcepNomDefi==1,TotalExentoIMSSPer,TotalExentoIMSSDedu)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="51" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+              </TextFormat>
+              <Type>Expression</Type>
+            </Text28>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>GroupFooterBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </GroupFooterBand1>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>ca85e0b65e894d03abfb25b9ac25de8a</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="52" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+    <sub_BaseGravablesOtros Ref="53" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="1">
+        <DataBand2 Ref="54" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid isNull="true" />
+          <ClientRectangle>0,0.4,19,0.6</ClientRectangle>
+          <Components isList="true" count="3">
+            <Text29 Ref="55" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>7.2,0,2,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text29</Name>
+              <Page isRef="53" />
+              <Parent isRef="54" />
+              <Text>{baseGravablesOtros.importe}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="56" type="CurrencyFormat" isKey="true">
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <PositivePattern>0</PositivePattern>
+              </TextFormat>
+            </Text29>
+            <Text30 Ref="57" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>0,0,1.4,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text30</Name>
+              <Page isRef="53" />
+              <Parent isRef="54" />
+              <Text>{baseGravablesOtros.claveConcepNomDefi}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text30>
+            <Text31 Ref="58" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <ClientRectangle>1.8,0,5,0.6</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text31</Name>
+              <Page isRef="53" />
+              <Parent isRef="54" />
+              <Text>{baseGravablesOtros.descripcionConcepNomDefi}</Text>
+              <TextBrush>Black</TextBrush>
+            </Text31>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataRelationName isNull="true" />
+          <DataSourceName>baseGravablesOtros</DataSourceName>
+          <Filters isList="true" count="0" />
+          <Name>DataBand2</Name>
+          <Page isRef="53" />
+          <Parent isRef="53" />
+          <Sort isList="true" count="0" />
+        </DataBand2>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>bb5dddc29f7544c58ea3f3854ab01405</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>sub_BaseGravablesOtros</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="59" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </sub_BaseGravablesOtros>
+  </Pages>
+  <PrinterSettings Ref="60" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>11/27/2020 9:35:30 AM</ReportChanged>
+  <ReportCreated>6/30/2020 3:44:04 PM</ReportCreated>
+  <ReportFile>D:\Nomina2020\NomRH\Exitosw.Payroll.Aplicacion.UI\Content\ReporteBasesGravables.mrt</ReportFile>
+  <ReportGuid>f2e3b2b2d7504327b6462ada4628608b</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2018.1.8.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>

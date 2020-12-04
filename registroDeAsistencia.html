@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Asistencias</title>
+    <meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/funcionesAsistencia.js"></script>  
+</head>
+<body>
+   
+        <div id="mainContent" class="mainContents">
+            <div class="contain" style="width: 100%;" id="con1">
+                <h1 id="titlecon1" class="titlecontain" cambiaridioma="true">Registro de Asistencia</h1>
+                <div id="row2Fcon1" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                        <div id="DivGroupT2Fcol1Frow2Fcon1" class="mainPanelDivGroup" style="max-width: 375px;">
+                            <div class="editContainer">
+                                <label id="lblTipoNomina" idetiqueta="TipoNomina" class="mainPanelContentComponents">Tipos de nomina</label>
+                                <div id="editTipoNomina" class="edit medium-large" dataedit="EditTipoNomina" functedit="setEditTipoNomina">
+                                    <input id="search-text-input" class="editKey medium" type="text" kind="filterKey" placeholder="">
+                                    <input id="brief-text-input" class="editBrief large" type="text" placeholder="" disabled="">
+                                    <button id="btnBuscar" class="editButton small" onclick="OpenEditModal(this)" ><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="row3Fcon1" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                        <div id="DivGroupT3Fcol1Frow3Fcon1" class="mainPanelDivGroup" style="max-width: 445px;">
+                            <div class="editContainer">
+                                <label id="lblPeriodoNomina" idetiqueta="PeriodosNomina" class="mainPanelContentComponents">Periodo Nomina</label>
+                                <div id="editPeriodoNomina" class="edit small-large" dataedit="EditPeriodoNomina" functedit="setEditPeriodoNomina">
+                                    <input id="search-text-input" class="editKey small" type="text" kind="filterKey" placeholder="">
+                                    <input id="brief-text-input" class="editBrief large" type="text" placeholder="" disabled="">
+                                    <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="row4Fcon1" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow4Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 14%;">
+                        <div id="DivGroup3Fcol1Frow4Fcon1" style="max-width: 90px;" class="mainPanelDivGroup">
+                            <label id="lblDelaFecha" idetiqueta="FechaIni" class="mainPanelContentComponents" style="width: 100%;">De la fecha</label>
+                            <input id="txtDelaFecha" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled>
+                        </div>
+                    </div>
+                    <div id="col2Frow4Fcon1" class="mainPanelCol borderCol col-3" style="visibility: visible;">
+                        <div id="DivGroup4Fcol2Frow4Fcon1" style="max-width: 90px;" class="mainPanelDivGroup">
+                            <label id="lblAlaFecha" idetiqueta="FechaFin" class="mainPanelContentComponents" style="width: 100%;">A la fecha</label>
+                            <input id="txtAlaFecha" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div id="row5Fcon1" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow5Fcon1" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 100%;">
+                        <div id="GruopCentroCosto" class="mainPanelDivGroup" style="max-width: 300px;display:none">
+                            <div class="editContainer">
+                                <label id="lblCentroDeCostos" idetiqueta="CentroDeCosto" class="mainPanelContentComponents">Centro de Costos</label>
+                                <div id="editCentroDeCostos" class="edit medium-large" dataedit="EditCentroDeCostos" functedit="setEditCentroDeCostos">
+                                    <input id="search-text-input" class="editKey medium" type="text" kind="filterKey" placeholder="">
+                                    <input id="brief-text-input" class="editBrief large" type="text" placeholder="" disabled="">
+                                    <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="row6Fcon1" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow6Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                        <div id="GruopEmpleado" class="mainPanelDivGroup" style="max-width: 500px;">
+                            <div class="editContainer">
+                                <label id="lblEmpleados" idetiqueta="Empleados" class="mainPanelContentComponents">Empleado</label>
+                                <div id="editEmpleados" class="edit small-large" dataedit="EditEmpleados" functedit="setEditEmpleados">
+                                    <input id="search-text-input" class="editKey small" type="text" kind="filterKey" placeholder="">
+                                    <input id="brief-text-input" class="editBrief large" type="text" placeholder="" disabled="">
+                                    <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="row7Fcon1" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow7Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                        <div id="GruopExcepcion" style="max-width: 250px;display:none " class="mainPanelDivGroup">
+                            <label id="lblExcepcion" idetiqueta="Excepcion" class="mainPanelContentComponents" style="width: 100%;">Excepcion</label>
+                            <div class="select-style" style="width: 100%;">
+                                <select id="selExcepcion" class="mainPanelContentComponents" style="width: 100%;" onchange="selecionarExcepcion(this.value)">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="con3" class="contain" style="display:none">
+                <div id="row1Fcon3" class="mainPanelRow" style="width:100%">
+                    <div id="col1row1Fcon3" class="mainPanelCol" style="width:100%">
+                        <div id="GruoptipoNominaDetalle" class="mainPanelDivGroup" style="max-width:200px;">
+                            <label id="lblTipoNominaDetalle" class="mainPanelContentComponents" style="width:100%">Tipo Nomina</label>
+                            <input id="txtTipoNominaDetalle" class="mainPanelContentComponents" type="text" style="width:100%" disabled/>
+                        </div>
+                        <div id="GruopPeriodoNominaDetalle" class="mainPanelDivGroup" style="max-width:350px;">
+                            <label id="lblPeriodoNominaDetalle" class="mainPanelContentComponents" style="width:100%">Periodo Nomina</label>
+                            <input id="txtPeriodoNominaDetalle" class="mainPanelContentComponents" type="text" style="width:100%" disabled />
+                        </div>
+                        <div id="GruopDeLaFechaDetalle" style="max-width: 160px; display:inline-block;" class="mainPanelDivGroup">
+                            <label id="lblDelaFechaDetalle" class="mainPanelContentComponents" style="width: 100%;">De la fecha</label>
+                            <input id="txtDelaFechaDetalle" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled>
+                        </div>
+                        <div id="GruopALaFechaDetalle" style="max-width: 150px;display:inline-block;margin-left:20px;" class="mainPanelDivGroup">
+                            <label id="lblAlaFechaDetalle" class="mainPanelContentComponents" style="width: 100%;">A la fecha</label>
+                            <input id="txtAlaFechaDetalle" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled>
+                        </div>
+                        <div id="GruopCentroCostoDetalle" class="mainPanelDivGroup" style="width:250px">
+                            <label id="lblCentroCosto3" class="mainPanelContentComponents">Centro de Costo</label>
+                            <input id="txtCentroCosto3" class="mainPanelContentComponents" type="text" style="width:100%" disabled />
+                        </div>
+                        <div id="GruopEmpleadoDetalle2" class="mainPanelDivGroup" style="width:400px">
+                            <label id="lblEmpleado3" class="mainPanelContentComponents">Empleado</label>
+                            <input id="txtEmpleado3" class="mainPanelContentComponents" type="text" style="width:100%" disabled />
+                        </div>
+
+                        <div id="GruopExcepcionDetalle1" class="mainPanelDivGroup" style="width:400px">
+                            <label id="lblExcepcionDetalle1" class="mainPanelContentComponents">Excepcion</label>
+                            <input id="txtExcepcionDetalle1" class="mainPanelContentComponents" type="text" style="width:100%" disabled />
+                        </div>
+                      
+                        <div id="GruopCentroCostoDetalle1" class="mainPanelDivGroup" style="max-width: 300px;">
+                            <div class="editContainer">
+                                <label id="lblCentroDeCostos1" class="mainPanelContentComponents">Centro de Costos</label>
+                                <div id="editCentroDeCostos1" class="edit" dataedit="EditCentroDeCostos1" functedit="setEditCentroDeCostos1">
+                                    <input id="search-text-input" class="editKey" type="text" kind="filterKey" placeholder="">
+                                    <input id="brief-text-input" class="editBrief" type="text" placeholder="" disabled="">
+                                    <button class="editButton" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="GruopEmpleadoDetalle" class="mainPanelDivGroup" style="width:400px">
+                            <div class="editContainer">
+                                <label id="lblEmpleadosDetalle" class="mainPanelContentComponents">Empleado</label>
+                                <div id="editEmpleadosDetalle" class="edit" dataedit="EditEmpleadosDetalle" functedit="setEditEmpleadosDetalle">
+                                    <input id="search-text-input" class="editKey" type="text" kind="filterKey" placeholder="">
+                                    <input id="brief-text-input" class="editBrief" type="text" placeholder="" disabled="">
+                                    <button class="editButton" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="GruopExcepcionDetalle" style="max-width: 170px;" class="mainPanelDivGroup">
+                            <label id="lblExcepcionDetalle" class="mainPanelContentComponents" style="width: 100%;">Excepcion</label>
+                            <div class="select-style" style="width: 100%;">
+                                <select id="selExcepcionDetalle" class="mainPanelContentComponents" onchange="activarCantidad(this.value)" style="width: 100%;">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="GruopFechaAsist" class="mainPanelDivGroup" style="width:200px;">
+                            <label id="lblFecha" class="mainPanelContentComponents" style="width:100%">Fecha</label>
+                            <input id="dpkFecha" class="mainPanelContentComponents" type="date" style="width:100%" disabled />
+                        </div>
+                        <div id="GruopDiaSemanaAsist" class="mainPanelDivGroup" style="width:200px;">
+                            <label id="lblDiaSemana" class="mainPanelContentComponents" style="width:100%">Día Semana</label>
+                            <input id="txtDiaSemana" class="mainPanelContentComponents" type="text" style="width:100%" disabled />
+                        </div>
+                        <div id="GruopJornadaAsist" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblJornada" class="mainPanelContentComponents" style="width:100%">Jornada</label>
+                            <input id="txtJornada" class="mainPanelContentComponents" type="text" style="width:100%" disabled />
+                        </div>
+                        <div id="GruopCantidad" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblCantidad" class="mainPanelContentComponents" style="width:100%">Cantidad</label>
+                            <input id="txtCantidad" type="text" class="mainPanelContentComponents" style="width:100%;" disabled/>
+                        </div>
+                        <div id="GruopCantidadSel" class="mainPanelDivGroup" style="width:100px; display:none">
+                            <label id="lblCantidadSel" class="mainPanelContentComponents" style="width:100%">Cantidad</label>
+                            <div class="select-style" style="width:100%">
+                                <select id="chkCantidad" style="width:100%;">
+                                    <option value=""></option>
+                                    <option value="1">1</option>
+                                    <option value="0.5">1/2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="con2" class="contain">
+                <div id="row8Fcon1" class="mainPanelRow" style="width: 100%; ">
+                    <div id="col1Frow8Fcon1" class="mainPanelCol borderCol col-12 " style="visibility: visible;">
+                        <div id="contTable" class="divTable" dataTbl="Asistencia" paginado="true" functEdit="editTableAsistencia" style="width: 100%;">
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            <div id="Gruopbotones" class="mainPanelDivGroup" style="width:100%">
+                <button id="btnGuarda" class="mainPanelContentComponents defaultButton" onclick="saveAsistencia()" style="display: inline-block;">
+                    <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                    <span idetiqueta="btnGuardar">Guardar</span>
+                </button>
+                <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="cancelar()" style="display: inline-block;">
+                    <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                    <span idetiqueta="btnCancelar">Cancelar</span>
+                </button>
+                <button id="btnAgregarAsist" class="mainPanelContentComponents defaultButton" onclick="" style="display: none;">Agregar</button>
+                <button id="btnLimpiar" class="mainPanelContentComponents defaultButton" onclick="limpiar()" style="display: none">Volver</button>
+                <!-- <button id="btnSalir" class="mainPanelContentComponents defaultButton" onclick="" style="display: inline-block;">Salir</button>-->
+            </div>
+            </div>
+           
+        
+
+</body>
+</html>

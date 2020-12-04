@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Apariencia</title>
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <!--<script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsCustomTools.js"></script>-->
+    <script class="AD" type="text/javascript" src="js/functionsApariencia.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+
+        <div id="cTab2" class="cTab" style="width: 100%; height: auto;">
+            <div class="tab" id="tab2FcTab2"><button id="btnTab1Ftab2FcTab2" class="tablinks" onclick="openTab(event,'con2FcTab2')">Apariencia</button></div>
+            <div id="con2FcTab2" class="contain" style="width: auto; display: block;">
+
+                <div id="row1" class="mainPanelRow" style="width: 100%; height: auto;">
+                    <div id="colSettings" class="mainPanelCol borderCol col-3" style="visibility: visible;">
+                        <div id="DivGroup1Fcol1Frow1Fcon2FcTab2" class="mainPanelDivGroup" style="max-width: 100%; padding-bottom:20px;">
+                            <label id="T2Fcol1Frow1Fcon2FcTab2" idetiqueta="AparienciaCrtAp" class="mainPanelContentComponents" style="width: 100%;">Control de apariencia</label>
+                            <div class="select-style" style="width: 100%;">
+                                <select id="cbxApaControl" class="mainPanelContentComponents" onchange="setControlApa(this);" style="width: 100%;">
+                                    <option value="1">Usuario</option>
+                                    <option value="2">Empresa</option>
+                                    <option value="3">Sistema</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div id="DivGroup2Fcol2Frow1Fcon2FcTab2" class="mainPanelDivGroup" style="max-width: 100%;">
+                            <label id="T3Fcol2Frow1Fcon2FcTab2" idetiqueta="AparienciaTema" class="mainPanelContentComponents" style="width: 100%;">Tema</label>
+                            <div class="select-style" style="width: 100%;">
+                                <select id="cbxApTema" class="mainPanelContentComponents" style="width: 100%;" onchange="setTheme(this);">
+                                    <option value="0">Default</option>
+                                    <option value="1">DevEx</option>
+                                    <option value="2">Aqua</option>
+                                    <option value="3">BlackGlass</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="DivGroupT6Fcol2Frow2Fcon2FcTab2" class="mainPanelDivGroup" style="max-width: 100%; padding-bottom:20px;">
+                            <div id="DivGroup4Fcol2Frow2Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                <input id="chkUsPermitirTema"  type="checkbox" class="mainPanelContentComponents">
+                                <label id="lblPermiteTema" idetiqueta="AparienciaPermitirTema" class="containerCheck" style="font-size:10px;" for="chkUsPermitirTema">Permitir usuario cambiar de tema</label>
+                            </div>
+                        </div>
+
+                        <div id="DivGroup3Fcol3Frow1Fcon2FcTab2" class="mainPanelDivGroup" style="max-width: 100%;" >
+                            <label id="T4Fcol3Frow1Fcon2FcTab2" idetiqueta="AparienciaIcono" class="mainPanelContentComponents" style="width: 100%;">Iconos</label>
+                            <div class="select-style" style="width: 100%;">
+                                <select id="cbxApIconos" class="mainPanelContentComponents" style="width: 100%;" onchange="setIcon(this);">
+                                    <option value="1">Azul</option>
+                                    <option value="2">Azul verde</option>
+                                    <option value="3">Cobalto</option>
+                                    <option value="4">Colores</option>
+                                    <option value="5">Fiesta</option>
+                                    <option value="6">Fiesta 2</option>
+                                    <option value="7">Fiesta 3</option>
+                                    <option value="8">Infantil</option>
+                                    <option value="9">Limon</option>
+                                    <option value="10">Marron</option>
+                                    <option value="11">Metro</option>
+                                    <option value="12">Morado</option>
+                                    <option value="13">Naranja</option>
+                                    <option value="14">Negocios</option>
+                                    <option value="15">Negocios 2</option>
+                                    <option value="16">Retro</option>
+                                    <option value="17">Sepia</option>
+                                    <option value="18">Verde</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="DivGroupT7Fcol3Frow2Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <div id="DivGroup5Fcol3Frow2Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                <input id="chkUsPermitirIconos" type="checkbox" class="mainPanelContentComponents">
+                                <label id="lblPermiteIcono" idetiqueta="AparienciaPermitirIcono" class="containerCheck" style="font-size:10px;" for="chkUsPermitirIconos">Permitir usuario cambiar sus icnonos</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mainPanelCol borderCol col-8" style="visibility: visible;  margin-left:5%; margin-top: -24px;">
+                       <label idetiqueta="AparienciaPrevisualizar" style="font-weight: bold;">Previsualización</label>
+                        <div id="col1Preview"  style="border:dotted;">
+                            
+                            <div id="containerTable" mode="search" sourcecontainer="Paises" class="mainPanelDivGroup containerTable">
+                                <div id="previewAp">
+                                    <div id="con2" class="contain" style="width: 60%;">
+                                        <div id="row2Fcon2" class="mainPanelRow" style="width: 100%; height: auto;">
+                                            <div id="row2Fcon2FcTab2" class="mainPanelRow" style="width: 100%; height: auto;">
+                                                <div id="col1Frow3Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                                    <button id="btnNuevo" class="mainPanelContentComponents defaultButton" style="display: inline;">
+                                                        <img class="imgBoton" src="img/Iconos/nuevo.png" />
+                                                        <span  idetiqueta="btnAgregar">Agregar</span>
+                                                    </button>
+
+                                                    <!--<div id="scrollSelecttblTheTable" class="mainPanelContentComponents scrollit" style="overflow-x: auto;">-->
+                                                    <table id="tableEdittblTheTable" style="width: 560px;" class="mainPanelContentComponents" functaddrow="tableAdd">
+                                                        <thead id="headerEdittblTheTable">
+                                                            <tr>
+                                                                <th id="clave" idetiqueta="AparienciaTblClave" style="width: 110px;">Clave</th>
+                                                                <th id="descripcion" idetiqueta="AparienciaTblDescripcion" style="width: 350px;">Descripción</th>
+                                                                <th id="acciones" idetiqueta="AparienciaTblAcciones" style="width: 40px;">Acciones</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="bodyEdittblTheTable" class="bodytr">
+                                                            <tr class="hidetd" functvalidate="prevalidacionAddRow" functremoverow="tableRemove" functcolumna="prevalidacionColumna">
+                                                                <td class="tdTable" style="width: 110px;" persist="clave" tipocompon="text" contenteditable="true">
+                                                                    <input class="tdInputText" id="txt_Clave" type="text" style="width: 100%; display: none;" funcion="undefined">
+                                                                    ESW
+                                                                </td>
+                                                                <td class="tdTable" style="width: 350px;" persist="descripcionDocumentacion" tipocompon="text" contenteditable="true">
+                                                                    <input class="tdInputText" id="txt_Descripcion" type="text" style="width: 100%; display: none;" funcion="undefined">
+                                                                    Exito Software
+
+                                                                </td>
+                                                                <td class="tdTable" style="width: 40px;" persist="acciones" contenteditable="false">
+                                                                    <div class="accionesTable">
+                                                                        <img id="imgEditar" class="imgEditar imgBoton" src="img/Iconos/editar.png"><a id="editarTbl" href="#">Editar</a>
+                                                                        <img id="imgEliminar" class="imgDelete imgBoton" src="img/Iconos/eliminar.png"><a id="eliminarTbl" href="#">Eliminar</a>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                    <nav id="containerPag" style="margin-left:1px;">
+                                                        <ul id="listPagEstados" class="pagination" style="padding-left:10px;">
+                                                            <li><a href="#" class="first_linkEstados">◀</a></li>
+                                                            <li><a href="#" class="prev_linkPreview" style="">«</a></li>
+                                                            <li class="active"><a href="#" class="page_linkEstados active" style="">1</a></li>
+                                                            <li><a href="#" class="page_linkPreview" style="">2</a></li>
+                                                            <li><a href="#" class="next_linkEstados">»</a></li>
+                                                            <li><a href="#" class="last_linkEstados">▶</a></li>
+                                                        </ul>
+                                                    </nav>
+                                                </div>
+                                            </div>
+
+                                            <!--</div>-->
+
+                                            <div style="width:100%; padding-top:20px;">
+                                                <div id="col1Frow2Fcon1" class="mainPanelCol borderCol col-12">
+                                                    <div id="DivGroup15Fcol1Frow2Fcon1" class="mainPanelDivGroup" style="max-width: 90px;">
+                                                        <label id="lbl_clave" class="mainPanelContentComponents" style="width: 100%;" idetiqueta="Paisesclave">Clave</label>
+                                                        <input id="txt_clave" class="mainPanelContentComponents" style="width: 100%; margin-bottom: 9px;" type="text">
+                                                    </div>
+
+                                                    <div id="DivGroup16Fcol1Frow2Fcon1" class="mainPanelDivGroup" style="max-width: 320px;">
+                                                        <label id="lbl_descripcion" class="mainPanelContentComponents" style="width: 100%;" idetiqueta="Paisesdescripcion">Descripción</label>
+                                                        <input id="txt_descripcion" class="mainPanelContentComponents" style="width: 100%; margin-bottom: 9px;" type="text">
+                                                    </div>
+
+                                                    <button id="btnGuardar" class="mainPanelContentComponents defaultButton"  style="display: inline;">
+                                                        <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                                                        <span idetiqueta="btnGuardar">Guardar</span>
+                                                    </button>
+                                                    <button id="btnCancelar" class="mainPanelContentComponents defaultButton" style="display: inline;">
+                                                        <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                                                        <span idetiqueta="btnCancelar">Cancelar</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div id="row2Fcon2" class="mainPanelRow" style="width: 60%; height: auto;">
+                                        <div id="row2Fcon2FcTab2" class="mainPanelRow" style="width: 100%; height: auto;">
+                                            <div id="col1Frow3Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+        <div id="botones" class="contenedor" style="max-width: 100%; width: 100%; float:left;">
+            <button id="btnGuardar" class="mainPanelContentComponents defaultButton"  style="display: inline;" onclick="saveApariencia()">
+                <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                <span idetiqueta="btnGuardar">Guardar</span>
+            </button>
+            <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="cancelApariencia()" style="display: inline;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span  idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

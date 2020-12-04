@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Fuente de Procesos</title>
+    <link href="css/stylepreview.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsConfig.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script> 
+    <script type="text/javascript" src="js/funcionesFuenteProceso.js"></script>
+</head>
+<body>
+    <div id="container" class="contenedor">
+        <div id="content" class="contentTitle">
+            <h2 class="subTitle">Fuente de proceso</h2>
+        </div>
+        <div id="SelectCaptura">
+            <div id="con1" class="contain" style="width:100%">
+                <div id="row2Fcon1" class="mainPanelRow" style="width:100%;">
+                    <div id="col1row2Fcon1" class="mainPanelCol" style="width:100%;">
+                        <button class="mainPanelContentComponents defaultButton right" onclick="mostrarCaptura(true) " style="float: right;margin-top: 20px;">Agregar</button>
+                        <nav id="containerPag">
+                            <ul id="listPagcaptura" class="pagination">
+                                <li>
+                                    <a href="#" onclick="previous()" class="first_link">◀</a>
+                                </li>
+                                <li><a href="#" onclick="next()" class="last_link">▶</a></li>
+                            </ul>
+                        </nav>
+                        <table id="tableSelector" style="width:100%;" border="1">
+                            <thead id="bodyTableSelector">
+                                <tr>
+                                    <th>Clave</th>
+                                    <th>Nombre</th>
+                                    <th>Estado</th>
+                                    <th>Nombre etiqueta</th>
+                                    <th>Editar</th>
+                                    <th>Eliminar</th>
+                                </tr>
+
+                            </thead>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="CapturaPrinci" style="display:none">
+            <div id="content" class="contentTitle">
+                <h3 class="subTitle">Proceso Origen</h3>
+            </div>
+            <div id="con2" class="contain">
+                <div id="row1Fcon2" class="mainPanelRow" style="width:100%">
+                    <div id="col1row1Fcon2" class="mainPanelCol" style="width:100%;">
+                        <div id="divGroupProceso" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblProceso" class="mainPanelContentComponents">Proceso del sistema</label>
+                            <div class="select-style" style="width:100%">
+                                <select id="txtProceso" name="Estado" onchange="selectProceso(this)">
+                                    <option value=""></option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div id="divGroupClave" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblClave" class="mainPanelContentComponents">Referencia</label>
+                            <input id="txtClave" class="mainPanelContentComponents" type="text" style="width: 80px;" disabled />
+                        </div>
+                        <div id="divGruopNombre" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblNombre" class="mainPanelContentComponents">Nombre</label>
+                            <input id="txtNombre" class="mainPanelContentComponents" type="text" style="width: 200px;" />
+                        </div>
+                        <div id="divGroupEstado" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblEstado" class="mainPanelContentComponents">Estado</label>
+                            <div class="select-style">
+                                <select id="txtEstado" name="Estado">
+                                    <option value="null"></option>
+                                    <option value="true">Disponible</option>
+                                    <option value="false">No disponible</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="divGroupIdEtiqueta" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblIdEtiqueta" class="mainPanelContentComponents">Nombre de etiqueta</label>
+                            <input id="txtIdetiqueta" class="mainPanelContentComponents" type="text" style="width: 200px;" />
+                        </div>
+                        <div id="containerTable" class="mainPanelDivGroup containerTable">
+                            <div>
+                                <button class="mainPanelContentComponents defaultButton" onclick="mostrarParametros(true)" style="float: right;margin-top: 20px;">Agregar</button>
+                                <nav id="containerPag">
+                                    <ul id="listPagparametros" class="pagination">
+                                        <li>
+                                            <a href="#" onclick="previous()" class="first_link">◀</a>
+                                        </li>
+                                        <li><a href="#" onclick="next()" class="last_link">▶</a></li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+                            <table id="tableParametros" style="width:100%;" border="1">
+                                <thead id="bodyTableSelector">
+                                    <tr>
+                                        <th fieldsource="campo">Campo</th>
+                                        <th fieldsource="estado">Estado</th>
+                                        <th fieldsource="idEtiqueta">Nombre etiqueta</th>
+                                        <th fieldsource="tipoDeDato">Tipo de dato</th>
+                                        <th fieldsource="compAncho">Ancho del campo</th>
+                                        <th fieldsource="configuracionTipoCaptura">Tipo de Captura</th>
+                                        <th>Editar</th>
+                                        <th>Eliminar</th>
+                                    </tr>
+
+                                </thead>
+
+                            </table>
+                        </div>
+                        <div id="containerTable" class="mainPanelDivGroup containerTable">
+                            <div>
+                                <button class="mainPanelContentComponents defaultButton" onclick="mostrarAcciones(true)" style="float: right;margin-top: 20px;">Agregar</button>
+                                <nav id="containerPag">
+                                    <ul id="listPagacciones" class="pagination">
+                                        <li>
+                                            <a href="#" onclick="previous()" class="first_link">◀</a>
+                                        </li>
+                                        <li><a href="#" onclick="next()" class="last_link">▶</a></li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+                            <table id="tableAccion" style="width:100%;" border="1">
+                                <thead id="bodyTableSelector">
+                                    <tr>
+                                        <th fieldsource="descripcion">Descripcion</th>
+                                        <th fieldsource="clave">Clave</th>
+                                        <th fieldsource="estado">Estado</th>
+                                        <th fieldsource="idEtiqueta">Nombre etiqueta</th>
+
+                                        <th fieldsource="rutaImagen">Imagen</th>
+                                        <th>Editar</th>
+                                        <th>Eliminar</th>
+                                    </tr>
+
+                                </thead>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="botones" class="contenedor" style="max-width: 100%; width: 100%;">
+                <button id="btnGuardar" class="mainPanelContentComponents defaultButton" style="display: inline;" onclick="save()">Guardar</button>
+                <button id="btnCancelar" class="mainPanelContentComponents defaultButton" style="display: inline;" onclick="limpiarCaptura()">Cancelar</button>
+            </div>
+        </div>
+        <div id="CapturaParam" style="display:none">
+            <div id="content" class="contentTitle">
+                <h3 class="subTitle">Parametros</h3>
+            </div>
+            <div id="con3" class="contain">
+                <div id="row1Fcon3" class="mainPanelRow" style="width:100%">
+                    <div id="col1row1Fcon3" class="mainPanelCol" style="width:50%">
+                        <div id="divGroupCampoParam" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblCampoParam" class="mainPanelContentComponents">Campo</label>
+                            <input id="txtCampoParam" class="mainPanelContentComponents" type="text" style="width:100%" required />
+                        </div>
+                        <div id="divGroupEstadoParam" class="mainPanelDivGroup" style="width:150px">
+                            <label id="lblEstadoParam" class="mainPanelContentComponents">Estado</label>
+                            <div class="select-style" style="width:100%">
+                                <select id="txtEstadoParam" name="Estado">
+                                    <option value=""></option>
+                                    <option value="true">Disponible</option>
+                                    <option value="false">No disponible</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="divGrupoRequeridoParam" class="mainPanelDivGroup">
+                            <input id="txtRequeridoParam" name="requeridoParam" type="checkbox">
+                            <label for="txtRequeridoParam" class="containerCheck">Requerido</label>
+                        </div>
+                        <div id="divGrupoRangoParam" class="mainPanelDivGroup">
+                            <input id="txtRangoParam" name="RangoParam" type="checkbox">
+                            <label for="txtRangoParam" class="containerCheck">Capturar Rango</label>
+                        </div>
+                        <div id="divGruopIdetiquetaParam" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblIdetiquetaParam" class="mainPanelContentComponents">Nombre de etiqueta</label>
+                            <input id="txtIdEtiquetaParam" class="mainPanelContentComponents " type="text" style="width:100%" />
+                        </div>
+                        <div id="divGruopTipoDatoParam" class="mainPanelDivGroup">
+                            <label id="lblTipoDatoParam" class="mainPanelContentComponents">Tipo de dato:</label>
+                            <div class="select-style">
+                                <select id="txttipoDeDatoParam" name="tipoDeDato" onchange="changeDataType(this.value)">
+                                    <option value=""></option>
+                                    <option value="0">Relacion</option>
+                                    <option value="1">Texto</option>
+                                    <option value="2">Entero</option>
+                                    <option value="3">Double</option>
+                                    <option value="4">Fecha</option>
+                                    <option value="5">Boleano</option>
+                                    <option value="6">Tiempo</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div id="DivGroupAnchoParam" class="mainPanelDivGroup " style="width:100px">
+                            <label id="lblAnchoParam" class="mainPanelContentComponents">Ancho</label>
+                            <input id="txtCompAnchoParam" name="compAncho" class="mainPanelContentComponents" type="text" style="width:100%" onkeypress="return validarSiNumero(event)">
+                        </div>
+                    </div>
+                    <div id="col2row1Fcon3" class="mainPanelCol" style="width:50%">
+                        <div id="divGroupTipoCapturaParam" class="mainPanelDivGroup ">
+                            <label id="lblTipoCapturaParam" class="mainPanelContentComponents">Tipo de captura:</label>
+                            <div class="select-style" style="width: 150px;">
+                                <select id="txtTipoCapturaParam" name="tipoCaptura" onchange="createTypeCaptura(this.value)">
+                                    <option value=""></option>
+                                    <!--   <option value="1">Libre</option>
+                                       <option value="2">Lista</option>
+                                       <option value="3">Equivalencias</option>
+                                       <option value="4">Origen de datos</option>-->
+                                </select>
+                            </div>
+                        </div>
+                        <div id="divGroupAdapterParam" class="mainPanelDivGroup ">
+                            <div id="adapterType">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="botonesParam" class="contenedor" style="max-width: 100%; width: 100%;">
+                <button id="btnAceptarParam" class="mainPanelContentComponents defaultButton" style="display: inline;" onclick="agregarParametro()">Aceptar</button>
+                <button id="btnCancelarParam" class="mainPanelContentComponents defaultButton" style="display: inline;" onclick="limpiarParametros(true)">Cancelar</button>
+            </div>
+        </div>
+        <div id="CapturaAccion" style="display:none">
+            <div id="content" class="contentTitle">
+                <h3 class="subTitle">Acciones</h3>
+            </div>
+            <div id="con4" class="contain">
+                <div id="row1Fcon4" class="mainPanelRow" style="width:100%">
+                    <div id="col1row1Fcon4" class="mainPanelCol" style="width:50%">
+                        <div id="divGroupClaveAccion" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblClaveAccion" class="mainPanelContentComponents">Clave</label>
+                            <input id="txtClaveAccion" class="mainPanelContentComponents" type="text" style="width:100%" disabled/>
+                        </div>
+                        <div id="divGroupDescripcionAccion" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblDescripcionAccion" class="mainPanelContentComponents">Descripcion</label>
+                            <input id="txtDescripcionAccion" class="mainPanelContentComponents" type="text" style="width:100%" />
+                        </div>
+                        <div id="divGroupEstadoAccion" class="mainPanelDivGroup" style="width:150px">
+                            <label id="lblEstadoAccion" class="mainPanelContentComponents">Estado</label>
+                            <div class="select-style" style="width:100%">
+                                <select id="txtEstadoAccion" name="Estado">
+                                    <option value=""></option>
+                                    <option value="true">Disponible</option>
+                                    <option value="false">No disponible</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="divGrupoRequeridoAccion" class="mainPanelDivGroup">
+                            <input id="txtRequeridoAccion" name="requeridoAccion" type="checkbox">
+                            <label for="txtRequeridoAccion" class="containerCheck">Requerido</label>
+                        </div>
+
+                        <div id="divGruopIdetiquetaAccion" class="mainPanelDivGroup" style="width:200px">
+                            <label id="lblIdetiquetaAccion" class="mainPanelContentComponents">Nombre de etiqueta</label>
+                            <input id="txtIdEtiquetaAccion" class="mainPanelContentComponents " type="text" style="width:100%" />
+                        </div>
+
+                        <div id="DivGroupImagenAccion" class="mainPanelDivGroup " style="width:200px;margin-top:10px">
+                            <label id="lblImagenAccion" class="mainPanelContentComponents">Selecione una imagen</label>
+                            <div class="select-style" style="width:100%">
+                                <select id="txtImagenAccion" name="Estado">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <!--   <label for="file-upload" class="subir">
+                                   <i class="fas fa-cloud-upload-alt"></i> Subir archivo
+                               </label>
+                               <input id="file-upload" onchange='cambiar()' type="file" style='display: none;' />
+                               <div id="info" style="display: inline-block;margin: 5px;"></div>
+                              <!-- <label id="lblImagenAccion" class="mainPanelContentComponents">Selecione una imagen</label>
+                               <input id="txtImagenAccion" name="ImagenAccion" class="mainPanelContentComponents defaultButton" type="file" style="width:100%">-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="botonesAcciones" class="contenedor" style="max-width: 100%; width: 100%;">
+                <button id="btnAceptarAcciones" class="mainPanelContentComponents defaultButton" style="display: inline;" onclick="agregarAccion()">Aceptar</button>
+                <button id="btnCancelarAcciones" class="mainPanelContentComponents defaultButton" style="display: inline;" onclick="limpiarAcciones(true)">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

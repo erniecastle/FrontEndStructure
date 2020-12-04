@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Envío de correo</title>
+    <meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsConfigCorreo.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsEditor.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div id="content" class="contentTitle">
+            <h2 class="subTitle">Configuración de correo</h2>
+        </div>
+        <div class="contain" style="width: 100%; display: block;" id="con2FcTab2">
+            <div id="row1Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                <div id="col2Frow1Fcon2FcTab2" class="mainPanelCol borderCol col-9" style="visibility: visible;">
+                    <div id="DivGroup2Fcol2Frow1Fcon2FcTab2" style="max-width: 300px;" class="mainPanelDivGroup">
+                        <label id="T2Fcol1Frow1Fcon2FcTab2" idetiqueta="CorreoSMTP" class="mainPanelContentComponents" style="width: 100%;">SMTP</label>
+                        <input id="txtMailSMTP" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+            <div id="row2Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                <div id="col2Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-9" style="visibility: visible;">
+
+                    <div id="DivGroup4Fcol2Frow2Fcon2FcTab2" style="max-width: 100px;" class="mainPanelDivGroup">
+                        <label id="T4Fcol1Frow2Fcon2FcTab2" idetiqueta="CorreoPuerto" class="mainPanelContentComponents" style="width: 100%;">Puerto</label>
+                        <input id="txtMailPuerto" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+            <div id="row3Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+
+                <div id="col2Frow3Fcon2FcTab2" class="mainPanelCol borderCol col-9" style="visibility: visible;">
+
+                    <div id="DivGroup6Fcol2Frow3Fcon2FcTab2" style="max-width: 300px;" class="mainPanelDivGroup">
+                        <label id="T6Fcol1Frow3Fcon2FcTab2" idetiqueta="CorreoUsuario" class="mainPanelContentComponents" style="width: 100%;">Usuario</label>
+                        <input id="txtMailUsuario" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+            <div id="row4Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+
+                <div id="col2Frow4Fcon2FcTab2" class="mainPanelCol borderCol col-9" style="visibility: visible;">
+
+                    <div id="DivGroup8Fcol2Frow4Fcon2FcTab2" style="max-width: 300px;" class="mainPanelDivGroup">
+                        <label id="T8Fcol1Frow4Fcon2FcTab2" idetiqueta="CorreoContraseña" class="mainPanelContentComponents" style="width: 100%;">Contraseña</label>
+                        <input id="txtMailPass" type="password" class="mainPanelContentComponents" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+            <div id="row5Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+
+                <div id="col2Frow5Fcon2FcTab2" class="mainPanelCol borderCol col-9" style="visibility: visible;">
+                    <div id="DivGroup10Fcol2Frow5Fcon2FcTab2" style="max-width: 60px;" class="mainPanelDivGroup">
+                        <label id="T10Fcol1Frow5Fcon2FcTab2" idetiqueta="CorreoSSL" class="mainPanelContentComponents" style="width: 100%;">SSL</label>
+                        <div class="select-style" style="width: 100%;">
+                            <select id="cbxSSL" class="mainPanelContentComponents" style="width: 100%;">
+                                <option value=""></option>
+                                <option value="true">Sí</option>
+                                <option value="false">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="row6Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                <div id="col2Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-9" style="visibility: visible; width: 33.3333%;">
+                    <div id="DivGroup12Fcol2Frow6Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="T13Fcol1Frow6Fcon2FcTab2" idetiqueta="CorreoCorreoRemitente" class="mainPanelContentComponents" style="width: 100%;">Correo remitente</label>
+                        <input id="txtMailRemitente" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                    </div>
+                </div>
+            </div>
+            <div id="rowMailTest" class="mainPanelRow" style="width: 100%;">
+
+                <div id="col2Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-9" style="visibility: visible; width: 33.3333%;">
+                    <div id="DivGroup12Fcol2Frow6Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="T13Fcol1Frow6Fcon2FcTab2" idetiqueta="CorreoDePrueba" class="mainPanelContentComponents" style="width: 100%;">Correo de prueba</label>
+                        <input id="txtMailPrueba" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                    </div>
+                    <div id="DivGroup13Fcol3Frow6Fcon2FcTab2" style="max-width: 100%; margin-top:5px;" class="mainPanelDivGroup">
+                        <button id="T15Fcol3Frow6Fcon2FcTab2" idetiqueta="btnProbarCorreo" class="mainPanelContentComponents defaultButton" style="" onclick="testEmail()">Probar correo</button>
+                    </div>
+                </div>
+          
+            </div>
+            <div id="row7Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow7Fcon2FcTab2" class="mainPanelCol borderCol col-4" style="visibility: visible; width: 100%;">
+                    <div id="DivGroupT16Fcol1Frow7Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <!-- <label id="T16Fcol1Frow7Fcon2FcTab2" class="mainPanelContentComponents" style="width: 100%;">Componente de edición (Desarrollo)</label>-->
+                        <textarea id="txtMailTexto" name="textarea" rows="10" cols="75"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="botones" class="contenedor" style="max-width: 100%; width: 100%;">
+            <button id="btnGuardar" class="mainPanelContentComponents defaultButton" style="display: inline;" onclick="saveConfigMail()">
+                <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                <span idetiqueta="btnGuardar">Guardar</span>
+            </button>
+            <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="cancelConfigMail()" style="display: inline;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+        </div>
+
+    </div>
+</body>
+</html>

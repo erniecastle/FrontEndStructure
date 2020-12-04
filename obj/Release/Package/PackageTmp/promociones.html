@@ -1,0 +1,512 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Promociones y modificaciones</title>
+    <meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsIngresosBajas.js"></script>
+</head>
+
+<body>
+    <div id="mainContent" class="mainContents">
+        <div class="cTab" style="width: 100%; height: auto;" id="cTab2">
+            <div id="content" class="contentTitle" style="margin-left:20px;">
+                <h2 class="subTitle">Promociones y modificaciones</h2>
+            </div>
+            <!--<div class="tab" id="tab2FcTab2">
+                <button id="btnTab1Ftab2FcTab2" class="tablinks" onclick="openTab(event,'con2FcTab2')"></button>
+            </div>-->
+            <div class="contain" style="width: 100%; " id="con2FcTab2">
+                <div id="row1" class="mainPanelRow" style="width: 100%; margin-left:20px;">
+                    <div id="col1Frow1Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+
+                        <div id="DivGroup1Fcol1Frow1Fcon2FcTab2" style="width:113px;" class="mainPanelDivGroup">
+                            <label id="lblReferencia" class="mainPanelContentComponents" style="width: 100%;">Referencia</label>
+                            <div style="display:flex">
+                                <input id="txtReferencia" idetiqueta="IngresosBajasReferencia" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled>
+                                <button id="btnBuscarAltas" title="Buscar altas" style="width:30px;  height:25px;" class="editButton small" dataEdit="selectorAltasProm" functEdit="selectorPromociones" onclick="OpenSelector(this)">
+                                    <img class="imgBoton" src="img/Iconos/puntos.png" />
+
+                                </button>
+                                <!--<button id="btnBuscar" class="mainPanelContentComponents defaultButton" idetiqueta="btnBuscar" dataEdit="selectorAltasBajas" functEdit="selectorIngreBajas" onclick="OpenSelector(this)" style="display: inline;">Buscar</button>-->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="row2" class="mainPanelRow" style="width: 100%; margin-left:20px;">
+                    <div id="col1Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 70px;">
+                        <div id="DivGroup2Fcol1Frow2Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <div class="editContainer">
+                                <label id="lblEmpleado" idetiqueta="Empleados" class="mainPanelContentComponents">Empleado</label>
+                                <div id="editEmpleado" class="edit small-large" dataedit="EditPlazasEmpleados" functedit="setEditPlazasEmpleados" disabled>
+                                    <input id="search-text-input" class="editKey small" kind="filterKey" type="text" placeholder="Buscar" style="width:60px;" disabled>
+                                    <!--<input id="brief-text-input" class="editBrief large" type="text" placeholder="..." disabled>-->
+                                    <button class="editButton small" onclick="OpenEditModal(this)" disabled> <img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 25px;"></div>
+                    <div id="col3Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-4" style="visibility: visible; width: 220px;">
+                        <div id="DivGroup5Fcol3Frow2Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblApellidoPat" idetiqueta="EmpleadosApePaterno" class="mainPanelContentComponents" style="width: 100%;">Apellido paterno</label>
+                            <input id="txtApellidoPat" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled>
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 15px;"></div>
+                    <div id="col2Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-4" style="visibility: visible; width: 220px;">
+                        <div id="DivGroup4Fcol2Frow2Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblApellidoMat" idetiqueta="EmpleadosApeMaterno" class="mainPanelContentComponents" style="width: 100%;">Apellido materno</label>
+                            <input id="txtApellidoMat" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled>
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 15px;"></div>
+                    <div id="col4Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-4" style="visibility: visible; width: 390px;">
+                        <div id="DivGroup5Fcol4Frow2Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblNombre" idetiqueta="EmpleadosNombre" class="mainPanelContentComponents" style="width: 100%;">Nombre(s)</label>
+                            <input id="txtNombre" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div id="row3" class="mainPanelRow" style="width: 100%; margin-top:15px; margin-left:20px;">
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 350px;">
+                        <div id="DivGroup6Fcol1Frow6Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblLugarNac" idetiqueta="EmpleadosLugarNacimiento" class="mainPanelContentComponents" style="width: 100%;">Lugar de nacimiento</label>
+                            <input id="txtLugarNac" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled>
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 15px;"></div>
+                    <div id="col2Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 135px;">
+                        <div id="DivGroup7Fcol2Frow6Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblFechaNac" idetiqueta="EmpleadosFechaNacimiento" class="mainPanelContentComponents" style="width: 100%;">Fecha Nac.</label>
+                            <input id="txtFechaNac" type="date" class="mainPanelContentComponents" style="width: 100%;" disabled>
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 15px;"></div>
+                    <div id="col3Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 50px;">
+                        <div id="DivGroup8Fcol3Frow6Fcon2FcTab2" style="max-width: 100%; margin-top:1px;" class="mainPanelDivGroup">
+                            <label id="lblEdad" idetiqueta="IngresosBajasEdad" class="mainPanelContentComponents" style="width: 40px;">Edad</label>
+                            <input id="txtEdad" type="text" class="mainPanelContentComponents" style="width: 50px;" disabled>
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 15px;"></div>
+                    <div id="col4Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 100px;">
+                        <div id="DivGroup9Fcol4Frow6Fcon2FcTab2" style="max-width: 100%; margin-top:1px;" class="mainPanelDivGroup">
+                            <label id="lblSexo" idetiqueta="IngresosBajasSexo" class="mainPanelContentComponents" style="width: 40px;">Sexo</label>
+                            <input id="txtSexo" type="text" class="mainPanelContentComponents" style="width: 100px;" disabled>
+                        </div>
+                    </div>
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 15px;"></div>
+                    <div id="col5Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 150px;">
+                        <div id="DivGroup10Fcol5Frow6Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblNacionalidad" idetiqueta="EmpleadosNacionalidad" class="mainPanelContentComponents" style="width: 100%;">Nacionalidad</label>
+                            <input id="txtNacionalidad" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div id="row4" class="mainPanelRow" style="width: 100%; margin-left:20px;">
+                    <div id="col1Frow7Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 100%;">
+                        <div id="DivGroupT121724Fcol1Frow7Fcon2FcTab2" class="mainPanelDivGroup" style="width: 400px; margin-top:15px;">
+                            <div class="editContainer">
+                                <label id="lblRegistroPatronal" idetiqueta="RegistroPatronal" class="mainPanelContentComponents">Registro Patronal</label>
+                                <div id="editRegistroPatronal" class="edit small-medium" dataedit="EditIngreReingistroPatronal" functedit="setEditIngreReingistroPatronal">
+                                    <input id="txtEditKeyRegistroPatronal" class="editKey small" kind="filterKey" type="text" disabled>
+                                    <input id="txtEditBriefRegistroPatronal" class="editBrief medium" type="text" disabled>
+                                    <button class="editButton small" onclick="OpenEditModal(this)" disabled> <img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--<div id="DivGroupT121726Fcol1Frow7Fcon2FcTab2" class="mainPanelDivGroup" style="max-width: 35%;">
+                            <div class="editContainer">
+                                <label id="34Fcol1Frow7Fcon2FcTab2" class="mainPanelContentComponents">Posición Organigrama</label>
+                                <div id="editPosOrganigrama" class="edit" dataedit="EditPosOrganigrama" functedit="setEditPosOrganigrama">
+                                    <input id="txtEditKeyPosOrganigrama" class="editKey" kind="filterKey" type="text">
+                                    <input id="txtEditPosOrganigrama" class="editBrief" type="text" disabled="">
+                                    <button id="ddf" class="editButton" onclick="OpenEditModal(this)"></button>
+                                </div>
+                            </div>
+                        </div>-->
+
+                    </div>
+                </div>
+                <div id="row5" class="mainPanelRow" style="width: 100%; margin-bottom:20px; margin-top:15px;">
+                    <div id="infoRelacionLaboral" lastValue="" class="contentBox" style="width:160px">
+                        <div class="contenChecks" style="display:flex;">
+                            <div id="" class="mainPanelDivGroup compact" style="margin-top: -13px;">
+                                <div id="" class="cmpCheck" style="padding-top:10px;">
+                                    <input id="chkIngreReinRelacionLaboral" name="checkboxPrm" type="checkbox">
+                                    <label for="chkIngreReinRelacionLaboral" class="containerCheck" disabled></label>
+                                </div>
+                            </div>
+
+                            <div id="col1Frow10Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                <div id="DivGroupT4Fcol1Frow10Fcon2FcTab2" style="max-width: 100%; display:flex; width: 110px;" class="mainPanelDivGroup">
+                                    <label id="lblRelacionLab" idetiqueta="IngresosBajasRelacionLaboral" class="mainPanelContentComponents" style="width: 100%;">Relación laboral </label>
+                                   
+                                </div>
+                                <div class="colborder" style="border-style: solid; border-width: 1px; width: 110px; margin-bottom:11px; margin-top:-7px;">
+                                    <div id="DivGroupT6Fcol1Frow10Fcon2FcTab2" style="max-width: 100%; margin-top:10px; margin-left: 5px;" class="mainPanelDivGroup ">
+                                        <div id="DivGroup14Fcol1Frow10Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input id="rbBase" type="radio" class="mainPanelContentComponents" name="one">
+                                            <label id="lblBase" idetiqueta="IngresosBajasRbBase" class="containerRadio" for="rbBase">Base</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT7Fcol1Frow10Fcon2FcTab2" style="max-width: 100%; margin-bottom:10px; margin-left: 5px; margin-top:-3px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup15Fcol1Frow10Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input id="rbConfianza" type="radio" class="mainPanelContentComponents" name="one">
+                                            <label id="lblConfianza" idetiqueta="IngresosBajasRbConfianza" class="containerRadio" for="rbConfianza">Confianza</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                    <div id="infoSindicalizado" class="contentBox" style="width:155px">
+                        <div class="contenChecks" style="display:flex;">
+                            <div id="" class="mainPanelDivGroup compact" style="margin-top: -13px;">
+                                <div id="" class="cmpCheck" style="padding-top:10px;">
+                                    <input id="chkIngreReinSindicalizado" name="checkboxPrm" type="checkbox">
+                                    <label for="chkIngreReinSindicalizado" class="containerCheck"></label>
+                                </div>
+                            </div>
+                            <div id="col1Frow10Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                <div id="DivGroupT4Fcol1Frow10Fcon2FcTab2" style="max-width: 100%; display:flex; width: 95px;" class="mainPanelDivGroup">
+                                    <label id="lblSindicalizado" idetiqueta="IngresosBajasSindicalizado" class="mainPanelContentComponents" style="width: 100%;">Sindicalizado</label>
+                                </div>
+                                <div class="colborder" style="border-style: solid; border-width: 1px; width: 110px; margin-top:-7px;">
+                                    <div id="DivGroupT6Fcol1Frow10Fcon2FcTab2" style="max-width: 100%; margin-top:11px; margin-left: 5px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup14Fcol1Frow10Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input id="rbSi" type="radio" class="mainPanelContentComponents" name="two">
+                                            <label id="lblSi" idetiqueta="IngresosBajasRbSi" class="containerRadio" for="rbSi">Sí</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT7Fcol1Frow10Fcon2FcTab2" style="max-width: 100%; margin-bottom:10px; margin-left: 5px; margin-top:-3px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup15Fcol1Frow10Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input id="rbNo" type="radio" class="mainPanelContentComponents" name="two">
+                                            <label id="lblNo" idetiqueta="IngresosBajasRbNo" class="containerRadio" for="rbNo">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="infoRegimenContratacion" class="bloc" lastValue="">
+                        <div id="" class="mainPanelDivGroup compact">
+                            <div id="" class="cmpCheck">
+                                <input id="chkIngreReinContratacion" name="checkboxPrm" type="checkbox">
+                                <label for="chkIngreReinContratacion" class="containerCheck"></label>
+                            </div>
+                        </div>
+                        <div id="col1Frow13Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 396px;">
+                            <div id="DivGroup23Fcol1Frow13Fcon2FcTab2" class="mainPanelDivGroup">
+                                <div class="editContainer">
+                                    <label id="lblRegimenContratacion" idetiqueta="RegimenDeContratacion" class="mainPanelContentComponents">Regimen de contratación</label>
+                                    <div id="editRegimenContratacion" class="edit small-large" dataedit="EditRegimenContratacion" functedit="setEditRegimenContratacion">
+                                        <input id="txtEditKeyRegimenContratacion" class="editKey small" kind="filterKey" type="text">
+                                        <input id="txtEditBriefRegimenContratacion" class="editBrief large" type="text" disabled="">
+                                        <button class="editButton small" onclick="OpenEditModal(this)"> <img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="row6" class="mainPanelRow" style="width: 100%;">
+                    <div id="infoTipoContrato" class="bloc" lastValue="">
+                        <div id="" class="mainPanelDivGroup compact">
+                            <div id="" class="cmpCheck">
+                                <input id="chkIngreReinTipoContrato" name="checkboxPrm" type="checkbox">
+                                <label for="chkIngreReinTipoContrato" class="containerCheck"></label>
+                            </div>
+                        </div>
+                        <div id="col1Frow12Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 396px;">
+                            <div id="DivGroup19Fcol1Frow12Fcon2FcTab2" class="mainPanelDivGroup" style="">
+                                <div class="editContainer">
+                                    <label id="lblTipoContrato" idetiqueta="TipoContrato" class="mainPanelContentComponents">Tipo de contrato</label>
+                                    <div id="editTipoContrato" class="edit small-large" dataedit="EditTipoContrato" functedit="setEditTipoContrato">
+                                        <input id="txtEditKeyTipoContrato" class="editKey small" kind="filterKey" type="text">
+                                        <input id="txtEditTipoContrato" class="editBrief large" type="text" disabled="">
+                                        <button class="editButton small" onclick="OpenEditModal(this)"> <img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 15px;"></div>-->
+                    <div id="col2Frow12Fcon2FcTab2" class="mainPanelCol borderCol" style="visibility: visible; width: 146px;">
+                        <div id="DivGroup20Fcol2Frow12Fcon2FcTab2" class="mainPanelDivGroup" style="max-width: 100%; margin-left:20px;">
+                            <label id="lblFechaInicial" idetiqueta="IngresosBajasFechasInicial" class="mainPanelContentComponents" style="width: 100%;">Fecha Inicial</label>
+                            <input id="txtFechaInicial" type="date" onchange="setDates(this);" class="mainPanelContentComponents" style="width: 100%;">
+                        </div>
+                    </div>
+
+                    <!--<div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 15px;"></div>
+                    <div id="col3Frow12Fcon2FcTab2" class="mainPanelCol borderCol col-4" style="visibility: visible; width: 150px;">
+                        <div id="DivGroup21Fcol3Frow12Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblFechaFinal" class="mainPanelContentComponents" style="width: 100%;">Fecha final</label>
+                            <input id="txtFechaFinal" type="date" class="mainPanelContentComponents" style="width: 100%;">
+                        </div>
+                    </div>
+
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 15px;"></div>
+                    <div id="col4Frow12Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 150px;">
+                        <div id="DivGroup22Fcol4Frow12Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblFechaPrestaciones" class="mainPanelContentComponents" style="width: 200px;">Fecha p/prestaciones</label>
+                            <input id="txtFechaPrestaciones" type="date" class="mainPanelContentComponents" style="width: 100%;">
+                        </div>
+                    </div>-->
+
+
+                </div>
+                <div id="row7" class="mainPanelRow" style="width: 100%; margin-left:6px;">
+
+                    <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 15px;"></div>
+                    <div id="col3Frow13Fcon2FcTab2" class="mainPanelCol borderCol" style="visibility: visible; width: 135px;">
+                        <div id="DivGroup24Fcol3Frow13Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblFechaIMSS" idetiqueta="IngresosBajasFechaIMSS" class="mainPanelContentComponents" style="width: 100%;">Fecha IMSS</label>
+                            <input id="txtFechaIMSS" type="date" class="mainPanelContentComponents" onchange="setDateImms(this);" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+                <div id="row8" class="mainPanelRow" style="width: 100%;">
+                    <div id="infoTipoNom" class="bloc" lastValue="">
+                        <div id="" class="mainPanelDivGroup compact">
+                            <div id="" class="cmpCheck">
+                                <input id="chkIngreReinTipoDeNomina" name="checkboxPrm" type="checkbox">
+                                <label for="chkIngreReinTipoDeNomina" class="containerCheck"></label>
+                            </div>
+                        </div>
+                        <div id="col1Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 425px;">
+                            <div id="DivGroupT2Fcol1Frow14Fcon2FcTab2" class="mainPanelDivGroup" style="width: 345px;">
+                                <div class="editContainer">
+                                    <label id="lblIngreReinGTipoDeNomina" idetiqueta="TipoNomina" class="mainPanelContentComponents">Tipo de nómina</label>
+                                    <div id="editIngreReinTipoNom" class="edit medium-large" dataedit="EditIngreReinTipoNom" functedit="setEditIngreReinTipoNom">
+                                        <input id="txtKeyTipNom" class="editKey medium" kind="filterKey" type="text">
+                                        <input id="txtBriefTipNom" class="editBrief large" type="text" disabled="">
+                                        <button class="editButton small" onclick="OpenEditModal(this)"> <img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="row9" class="mainPanelRow" style="width: 100%;">
+
+                    <div id="infoCentroCosto" class="bloc" lastValue="">
+                        <div id="" class="mainPanelDivGroup compact">
+                            <div id="" class="cmpCheck">
+                                <input id="chkIngreReinCentroCostos" name="checkboxPrm" type="checkbox">
+                                <label for="chkIngreReinCentroCostos" class="containerCheck"></label>
+                            </div>
+                        </div>
+                        <div id="col1Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 425px;">
+                            <div id="DivGroupT3Fcol1Frow15Fcon2FcTab2" class="mainPanelDivGroup" style="width: 345px;">
+                                <div class="editContainer">
+                                    <label id="lblIngreReinCentroCostos" idetiqueta="CentroDeCosto" class="mainPanelContentComponents">Centro de costos</label>
+                                    <div id="editIngreReinCentroCostos" class="edit medium-large" dataedit="EditIngreReinCentroCostos" functedit="setEditIngreReinCentroCostos">
+                                        <input id="txtIngreReinEditKeyCentroCosto" class="editKey medium" kind="filterKey" type="text">
+                                        <input id="txtIngreReinEditBriefCentroCosto" class="editBrief large" type="text" disabled="">
+                                        <button id="btnIngreReinCentroCostos" class="editButton small" onclick="OpenEditModal(this)"> <img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="row10" class="mainPanelRow" style="width: 100%;">
+                <div id="infoDepartamento" class="bloc" lastValue="">
+                    <div id="" class="mainPanelDivGroup compact">
+                        <div id="" class="cmpCheck">
+                            <input id="chkIngreReinDepartamento" name="checkboxPrm" type="checkbox">
+                            <label for="chkIngreReinDepartamento" class="containerCheck"></label>
+                        </div>
+                    </div>
+                    <div id="col1Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 295px;">
+                        <div id="DivGroupT4Fcol1Frow16Fcon2FcTab2" class="mainPanelDivGroup" style="width: 345px;">
+                            <div class="editContainer">
+                                <label id="lblIngreReinDepartamento" idetiqueta="Departamentos" class="mainPanelContentComponents">Departamento</label>
+                                <div id="editIngreReinDepartamento" class="edit small-medium" dataedit="EditIngreReinDepartamento" functedit="setEditIngreReinDepartamento">
+                                    <input id="txtKeyEditDepa" class="editKey small" kind="filterKey" type="text">
+                                    <input id="txtBriefEditDepa" class="editBrief medium" type="text" disabled="">
+                                    <button id="btnIngreReinEdit" class="editButton small" onclick="OpenEditModal(this)"> <img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="row11" class="mainPanelRow" style="width: 100%; margin-top:15px;">
+                <div id="infoPuestos" class="bloc" lastValue="">
+                    <div id="" class="mainPanelDivGroup compact">
+                        <div id="" class="cmpCheck">
+                            <input id="chkIngreReinPuestos" name="checkboxPrm" type="checkbox">
+                            <label for="chkIngreReinPuestos" class="containerCheck"></label>
+                        </div>
+                    </div>
+                    <div id="col1Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 295px;">
+                        <div id="DivGroupT5Fcol1Frow17Fcon2FcTab2" class="mainPanelDivGroup" style="width: 345px;">
+                            <div class="editContainer">
+                                <label id="lblIngreReinPuestos" idetiqueta="Puestos" class="mainPanelContentComponents">Puesto</label>
+                                <div id="editIngreReinPuestos" class="edit small-medium" dataedit="EditIngreReinPuestos" functedit="setEditIngreReinPuestos">
+                                    <input id="txtKeyEditPuestos" class="editKey small" kind="filterKey" type="text">
+                                    <input id="txtBriefEditPuestos" class="editBrief medium" type="text" disabled="">
+                                    <button id="btnIngreReinEditPuestos" class="editButton small" onclick="OpenEditModal(this)"> <img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="row12" class="mainPanelRow" style="width: 100%;">
+                <div id="infoHoras" class="bloc" lastValue="">
+                    <div id="" class="mainPanelDivGroup compact">
+                        <div id="" class="cmpCheck">
+                            <input id="chkIngreReinHoras" name="checkboxPrm" type="checkbox">
+                            <label for="chkIngreReinHoras" class="containerCheck"></label>
+                        </div>
+                    </div>
+                    <div id="col1Frow18Fcon2FcTab2" class="mainPanelCol borderCol col-5" style="visibility: visible;">
+                        <div id="DivGroup34Fcol1Frow18Fcon2FcTab2" style="max-width: 100%; width:70px" class="mainPanelDivGroup">
+                            <label id="lblHoras" idetiqueta="IngresosBajasHoras" class="mainPanelContentComponents" style="width: 100%;">Horas</label>
+                            <input id="txtHoras" class="mainPanelContentComponents" type="text" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 5px;"></div>
+                <div id="col3Frow16Fcon2FcTab2" class="mainPanelCol borderCol col-5" style="visibility: visible; width:155px;">
+                    <div id="infoSalarioDiario" class="bloc" lastValue="">
+                        <div id="" class="mainPanelDivGroup compact">
+                            <div id="" class="cmpCheck">
+                                <input id="chkIngreReinSalarioDiario" name="checkboxPrm" type="checkbox">
+                                <label for="chkIngreReinSalarioDiario" class="containerCheck"></label>
+                            </div>
+                        </div>
+                        <div id="DivGroup30Fcol3Frow16Fcon2FcTab2" class="mainPanelDivGroup" style="max-width: 100%; width:90px;">
+                            <label id="lblSalarioDiario" idetiqueta="IngresosBajasSalarioDiario" class="mainPanelContentComponents" style="width: 100%;">Salario diario</label>
+                            <input id="txtSalarioDiario" type="text" class="mainPanelContentComponents" style="width: 70%;" onblur="makeCalculate()">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="col1Frow6Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 5px;"></div>
+                <div id="col10Frow16Fcon2FcTab2" class="mainPanelCol borderCol col-1" style="visibility: visible; width: 125px;">
+                    <div id="DivGroup34Fcol10Frow16Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <label id="lblSalarioDiarioInt" idetiqueta="IngresosBajasSalarioDiarioInt" class="mainPanelContentComponents" style="width: 100%;">Salario diario Int.</label>
+                        <input id="txtSalarioDiarioInt" type="text" class="mainPanelContentComponents" style="width: 90px;" disabled="">
+                    </div>
+                </div>
+            </div>
+
+            <div id="row13" class="mainPanelRow" style="width: 100%;">
+                <div id="infoTurnos" class="bloc" lastValue="">
+                    <div id="" class="mainPanelDivGroup compact">
+                        <div id="" class="cmpCheck">
+                            <input id="chkIngreReinTurnos" name="checkboxPrm" type="checkbox">
+                            <label for="chkIngreReinTurnos" class="containerCheck"></label>
+                        </div>
+                    </div>
+                    <div id="col3Frow15Fcon2FcTab2" class="mainPanelCol borderCol col-5" style="visibility: visible; width: 295px;">
+                        <div id="DivGroupT6Fcol3Frow14Fcon2FcTab2" class="mainPanelDivGroup" style="width: 345px;">
+                            <div class="editContainer">
+                                <label id="lblIngreReinTurnos" idetiqueta="Turnos" class="mainPanelContentComponents">Turnos</label>
+                                <div id="editIngreReinTurnos" class="edit small-medium" dataedit="EditIngreReinTurnos" functedit="setEditIngreReinTurnos">
+                                    <input id="txtKeyEditTurnos" class="editKey small" kind="filterKey" type="text">
+                                    <input id="txtBriefEditTurnos" class="editBrief medium" type="text" disabled="">
+                                    <button class="editButton small" onclick="OpenEditModal(this)"> <img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="row14" class="mainPanelRow" style="width: 100%;">
+                <div id="infoTipoSalario" class="bloc" lastValue="">
+                    <div id="" class="mainPanelDivGroup compact">
+                        <div id="" class="cmpCheck">
+                            <input id="chkIngreTipoSalario" name="checkboxPrm" type="checkbox">
+                            <label for="chkIngreTipoSalario" class="containerCheck"></label>
+                        </div>
+                    </div>
+                    <div id="col3Frow17Fcon2FcTab2" class="mainPanelCol borderCol col-5" style="visibility: visible; width: 125px;">
+                        <div id="DivGroup33Fcol3Frow17Fcon2FcTab2" style="max-width: 100%; width:120px;" class="mainPanelDivGroup">
+                            <label id="lblTipoSalario" idetiqueta="IngresosBajasTipoSalario" class="mainPanelContentComponents" style="width: 115px;">Tipo de salario</label>
+                            <div class="select-style" style="width: 100%;">
+                                <select id="cbxTipoSalario" class="mainPanelContentComponents" style="width: 100%;"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="row15" class="mainPanelRow" style="width: 100%; margin-top:15px;">
+                <div id="infoJornada" class="bloc" lastValue="">
+                    <div id="" class="mainPanelDivGroup compact">
+                        <div id="" class="cmpCheck">
+                            <input id="chkIngreReinJornada" name="checkboxPrm" type="checkbox">
+                            <label for="chkIngreReinJornada" class="containerCheck"></label>
+                        </div>
+                    </div>
+                    <div id="col3Frow15Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 295px;">
+                        <div id="DivGroup28Fcol3Frow15Fcon2FcTab2" class="mainPanelDivGroup">
+                            <div class="editContainer">
+                                <label id="lblTipoJornada" idetiqueta="IngresosBajasTipoJornada" class="mainPanelContentComponents">Tipo de jornada</label>
+                                <div id="editJornada" class="edit small-medium" dataedit="EditJornada" functedit="setEditJornada">
+                                    <input id="txtEditKeyJornada" class="editKey small" kind="filterKey" type="text">
+                                    <input id="txtEditJornada" class="editBrief medium" type="text" disabled="">
+                                    <button class="editButton small" onclick="OpenEditModal(this)"> <img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="botones" class="contenedor" style="max-width: 100%; width: 100%; margin-top:20px;">
+            <button id="btnGuardar" class="mainPanelContentComponents defaultButton" style="display: inline;" onclick="saveIngreBajas()">
+                <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                <span idetiqueta="btnGuardar">Guardar</span>
+            </button>
+            <button id="btnActualizar" class="mainPanelContentComponents defaultButton" style="display: none;" onclick="updateIngreBajas()">
+                <img class="imgBoton" src="img/Iconos/editar.png" />
+                <span idetiqueta="btnActualizar">Actualizar</span>
+            </button>
+            <button id="btnEliminar" class="mainPanelContentComponents defaultButton" style="display: none;" onclick="deleteIngreBajas()">
+                <img class="imgBoton" clase="imgBoton" src="img/Iconos/eliminar.png" />
+                <span idetiqueta="btnEliminar">Eliminar</span>
+            </button>
+            <div id="ContenedoraBuscar" style="display: inline;">
+                <button id="btnBuscar" class="mainPanelContentComponents defaultButton" dataEdit="selectorAltasBajas" functEdit="selectorIngreBajas" onclick="OpenSelector(this)" style="display: inline;">
+                    <img class="imgBoton" src="img/Iconos/buscar.png" />
+                    <span idetiqueta="btnBuscar">Buscar</span>
+                </button>
+            </div>
+            <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="cancelIngreBajas()" style="display: inline;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

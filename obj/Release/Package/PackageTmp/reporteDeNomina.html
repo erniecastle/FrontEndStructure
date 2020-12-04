@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Reporte de nomina</title>
+    <script class="AD" type="text/javascript" src="js/funcionesReporNomina.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div class="contain" style="width: 100%;" id="con1">
+            <h1 id="titlecon1" class="titlecontain" cambiaridioma="true">Reporte de nomina</h1>
+            <div id="row2Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow2Fcon1" class="mainPanelCol borderCol col-12 " style="visibility: visible;">
+                    <div class="cTab" style="width: 100%; height: auto;" id="cTab2">
+                        <div class="tab" id="tab2FcTab2">
+                            <button id="btnTab1Ftab2FcTab2" class="tablinks Selected" onclick="openTab(event,'con2FcTab2')" idetiqueta="ReporteDeNominaDatosPrinc">Datos Principales</button>
+                            <button id="btnTab4Ftab2FcTab2" class="tablinks borderleft" onclick="openTab(event,'con4FcTab2')" idetiqueta="ReporteDeNominaDatosAdi">Datos Adiccionales</button>
+                        </div>
+                        <div class="contain" style="width: 100%; display: block;" id="con2FcTab2">
+                            <div id="row1Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow1Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                    <div id="DivGroup1Fcol1Frow1Fcon2FcTab2" style="max-width: 430px;" class="mainPanelDivGroup">
+                                        <label id="lblTipoCorrida" idetiqueta="TipoCorrida" class="mainPanelContentComponents" style="width: 100%;">Tipo de corrida</label>
+                                        <div id="editTipoCorrida" class="edit small-medium" dataedit="EditTipoCorrida" functedit="setEditTipoCorrida">
+                                            <input id="S1FT3Fcol1Frow1Fcon2FcTab2" class="editKey small" type="text" source="4" kind="filterKey" persist="TipoCorrida" />
+                                            <input id="B1FT3Fcol1Frow1Fcon2FcTab2" class="editBrief medium" type="text" disabled="" />
+                                            <button id="BU1FT3Fcol1Frow1Fcon2FcTab2" class="editButton small" onclick="OpenEditModal(this)">
+                                                <img class="imgBoton" src="img/Iconos/colores/puntos.png" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT3Fcol1Frow1Fcon2FcTab2" class="mainPanelDivGroup" style="max-width: 430px;">
+                                        <div class="editContainer">
+                                            <label id="lblTipoNomina" idetiqueta="TipoNomina" class="mainPanelContentComponents">Tipo de nomina</label>
+                                            <div id="editTipoNomina" class="edit medium-large" dataedit="EditTipoNomina" functedit="setEditTipoNomina">
+                                                <input class="editKey medium" type="text" kind="filterKey" placeholder="" />
+                                                <input class="editBrief large" type="text" placeholder="" disabled="" />
+                                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT4Fcol1Frow1Fcon2FcTab2" class="mainPanelDivGroup" style="max-width: 400px;">
+                                        <div id="T4Fcol1Frow1Fcon2FcTab2" class="editContainer">
+                                            <label id="lblPeriodoNomina" idetiqueta="PeriodosNomina" class="mainPanelContentComponents">Periodos nomina</label>
+                                            <div id="editPeriododNomina" class="edit small-large" dataedit="EditPeriodo" functedit="setEditPeriodo">
+                                                <input class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                                <input class="editBrief large" type="text" placeholder="" disabled="" />
+                                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row2Fcon2FcTab2" class="mainPanelRow" style="width: 100%;margin-bottom:20px;">
+                                <div id="col1Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 16.667%;margin-left: 3px;">
+                                    <div id="DivGroup4Fcol1Frow2Fcon2FcTab2" style="max-width: 80px;" class="mainPanelDivGroup">
+                                        <label id="lblDeLaFecha" idetiqueta="FechaIni" class="mainPanelContentComponents" style="width: 100%;">De la fecha</label>
+                                        <input id="txtDeLAFecha" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled />
+                                    </div>
+                                </div>
+                                <div id="col2Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-2" style="visibility: visible;">
+                                    <div id="DivGroup5Fcol2Frow2Fcon2FcTab2" style="max-width: 80px;" class="mainPanelDivGroup">
+                                        <label id="lblAlaFecha" idetiqueta="FechaFin" class="mainPanelContentComponents" style="width: 100%;">A la fecha</label>
+                                        <input id="txtAlaFecha" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled />
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row3Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow3Fcon2FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                    <div id="DivGroupT10Fcol1Frow3Fcon2FcTab2" class="mainPanelDivGroup" style="max-width: 440px;">
+                                        <div class="editContainer">
+                                            <label id="lblCentroDeCostos" idetiqueta="CentroDeCosto" class="mainPanelContentComponents">Centro de costos</label>
+                                            <div id="editCentroDeCostos" class="edit medium-large" dataedit="EditCentroCostos" functedit="setEditCentroCostos">
+                                                <input class="editKey medium" type="text" kind="filterKey" placeholder="" />
+                                                <input class="editBrief large" type="text" placeholder="" disabled="" />
+                                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT11Fcol1Frow3Fcon2FcTab2" class="mainPanelDivGroup" style="max-width: 310px;margin-bottom:20px;">
+                                        <div id="T11Fcol1Frow3Fcon2FcTab2" class="editContainer">
+                                            <label id="lblDepartamento" idetiqueta="Departamentos" class="mainPanelContentComponents">Departamento</label>
+                                            <div id="editoDepartamento" class="edit small-medium" dataedit="EditDepartamento" functedit="setEditDepartamento">
+                                                <input class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                                <input class="editBrief medium" type="text" placeholder="" disabled="" />
+                                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT12Fcol1Frow3Fcon2FcTab2" class="mainPanelDivGroup" style="max-width: 400px;">
+                                        <div id="T12Fcol1Frow3Fcon2FcTab2" class="editContainer">
+                                            <label id="lblDelEmpleado" idetiqueta="EmpleadoIni" class="mainPanelContentComponents">Del empleado</label>
+                                            <div id="editEmpeladoInicio" class="edit small-large" dataedit="EditInicioEmpleado" functedit="setEditInicioEmpleado">
+                                                <input class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                                <input class="editBrief large" type="text" placeholder="" disabled="" />
+                                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT13Fcol1Frow3Fcon2FcTab2" class="mainPanelDivGroup" style="max-width: 400px;">
+                                        <div id="T13Fcol1Frow3Fcon2FcTab2" class="editContainer">
+                                            <label id="lblAlEmpleado" idetiqueta="EmpleadoFin" class="mainPanelContentComponents">Al empleado</label>
+                                            <div id="editEmpleadoFin" class="edit small-large" dataedit="EditFinEmpleado" functedit="setEditFinEmpleado">
+                                                <input class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                                <input class="editBrief large" type="text" placeholder="" disabled="" />
+                                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contain" style="width: 100%; display: none;" id="con4FcTab2">
+                            <div id="row1Fcon4FcTab2" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow1Fcon4FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                    <div id="DivGroupT201144Fcol1Frow1Fcon4FcTab2" class="mainPanelDivGroup" style="max-width: 310px;">
+                                        <div class="editContainer">
+                                            <label id="lblRegistroPatronal" idetiqueta="RegistroPatronal" class="mainPanelContentComponents">Registro patronal</label>
+                                            <div id="editRegistroPatronal" class="edit small-medium" dataedit="EditRegistroPatronal" functedit="setEditRegistroPatronal">
+                                                <input class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                                <input class="editBrief medium" type="text" placeholder="" disabled="" />
+                                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /><</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT15Fcol1Frow1Fcon4FcTab2" class="mainPanelDivGroup" style="max-width: 300px;">
+                                        <div id="T15Fcol1Frow1Fcon4FcTab2" class="editContainer">
+                                            <label id="lblCataegoriaPuestos" idetiqueta="CategoriasPuestos" class="mainPanelContentComponents">Categorias Puestos</label>
+                                            <div id="editCategoriaPuestos" class="edit small-medium" dataedit="EditCategoriaPuesto" functedit="setEditCategoriaPuesto">
+                                                <input class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                                <input class="editBrief medium" type="text" placeholder="" disabled="" />
+                                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT16Fcol1Frow1Fcon4FcTab2" class="mainPanelDivGroup" style="max-width: 300px;">
+                                        <div id="T16Fcol1Frow1Fcon4FcTab2" class="editContainer">
+                                            <label id="lblPuesto" idetiqueta="Puestos" class="mainPanelContentComponents">Puestos</label>
+                                            <div id="editPuestos" class="edit small-medium" dataedit="EditPuesto" functedit="setEditPuesto">
+                                                <input class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                                <input class="editBrief medium" type="text" placeholder="" disabled="" />
+                                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT17Fcol1Frow1Fcon4FcTab2" class="mainPanelDivGroup" style="max-width: 300px;">
+                                        <div id="T17Fcol1Frow1Fcon4FcTab2" class="editContainer">
+                                            <label id="lblTurnos" idetiqueta="Turnos" class="mainPanelContentComponents">Turnos</label>
+                                            <div id="editTurnos" class="edit small-medium" dataedit="EditTurno" functedit="setEditTurno">
+                                                <input class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                                <input class="editBrief medium" type="text" placeholder="" disabled="" />
+                                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup15Fcol1Frow1Fcon4FcTab2" style="max-width: 100px;" class="mainPanelDivGroup">
+                                        <label id="lblTipoSalario" idetiqueta="TipoSalario" class="mainPanelContentComponents" style="width: 100%;">Tipo de salario</label>
+                                        <div class="select-style" style="width: 100%;">
+                                            <select id="selTipoSalario" class="mainPanelContentComponents" style="width: 100%;">
+                                                <option value=""></option>
+                                                <option value="0">Fijo</option>
+                                                <option value="1">Variable</option>
+                                                <option value="2">Mixto</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup16Fcol1Frow1Fcon4FcTab2" style="max-width: 300px;" class="mainPanelDivGroup">
+                                        <div class="editContainer">
+                                            <label id="lblFormasPago" idetiqueta="FormasDePago" class="mainPanelContentComponents">Formas de pago</label>
+                                            <div id="editFormasPago" class="edit small-medium" dataedit="EditFormasPago" functedit="setEditFormasPago">
+                                                <input id="search-text-input" class="editKey small" type="text" kind="filterKey" placeholder="">
+                                                <input id="brief-text-input" class="editBrief medium" type="text" placeholder="" disabled="">
+                                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT20Fcol1Frow1Fcon4FcTab2" class="mainPanelDivGroup" style="max-width: 410px;">
+                                        <div id="T20Fcol1Frow1Fcon4FcTab2" class="editContainer">
+                                            <label id="lblBancos" idetiqueta="Bancos" class="mainPanelContentComponents">Bancos</label>
+                                            <div id="editBancos" class="edit small-large" dataedit="EditBancos" functedit="setEditBancos">
+                                                <input class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                                <input class="editBrief large" type="text" placeholder="" disabled="" />
+                                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup18Fcol1Frow1Fcon4FcTab2" style="max-width: 400px;" class="mainPanelDivGroup">
+                                        <label class="mainPanelContentComponents" idetiqueta="TipoContrato" style="width: 100%;" id="lblTipoDeContrato">Tipo de contrato</label>
+                                        <div id="editTipoContrato" class="edit small-large" dataedit="EditTipoContrato" functedit="setEditTipoContrato">
+                                            <input id="S1FT10Fcol1Frow1Fcon4FcTab2" class="editKey small" type="text" source="16" kind="filterKey" persist="TipoContrato" />
+                                            <input id="B1FT10Fcol1Frow1Fcon4FcTab2" class="editBrief large" type="text" disabled="" />
+                                            <button id="BU1FT10Fcol1Frow1Fcon4FcTab2" class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/colores/puntos.png" /></button>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup19Fcol1Frow1Fcon4FcTab2" style="max-width: 100px;" class="mainPanelDivGroup">
+                                        <label class="mainPanelContentComponents" idetiqueta="Estatus" style="width: 100%;" id="lblTipoDeContrato">Status</label>
+                                        <div class="select-style" style="width: 100%;">
+                                            <select id="selStatus" class="mainPanelContentComponents" style="width: 100%;">
+                                                <option value=""></option>
+                                                <option value="0">Todos</option>
+                                                <option value="1">Alta</option>
+                                                <option value="2">Baja</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div id="Gruopbotones" class="mainPanelDivGroup" style="width:100%">
+            <button id="btnVisualizar" class="mainPanelContentComponents defaultButton" onclick="visualizarRepNom()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/listado.png" />
+                <span idetiqueta="btnListado">Listado</span>
+            </button>
+            <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="limpiarRepNom()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+
+
+        </div>
+    </div>
+</body>
+</html>

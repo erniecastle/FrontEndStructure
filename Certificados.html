@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Certificados</title>
+    <meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/certificados.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div class="contain" style="width: 100%;" id="con1">
+            <div class="contain" style="width: 100%;" id="con1">
+                <h1 id="titlecon1" class="titlecontain" cambiaridioma="true">Certificados</h1>
+                <div id="row2Fcon1" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                        <div id="DivGroup1Fcol1Frow2Fcon1" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblRazonSocial"  idetiqueta="RazonesSocialesrazonsocial" class="mainPanelContentComponents" style="width: 100%;">Razon social</label>
+                            <div id="DivEdt1">
+                                <input id="txtRazonSocial" type="text" class="mainPanelContentComponents" style="width: 50%;"disabled=""  />
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="DivGroup1Fcol1Frow2Fcon1" style="max-width: 100px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="CertificadoClave" style="width: 100%;" id="lblClave">Clave</label>
+                        <input type="text" class="mainPanelContentComponents" style="width: 100%;" id="txtClave" />
+                    </div>
+                    <div id="DivGroup1Fcol1Frow2Fcon2" style="max-width: 100px;display:none" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents"  style="width: 100%;" id="lblClave">id</label>
+                        <input type="text" class="mainPanelContentComponents" style="width: 100%;" id="txtid" />
+                    </div>
+
+                </div>
+                <div id="row3Fcon1" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                        <div id="DivGroup2Fcol1Frow3Fcon1" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblCertificado" idetiqueta="CertificadoArchivo" class="mainPanelContentComponents" style="width: 100%;">Certificado</label>
+                            <div id="DivGroupCert" class="mainPanelDivGroup">
+                                <label id="selectorFileCert" class="file" style="width:50%; float:left;">
+                                    <input id="fileCert" class="inputFile" type="file"accept=".cer" >
+                                    <span class="file-custom" id="file-custom" filetitle="Buscar">
+                                        <a class="file-watch" id="file-watch" href="" target="_blank">
+                                        </a>
+                                    </span>
+                                </label>
+                            </div> 
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="row4Fcon1" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow4Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                        <div id="DivGroup3Fcol1Frow4Fcon1" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblKey"idetiqueta="CertificadoLlave" class="mainPanelContentComponents" style="width: 100%;">Llave privada</label>
+                            <div id="DivGroupLlave" class="mainPanelDivGroup">
+                                <label id="selectorFileKey" class="file" style="width:50%; float:left;">
+                                    <input id="fileKey" class="inputFile" type="file"accept=".key">
+                                    <span class="file-custom" id="file-customK" filetitle="Buscar">
+                                        <a class="file-watch" id="file-watchK"  href="" target="_blank">
+                                        </a>
+                                    </span>
+                                </label>
+                            </div>  
+
+                        </div>
+                    </div>
+                </div>
+                <div id="row5Fcon1" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow5Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                        <div id="DivGroup4Fcol1Frow5Fcon1" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="lblContrasena"  idetiqueta="CertificadoContrasena" class="mainPanelContentComponents" style="width: 100%;">Contraseña</label>
+                            <div id="DivEdt1">
+                                <input id="txtContrasena" type="password" class="editBrief medium" style="width: 30%;" />
+                                <button id="btnBuscarcontra" class="editButton small" style="width:25px; height:28px" onclick="procesaCertificado()"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="row6Fcon1" class="mainPanelRow" style="width: 100%;margin-top: 15px; ">
+                    <div id="col1Frow6Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                        <div id="DivGroupT1col1Frow6Fcon1" style="max-width: 100px;" class="mainPanelDivGroup">
+                            <label class="mainPanelContentComponents" idetiqueta="CertificadoVigencia" style="width: 100%;" id="lblOpciones">Vigencia</label>
+                        </div>
+                        <div id="DivRecuadro" class="colborder" style="border-style: solid; border-width: 1px;width:16%;">
+
+                            <div id="DivGroupT21Fcol3Frow2Fcon2" style="max-width: 90px;" class="mainPanelDivGroup">
+                                <div id="DivGroup17Fcol3Frow2Fcon2" style="display:inline-grid; height:55px; padding-left:5px;">
+                                    <label id="lblDesde" idetiqueta="CertificadoVigenciaD" class="mainPanelContentComponents" style="width: 100%;">Desde</label>
+                                    <input id="txtFechadesde" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled="">
+
+                                </div>
+                            </div>
+                            <div id="DivGroupT22Fcol3Frow2Fcon1" style="max-width: 90px" class="mainPanelDivGroup">
+                                <div id="DivGroup18Fcol3Frow2Fcon2" style="display:inline-grid; height:55px; padding-left:5px;">
+                                    <label id="lblHasta" class="mainPanelContentComponents" idetiqueta="CertificadoVigenciaH" style="width: 100%;">Hasta</label>
+                                    <input id="txtFechahasta" type="text" class="mainPanelContentComponents" style="width: 100%;" disabled="">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div id="row7Fcon1" class="mainPanelRow" style="width: 100%; margin-top: 15px;">
+                    <div id="col1Frow7Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                        <div id="DivGroup5Fcol1Frow7Fcon1" style="width: 200px;" class="mainPanelDivGroup">
+                            <label id="lblNoCert" idetiqueta="CertificadoNoCert" class="mainPanelContentComponents" style="width: 100%;">No. Certificado</label>
+                            <div id="DivEdt1">
+                                <input id="txtNoCert" type="text" class="mainPanelContentComponents" style="width: 100%;" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="botones" class="contenedor" style="max-width: 100%; width: 100%;">
+            <button id="btnGuardar" class="mainPanelContentComponents defaultButton" style="display:inline;" onclick="saveCertificado()">
+                <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                <span idetiqueta="btnGuardar">Guardar</span>
+            </button>
+            <button id="btnActualizar" class="mainPanelContentComponents defaultButton" style="display:none;" onclick="actualizarCertificado()">
+                <img class="imgBoton" src="img/Iconos/editar.png" />
+                <span idetiqueta="btnActualizar">Actualizar</span>
+            </button>
+            <button id="btnEliminar" class="mainPanelContentComponents defaultButton" style="display: none;" onclick="eliminarCertificado()">
+                <img class="imgBoton" clase="imgBoton" src="img/Iconos/eliminar.png" />
+                <span idetiqueta="btnEliminar">Eliminar</span>
+            </button>
+            <div id="ContenedoraBuscar" style="display: inline;">
+                <button id="btnBuscar" class="mainPanelContentComponents defaultButton" dataEdit="selectorCert" functEdit="selectorCertificados" onclick="OpenSelector(this)" style="display: inline;">
+                    <img class="imgBoton" src="img/Iconos/buscar.png" />
+                    <span idetiqueta="btnBuscar">Buscar</span>
+                </button>
+            </div>
+            <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="limpiar()" style="display: inline;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

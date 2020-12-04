@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/menu.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/stylePreview.css" type="text/css" media="all">
+    <link class="" rel="stylesheet" href="css/temasSistema.css" type="text/css" media="all">
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <script src="js/stimulsoft.reports.js" type="text/javascript"></script>
+    <script src="js/stimulsoft.viewer.js" type="text/javascript"></script>
+    <script src="js/stimulsoft.designer.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsConfig.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script type="text/javascript" src="js/functionsMenu.js"></script>
+    <script type="text/javascript" src="js/functionsMain.js"></script>
+
+    <script type="text/javascript" src="scripts/dx.all.js"></script>
+    <script type="text/javascript" src="scripts/cldr.js"></script>
+    <script type="text/javascript" src="scripts/cldr/event.js"></script>
+    <script type="text/javascript" src="scripts/cldr/supplemental.js"></script>
+    <script type="text/javascript" src="scripts/cldr/unresolved.js"></script>
+    <script type="text/javascript" src="scripts/globalize.js"></script>
+    <script type="text/javascript" src="scripts/globalize/message.js"></script>
+    <script type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script type="text/javascript" src="js/functionsUtils.js"></script>
+    <script type="text/javascript" src="js/funcionesTraducion.js"></script>
+    <script type="text/javascript" src="js/funcionesGlobales.js"></script>
+    <script type="text/javascript" src="js/genericfunctions.js"></script>
+    <script type="text/javascript" src="js/funcionesValidaciones.js"></script>
+
+
+
+    <!--Included files Windows-->
+
+</head>
+<!-- <body class="brownTheme"> -->
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSideMenu()">&times;</a>
+        <ul class="sidebar-nav" id="sidebar">
+            <!--Builder Sidebar-->
+        </ul>
+    </div>
+
+    <div id="main">
+        <div class="main-top py-1" style="height:81px;">
+            <div class="container">
+                <!-- Init nav Content -->
+                <div class="nav-content">
+                    <!-- logo -->
+                    <div class="leftHeaderLogo">
+                        <h1 class="logoComplement">
+                            <a id="logo" class="logo">
+                                <img id="imgMainLogo" class="img-fluid" src="" alt="">
+                                <!--<span>Sapieres</span>Astor-->
+                            </a>
+                        </h1>
+                    </div>
+                    <!-- End logo -->
+                    <!-- Companies -->
+                    <div class="leftHeaderTop">
+                        <span id="nameCompany" class="nameCompany"></span>
+                        <br />
+                        <span id="nameUser" class="nameUser"></span>
+                    </div>
+                    <!-- End brief companies -->
+                    <!-- User -->
+                    <div class="leftHeaderTop">
+
+                    </div>
+                    <!--End user -->
+                    <!-- Menu Right Responsive -->
+                    <div class="menuHeaderTop">
+                        <div class="nav_web-dealingsls">
+                            <nav class="nav-up">
+                                <label for="drop" class="toggle">Menu</label>
+                                <input type="checkbox" id="drop" />
+                                <ul class="menu">
+                                    <li>
+                                        <!-- First Tier Drop Down -->
+                                        <label for="drop-1" class="toggle toogle-2">
+                                            Configurar<span class="fa fa-angle-down" aria-hidden="true"></span>
+                                        </label>
+                                        <a class="iconGear" href="#pages">
+                                            <span class="fa" aria-hidden="true">Configurar</span>
+                                        </a>
+                                        <input type="checkbox" id="drop-1" />
+                                        <ul>
+                                            <li><a class="drop-text" href="fuentes.html">Fuentes</a></li>
+                                            <li><a class="drop-text" href="fuenteProcesos.html">Fuentes de procesos</a></li>
+                                            <li><a class="drop-text" href="capturas.html">Alta de capturas</a></li>
+                                            <li><a class="drop-text" href="modulo.html">Listado de modulos</a></li>
+                                            <li><a href="javascript:void(0);" onclick="changeCompanie(); return false;">Cambiar razón social</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <label for="drop-2" class="toggle toogle-2">
+                                            Notificaciones<span class="fa" aria-hidden="true"></span>
+                                        </label>
+                                        <a class="iconNotifier" href="#pages">
+                                            <span class="fa" aria-hidden="true">Notificar</span>
+                                        </a>
+                                        <input type="checkbox" id="drop-2" />
+                                    </li>
+
+                                    <li>
+                                        <label for="drop-3" class="toggle toogle-2">
+                                            Salir<span class="fa" aria-hidden="true"></span>
+                                        </label>
+                                        <a class="iconTurnOff" href="javascript:void(0);" onclick="exit();">
+                                            <span class="fa" aria-hidden="true">Salir</span>
+                                        </a>
+                                        <input type="checkbox" id="drop-3" />
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- End Menu Right Responsive -->
+                </div>
+                <!-- End logo -->
+            </div>
+        </div>
+
+        <div id="fastMenu" class="fastMenu">
+            <a id="MP" class="acces iconMenu" onclick="openNav(); return false;" style="cursor:pointer; margin-left:3px;"><span></span></a>
+            <a class="acces iconFavorite" href="#"><span></span></a>
+            <a class="acces iconInterrogation" href="#"><span></span></a>
+            <a class="acces iconHome" onclick="setfastMenuHome(); return false;"><span></span></a>
+            <!--<a class="iconNextLevel" href="#" style=""></a>
+            <a class="level" href="#">Level 1</a>-->
+        </div>
+
+        <div class="nav_openener">
+            <!--<span id="MP" style="font-size:30px;cursor:pointer" onclick="openNav();return false;">&#9776;</span>-->
+            <span id="closeWindow" class="closeWindow" onclick="closeWindow(); return false;"></span>
+        </div>
+        <div id="container" class="DevEx">
+
+        </div>
+        <!--<p>Display the option of each menu</p>-->
+        <div id="hub" class="hub-container">
+            <!--   <div class="hub-row">
+                <h2>Accesos 1</h2>
+                <div class="container-view">
+                    <a href="modulo.html">
+                        <img src="img/s1.png" />
+                        <p>Empleados</p>
+                    </a>
+                </div>
+                <div class="container-view">
+                    <a href="capturas.html">
+                        <img src="img/s2.png" />
+                        <p>Reportes</p>
+                    </a>
+                </div>
+            </div-->
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <!--<span class="close">&times;</span>-->
+                <h2>Seleccione empresa a operar</h2>
+            </div>
+            <div class="modal-body">
+                <div class="select-style" style="width: 100%;">
+                    <select id="cbxCompanies" class="mainPanelContentComponents" style="width: 100%;">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="mainPanelContentComponents modal-defaultButton" onclick="setCompanie()">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

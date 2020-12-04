@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>Formatos de captura</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link id="stylesheet" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsConfig.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script type="text/javascript" src="js/funcionesGlobales.js"></script>
+    <script type="text/javascript" src="js/functionsCaptura.js"></script>
+
+   <!-- <script type="text/javascript" src="js/dynamicBasic.js"></script>-->
+
+</head>
+<body>
+    <div id="designer">
+
+    </div>
+    <div id="container" class="contenedor">
+        <div id="viewer">
+            <div id="con1" class="contain" style="width: 100%;">
+                <h1 id="titlecon1">Selector de registros</h1>
+                <div id="row2Fcon1" class="mainPanelRow" style="width: 100%;">
+                    <div id="DivGroup1Fcol1Frow1Fcon1FcTab1" class="mainPanelDivGroup" style="height: 50px; width: 100%; max-width: 25%;">
+                        <label id="lblCaptura" class="mainPanelContentComponents" style="height: 22px; width: 100%;">Tipos de captura</label>
+                        <div class="select-style" style="width: 180px;">
+                            <select id="cbxCapturaSelect" class="mainPanelContentComponents" onchange="showDataTable(this.value)">
+                                <option value="1">Normal</option>
+                                <option value="2">Proceso</option>
+                                <!-- <option value="3">Reporte</option>
+                 <option value="4">Simple</option>
+                 <option value="5">Masiva</option>-->
+                            </select>
+                        </div>
+                    </div>
+                    <div id="col1Frow2Fcon1" class="mainPanelCol " style="width: 100%;">
+                        <button class="mainPanelContentComponents defaultButton right" onclick="toAddInTable()">Agregar</button>
+
+                        <nav id="containerPag">
+                            <ul id="listPag" class="pagination">
+                                <li>
+                                    <a href="#" onclick="previous()" class="first_link">◀</a>
+                                </li>
+                                <li><a href="#" onclick="next()" class="last_link">▶</a></li>
+                            </ul>
+                        </nav>
+
+                        <table id="tableSelector" style="width: 100%;" border="1">
+                            <thead id="bodyTableSelector">
+                                <tr>
+                                    <th>Clave</th>
+                                    <th>Descripción</th>
+                                    <th>Editar</th>
+                                    <th>Eliminar</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="catalog" style="display: none">
+            <div id="cTab1" class="cTab" style="height: auto; width: 100%;">
+                <div id="tab1FcTab1" class="tab">
+                    <button id="tabFormas" class="tablinks active" onclick="openTab(event, 'con1FcTab1')">Formas de captura</button>
+                    <h1 class="typeModes"></h1>
+                </div>
+                <div id="con1FcTab1" class="contain" style="width: 100%;">
+                    <div id="row2Frow1Fcon1FcTab1" class="mainPanelRow" style="width: 100%;">
+                        <div id="col1Frow2Frow1Fcon1FcTab1" class="mainPanelCol" style="width: 100%;">
+                            <div id="DivGroup11Fcol1Frow2Frow1Fcon1FcTab1" class="mainPanelDivGroup " style="height: 58px; width: 100%; max-width: 10%;">
+                                <label id="lblClave" class="mainPanelContentComponents" style="height: 22px; width: 100%;">Clave</label>
+                                <input id="txtClave" class="mainPanelContentComponents" type="text">
+                            </div>
+                            <div id="DivGroup2Fcol1Frow2Fcon1FcTab1" class="mainPanelDivGroup" style="max-width: 40%; width: 100%; height: 55px;">
+                                <label id="lblNombre" class="mainPanelContentComponents" style="width: 100%; height: 20px;">Nombre</label>
+                                <input id="txtNombre" class="mainPanelContentComponents inpLarge" type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row1Fcon1FcTab1" class="mainPanelRow" style="width: 100%;">
+                        <div id="col1Frow1Fcon1FcTab1" class="mainPanelCol" style="width: 100%;">
+                            <div id="DivGroup1Fcol1Frow1Fcon1FcTab1" class="mainPanelDivGroup" style="height: 50px; width: 100%; max-width: 25%;">
+                                <label id="lblCaptura" class="mainPanelContentComponents" style="height: 22px; width: 100%;">Tipos de captura</label>
+                                <div class="select-style" style="width: 180px;">
+                                    <select id="cbxCaptura" class="mainPanelContentComponents" onchange="tipocaptura()">
+                                        <option value="1">Normal</option>
+                                        <option value="2">Proceso</option>
+                                        <option value="3">Reporte</option>
+                                        <option value="4">Simple</option>
+                                        <option value="5">Masiva</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="NormalDiv" class="mainPanelDivGroup" style="height: 70px; width: 30%; max-width: 100%;">
+                                <label id="lblOrigenDatos" class="mainPanelContentComponents" style="height: 22px; width: 100%;">Origen de datos</label>
+                                <div class="select-style" style="width: 250px;">
+                                    <select id="cbxOrigenDatos" class="mainPanelContentComponents" onchange="searchcampoorigen()">
+                                        <option value="">Seleccione un origen</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="PrcocesoDiv" class="mainPanelDivGroup" style="height: 70px; width: 30%; max-width: 100%;">
+                                <label id="lblProcesoOrigenDatos" class="mainPanelContentComponents" style="height: 22px; width: 100%;">Proceso origen</label>
+                                <div class="select-style" style="width: 250px;">
+                                    <select id="cbxProcesoOrigenDatos" class="mainPanelContentComponents" onchange="getAcciones(this.value)">
+                                        <option value="">Seleccione un Proceso origen</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="contCapturaRegis" class="mainPanelDivGroup">
+                                <input type="radio" id="chkSeleccion" name="frmSelect">
+                                <label for="chkSeleccion" class="containerRadio">Selección de registros</label>
+                            </div>
+
+                            <div id="contCapturaBusqueda" class="mainPanelDivGroup">
+                                <input type="radio" id="chkBusqueda"  name="frmSelect">
+                                <label for="chkBusqueda" class="containerRadio">Búsqueda de registros</label>
+                            </div>
+
+
+                        </div>
+                        <div id="contedorCampos" class="mainPanelDivGroup" style=" width 100%; max-width 30%;display:none">
+                            <label id="lblCampos" class="contentComp">Campos de captura global</label>
+                            <div id="selectorCampos" class="borderContedor" style="width: 100%; max-width: 100%">
+
+                            </div>
+                        </div>
+                        <div id="contedorAcciones" class="mainPanelDivGroup" style=" width:100%; max-width:30%;display:none">
+                            <label id="lblAcciones" class="contentComp">Permitir Acciones</label>
+                            <div id="selectorAcciones" class="borderContedor" style="width: 100%; max-width: 100%">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row2Fcon1FcTab1" class="mainPanelRow" style="width: 100%;">
+                        <div id="divbtnFormaCaptura" class="mainPanelCol" style="width: 33.3333%;">
+                            <div id="col1Frow2Fcon1FcTab1" class="mainPanelDivGroup" style="height: 44px; width: 100%; max-width: 50%;">
+                                <button id="btnFormaCaptura" class="mainPanelContentComponents defaultButton" onclick="formaCaptura(1)" style="height: 40px; width: 100%;">Forma de captura</button>
+                            </div>
+                        </div>
+                        <div id="divbtnFormaSelect" class="mainPanelCol" style="width: 33.3333%;">
+                            <div id="col2Frow2Fcon1FcTab1" class="mainPanelDivGroup" style="height: 44px; width: 100%; max-width: 50%;">
+                                <button id="btnFormaSelect" class="mainPanelContentComponents defaultButton" onclick="formaCaptura(2)" disabled style="height: 40px; width: 100%;">Forma Selección</button>
+                            </div>
+                        </div>
+                        <div id="divbtnFormaBusqueda" class="mainPanelCol" style="width: 33.3333%;">
+                            <div id="col3Frow2Fcon1FcTab1" class="mainPanelDivGroup" style="height: 44px; width: 100%; max-width: 50%;">
+                                <button id="btnFormaBusqueda" class="mainPanelContentComponents defaultButton" onclick="formaCaptura(3)" disabled style="height: 40px; width: 100%;">Forma de búsqueda</button>
+                            </div>
+                        </div>
+                        <div id="divbtnFormaCapturaDetalle" class="mainPanelCol" style="width: 33.3333%;display:none">
+                            <div id="col4Frow2Fcon1FcTab1" class="mainPanelDivGroup" style="height: 44px; width: 100%; max-width: 50%;">
+                                <button id="btnFormaCapturaDetalle" class="mainPanelContentComponents defaultButton" onclick="formaCaptura(4)" style="height: 40px; width: 100%;">Forma de captura detalle</button>
+                            </div>
+                        </div>
+                        <div id="divbtnFormaCapturaProceso" class="mainPanelCol" style="width: 33.3333%;display:none">
+                            <div id="col4Frow2Fcon1FcTab1" class="mainPanelDivGroup" style="height: 44px; width: 100%; max-width: 50%;">
+                                <button id="btnFormaCapturaProceso" class="mainPanelContentComponents defaultButton" onclick="formaCaptura(5)" style="height: 40px; width: 100%;">Forma de captura Proceso</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="panelDivDetalle" class="mainPanelRow" style="width: 100%;">
+                        <div id="col1Frow3Fcon1FcTab1" class="mainPanelCol" style="width: 100%;">
+                            <h2 id="titleDetalles" class="mainPanelContentComponents" style="height: 29px; width: 100%;">Detalles</h2>
+                            <table id="mainTable" style="width: 100%;" border="1">
+                                <thead id="mainBodyTable">
+                                    <tr>
+                                        <th>Origen datos</th>
+                                        <th>Diseño de captura</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="row1Fcon2FcTab1" class="mainPanelRow" style="width: 100%;">
+                        <div id="col1Frow1Fcon2FcTab1" class="mainPanelCol " style="width: 25%;"></div>
+                        <div id="col2Frow1Fcon2FcTab1" class="mainPanelCol" style="width: 25%;">
+                            <div id="DivGroup14Fcol2Frow1Fcon2FcTab1" class="mainPanelDivGroup" style="height: 49px; width: 50%; max-width: 100%;">
+                                <button id="btnGuardar" class="mainPanelContentComponents defaultButton" style="height: 40px; width: 100%;" onclick="toSave()">Guardar</button>
+                            </div>
+                        </div>
+                        <div id="col4Frow1Fcon2FcTab1" class="mainPanelCol" style="width: 25%;">
+                            <div id="DivGroup15Fcol4Frow1Fcon2FcTab1" class="mainPanelDivGroup" style="height:49px;width:50%;max-width:100%;">
+                                <button id="btnVistaPrevia" class="mainPanelContentComponents defaultButton" style="height:40px;width:100%;" onclick="showPreviewGnral()">Vista Previa</button>
+                            </div>
+                        </div>
+                        <div id="col3Frow1Fcon2FcTab1" class="mainPanelCol" style="width: 25%;">
+                            <div id="DivGroup15Fcol3Frow1Fcon2FcTab1" class="mainPanelDivGroup" style="height: 49px; width: 50%; max-width: 100%;">
+                                <button id="btnCancelar" class="mainPanelContentComponents defaultButton" style="height: 40px; width: 100%;" onclick="toCancel()">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

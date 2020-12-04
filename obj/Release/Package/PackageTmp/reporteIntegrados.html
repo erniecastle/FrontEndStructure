@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script class="AD" type="text/javascript" src="js/funcionesReporteIntegrados.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div class="contain" style="width: 100%;" id="con1">
+            <h1 id="titlecon1" class="titlecontain" cambiaridioma="true">Reporte Integrados</h1>
+            <div id="row21Fcon1" class="mainPanelRow" style="width: 100%;">
+
+                <div id="col11Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 25%;">
+                    <div id="DivGroupT2Fcol1Frow2Fcon1" style="max-width: 100px;margin-bottom: -6px;" class="mainPanelDivGroup">
+                        <label id="lblPrestacion" idetiqueta="ReporteIntegradoPresentacion" class="mainPanelContentComponents" style="width: 100%;">Presentación</label>
+                    </div>
+
+                </div>
+            </div>
+            <div id="row2Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow2Fcon1" class="mainPanelCol borderCol col-12 colborder" style="visibility: visible; width: 25%;">
+                    <div id="DivGroupT4Fcol1Frow2Fcon1" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <div id="DivGroup2Fcol1Frow2Fcon1" style="max-width: 100%; width: 100%;margin-left: 5px;margin-top: 10px;" class="containerSelectors">
+                            <input type="radio" class="mainPanelContentComponents" name="Presentacion" id="txtDetalla" />
+                            <label id="lblDetallada" idetiqueta="ReporteIntegradoRbDetallada" class="containerRadio" for="txtDetalla">Detallada</label>
+                        </div>
+                    </div>
+                    <div id="DivGroupT5Fcol1Frow2Fcon1" style="max-width: 100%;" class="mainPanelDivGroup">
+                        <div id="DivGroup3Fcol1Frow2Fcon1" style="max-width: 100%; width: 100%;margin-top: -8px;margin-left: 5px;margin-bottom: 10px;" class="containerSelectors">
+                            <input type="radio" class="mainPanelContentComponents" name="Presentacion" id="txtResumida" />
+                            <label id="lblResumida" idetiqueta="ReporteIntegradoRbResumida" class="containerRadio" for="txtResumida">Resumida</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="row21Fcon1" class="mainPanelRow" style="width: 100%;margin-top: 10px;">
+
+                <div id="col11Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 25%;">
+                    <div id="DivGroupT2Fcol1Frow2Fcon1" style="max-width: 120px;margin-bottom: -6px;" class="mainPanelDivGroup">
+                        <label id="lblInformacionIncluir" idetiqueta="ReporteIntegradoInfoInluir" class="mainPanelContentComponents" style="width: 100%;">Información a Incluir</label>
+                    </div>
+
+                </div>
+            </div>
+            <div id="row3Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow3Fcon1" class="mainPanelCol borderCol col-3 colborder" style="visibility: visible; width: 33.3333%;">
+
+                    <div id="DivGroupT7Fcol1Frow3Fcon1" class="mainPanelDivGroup" style="max-width: 250px;">
+                        <div id="DivGroup5Fcol1Frow3Fcon1" style="max-width: 250px;margin-top: 10px;margin-left: 5px;" class="containerSelectors">
+                            <input type="radio" class="mainPanelContentComponents" name="InformacionIcluir" id="txtSalarioAFecha" onclick="rbnSalarioAFechas()" />
+                            <label id="lblSalarioAFecha" idetiqueta="ReporteIntegradoRbSalIntAunaFecha" class="containerRadio" for="txtSalarioAFecha">Salario Integrados a una fecha </label>
+                        </div>
+                    </div>
+                    <div id="DivGroupT8Fcol1Frow3Fcon1" style="max-width: 180px;" class="mainPanelDivGroup">
+                        <div id="DivGroup6Fcol1Frow3Fcon1" style="max-width: 180px;margin-top: -8px;margin-bottom: 10px;margin-left: 5px; /*! width: 100%; */" class="containerSelectors">
+                            <input type="radio" class="mainPanelContentComponents" name="InformacionIcluir" id="txtSoloMov" onclick="rbnSoloMovimientos()" />
+                            <label id="lblSoloMov" idetiqueta="ReporteIntegradoRbSoloMov" class="containerRadio" for="txtSoloMov">Solo movimientos</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="row21Fcon1" class="mainPanelRow" style="width: 100%;margin-top: 15px;">
+
+                <div id="col11Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 25%;">
+                    <div id="DivGroupT2Fcol1Frow2Fcon1" style="max-width: 100px;margin-bottom: -23px;" class="mainPanelDivGroup">
+                        <label id="lblMovimientosEn" idetiqueta="ReporteIntegradoMovimientosEn" class="mainPanelContentComponents" style="width: 100%;">Movimientos en</label>
+                    </div>
+
+                </div>
+            </div>
+            <div id="row4Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow4Fcon1" class="mainPanelCol borderCol col-3 colborder" style="visibility: visible;height: 65px;margin-top: 18px;">
+                    <div id="DivGroupT10Fcol1Frow4Fcon1" style="max-width: 100%;margin-top: 10px;margin-left: 5px;" class="mainPanelDivGroup">
+                        <div id="DivGroup8Fcol1Frow4Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                            <input type="radio" class="mainPanelContentComponents" name="MovimientosEn" id="txtPorBimestre" onclick="rbnBimestre()" />
+                            <label id="lblBimestre" idetiqueta="ReporteIntegradoRbBimestre" class="containerRadio" for="txtPorBimestre">Un bimestre</label>
+                        </div>
+                    </div>
+                    <div id="DivGroupT11Fcol1Frow4Fcon1" style="max-width: 100%;margin-left: 5px;margin-top: -8px;" class="mainPanelDivGroup">
+                        <div id="DivGroup9Fcol1Frow4Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                            <input type="radio" class="mainPanelContentComponents" name="MovimientosEn" id="txtPorRangoFechas" onclick="rbnRangoFechas()" />
+                            <label id="lblPorRangoFechas" idetiqueta="ReporteIntegradoRbRangoFechas" class="containerRadio" for="txtPorRangoFechas">Un Rango de Fechas</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="col2Frow4Fcon1" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 1.333%;">
+
+                </div>
+                <div id="col3Frow4Fcon1" class="mainPanelCol borderCol col-3" style="visibility: visible; width:25%">
+                    <div id="DivGroup10Fcol3Frow4Fcon1" style="max-width: 135px;" class="mainPanelDivGroup">
+                        <label id="lblFechaIni" idetiqueta="FechaIni" class="mainPanelContentComponents" style="width: 100%;">De la fecha</label>
+                        <input id="txtFechaIni" type="date" class="mainPanelContentComponents" style="width: 100%;" />
+                    </div>
+                    <div id="DivGroup11Fcol3Frow4Fcon1" style="max-width: 135px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="FechaFin" style="width: 100%;" id="lblAlaFecha">A la fecha</label>
+                        <input id="txtFechaFin" type="date" class="mainPanelContentComponents" style="width: 100%;" />
+                    </div>
+                </div>
+                <div id="col4Frow4Fcon1" class="mainPanelCol borderCol col-3" style="visibility: visible;">
+                    <div id="DivGroup12Fcol4Frow4Fcon1" style="max-width: 100px;" class="mainPanelDivGroup">
+                        <label id="lblEjercicio" idetiqueta="ReporteIntegradoEjercicio" class="mainPanelContentComponents" style="width: 100%;">Ejercicio</label>
+                        <input id="txtEjercicio" type="text" class="mainPanelContentComponents" style="width: 100%;" />
+                    </div>
+                    <div id="DivGroup13Fcol4Frow4Fcon1" style="max-width: 200px;" class="mainPanelDivGroup">
+                        <label class="mainPanelContentComponents" idetiqueta="ReporteIntegradoBimestre" style="width: 100%;" id="lblBimestre">Bimestre</label>
+                        <div class="select-style" style="width: 100%;">
+                            <select id="selBimestre" class="mainPanelContentComponents" style="width: 100%;" onchange="bimestres()">
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="row21Fcon1" class="mainPanelRow" style="width: 100%;margin-top: 10px;">
+
+                <div id="col11Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 25%;">
+                    <div id="DivGroupT2Fcol1Frow2Fcon1" style="max-width: 100px;margin-bottom: -6px;" class="mainPanelDivGroup">
+                        <label id="lblTipoSalario" idetiqueta="ReporteIntegradoTipoSal" class="mainPanelContentComponents" style="width: 100%;">Tipo de Salario</label>
+                    </div>
+
+                </div>
+            </div>
+            <div id="row5Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow5Fcon1" class="mainPanelCol borderCol col-3 colborder" style="visibility: visible;">
+                     <div id="DivGroupT19Fcol1Frow5Fcon1" style="max-width: 100%;margin-left: 5px;margin-top: 10px;" class="mainPanelDivGroup">
+                        <div id="DivGroup15Fcol1Frow5Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                            <input type="radio" class="mainPanelContentComponents" name="TipoSalario" id="txtFijos" />
+                            <label id="lblFijos" idetiqueta="ReporteIntegradoRbSoloFijo" class="containerRadio" for="txtFijos">Solo Fijos</label>
+                        </div>
+                    </div>
+                    <div id="DivGroupT20Fcol1Frow5Fcon1" style="max-width: 100%; margin-left: 5px;margin-top: -8px;" class="mainPanelDivGroup">
+                        <div id="DivGroup16Fcol1Frow5Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                            <input type="radio" class="mainPanelContentComponents" name="TipoSalario" id="txtSoloVariables" />
+                            <label id="lblSoloVariables" idetiqueta="ReporteIntegradoRbSoloVariable" class="containerRadio" for="txtSoloVariables">Solo Variables</label>
+                        </div>
+                    </div>
+                    <div id="DivGroupT21Fcol1Frow5Fcon1" style="max-width: 100%;margin-left: 5px;margin-top: -8px;margin-bottom: 10px;" class="mainPanelDivGroup">
+                        <div id="DivGroup17Fcol1Frow5Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                            <input type="radio" class="mainPanelContentComponents" name="TipoSalario" id="txtMixtos" />
+                            <label id="lblMixtos" idetiqueta="ReporteIntegradoRbMixtos" class="containerRadio" for="txtMixtos">Mixtos</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="row6Fcon1" class="mainPanelRow" style="width: 100%;margin-top:15px;">
+                <div id="col1Frow6Fcon1" class="mainPanelCol borderCol col-3" style="visibility: visible; width: 100%;">
+                    <div id="DivGroupT21Fcol1Frow6Fcon1" class="mainPanelDivGroup" style="max-width: 300px;">
+                        <div class="editContainer">
+                            <label id="lblTipoNomina" idetiqueta="TipoNomina" class="mainPanelContentComponents">Tipo nomina</label>
+                            <div id="editTipoNomina" class="edit small-medium" dataedit="EditTipoNomina" functedit="setEditTipoNomina">
+                                <input id="search-text-input" class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                <input id="brief-text-input" class="editBrief medium" type="text" placeholder="" disabled="" />
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="DivGroupT22Fcol1Frow6Fcon1" class="mainPanelDivGroup" style="max-width: 400px;">
+                        <div class="editContainer">
+                            <label id="lblEmpleadoIni" idetiqueta="EmpleadoIni" class="mainPanelContentComponents">Del Empleado</label>
+                            <div id="editInicioEmpleados" class="edit small-large" dataedit="EditInicioEmpleados" functedit="setEditInicioEmpleados">
+                                <input id="search-text-input" class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                <input id="brief-text-input" class="editBrief large" type="text" placeholder="" disabled="" />
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="DivGroupT23Fcol1Frow6Fcon1" class="mainPanelDivGroup" style="max-width: 400px;">
+                        <div class="editContainer">
+                            <label id="lblEmpleadoFin" idetiqueta="EmpleadoFin" class="mainPanelContentComponents">Al Empleado</label>
+                            <div id="editFinEmpleados" class="edit small-large" dataedit="EditFinEmpleados" functedit="setEditFinEmpleados">
+                                <input id="search-text-input" class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                <input id="brief-text-input" class="editBrief large" type="text" placeholder="" disabled="" />
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="DivGroupT24Fcol1Frow6Fcon1" class="mainPanelDivGroup" style="max-width: 430px;">
+                        <div class="editContainer">
+                            <label id="lblCentroCosto" idetiqueta="CentroDeCosto" class="mainPanelContentComponents">Centro de costos</label>
+                            <div id="editCentroCosto" class="edit medium-large" dataedit="EditCentroCosto" functedit="setEditCentroCosto">
+                                <input id="search-text-input" class="editKey medium" type="text" kind="filterKey" placeholder="" />
+                                <input id="brief-text-input" class="editBrief large" type="text" placeholder="" disabled="" />
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="DivGroupT25Fcol1Frow6Fcon1" class="mainPanelDivGroup" style="max-width: 300px;">
+                        <div class="editContainer">
+                            <label id="lblDepartamentos" idetiqueta="Departamentos" class="mainPanelContentComponents">Departamentos</label>
+                            <div id="editDepartametos" class="edit small-medium" dataedit="EditDepartametos" functedit="setEditDepartametos">
+                                <input id="search-text-input" class="editKey small" type="text" kind="filterKey" placeholder="" />
+                                <input id="brief-text-input" class="editBrief medium" type="text" placeholder="" disabled="" />
+                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Gruopbotones" class="mainPanelDivGroup" style="width:100%">
+            <button id="btnVisualizar" class="mainPanelContentComponents defaultButton" onclick="visualizar()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/listado.png" />
+                <span idetiqueta="btnListado">Listado</span>
+            </button>
+            <button id="btnCancelar" class="mainPanelContentComponents defaultButton" onclick="limpiar()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+
+
+        </div>
+    </div>
+</body>
+</html>

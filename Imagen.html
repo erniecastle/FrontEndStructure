@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Imagen</title>
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <!--<script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>-->
+    <script class="AD" type="text/javascript" src="js/functionsCustomTools.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsImagen.js"></script>
+</head>
+<body>
+    <div id="mainContent" class="mainContents">
+        <div class="cTab" style="width: 100%; height: auto;" id="cTab2">
+            <div class="tab" id="tab2FcTab2">
+                <button id="btnTab1Ftab2FcTab2" class="tablinks Selected" onclick="openTab(event,'con2FcTab2')" idetiqueta="ImagenInstutucionalLogotipo">Logotipo</button>
+                <button id="btnTab3Ftab2FcTab2" class="tablinks borderleft" onclick="openTab(event,'con3FcTab2')" idetiqueta="ImagenInstutucionalBanner">Banner</button>
+                <button id="btnTab4Ftab2FcTab2" class="tablinks borderleft" onclick="openTab(event,'con4FcTab2')" idetiqueta="ImagenInstutucionalLogin">Login</button>
+                <button id="btnTab5Ftab2FcTab2" class="tablinks borderleft" onclick="openTab(event,'con5FcTab2')" idetiqueta="ImagenInstutucionalPaginaPrincipal">Pagina principal</button>
+                <button id="btnTab5Ftab2FcTab2" class="tablinks borderleft" onclick="openTab(event, 'con6FcTab2')">Reportes excel</button>
+                <button class="tablinks borderleft" onclick="openTab(event,'con7FcTab2')" id="btnTab6Ftab2FcTab2">Loading</button>
+            </div>
+
+            <div class="contain" style="width: 100%; display: block;" id="con2FcTab2">
+                <div id="row1Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow1Fcon2FcTab2" class="mainPanelCol borderCol col-6" style="visibility: visible;">
+                        <br />
+                        <div id="DivGroup1Fcol1Frow1Fcon2FcTab2" class="mainPanelDivGroup" style="max-width: 100%;">
+                            <label id="T3Fcol1Frow1Fcon2FcTab2" idetiqueta="ImagenInstutucionalImgCoop" class="mainPanelContentComponents" style="width: 100%;">Imagen corporativa</label>
+                            <div id="DivGroupArchivo" class="mainPanelDivGroup" style="max-width: 50%; display:inline;">
+                                <label id="selectorFileLogo" class="file" style="width:70%; float:left;">
+                                    <input id="fileImagen" class="inputFile" type="file">
+                                    <span class="file-custom" filetitle="Buscar">
+                                        <a id="fileWatchLogo" class="file-watch" href="" target="_blank">
+                                        </a>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="row2Fcon2FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow2Fcon2FcTab2" class="mainPanelCol borderCol col-6" style="visibility: visible;">
+                        <br /><br />
+                        <div id="DivGroupT4Fcol1Frow2Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T4Fcol1Frow2Fcon2FcTab2" idetiqueta="ImagenInstutucionalCarctLogo" class="mainPanelContentComponents" style="width: 100%;">Características del logotipo</label>
+                        </div>
+                        <div id="DivGroupT5Fcol1Frow2Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T5Fcol1Frow2Fcon2FcTab2" idetiqueta="ImagenInstutucionalDimenRecomLogo" class="mainPanelContentComponents" style="width: 100%;">*La dimension recomendada para el logotipo en pixeles es de 157 de ancho x 75 de alto.</label>
+                        </div>
+                        <div id="DivGroupT5Fcol1Frow2Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T5Fcol1Frow2Fcon2FcTab2" idetiqueta="ImagenInstutucionalFormatoLogo" class="mainPanelContentComponents" style="width: 100%;">*Los formatos de imagen permitidos son: jpg .png .gif .bmp</label>
+                        </div>
+                        <div id="DivGroupT5Fcol1Frow2Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <label id="T5Fcol1Frow2Fcon2FcTab2" idetiqueta="ImagenInstutucionalTamaMaxLogo" class="mainPanelContentComponents" style="width: 100%;">*Tamaño máximo de la imagen es de 100 Kbytes</label>
+                        </div>
+                    </div>
+
+                    <div id="col2Frow1Fcon2FcTab2" class="mainPanelCol borderCol col-6" style="visibility: visible;">
+                        <img id="imgLogoPreview" class="imgLogoPreview" style="position:relative; display:inline-block; left:5%; top:20%; width:157px; height:75px;" src="" />
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="contain" style="width: 100%; display: none;" id="con3FcTab2">
+                <div id="row1Fcon3FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow1Fcon3FcTab2" class="mainPanelCol borderCol col-6" style="visibility: visible; width: 50%;">
+                        <br />
+                        <div id="DivGroup1Fcol1Frow1Fcon3FcTab2" class="mainPanelDivGroup" style="max-width: 100%;">
+                            <label id="T3Fcol1Frow1Fcon3FcTab2" idetiqueta="ImagenInstutucionalBanner" class="mainPanelContentComponents" style="width: 100%;">Banner</label>
+                            <br />
+                            <div id="DivGroupArchivo" class="mainPanelDivGroup" style="max-width: 50%; display:inline;">
+                                <label id="selectorFileBanner" class="file" style="width:70%; float:left;">
+                                    <input id="fileBanner" class="inputFile" type="file">
+                                    <span class="file-custom" filetitle="Buscar">
+                                        <a id="fileWatchBanner" class="file-watch" href="" target="_blank">
+                                        </a>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div id="row2Fcon3FcTab2" class="mainPanelRow" style="width: 100%;">
+                        <div id="col1Frow2Fcon3FcTab2" class="mainPanelCol borderCol col-6" style="visibility: visible;">
+                            <br /><br />
+                            <div id="DivGroupT4Fcol1Frow2Fcon3FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <label id="T4Fcol1Frow2Fcon2FcTab2" idetiqueta="ImagenInstutucionalCarctBanner" class="mainPanelContentComponents" style="width: 100%;">Características del logotipo</label>
+                            </div>
+                            <div id="DivGroupT5Fcol1Frow2Fcon3FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <label id="T5Fcol1Frow2Fcon3FcTab2" idetiqueta="ImagenInstutucionalDimenRecomBanner" class="mainPanelContentComponents" style="width: 100%;">*La dimension recomendada para el banner en pixeles es de 270 de ancho x 85 de alto.</label>
+                            </div>
+                            <div id="DivGroupT5Fcol1Frow2Fcon3FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <label id="T5Fcol1Frow2Fcon3FcTab2" idetiqueta="ImagenInstutucionalFormatoBanner" class="mainPanelContentComponents" style="width: 100%;">*Los formatos de imagen permitidos son: jpg .png .gif .bmp</label>
+                            </div>
+                            <div id="DivGroupT5Fcol1Frow2Fcon3FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <label id="T5Fcol1Frow2Fcon3FcTab2" idetiqueta="ImagenInstutucionalTamaMaxBanner" class="mainPanelContentComponents" style="width: 100%;">*Tamaño máximo de la imagen es de 100 Kbytes</label>
+                            </div>
+                        </div>
+
+                        <div id="col2Frow1Fcon3FcTab2" class="mainPanelCol borderCol col-6" style="visibility: visible;">
+                            <img id="imgBannerPreview" class="imgBannerPreview" style="position:relative; display:inline-block; left:5%; width:270px; height:85px;" src="" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="contain" style="width: 100%; display: none;" id="con4FcTab2">
+                <div id="row1Fcon4FcTab2" class="mainPanelRow" style="width: 100%;">
+                    <div id="col1Frow1Fcon4FcTab2" class="mainPanelCol borderCol col-6" style="visibility: visible; width: 50%;">
+                        <br />
+                        <div id="DivGroup1Fcol1Frow1Fcon4FcTab2" class="mainPanelDivGroup" style="max-width: 100%;">
+                            <label id="T3Fcol1Frow1Fcon4FcTab2" idetiqueta="ImagenInstutucionalImgFondo" class="mainPanelContentComponents" style="width: 100%">Imagen de fondo</label>
+                            <div id="DivGroupArchivo" class="mainPanelDivGroup" style="max-width: 400px; display:inline;">
+                                <label id="selectorFileImFondo" class="file" style="width:300px; float:left;">
+                                    <input id="fileImFondo" class="inputFile" type="file">
+                                    <span class="file-custom" filetitle="Buscar">
+                                        <a id="fileWatchImFondo" class="file-watch" href="" target="_blank">
+                                        </a>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="row2Fcon4FcTab2" class="mainPanelRow" style="width: 100%;">
+                        <div id="col1Frow2Fcon4FcTab2" class="mainPanelCol borderCol col-6" style="visibility: visible;">
+                            <br /><br />
+                            <div id="DivGroupT4Fcol1Frow2Fcon4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <label id="T4Fcol1Frow2Fcon2FcTab2" idetiqueta="ImagenInstutucionalCarctImgFond" class="mainPanelContentComponents" style="width: 100%;">Características del logotipo</label>
+                            </div>
+                            <div id="DivGroupT5Fcol1Frow2Fcon4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <label id="T5Fcol1Frow2Fcon4FcTab2" idetiqueta="ImagenInstutucionalDimenRecomImgFond" class="mainPanelContentComponents" style="width: 100%;">*La dimension recomendada para la imagen de fondo en pixeles es de 1650 de ancho x 1150 de alto.</label>
+                            </div>
+                            <div id="DivGroupT5Fcol1Frow2Fcon4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <label id="T5Fcol1Frow2Fcon4FcTab2" idetiqueta="ImagenInstutucionalFormatoImgFond" class="mainPanelContentComponents" style="width: 100%;">*Los formatos de imagen permitidos son: jpg .png .gif .bmp</label>
+                            </div>
+                            <div id="DivGroupT5Fcol1Frow2Fcon4FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <label id="T5Fcol1Frow2Fcon4FcTab2" idetiqueta="ImagenInstutucionalTamaMaxImgFond" class="mainPanelContentComponents" style="width: 100%;">*Tamaño máximo de la imagen es de 100 Kbytes</label>
+                            </div>
+                            <div id="DivGroupT3Fcol1Frow1Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <div id="DivGroupImgBannerLog" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                    <input type="checkbox" class="mainPanelContentComponents" id="imgShowBannerLogin">
+                                    <label id="imgShowBannerLogin" idetiqueta="ImagenInstutucionalCkbMostrarBannerLog" class="containerCheck" for="imgShowBannerLogin">Mostrar banner de la empresa en el login</label>
+                                </div>
+                            </div>
+                            <div id="DivGroup33Fcol1Frow13Fcon2FcTab2" style="max-width: 350px;" class="mainPanelDivGroup">
+                                <label id="lblTextoBienvenida" idetiqueta="ImagenInstutucionalTextoBienvenida" class="mainPanelContentComponents" style="width: 100%;">Texto de bienvenida</label>
+                                <input id="txtImgTextoBienv" type="text" class="mainPanelContentComponents" style="width: 100%;">
+                            </div>
+                        </div>
+                        <div id="col2Frow1Fcon4FcTab2" class="mainPanelCol borderCol col-6" style="visibility: visible;">
+                            <img id="imgImFondoPreview" class="imgImFondoPreview" style="position:relative; display:inline-block; left:30%;  width:330px; height:230px;" src="" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="contain" style="width: 100%; display: none;" id="con5FcTab2">
+                <div id="row1Fcon5FcTab2" class="mainPanelRow" style="width: 100%; ">
+                    <div id="col1Frow1Fcon5FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                        <br /><br />
+                        <div id="DivGroupColorFondo" class="mainPanelDivGroup" style="max-width: 100%;">
+                            <label id="" idetiqueta="Empleados" class="mainPanelContentComponents" style="width: 100%;">Imagen en encabezado</label>
+                        </div>
+
+                        <div id="DivGroupT3Fcol1Frow1Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <div id="DivGroup1Fcol1Frow1Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                <input id="rbImgBanner" type="radio" class="mainPanelContentComponents" name="one">
+                                <label id="" idetiqueta="ImagenInstutucionalRbBanner" class="containerRadio" for="rbImgBanner">Banner</label>
+                            </div>
+                        </div>
+                        <div id="DivGroupT4Fcol1Frow1Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                            <div id="DivGroup2Fcol1Frow1Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                <input id="rbImgLogotipo" type="radio" class="mainPanelContentComponents" name="one">
+                                <label id="" idetiqueta="ImagenInstutucionalRbLogotipo" class="containerRadio" for="rbImgLogotipo">Logotipo</label>
+                            </div>
+                        </div>
+                        <div id="colImgShow" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                            <br />
+                            <div id="DivGroupT3Fcol1Frow1Fcon2FcTab2" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <div id="DivGroup1Fcol1Frow1Fcon2FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                    <input type="checkbox" class="mainPanelContentComponents" id="imgShowName">
+                                    <label id="imgShowName" idetiqueta="ImagenInstutucionalCkbMostrarNom" class="containerCheck" for="imgShowName">Mostrar nombre de la corporación</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div id="col1Frow1Fcon5FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                            <div id="DivGroupColorFondo" class="mainPanelDivGroup" style="max-width: 100%;">
+                                <label id="" idetiqueta="ImagenInstutucionalColorFondo" class="mainPanelContentComponents" style="width: 100%;">Color de fondo</label>
+                            </div>
+                            <div id="DivGroupColorFondo" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <input id="imgColorFondo" type="color" style="width:20%;">
+                            </div>
+                            <div id="DivGroupColorFuente" class="mainPanelDivGroup" style="max-width: 100%;">
+                                <label id="imgColor" idetiqueta="ImagenInstutucionalColorFuente" class="mainPanelContentComponents" style="width: 100%;">Color de fuente</label>
+                            </div>
+                            <div id="DivGroupColorFuente" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <input id="imgColorFuente" type="color" style="width:20%;">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contain" style="width: 100%; display: none;" id="con6FcTab2">
+                <div id="row1Fcon6FcTab2" class="mainPanelRow" style="width: 100%; ">
+                    <div id="col1Frow1Fcon6FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                        <br /><br />
+                        <div id="col1Frow1Fcon6FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                            <div id="DivGroupColorFondo" class="mainPanelDivGroup" style="max-width: 100%;">
+                                <label id="" class="mainPanelContentComponents" style="width: 100%;">Color fondo encabezado</label>
+                            </div>
+                            <div id="DivGroupColorFondoEncabezado" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <input id="imgColorFondoEncabezado" type="color" style="width:20%;">
+                            </div>
+                            <div id="DivGroupColorTextoEncabezado" class="mainPanelDivGroup" style="max-width: 100%;">
+                                <label id="imgColor" class="mainPanelContentComponents" style="width: 100%;">Color texto encabezado</label>
+                            </div>
+                            <div id="DivGroupColorFuente" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <input id="imgColorTextoEncabezado" type="color" style="width:20%;">
+                            </div>
+                            <div id="DivGroupColorGruposTotales" class="mainPanelDivGroup" style="max-width: 100%;">
+                                <label id="" class="mainPanelContentComponents" style="width: 100%;">Color grupos y totales</label>
+                            </div>
+                            <div id="DivGroupColorFondo" style="max-width: 100%;" class="mainPanelDivGroup">
+                                <input id="imgColorGruposTotales" type="color" style="width:20%;">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contain" style="width: 100%; display: none;" id="con7FcTab2">
+                <div class="mainPanelRow" style="width: 100%; margin-top:15px;" id="row1Fcon7FcTab2">
+                    <div class="mainPanelCol borderCol col-12" style="visibility: visible;" id="col1Frow1Fcon7FcTab2">
+                        <div style="max-width: 140px;" class="mainPanelDivGroup" id="DivGroupT1Fcol1Frow1Fcon7FcTab2">
+                            <div id="DivGroup35Fcol1Frow1Fcon7FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                <input type="checkbox" class="mainPanelContentComponents" id="ckbQuitarFondo" />
+                                <label class="containerCheck" for="ckbQuitarFondo" id="ckbQuitarFondo">Quitar Fondo</label>
+                            </div>
+                        </div>
+                        <div style="max-width: 100%;" class="mainPanelDivGroup" id="DivGroupT2Fcol1Frow1Fcon7FcTab2">
+                            <div id="DivGroup36Fcol1Frow1Fcon7FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                <input type="checkbox" class="mainPanelContentComponents" id="ckbQuitarPanel" />
+                                <label class="containerCheck" id="ckbQuitarPanel" for="ckbQuitarPanel">Quitar Panel</label>
+                            </div>
+                        </div>
+                        <div style="max-width: 100%;" class="mainPanelDivGroup" id="DivGroupT3Fcol1Frow1Fcon7FcTab2">
+                            <div id="DivGroup37Fcol1Frow1Fcon7FcTab2" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                <input type="checkbox" class="mainPanelContentComponents" id="ckbQuitarIndicador" />
+                                <label class="containerCheck" id="ckbQuitarIndicador" for="ckbQuitarIndicador">Quitar Indicador</label>
+                            </div>
+                        </div>
+                        <div id="DivGroup38Fcol1Frow1Fcon7FcTab2" style="max-width: 200px;" class="mainPanelDivGroup">
+                            <label class="mainPanelContentComponents" style="width: 100%;" id="lblAnchoIndicador">Ancho de la Animacion</label>
+                            <div class="select-style" style="width: 100%;">
+                                <select class="mainPanelContentComponents" style="width: 100%;" onchange="cambiarAnchoInd(this.value)" id="selAnchoIndicador">
+                                    <option value="5%">Ancho 1</option>
+                                    <option value="10%">Ancho 2</option>
+                                    <option value="15%">Ancho 3</option>
+                                    <option value="20%">Ancho 4</option>
+                                    <option value="25%">Ancho 5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="row2Fcon7FcTab2" class="mainPanelRow" style="width: 100%;margin-top:15px;">
+                    <div id="col1Frow2Fcon7FcTab2" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                        <div style="width:100%;height:133px;">
+                            <div id="panelFondo" class="overlay-wrapper overlay-modal overlay-shader loadpanel-wrapper" style="z-index: 1501; left: 0px; top: 0px; transform: translate(0px, 0px); transition: all 0s ease 0s; ">
+                                <div id="panelOverlay" class="overlay-content resizable loadpanel-content" style="width: 222px; height: 90px; z-index: 1501; margin: 0px; left: 0px; top: 0px; transform: translate(240px, 15px); transition: all 0s ease 0s;">
+                                    <div class="loadpanel-content-wrapper">
+                                        <div id="panelIndicadorPrinc" class="loadpanel-indicator loadindicator widget">
+                                            <div id="panelIndicador" class="loadindicator-wrapper">
+                                                <div class="loadindicator-content">
+                                                    <div class="loadindicator-icon">
+                                                        <div id="segment7" class="loadindicator-segment loadindicator-segment7"></div>
+                                                        <div id="segment6" class="loadindicator-segment loadindicator-segment6"></div>
+                                                        <div id="segment5" class="loadindicator-segment loadindicator-segment5"></div>
+                                                        <div id="segment4" class="loadindicator-segment loadindicator-segment4"></div>
+                                                        <div id="segment3" class="loadindicator-segment loadindicator-segment3"></div>
+                                                        <div id="segment2" class="loadindicator-segment loadindicator-segment2"></div>
+                                                        <div id="segment1" class="loadindicator-segment loadindicator-segment1"></div>
+                                                        <div id="segment0" class="loadindicator-segment loadindicator-segment0"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="loadpanel-message">Espere...</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="botones" class="contenedor" style="max-width: 100%; width: 70%;">
+                <button id="btnEnviar" class="mainPanelContentComponents defaultButton" style="display: inline; float:left;" onclick="saveCnfImg()">
+                    <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                    <span idetiqueta="btnGuardar">Guardar</span>
+                </button>
+                <button id="btnGuardar" class="mainPanelContentComponents defaultButton" style="display: inline; float:left;" onclick="cancelCnfImg()">
+                    <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                    <span idetiqueta="btnCancelar">Cancelar</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

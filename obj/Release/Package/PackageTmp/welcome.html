@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+    }
+
+    .bgimg {
+        background-image: url('img/forestbridge.jpg');
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 25px;
+    }
+
+    .topleft {
+        position: absolute;
+        top: 0;
+        left: 16px;
+    }
+
+    .bottomleft {
+        position: absolute;
+        bottom: 0;
+        left: 16px;
+    }
+
+    .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    hr {
+        margin: auto;
+        width: 40%;
+    }
+    a {
+       font-size: 20px;
+       color:#ffffff;
+    }
+</style>
+
+<!-- Head -->
+<head>
+    <title>Bienvenido - NomRh 1.0</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsWelcome.js"></script>
+</head>
+
+
+<body>
+    <script>
+        
+    </script>
+    <div class="bgimg">
+        <div class="topleft">
+            <p>Bienvenido al sistema NRH</p>
+            <p>Menu:</p>
+            <a href="login.html">Login</a>
+            <br /><br />
+            <a href="fuentes.html">Fuentes</a>
+            <br /><br />
+            <a href="fuenteProcesos.html">Fuentes Procesos</a>
+            <br /><br />
+            <a href="capturas.html">Capturas</a>
+            <br /><br />
+            <a href="modulo.html">Modulos</a>
+            <br /><br />
+            <a href="main.html">Menu</a>
+        </div>
+        <div id="ok">
+        </div>
+        <div class="middle">
+            <h1>En Desarrollo</h1>
+            <hr>
+            <p>☭ ☫ ☬</p>
+        </div>
+        <div class="bottomleft">
+            <p>Sistema actualmente en desarrollo</p>
+        </div>
+    </div>
+</body>
+</html>

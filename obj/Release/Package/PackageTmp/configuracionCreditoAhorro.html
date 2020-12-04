@@ -1,0 +1,554 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Configuracion de Creditos y Ahorros</title>
+    <meta charset="utf-8" />
+    <link class="AD" href="css/stylepreview.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/functionsCommon.js"></script>
+    <script class="AD" type="text/javascript" src="js/functionsUtils.js"></script>
+    <!-- <script class="AD" type="text/javascript" src="js/functionsCustomTools.js"></script>-->
+    <script class="AD" type="text/javascript" src="js/configuracionCreditoAhorro.js"></script>
+    <link class="AD" rel="stylesheet" href="css/ejemploTemas.css" type="text/css" media="all">
+</head>
+<body>
+
+    <div id="mainContent" class="mainContents">
+        <div class="contain" style="width: 100%;" id="con1">
+            <h1 id="tituloCreAhorr" class="titlecontain" cambiaridioma="true">Configuracion Creditos y Ahorros</h1>
+            <div id="row2Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow2Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 120px;">
+                    <div id="DivGroup1Fcol1Frow2Fcon1" style="max-width: 100px;margin-top: 1px;" class="mainPanelDivGroup">
+                        <label id="lblClave" idetiqueta="ConfiguracionCredAhoClave" class="mainPanelContentComponents" style="width: 100%;">Clave</label>
+                        <input id="txtClave" type="text" class="mainPanelContentComponents" style="width: 100%;" />
+                    </div>
+                </div>
+                <div id="col2Frow2Fcon1" class="mainPanelCol borderCol col-2" style="visibility: visible; width: 370px;">
+                    <div id="DivGroup2Fcol2Frow2Fcon1" style="max-width: 350px;" class="mainPanelDivGroup">
+                        <label id="lblDescripcion" idetiqueta="ConfiguracionCredAhoDescripcion" class="mainPanelContentComponents" style="width: 100%;">Descripción</label> 
+                        <input id="txtDescripcion" type="text" class="mainPanelContentComponents" style="width: 100%;" />
+                    </div>
+                </div>
+                <div id="col3Frow2Fcon1" class="mainPanelCol borderCol col-5" style="visibility: visible; ">
+                    <div id="DivGroup3Fcol3Frow2Fcon1" style="max-width: 200px;" class="mainPanelDivGroup">
+                        <label id="lblDescripcionAbre" idetiqueta="ConfiguracionCredAhoDescripcionAbre" class="mainPanelContentComponents" style="width: 100%;">Descripción breve</label> 
+                        <input id="txtDescripcionAbre" type="text" class="mainPanelContentComponents" style="width: 100%;" />
+                    </div>
+                </div>
+            </div>
+            <div id="row3Fcon1" class="mainPanelRow" style="width: 100%;">
+                <div id="col1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                    <div class="cTab" style="width: 100%; height: auto;" id="cTab3Fcol1Frow3Fcon1">
+                        <div class="tab" id="tab3FcTab3Fcol1Frow3Fcon1">
+                            <button class="tablinks Selected" id="tabGeneral" onclick="openTab(event,'conGeneral')" idetiqueta="ConfiguracionCredAhoGeneral">General</button> 
+                            <button class="tablinks borderleft" id="tabDescuento" onclick="openTab(event,'conDescuento')" idetiqueta="ConfiguracionCredAhoDescuento">Descuento</button>
+                            <button class="tablinks borderleft" id="tapComisionXManejo" onclick="openTab(event,'conComisionXManejo')" idetiqueta="ConfiguracionCredAhoComisionManejo">Comisión por Manejo</button>
+                            <button class="tablinks borderleft" id="tapParametrosAhorro" onclick="openTab(event,'conParametrosAhorros')" idetiqueta="ConfiguracionCredAhoParamAhorr">Parámetros de Ahorros</button>
+                            <button class="tablinks borderleft" id="tapOtrosDatos" onclick="openTab(event,'conOtrosDatos')" idetiqueta="ConfiguracionCredAhoOtrosDatos">Otros Datos</button>
+                        </div>
+                        <div class="contain" style="width: 100%; display: none;" id="conDescuento">
+                            <div id="row2Frow1Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow2Frow1Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelCol col-12 bordersubtitulo" style="visibility: visible;">
+                                    <div id="DivGroupT17Fcol1Frow2Frow1Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%;margin-top: 6px;margin-left: -3px;margin-bottom: -6px;" class="mainPanelDivGroup divgruoptitulo">
+                                        <label id="lblModalidadDescuento" idetiqueta="ConfiguracionCredAhoModalidadDescuento" class="mainPanelContentComponents" style="width: 100%;">Modalidad de Descuento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row1Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow1Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelCol col-12 colborder" style="visibility: visible; width: 250px;margin-top: 20px;">
+                                    <div id="DivGroupT6Fcol1Frow1Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 200px;margin-top: 10px;margin-left:5px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup4Fcol1Frow1Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" id="rbElegirModoRegCred" name="modoDescuento" />
+                                            <label class="containerRadio" idetiqueta="ConfiguracionCredAhoRbEligirModReg" for="rbElegirModoRegCred" id="rbElegirModoRegCred">Elegir modalidad al registrar</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT7Fcol1Frow1Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 200px;margin-top: -10px;margin-left:5px;margin-bottom: 10px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup5Fcol1Frow1Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" id="rbEspecificarNumParcial" name="modoDescuento" />
+                                            <label class="containerRadio" idetiqueta="ConfiguracionCredAhoRbNumParcialidades" for="rbEspecificarNumParcial" id="rbEspecificarNumParcial">Número de parcialidades</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="reglonModoDescuento" class="mainPanelRow" style="width: 100%;margin-top: 20px;">
+                                <div id="col1Frow2Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 25%;">
+                                    <div id="DivGroupT8Fcol1Frow2Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 150px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup6Fcol1Frow2Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="checkbox" class="mainPanelContentComponents" id="ckbImporteFijo" /> 
+                                            <label id="ckbImporteFijo" idetiqueta="ConfiguracionCredAhoChkImporteFijo" class="containerCheck" for="ckbImporteFijo">Importe Fijo</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup9Fcol1Frow2Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 150px;" class="mainPanelDivGroup">
+                                        <label id="lblCapturaDescuento" idetiqueta="ConfiguracionCredAhoChkCapturaDescuento" class="mainPanelContentComponents" style="width: 100%;">Captura del descuento</label>
+                                        <div class="select-style" style="width: 100%;">
+                                            <select id="selCapturaDescuento" class="mainPanelContentComponents" style="width: 100%;">
+                                                <option value=""></option>
+                                                <option value="0">Por periodo</option>
+                                                <option value="1">Mensual</option>
+                                                <option value="2">Bimestral</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup12Fcol1Frow2Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 150px;" class="mainPanelDivGroup">
+                                        <label id="lblNumDecimales" idetiqueta="ConfiguracionCredAhoChkNumeroDecimales" class="mainPanelContentComponents" style="width: 100%;">Numeros decimales</label>
+                                        <input id="txtNumDecimales"  type="text" class="mainPanelContentComponents" style="width: 30%;" />
+                                    </div>
+                                </div>
+                                <div id="col2Frow2Fcon3FcTab3Fcol1Frow3Fcon1" style="visibility: visible;" class="mainPanelCol borderCol col-3">
+                                    <div id="DivGroupT9Fcol2Frow2Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 150px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup7Fcol2Frow2Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="checkbox" class="mainPanelContentComponents" id="ckbVSMG" />
+                                            <label id="ckbVSMG" idetiqueta="ConfiguracionCredAhoChkVSG" class="containerCheck" for="ckbVSMG">VSMG</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup10Fcol2Frow2Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 150px;" class="mainPanelDivGroup">
+                                        <label id="lblCapturaDescuento1" idetiqueta="ConfiguracionCredAhoChkCapturaDescuento" class="mainPanelContentComponents" style="width: 100%;">Captura del descuento</label>
+                                        <div class="select-style" style="width: 100%;">
+                                            <select id="selCapturaDescuento1" class="mainPanelContentComponents" style="width: 100%;">
+                                                <option value=""></option>
+                                                <option value="0">Por periodo</option>
+                                                <option value="1">Mensual</option>
+                                                <option value="2">Bimestral</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup13Fcol2Frow2Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 150px;" class="mainPanelDivGroup">
+                                        <label id="lblNumDecimales1" class="mainPanelContentComponents" style="width: 100%;">Numeros decimales</label>
+                                        <input id="txtNumDecimales1" idetiqueta="ConfiguracionCredAhoChkNumeroDecimales" type="text" class="mainPanelContentComponents" style="width: 30%;" />
+                                    </div>
+                                    <div id="DivGroup14Fcol2Frow2Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 150px;" class="mainPanelDivGroup">
+                                        <label class="mainPanelContentComponents" idetiqueta="ConfiguracionCredAhoValorVsg" style="width: 100%;" id="lblValorVSMG">Valor VSMG</label>
+                                        <div class="select-style" style="width: 100%;">
+                                            <select id="selValorVSMG" class="mainPanelContentComponents" style="width: 100%;">
+                                                <option value=""></option>
+                                                <option value="0">SMG</option>
+                                                <option value="1">UMA</option>
+                                                <option value="2">UMI</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="col3Frow2Fcon3FcTab3Fcol1Frow3Fcon1" style="visibility: visible;" class="mainPanelCol borderCol col-3">
+                                    <div id="DivGroupT10Fcol3Frow2Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 150px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup8Fcol3Frow2Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="checkbox" class="mainPanelContentComponents" id="ckbPorcentaje" />
+                                            <label id="ckbPorcentaje" idetiqueta="ConfiguracionCredAhoChkPorcentaje" class="containerCheck" for="ckbPorcentaje">Porcentaje</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup11Fcol3Frow2Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 150px;" class="mainPanelDivGroup">
+                                        <label id="lblCapturaDescuento2" idetiqueta="ConfiguracionCredAhoChkCapturaDescuento" class="mainPanelContentComponents" style="width: 100%;">Captura del descuento</label>
+                                        <div class="select-style" style="width: 100%;">
+                                            <select id="selCapturaDescuento2" class="mainPanelContentComponents" style="width: 100%;">
+                                                <option value=""></option>
+                                                <option value="0">Por periodo</option>
+                                                <option value="1">Mensual</option>
+                                                <option value="2">Bimestral</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup15Fcol3Frow2Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 150px;" class="mainPanelDivGroup">
+                                        <label id="lblNumDecimales2" class="mainPanelContentComponents" style="width: 100%;">Numeros decimales</label>
+                                        <input id="txtNumDecimales2" idetiqueta="ConfiguracionCredAhoChkNumeroDecimales" type="text" class="mainPanelContentComponents" style="width: 30%;" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row4Frow4Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow4Frow4Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;margin-top: 10px;">
+                                    <div id="DivGroupT3Fcol1Frow4Frow4Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 340px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup56Fcol1Frow4Frow4Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="checkbox" class="mainPanelContentComponents" id="ckbDescontarPropoDiasPer" />
+                                            <label id="ckbDescontarPropoDiasPer" idetiqueta="ConfiguracionCredAhoDescontarProporDiasPer" class="containerCheck" for="ckbDescontarPropoDiasPer">Descontar proporcional a los días del periodo</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT4Fcol1Frow4Frow4Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 230px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup57Fcol1Frow4Frow4Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="checkbox" class="mainPanelContentComponents" id="ckbConsiderarIncap" />
+                                            <label id="ckbConsiderarIncap" idetiqueta="ConfiguracionCredAhoConsiderarIncap" class="containerCheck" for="ckbConsiderarIncap">Considerar Incapacidades</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row4Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow4Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelCol col-12 bordersubtitulo" style="visibility: visible;">
+                                    <div id="DivGroupT18Fcol1Frow4Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%;margin-top: 20px;margin-left: -3px;margin-bottom: -6px;" class="mainPanelDivGroup divgruoptitulo">
+                                        <label id="lblDescuentosBajas" idetiqueta="ConfiguracionCredAhoDescuentosBajas" class="mainPanelContentComponents" style="width: 100%;">Descuentos en Bajas</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row5Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow5Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 25%;">
+                                    <div id="DivGroupT20Fcol1Frow5Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 210px;margin-top: 20px;margin-bottom: 10px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup18Fcol1Frow5Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="checkbox" class="mainPanelContentComponents" id="ckbDescontarFiniquito" />
+                                            <label class="containerCheck" idetiqueta="ConfiguracionCredAhoChkDescontarFini" id="ckbDescontarFiniquito" for="ckbDescontarFiniquito">Descontar en Finiquitos</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row6Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow6Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelCol col-12 colborder" style="visibility: visible;  width: 200px;">
+                                    <div id="DivGroupT21Fcol1Frow6Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 210px;margin-top: 10px;margin-left:5px" class="mainPanelDivGroup">
+                                        <div id="DivGroup19Fcol1Frow6Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" id="rbSaldarAutoFin" name="desCredFiniquitos" />
+                                            <label class="containerRadio" idetiqueta="ConfiguracionCredAhoRbSaldarAuto" id="rbSaldarAutoFin" for="rbSaldarAutoFin">Saldar automáticamente</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT22Fcol1Frow6Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 210px;margin-top: -7px;margin-left:5px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup20Fcol1Frow6Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" id="rbAgregarSinPreguntarFin" name="desCredFiniquitos" />
+                                            <label class="containerRadio" idetiqueta="ConfiguracionCredAhoRbAgregarSinPre" id="rbAgregarSinPreguntarFin" for="rbAgregarSinPreguntarFin">Agregar sin preguntar</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT23Fcol1Frow6Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 210px;margin-top: -7px;margin-bottom: 10px;margin-left:5px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup21Fcol1Frow6Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" id="rbAgregarPreguntandoFin" name="desCredFiniquitos" />
+                                            <label class="containerRadio" idetiqueta="ConfiguracionCredAhoRbAgregarPregun" id="rbAgregarPreguntandoFin" for="rbAgregarPreguntandoFin">Agregar preguntando</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row2Frow7Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow2Frow7Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 25%;">
+                                    <div id="DivGroupT24Fcol1Frow2Frow7Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 210px;margin-top: 30px;margin-bottom: 10px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup22Fcol1Frow2Frow7Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="checkbox" class="mainPanelContentComponents" id="ckbDescontarLiquidaciones" />
+                                            <label class="containerCheck" idetiqueta="ConfiguracionCredAhoChkDescontarliqui" id="ckbDescontarLiquidaciones" for="ckbDescontarLiquidaciones">Descontar en Liquidaciones</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row8Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow8Fcon3FcTab3Fcol1Frow3Fcon1" class="mainPanelCol col-12 colborder" style="visibility: visible; width: 200px; ">
+                                    <div id="DivGroupT25Fcol1Frow8Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 210px;margin-top: 10px;margin-left:5px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup23Fcol1Frow8Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" id="rbSaldarAutoLiq" name="desCredLiquidacion" />
+                                            <label class="containerRadio" idetiqueta="ConfiguracionCredAhoRbSaldarAuto" id="rbSaldarAutoLiq" for="rbSaldarAutoLiq">Saldar automáticamente</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT26Fcol1Frow8Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 210px;margin-top: -7px;margin-left:5px" class="mainPanelDivGroup">
+                                        <div id="DivGroup24Fcol1Frow8Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" name="desCredLiquidacion" id="rbAgregarSinPreguntarLiq" />
+                                            <label class="containerRadio" idetiqueta="ConfiguracionCredAhoRbAgregarSinPre" id="rbAgregarSinPreguntarLiq" for="rbAgregarSinPreguntarLiq">Agregar sin preguntar</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT27Fcol1Frow8Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 210px;margin-top: -7px;margin-bottom: 10px;margin-left:5px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup25Fcol1Frow8Fcon3FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" name="desCredLiquidacion" id="rbAgregarPreguntandoLiq" />
+                                            <label class="containerRadio" idetiqueta="ConfiguracionCredAhoRbAgregarPregun" id="rbAgregarPreguntandoLiq" for="rbAgregarPreguntandoLiq">Agregar preguntando</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contain" style="width: 100%; display: block;" id="conGeneral">
+                            <div id="row1Fcon4FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow1Fcon4FcTab3Fcol1Frow3Fcon1" class="mainPanelCol col-12 bordersubtitulo" style="visibility: visible; ">
+                                    <div id="DivGroupT27Fcol1Frow1Fcon4FcTab3Fcol1Frow3Fcon1" style="max-width: 100%;margin-top: 6px;margin-left: 0px;margin-bottom: -6px;" class="mainPanelDivGroup divgruoptitulo">
+                                        <label id="lblConfiguracionGeneral" idetiqueta="ConfiguracionCredAhoConfgGeneral" class="mainPanelContentComponents" style="width: 100%;">Configuración general</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row2Fcon4FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow2Fcon4FcTab3Fcol1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                    <div id="DivGroupT29Fcol1Frow2Fcon4FcTab3Fcol1Frow3Fcon1" style="max-width: 330px;margin-top: 15px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup27Fcol1Frow2Fcon4FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="checkbox" class="mainPanelContentComponents" id="ckbAsignaNumCreAuto" />
+                                            <label class="containerCheck" idetiqueta="ConfiguracionCreditosAsignarNumAuto" id="lblAsignaNumCreAuto" for="ckbAsignaNumCreAuto">Asignar número de crédito automáticamente</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row3Fcon4FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow3Fcon4FcTab3Fcol1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                    <div id="DivGroup28Fcol1Frow3Fcon4FcTab3Fcol1Frow3Fcon1" style="max-width: 160px;" class="mainPanelDivGroup">
+                                        <label id="lblLongNumCred" idetiqueta="ConfiguracionCreditosLongNum" class="mainPanelContentComponents" style="width: 100%;margin-top:6px;">Longitud del núm. de crédito</label>
+                                        <input id="txtLongNumCred" type="text" class="mainPanelContentComponents" style="width: 25%;" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row4Fcon4FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow4Fcon4FcTab3Fcol1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                    <div id="DivGroup29Fcol1Frow4Fcon4FcTab3Fcol1Frow3Fcon1" style="max-width: 170px;" class="mainPanelDivGroup">
+                                        <label id="lblFormatoNumCred" idetiqueta="ConfiguracionCreditosFormatoNum" class="mainPanelContentComponents" style="width: 100%;">Formato núm. Crédito</label>
+                                        <input id="txtFormatoNumCred" type="text" class="mainPanelContentComponents" style="width: 70%;" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row5Fcon4FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow5Fcon4FcTab3Fcol1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 25%;">
+                                    <div id="DivGroupT31Fcol1Frow5Fcon4FcTab3Fcol1Frow3Fcon1" style="max-width: 150px;;margin-bottom: -6px;" class="mainPanelDivGroup">
+                                        <label id="lblInicioDescuento" idetiqueta="ConfiguracionCredAhoInicioDesc" class="mainPanelContentComponents" style="width: 100%;">Inicio de descuento</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row6Fcon4FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow6Fcon4FcTab3Fcol1Frow3Fcon1" class="mainPanelCol col-12 colborder" style="visibility: visible; width: 200px;">
+                                    <div id="DivGroupT33Fcol1Frow6Fcon4FcTab3Fcol1Frow3Fcon1" style="max-width: 200px;margin-top: 10px;margin-left:5px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup31Fcol1Frow6Fcon4FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" id="rbApartirPeriodo" name="inicioDescuento" />
+                                            <label class="containerRadio" idetiqueta="ConfiguracionCredAhoRbApartirPer" id="rbApartirPeriodo" for="rbApartirPeriodo">A partir de un periodo</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT34Fcol1Frow6Fcon4FcTab3Fcol1Frow3Fcon1" style="max-width: 200px;margin-top: -8px;margin-bottom: 10px; margin-left:5px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup32Fcol1Frow6Fcon4FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" id="rbApartirFecha" name="inicioDescuento" />
+                                            <label class="containerRadio" idetiqueta="ConfiguracionCredAhoRbApartirFec" id="rbApartirFecha" for="rbApartirFecha">A partir de una fecha</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row7Fcon4FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow7Fcon4FcTab3Fcol1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible; width: 40%;">
+                                    <div id="DivGroupT35Fcol1Frow7Fcon4FcTab3Fcol1Frow3Fcon1" style="max-width: 310px;margin-top: 20px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup33Fcol1Frow7Fcon4FcTab3Fcol1Frow3Fcon1" style="visibility: visible; width: 100%;" class="containerSelectors">
+                                            <input type="checkbox" class="mainPanelContentComponents" id="ckbCapturarCreditoTotal" />
+                                            <label class="containerCheck" idetiqueta="ConfiguracionCreditosCapturaTotalCred" id="ckbCapturarCreditoTotal" for="ckbCapturarCreditoTotal">Capturar monto total al registrar crédito</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contain" style="width: 100%; display: none;" id="conComisionXManejo">
+                            <div id="row1Fcon5FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow1Fcon5FcTab3Fcol1Frow3Fcon1" class="mainPanelCol col-12 bordersubtitulo" style="visibility: visible; ">
+                                    <div id="DivGroupT35Fcol1Frow1Fcon5FcTab3Fcol1Frow3Fcon1" style="max-width: 100%;margin-top: 6px;margin-left: -3px;margin-bottom: -6px;" class="mainPanelDivGroup divgruoptitulo">
+                                        <label id="lblComisionXManejo" idetiqueta="ConfiguracionCreditosComisionPorManejeCred" class="mainPanelContentComponents" style="width: 100%;">Comisión por Manejo de Crédito</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row2Fcon5FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow2Fcon5FcTab3Fcol1Frow3Fcon1" class="mainPanelCol borderCol col-12 " style="visibility: visible;">
+                                    <div id="DivGroupT37Fcol1Frow2Fcon5FcTab3Fcol1Frow3Fcon1" style="max-width: 340px;margin-top: 20px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup35Fcol1Frow2Fcon5FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="checkbox" class="mainPanelContentComponents" id="ckbRealizarDescuentoXManejoCred" />
+                                            <label class="containerCheck" idetiqueta="ConfiguracionCreditosChkDescontarXManejoCred" id="ckbRealizarDescuentoXManejoCred" for="ckbRealizarDescuentoXManejoCred">Descontar comisión por manejo de crédito</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup36Fcol1Frow2Fcon5FcTab3Fcol1Frow3Fcon1" style="max-width: 210px;margin-top: 20px;" class="mainPanelDivGroup">
+                                        <label id="lblConceptoDescuento" idetiqueta="ConfiguracionCreditosDescrpcionDescuento" class="mainPanelContentComponents" style="width: 100%;">Descripción para el descuento</label>
+                                        <input id="txtConceptoDescuento" type="text" class="mainPanelContentComponents" style="width: 100%;" />
+                                    </div>
+                                    <div id="DivGroup37Fcol1Frow2Fcon5FcTab3Fcol1Frow3Fcon1" style="max-width: 210px;margin-top: 20px;" class="mainPanelDivGroup">
+                                        <label class="mainPanelContentComponents" idetiqueta="ConfiguracionCreditosPeriodicidadDescuento" style="width: 100%;" id="lblPeriodicidadDescto">Periodicidad del Descuento</label>
+                                        <div class="select-style" style="width: 100%;">
+                                            <select id="selPeriodicidadDescto" class="mainPanelContentComponents" style="width: 100%;">
+                                                <option value=""></option>
+                                                <option value="0">Al descontar</option>
+                                                <option value="1">Mensual</option>
+                                                <option value="2">Bimestral</option>
+                                                <option value="3">Única</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup58Fcol1Frow2Fcon5FcTab3Fcol1Frow3Fcon1" style="max-width: 300px;margin-top: 20px;" class="mainPanelDivGroup">
+                                        <label id="T5Fcol1Frow2Fcon5FcTab3Fcol1Frow3Fcon1" idetiqueta="ConfiguracionCreditosCuantoDescontar" class="mainPanelContentComponents" style="width: 100%;">Cuando descontar</label>
+                                        <div class="select-style" style="width: 100%;">
+                                            <select id="selCuantoDescontar" class="mainPanelContentComponents" style="width: 100%;">
+                                                <option value=""></option>
+                                                <option value="0">Descontar proporcionalmente cada periodo nómina</option>
+                                                <option value="1">Descontar en el primer periodo del</option>
+                                                <option value="2">Descontar en el ultimo periodo del</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup38Fcol1Frow2Fcon5FcTab3Fcol1Frow3Fcon1" style="max-width: 210px;margin-top: 20px;" class="mainPanelDivGroup">
+                                        <label class="mainPanelContentComponents" idetiqueta="ConfiguracionCreditosFormaApliDescuento" style="width: 100%;" id="lblCuantoDescontar">Forma de aplicar el descuento</label>
+                                        <div class="select-style" style="width: 100%;">
+                                            <select id="selFormaAplicar" class="mainPanelContentComponents" style="width: 100%;" onchange="activarCapturaFormaAplicar(this.value)">
+                                                <option value=""></option>
+                                                <option value="1">En Porcentaje</option>
+                                                <option value="2">Importe fijo descto</option>
+                                                <option value="3">Definir en captura de créditos</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="DivFormaAplicar" style="max-width: 110px;display:none;" class="mainPanelDivGroup">
+                                        <input id="txtFormaAplicar" type="text" class="mainPanelContentComponents" style="width: 100%;" />
+                                    </div>
+                                    <div id="DivGroupT25Fcol1Frow38Fcon2" class="mainPanelDivGroup" style="max-width: 450px;margin-top: 20px;">
+                                        <div class="editContainer">
+                                            <label id="lblConceptoNomina" idetiqueta="ConceptosNomina" class="mainPanelContentComponents">Concepto de nómina</label>
+                                            <div id="editConceptoNomina" class="edit medium-large" dataedit="EditConceptoNomina" functedit="setEditConceptoNomina">
+                                                <input id="search-text-input" class="editKey medium" kind="filterKey" type="text" placeholder="" disabled="" /> 
+                                                <input id="brief-text-input" class="editBrief large" type="text" disabled="" placeholder="" />
+                                                <button class="editButton small" onclick="OpenEditModal(this)" disabled=""><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contain" style="width: 100%; display: none;" id="conParametrosAhorros">
+                            <div id="row1Fcon6FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow1Fcon6FcTab3Fcol1Frow3Fcon1" class="mainPanelCol col-12 bordersubtitulo" style="visibility: visible;">
+                                    <div id="DivGroupT42Fcol1Frow1Fcon6FcTab3Fcol1Frow3Fcon1" style="max-width: 100%;margin-top: 6px;margin-left: -3px;margin-bottom: -6px;" class="mainPanelDivGroup divgruoptitulo">
+                                        <label id="T42Fcol1Frow1Fcon6FcTab3Fcol1Frow3Fcon1" idetiqueta="ConfiguracionCredAhoParamAhorr" class="mainPanelContentComponents" style="width: 100%;">Parametros de Ahorro</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row2Fcon6FcTab3Fcol1Frow3Fcon1" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow2Fcon6FcTab3Fcol1Frow3Fcon1" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                    <div id="DivGroupT44Fcol1Frow2Fcon6FcTab3Fcol1Frow3Fcon1" style="max-width: 200px;margin-top: 20px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup42Fcol1Frow2Fcon6FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="checkbox" class="mainPanelContentComponents" id="ckbCorteAnualAuto" /> 
+                                            <label idetiqueta="ConfiguracionAhorrosChkCorteAnual" class="containerCheck" id="ckbCorteAnualAuto" for="ckbCorteAnualAuto">Corte automático anual</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup43Fcol1Frow2Fcon6FcTab3Fcol1Frow3Fcon1" style="max-width: 150px;margin-top: 20px;" class="mainPanelDivGroup">
+                                        <label class="mainPanelContentComponents" idetiqueta="ConfiguracionAhorrosCorteMes" style="width: 100%;" id="lblCorteMes">Corte al mes</label>
+                                        <div class="select-style" style="width: 100%;">
+                                            <select class="mainPanelContentComponents" style="width: 100%;" id="selCorteMes" onchange="llenarselDias(this.value)">
+                                                <option value=""></option>
+                                                <option value="0">Enero</option>
+                                                <option value="1">Febrero</option>
+                                                <option value="2">Marzo</option>
+                                                <option value="3">Abril</option>
+                                                <option value="4">Mayo</option>
+                                                <option value="5">Junio</option>
+                                                <option value="6">Julio</option>
+                                                <option value="7">Agosto</option>
+                                                <option value="8">Septiembre</option>
+                                                <option value="9">Octubre</option>
+                                                <option value="10">Noviembre</option>
+                                                <option value="11">Diciembre</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup44Fcol1Frow2Fcon6FcTab3Fcol1Frow3Fcon1" style="max-width: 100px;" class="mainPanelDivGroup">
+                                        <label class="mainPanelContentComponents" idetiqueta="ConfiguracionAhorrosCorteDia" style="width: 100%;" id="lblCorteDia">Corte al dia</label>
+                                        <div class="select-style" style="width: 100%;"><select class="mainPanelContentComponents" style="width: 100%;" id="selCorteDia"> </select></div>
+                                    </div>
+                                    <div id="DivGroupT47Fcol1Frow2Fcon6FcTab3Fcol1Frow3Fcon1" style="max-width: 175px;margin-top: 20px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup45Fcol1Frow2Fcon6FcTab3Fcol1Frow3Fcon1" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="checkbox" class="mainPanelContentComponents" id="ckbFondoAhorro" /> 
+                                            <label class="containerCheck" idetiqueta="ConfiguracionAhorrosChkFondoAhorro" id="ckbFondoAhorro" for="ckbFondoAhorro">Es fondo de ahorro</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contain" style="width: 100%; display: none;" id="conOtrosDatos">
+                            <div class="mainPanelRow" style="width: 100%;" id="row1Fcon7FcTab7Fcol1Frow3Fcon7">
+                                <div class="mainPanelCol col-12 bordersubtitulo" style="visibility: visible;" id="lblOtrosDatos">
+                                    <div id="DivGroupT2Fcol1Frow1Fcon7FcTab7Fcol1Frow3Fcon7" style="max-width: 100%;margin-top: 6px;margin-left: -3px;margin-bottom: -6px;" class="mainPanelDivGroup divgruoptitulo">
+                                        <label id="T2Fcol1Frow1Fcon7FcTab7Fcol1Frow3Fcon7" idetiqueta="ConfiguracionCredAhoOtrosDatos" class="mainPanelContentComponents" style="width: 100%;">Otros Datos</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row2FconOtrosDatos" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow2FconOtrosDatos" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                    <div id="DivGroupT4Fcol1Frow2FconOtrosDatos" style="max-width: 375px;margin-top: 20px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup47Fcol1Frow2FconOtrosDatos" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="checkbox" class="mainPanelContentComponents" id="ckbDefinirNumEmpleado" />
+                                            <label class="containerCheck" idetiqueta="ConfiguracionCreditosChkDefinirNumEmpleado" id="lblDefinirNumEmpleado" for="ckbDefinirNumEmpleado">Definir número de empleado por tipo de crédito</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup48Fcol1Frow2FconOtrosDatos" style="max-width: 50px;margin-top: 20px;" class="mainPanelDivGroup">
+                                        <label id="lblLongitud" idetiqueta="ConfiguracionCreditosLongitud"  class="mainPanelContentComponents" style="width: 100%;">Longitud</label> 
+                                        <input id="txtLongitud"  type="text" class="mainPanelContentComponents" style="width: 100%;" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row3FconOtrosDatos" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow3FconOtrosDatos" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                    <div id="DivGroupT6Fcol1Frow3FconOtrosDatos" style="max-width: 100px;margin-top: 20px;margin-bottom: -5px;" class="mainPanelDivGroup">
+                                        <label class="mainPanelContentComponents" idetiqueta="ConfiguracionCreditosDiasMes"  style="width: 100%;" id="lblFactorProporcional">Dias del mes</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row4FconOtrosDatos" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow4FconOtrosDatos" class="mainPanelCol col-12 colborder" style="visibility: visible;  width: 150px;margin-left: 0px;">
+                                    <div id="DivGroupT8Fcol1Frow4FconOtrosDatos" style="max-width: 130px;margin-top: 10px;margin-left:5px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup50Fcol1Frow4FconOtrosDatos" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" id="rbFactorMensual" name="factorProporcional" /> 
+                                            <label class="containerRadio" idetiqueta="ConfiguracionCreditosRbFactorMensual" id="rbFactorMensual" for="rbFactorMensual">Factor mensual</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT9Fcol1Frow4FconOtrosDatos" style="max-width: 130px;margin-top: -7px;margin-bottom: 10px;margin-left:5px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup51Fcol1Frow4FconOtrosDatos" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="radio" class="mainPanelContentComponents" name="factorProporcional" id="rbDiasNaturales" /> 
+                                            <label class="containerRadio" idetiqueta="ConfiguracionCreditosRbDiasNarurales" id="rbDiasNaturales" for="rbDiasNaturales">Dias naturales</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="row5FconOtrosDatos" class="mainPanelRow" style="width: 100%;">
+                                <div id="col1Frow5FconOtrosDatos" class="mainPanelCol borderCol col-12" style="visibility: visible;">
+                                    <div id="DivGroupT10Fcol1Frow5FconOtrosDatos" style="max-width: 240px;margin-top: 20px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup52Fcol1Frow5FconOtrosDatos" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="checkbox" class="mainPanelContentComponents" id="ckbSolicitarFechaVenc" />
+                                            <label class="containerCheck" idetiqueta="ConfiguracionCreditosChkSoliFechVenc" id="ckbSolicitarFechaVenc" for="ckbSolicitarFechaVenc">Solicitar fecha de vencimiento</label>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroup53Fcol1Frow5FconOtrosDatos" style="max-width: 140px;margin-top: 20px;" class="mainPanelDivGroup">
+                                        <label class="mainPanelContentComponents" idetiqueta="ConfiguracionCreditosVersionCalculo" style="width: 100%;" id="lblVersionCalculo">Versión de cálculo</label>
+                                        <div class="select-style" style="width: 100%;">
+                                            <select class="mainPanelContentComponents" style="width: 100%;" id="selVersionCalculo">
+                                                <option value=""></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT27Fcol1Frow21Fcon2" class="mainPanelDivGroup" style="max-width: 450px;margin-top: 20px;">
+                                        <div class="editContainer">
+                                            <label id="lblConceptoXDeduccion" idetiqueta="ConfiguracionCreditosConceptoDeduduccion" class="mainPanelContentComponents">Concepto para deducción</label>
+                                            <div id="editConceptoXDeduccion" class="edit medium-large" dataedit="EditConceptoXDeduccion" functedit="setEditConceptoXDeduccion">
+                                                <input id="search-text-input" class="editKey medium" type="text" kind="filterKey" placeholder="" />
+                                                <input id="brief-text-input" class="editBrief large" type="text" placeholder="" disabled="" />
+                                                <button class="editButton small" onclick="OpenEditModal(this)"><img class="imgBoton" src="img/Iconos/puntos.png" /></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="DivGroupT13Fcol1Frow5FconOtrosDatos" style="max-width: 330px;margin-top: 20px;" class="mainPanelDivGroup">
+                                        <div id="DivGroup55Fcol1Frow5FconOtrosDatos" style="max-width: 100%; width: 100%;" class="containerSelectors">
+                                            <input type="checkbox" class="mainPanelContentComponents" id="ckbIncluirEnMenu" />
+                                            <label class="containerCheck" idetiqueta="ConfiguracionCreditosChkCrearAccMenu" id="ckbIncluirEnMenu" for="ckbIncluirEnMenu">Crear Acceso directo en el menu del sistema</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Gruopbotones" class="mainPanelDivGroup" style="width:100%">
+            <button id="btnGuarda" class="mainPanelContentComponents defaultButton" onclick="saveCredAhorr()" style="display: inline-block;">
+                <img class="imgBoton" src="img/Iconos/aceptar.png" />
+                <span idetiqueta="btnGuardar">Guardar</span>
+            </button>
+            <button id="btnActualizar" class="mainPanelContentComponents defaultButton" onclick="actualizarAhorr()" style="display: none">
+                <img class="imgBoton" src="img/Iconos/editar.png" />
+                <span idetiqueta="btnActualizar">Actualizar</span>
+            </button>
+            <button id="btnEliminar" class="mainPanelContentComponents defaultButton" onclick="eliminarAhorr()" style="display: none">
+                <img class="imgBoton" clase="imgBoton" src="img/Iconos/eliminar.png" />
+                <span idetiqueta="btnEliminar">Eliminar</span>
+            </button>
+            <div id="ContenedoraBuscar" style="display: inline;">
+                <button id="btnBuscarCredAhorr" class="mainPanelContentComponents defaultButton"  dataEdit="selectorCatalogoCredAhorr" functEdit="selectorCredAhorr" onclick="OpenSelector(this)" style="display: inline;">
+                    <img class="imgBoton" src="img/Iconos/buscar.png" />
+                    <span idetiqueta="btnBuscar">Buscar</span>
+                </button>
+            </div>
+            <button id="btnLimpiar" class="mainPanelContentComponents defaultButton" onclick="limpiar()" style="display: inline-block">
+                <img class="imgBoton" src="img/Iconos/cancelar.png" />
+                <span idetiqueta="btnCancelar">Cancelar</span>
+            </button>
+
+        </div>
+    </div>
+
+ 
+
+
+
+</body>
+</html>
+ 
